@@ -49,12 +49,6 @@ class ConfigurationSet<Base:Configurateable> {
         }
     }
     
-    func without(_ key: String) -> ConfigurationSet<Base> {
-        remove(key)
-        
-        return self
-    }
-    
     @discardableResult
     func merge(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
         configurations.append(contentsOf: configuration.configurations)
