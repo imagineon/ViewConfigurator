@@ -13,32 +13,32 @@ extension UIView: Configurateable {
 
 extension ConfigurationSet where Base: UIView {
     func alpha(_ alpha: CGFloat) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.alpha = alpha
         }
     }
 
     func backgroundColor(_ color: UIColor?) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.backgroundColor = color
         }
     }
 
     func bounds(_ bounds: CGRect) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.bounds = bounds
         }
     }
 
     func center(_ center: CGPoint) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.center = center
         }
     }
 
     func content(compressionResistancePriority priority: UILayoutPriority,
                  for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.setContentCompressionResistancePriority(priority, for: axis)
         }
     }
@@ -51,7 +51,7 @@ extension ConfigurationSet where Base: UIView {
 
     func content(huggingPriority priority: UILayoutPriority,
                  for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.setContentHuggingPriority(priority, for: axis)
         }
     }
@@ -63,38 +63,38 @@ extension ConfigurationSet where Base: UIView {
     }
 
     func cornerRadius(_ cornerRadius: CGFloat) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.layer.cornerRadius = cornerRadius
         }
     }
 
     func clearsContextBeforeDrawing(_ clears: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.clearsContextBeforeDrawing = clears
         }
     }
 
     func clipsToBounds(_ clips: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.clipsToBounds = clips
         }
     }
 
     func contentMode(_ contentMode: UIViewContentMode) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.contentMode = contentMode
         }
     }
 
     @available(iOS 4.0, *)
     func contentScaleFactor(_ factor: CGFloat) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.contentScaleFactor = factor
         }
     }
 
     func frame(_ frame: CGRect) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.frame = frame
         }
     }
@@ -106,110 +106,110 @@ extension ConfigurationSet where Base: UIView {
 
     @available(iOS 3.2, *)
     func gestureRecognizers(_ gestureRecognizers: [UIGestureRecognizer]?) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.gestureRecognizers = gestureRecognizers
         }
     }
 
     func isExclusiveTouch(_ enabled: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.isExclusiveTouch = enabled
         }
     }
 
     func isHidden(_ hidden: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.isHidden = hidden
         }
     }
 
     func isMultipleTouchEnabled(_ enabled: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.isMultipleTouchEnabled = enabled
         }
     }
 
     func isOpaque(_ opaque: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.isOpaque = opaque
         }
     }
 
     func isUserInteractionEnabled(_ enabled: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.isUserInteractionEnabled = enabled
         }
     }
 
     func layer(_ block: @escaping (CALayer) -> Void) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             block(view.layer)
         }
     }
 
     @available(iOS 8.0, *)
     func layout(margins: UIEdgeInsets) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.layoutMargins = margins
         }
     }
 
     @available(iOS 8.0, *)
     func mask(_ mask: UIView?) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.mask = mask
         }
     }
 
     @available(iOS 7.0, *)
     func motionEffects(_ effects: [UIMotionEffect]) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.motionEffects = effects
         }
     }
 
     @available(iOS 8.0, *)
     func preservesSuperviewLayoutMargins(_ preserve: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.preservesSuperviewLayoutMargins = preserve
         }
     }
 
     @available(iOS 9.0, *)
     func semanticContentAttribute(_ attributes: UISemanticContentAttribute) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.semanticContentAttribute = attributes
         }
     }
 
     func tag(_ tag: Int) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.tag = tag
         }
     }
 
     @available(iOS 7.0, *)
     func tintAdjustmentMode(_ mode: UIViewTintAdjustmentMode) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.tintAdjustmentMode = mode
         }
     }
 
     func tintColor(_ color: UIColor) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.tintColor = color
         }
     }
 
     func transform(_ transform: CGAffineTransform) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.transform = transform
         }
     }
 
     @available(iOS 6.0, *)
     func translatesAutoresizingMaskIntoConstraints(_ translates: Bool) -> ConfigurationSet<Base> {
-        return add { (view: UIView) in
+        return set { (view: UIView) in
             view.translatesAutoresizingMaskIntoConstraints = translates
         }
     }

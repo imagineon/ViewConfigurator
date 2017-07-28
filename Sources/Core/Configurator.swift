@@ -13,16 +13,12 @@ protocol Configurateable: class {
 }
 
 extension Configurateable {
-    static var configuration: ConfigurationSet<Self> {
+    static var configure: ConfigurationSet<Self> {
         return .init()
     }
 
-    func apply(from configurator: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
-        return configurator(type(of: self).configuration).apply(self)
-    }
-
     static func build(from configuraton: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
-        return configuraton(self.configuration).build()
+        return configuraton(self.configure).build()
     }
 }
 
@@ -35,14 +31,14 @@ class ConfigurationSet<Base: Configurateable> {
         self.configurations = .init()
     }
 
-    private func add(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
+    private func set(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
         configurations.append(block)
 
         return self
     }
 
-    func add(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
-        return add { (base) -> Base in
+    func set(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
+        return set { (base) -> Base in
             block(base)
 
             return base
