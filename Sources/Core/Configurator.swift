@@ -16,7 +16,7 @@ extension Configurateable {
     static var configuration: ConfigurationSet<Self> {
         return .init()
     }
-    
+
     func apply(from configurator: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
         return configurator(type(of: self).configuration).apply(self)
     }
@@ -26,36 +26,36 @@ extension Configurateable {
     }
 }
 
-class ConfigurationSet<Base:Configurateable> {
+class ConfigurationSet<Base: Configurateable> {
     typealias Configuration = (Base) -> Base
-    
+
     private var configurations: [Configuration]
-    
+
     fileprivate init() {
         self.configurations = .init()
     }
-    
+
     private func add(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
         configurations.append(block)
-        
+
         return self
     }
-    
+
     func add(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
         return add { (base) -> Base in
             block(base)
-            
+
             return base
         }
     }
-    
+
     @discardableResult
     func merge(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
         configurations.append(contentsOf: configuration.configurations)
-        
+
         return self
     }
-    
+
     func apply(_ base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
