@@ -14,9 +14,9 @@
 		3549BB661DA38ADB00C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* Configurator.framework */; };
 		3549BB751DA38AEF00C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB481DA389F300C63030 /* Configurator.framework */; };
 		3549BB841DA38B0000C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB3B1DA389E800C63030 /* Configurator.framework */; };
-		3549BB8B1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
-		3549BB8C1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
-		3549BB8D1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
+		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
+		3549BB8C1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
+		3549BB8D1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
 		35CA2AC81E12927100147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A931E12920400147290 /* Nimble.framework */; };
@@ -232,7 +232,7 @@
 		3549BB611DA38ADB00C63030 /* ConfiguratorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB701DA38AEF00C63030 /* ConfiguratorTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB7F1DA38B0000C63030 /* ConfiguratorTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorSpec.swift; sourceTree = "<group>"; };
+		3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorSetSpec.swift; sourceTree = "<group>"; };
 		35CA2A861E12920400147290 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		35CA2A891E12920400147290 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		35CD64E81E60192300AF060B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -363,7 +363,7 @@
 		3549BB191DA3890B00C63030 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */,
+				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 			);
 			path = Tests;
@@ -1006,7 +1006,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8B1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1014,7 +1014,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8D1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				3549BB8D1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,7 +1022,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8C1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				3549BB8C1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1126,6 +1126,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1173,6 +1174,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1199,7 +1201,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1226,7 +1228,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1246,7 +1248,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1269,7 +1271,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1294,7 +1296,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1317,7 +1319,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1337,7 +1339,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1359,7 +1361,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;

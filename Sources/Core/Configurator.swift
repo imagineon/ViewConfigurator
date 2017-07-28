@@ -35,7 +35,7 @@ class ConfigurationSet<Base:Configurateable> {
         self.configurations = .init()
     }
     
-    func add(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
+    private func add(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
         configurations.append(block)
         
         return self
