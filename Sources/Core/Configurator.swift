@@ -35,14 +35,14 @@ class ConfigurationSet<Base:Configurateable> {
         self.configurations = .init()
     }
     
-    func set(_ key: String, configurator block: @escaping Configuration) -> ConfigurationSet<Base> {
+    func add(_ block: @escaping Configuration) -> ConfigurationSet<Base> {
         configurations.append(block)
         
         return self
     }
     
-    func set(_ key: String, configurator block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
-        return set(key) { (base) -> Base in
+    func add(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
+        return add { (base) -> Base in
             block(base)
             
             return base
@@ -67,7 +67,7 @@ class ConfigurationSet<Base:Configurateable> {
     }
 }
 
-extension ConfigurationSet where Base: Configurateable {
+extension ConfigurationSet {
     func build() -> Base {
         return apply(Base())
     }
