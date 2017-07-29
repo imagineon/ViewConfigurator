@@ -30,7 +30,7 @@ extension ConfigurationSet where Base: LayerContaining {
             container.layer.shadowPath = path
         }
     }
-    
+
     func shadowOffset(_ offset: CGSize) -> ConfigurationSet<Base> {
         return set { (container: LayerContaining) in
             container.layer.shadowOffset = offset
@@ -86,7 +86,7 @@ extension ConfigurationSet where Base: LayerContaining {
     }
 
     @available(iOS 11.0, *)
-    func cornerMask(_ mask: CACornerMask) -> ConfigurationSet<Base> {
+    func maskedCorners(_ mask: CACornerMask) -> ConfigurationSet<Base> {
         return set { (container: LayerContaining) in
             container.layer.maskedCorners = mask
         }
