@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension UIView: Configurateable {
-}
+extension UIView: Configurateable {}
+extension UIView: LayerContaining {}
 
 extension ConfigurationSet where Base: UIView {
     func alpha(_ alpha: CGFloat) -> ConfigurationSet<Base> {
@@ -61,7 +61,7 @@ extension ConfigurationSet where Base: UIView {
             .content(huggingPriority: priority, for: .horizontal)
             .content(huggingPriority: priority, for: .vertical)
     }
-    
+
     func clearsContextBeforeDrawing(_ clears: Bool) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
             view.clearsContextBeforeDrawing = clears

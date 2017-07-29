@@ -30,6 +30,9 @@
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
 		E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45B54231F2BBBA1001F20E3 /* UIView.swift */; };
 		E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */; };
+		E4FEB66E1F2CEB2900EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E4FEB66F1F2CEB2A00EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E4FEB6701F2CEB2B00EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1015,6 +1018,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB6701F2CEB2B00EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1026,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB66E1F2CEB2900EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,6 +1034,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB66F1F2CEB2A00EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1446,6 +1452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65101E60192300AF060B /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1466,6 +1473,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65101E60192300AF060B /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1485,6 +1493,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65091E60192300AF060B /* Mac-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1507,6 +1516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65091E60192300AF060B /* Mac-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;

@@ -20,6 +20,21 @@ class LayerContainingSpecs: QuickSpec {
                 }
                 expect(testView.layer.cornerRadius).to(equal(radius))
             }
+            it("can set lazer zPosition") {
+                let newPosition: CGFloat = 8
+                let testView: UIView = .build { set in
+                    set.layerZPosition(newPosition)
+                }
+                expect(testView.layer.zPosition).to(equal(newPosition))
+            }
+            it("can set lazer isDoubleSided") {
+                let newValue = false
+                let testView: UIView = .build { set in
+                    set.layerIsDoubleSided(newValue)
+                }
+                expect(testView.layer.isDoubleSided).to(equal(newValue))
+            }
+            
         }
     }
 }
