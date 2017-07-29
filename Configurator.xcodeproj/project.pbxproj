@@ -24,6 +24,9 @@
 		35CA2AD21E12928C00147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A9B1E12920400147290 /* Nimble.framework */; };
 		35CA2AD31E12928C00147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2ABB1E12920400147290 /* Quick.framework */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E43951761F2C7E0100543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E43951771F2C7E0200543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45B54231F2BBBA1001F20E3 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
@@ -261,6 +264,7 @@
 		35CD65171E60192300AF060B /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
+		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
+				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 			);
 			path = Tests;
@@ -1025,6 +1030,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,6 +1039,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3549BB8D1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951771F2C7E0200543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1041,6 +1048,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3549BB8C1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951761F2C7E0100543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

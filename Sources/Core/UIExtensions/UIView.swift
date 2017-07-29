@@ -105,9 +105,13 @@ extension ConfigurationSet where Base: UIView {
     }
 
     @available(iOS 3.2, *)
-    func gestureRecognizers(_ gestureRecognizers: [UIGestureRecognizer]?) -> ConfigurationSet<Base> {
+    func gestureRecognizers(_ gestureRecognizers: [UIGestureRecognizer]) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
-            view.gestureRecognizers = gestureRecognizers
+            if view.gestureRecognizers != nil {
+                view.gestureRecognizers?.append(contentsOf: gestureRecognizers)
+            } else {
+                view.gestureRecognizers = gestureRecognizers
+            }
         }
     }
 
