@@ -61,13 +61,7 @@ extension ConfigurationSet where Base: UIView {
             .content(huggingPriority: priority, for: .horizontal)
             .content(huggingPriority: priority, for: .vertical)
     }
-
-    func cornerRadius(_ cornerRadius: CGFloat) -> ConfigurationSet<Base> {
-        return set { (view: UIView) in
-            view.layer.cornerRadius = cornerRadius
-        }
-    }
-
+    
     func clearsContextBeforeDrawing(_ clears: Bool) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
             view.clearsContextBeforeDrawing = clears
@@ -150,12 +144,6 @@ extension ConfigurationSet where Base: UIView {
         }
     }
 
-    func layer(_ block: @escaping (CALayer) -> Void) -> ConfigurationSet<Base> {
-        return set { (view: UIView) in
-            block(view.layer)
-        }
-    }
-
     @available(iOS 8.0, *)
     func layout(margins: UIEdgeInsets) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
@@ -230,6 +218,12 @@ extension ConfigurationSet where Base: UIView {
     func transform(_ transform: CGAffineTransform) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
             view.transform = transform
+        }
+    }
+
+    func additionalTransform(_ transform: CGAffineTransform) -> ConfigurationSet<Base> {
+        return set { (view: UIView) in
+            view.transform = view.transform.concatenating(transform)
         }
     }
 

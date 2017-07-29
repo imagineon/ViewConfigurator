@@ -27,7 +27,9 @@
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E43951761F2C7E0100543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E43951771F2C7E0200543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
 		E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45B54231F2BBBA1001F20E3 /* UIView.swift */; };
+		E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,7 +267,9 @@
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
+		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
+		E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContainingSpecs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,7 @@
 			children = (
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
+				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 			);
 			path = Tests;
@@ -544,6 +549,7 @@
 			isa = PBXGroup;
 			children = (
 				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
+				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
 			);
 			name = UIKitExtensions;
 			sourceTree = "<group>";
@@ -999,6 +1005,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
 				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
 				E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */,
 			);
@@ -1029,6 +1036,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
 				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 				E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */,
 			);

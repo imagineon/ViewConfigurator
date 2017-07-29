@@ -133,6 +133,62 @@ class UIViewSpec: QuickSpec {
                 }
                 expect(testView.preservesSuperviewLayoutMargins).to(equal(newValue))
             }
+            if #available(iOS 9.0, *) {
+                it("can set semanticContentAttribute") {
+                    let newAttribute: UISemanticContentAttribute = .playback
+                    let testView: UIView = .build { set in
+                        set.semanticContentAttribute(newAttribute)
+                    }
+                    expect(testView.semanticContentAttribute).to(equal(newAttribute))
+                }
+            }
+            it("can set tag") {
+                let newValue = 42
+                let testView: UIView = .build { set in
+                    set.tag(newValue)
+                }
+                expect(testView.tag).to(equal(newValue))
+            }
+            it("can set tintAdjustmentMode") {
+                let newMode: UIViewTintAdjustmentMode = .dimmed
+                let testView: UIView = .build { set in
+                    set.tintAdjustmentMode(newMode)
+                }
+                expect(testView.tintAdjustmentMode).to(equal(newMode))
+            }
+            it("can set tintColor") {
+                let newColor: UIColor = .black
+                let testView: UIView = .build { set in
+                    set.tintColor(newColor)
+                }
+                expect(testView.tintColor).to(equal(newColor))
+            }
+            it("can set translatesAutoresizingMaskIntoConstraints") {
+                let newValue = false
+                let testView: UIView = .build { set in
+                    set.translatesAutoresizingMaskIntoConstraints(newValue)
+                }
+                expect(testView.translatesAutoresizingMaskIntoConstraints).to(equal(newValue))
+            }
+            describe("handle Transforms") {
+                it("can set transform") {
+                    let newTransform: CGAffineTransform = CGAffineTransform(rotationAngle: 5)
+                    let testView: UIView = .build { set in
+                        set.transform(newTransform)
+                    }
+                    expect(testView.transform).to(equal(newTransform))
+                }
+                it("can add a transform") {
+                    let newTransform: CGAffineTransform = CGAffineTransform(rotationAngle: 5)
+                    let secondTransform: CGAffineTransform = CGAffineTransform(scaleX: 0.3, y: 0.6)
+                    let testView: UIView = .build { set in
+                        set
+                            .transform(newTransform)
+                            .additionalTransform(secondTransform)
+                    }
+                    expect(testView.transform).to(equal(newTransform.concatenating(secondTransform)))
+                }
+            }
             describe("handle Motion Effects") {
                 it("can set an Array of Motion Effects") {
                     let newMotionEffects = [UIMotionEffect()]
