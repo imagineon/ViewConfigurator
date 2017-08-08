@@ -1,11 +1,3 @@
-//
-//  UIView.swift
-//  Configurator-iOS
-//
-//  Created by ImagineOn on 28.07.17.
-//  Copyright © 2017 ImagineOn GmbH. All rights reserved.
-//
-
 import UIKit
 
 extension UIView: Configurateable {}

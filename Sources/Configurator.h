@@ -1,11 +1,3 @@
-//
-//  Configurator.h
-//  Configurator
-//
-//  Created by ImagineOn GmbH on 04/10/16.
-//  Copyright © 2017 ImagineOn GmbH. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for Configurator.

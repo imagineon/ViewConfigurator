@@ -1,11 +1,3 @@
-//
-//  LayerContainingSpecs.swift
-//  ConfiguratorTests-iOS
-//
-//  Created by Peter Schumacher on 29.07.17.
-//  Copyright © 2017 ImagineOn GmbH. All rights reserved.
-//
-
 import Quick
 import Nimble
 import Configurator

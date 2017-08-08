@@ -1,11 +1,3 @@
-//
-//  Configurator.swift
-//  Configurator
-//
-//  Created by ImagineOn on 28.07.17.
-//  Copyright © 2017 ImagineOn GmbH. All rights reserved.
-//
-
 import Foundation
 
 public protocol Configurateable: class {
