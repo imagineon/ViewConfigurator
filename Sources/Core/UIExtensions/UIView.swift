@@ -11,7 +11,7 @@ import UIKit
 extension UIView: Configurateable {}
 extension UIView: LayerContaining {}
 
-extension ConfigurationSet where Base: UIView {
+public extension ConfigurationSet where Base: UIView {
     func alpha(_ alpha: CGFloat) -> ConfigurationSet<Base> {
         return set { (view: UIView) in
             view.alpha = alpha

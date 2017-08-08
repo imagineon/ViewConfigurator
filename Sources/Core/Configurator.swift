@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol Configurateable: class {
+public protocol Configurateable: class {
     init()
 }
 
 extension Configurateable {
-    static var configure: ConfigurationSet<Self> {
+    public static var configure: ConfigurationSet<Self> {
         return .init()
     }
 
-    static func build(from configuraton: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
+    public static func build(from configuraton: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
         return configuraton(self.configure).build()
     }
 }
 
-class ConfigurationSet<Base: Configurateable> {
+public class ConfigurationSet<Base: Configurateable> {
     typealias Configuration = (Base) -> Base
 
     private var configurations: [Configuration]
@@ -37,7 +37,7 @@ class ConfigurationSet<Base: Configurateable> {
         return self
     }
 
-    func set(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
+    public func set(_ block: @escaping (Base) -> Void) -> ConfigurationSet<Base> {
         return set { (base) -> Base in
             block(base)
 
@@ -46,19 +46,19 @@ class ConfigurationSet<Base: Configurateable> {
     }
 
     @discardableResult
-    func merge(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
+    public func apply(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
         configurations.append(contentsOf: configuration.configurations)
 
         return self
     }
 
-    func apply(_ base: Base) -> Base {
+    fileprivate func apply(_ base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
 }
 
 extension ConfigurationSet {
-    func build() -> Base {
+    public func build() -> Base {
         return apply(Base())
     }
 }

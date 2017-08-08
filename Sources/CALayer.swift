@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol LayerContaining {
+public protocol LayerContaining {
     var layer: CALayer { get }
 }
 
-extension ConfigurationSet where Base: LayerContaining {
+public extension ConfigurationSet where Base: LayerContaining {
     func layerDelegate(_ delegate: CALayerDelegate) -> ConfigurationSet<Base> {
         return set { (container: LayerContaining) in
             container.layer.delegate = delegate

@@ -8,7 +8,7 @@
 
 import Quick
 import Nimble
-@testable import Configurator
+import Configurator
 
 class LayerContainingSpecs: QuickSpec {
     override func spec() {

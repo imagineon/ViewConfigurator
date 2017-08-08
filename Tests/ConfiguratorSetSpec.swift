@@ -43,7 +43,7 @@ class ConfiguratorSetSpec: QuickSpec {
                 let firstConfiguration = TestConfiguratable.configure.set({ $0.configuratableProperty = 1 })
                 let secondConfiguration = TestConfiguratable.configure.set({ $0.anotherProperty = "foo" })
                 let testBuild = TestConfiguratable.build { configSet in
-                    configSet.merge(firstConfiguration).merge(secondConfiguration)
+                    configSet.apply(firstConfiguration).apply(secondConfiguration)
                 }
                 expect(testBuild.configuratableProperty).to(equal(1))
                 expect(testBuild.anotherProperty).to(equal("foo"))
