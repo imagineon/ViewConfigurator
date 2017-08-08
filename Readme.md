@@ -7,15 +7,117 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
 
-[![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/ImagineOn GmbH/Configurator/branches)
-[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
+<!-- [![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/ImagineOn GmbH/Configurator/branches) -->
+<!-- [![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework) -->
 
-The clean way to setup your views
+The clean way to setup your views!
 
+- [Motivation](#motivation)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+
+## Motivation
+Some iOS Developers like to use Storyboards some like to create all views and Constraints in Code.
+While we don't want to give preferance for either approach, this Library is for the latter.
+
+When creating and configuring Views in Code there are a lot of Lines to write.
+And doing it all in `viewDidLoad()` makes for one f*ing big method.
+
+Swift allows us to instantiate and configure our Views right where we declare them.
+For Example:
+
+```swift
+
+class ExampleViewController: UIViewController {
+	
+	let view: UIView = {
+    	let view = UIView()
+		view.backgroundColor = .blue
+		view.alpha = 0.8
+		view.layer.cornerRadius = 8
+		view.layer.borderColor = UIColor.red.cgColor
+		view.layer.borderWidth = 0.5
+		return view
+	}()
+	
+}
+
+```
+
+There is even the Possibility to use Instance Variables if you declare them lazy.
+For Example:
+
+```swift
+
+struct ExampleColorModel {
+    let primaryColor: UIColor
+    let secondaryColor: UIColor
+}
+
+class ExampleViewController: UIViewController {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
+    
+    lazy var someView: UIView = {
+        let view = UIView()
+        view.backgroundColor = self.model.primaryColor
+        view.alpha = 0.8
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = self.model.secondaryColor.cgColor
+        view.layer.borderWidth = 0.5
+        return view
+    }()
+    
+}
+```
+
+With this Libary we want to archive an even higher level of Swiftiness.
+
+With Configurator Our Example looks like this:
+
+```swift
+
+struct ExampleColorModel {
+    let primaryColor: UIColor
+    let secondaryColor: UIColor
+}
+
+class ExampleViewController: UIViewController {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
+    
+    lazy var someLazyView: UIView = .build { set in
+        set.backgroundColor(self.model.primaryColor)
+            .alpha(0.8)
+            .cornerRadius(8)
+            .borderColor(self.model.secondaryColor.cgColor)
+            .borderWidth(0.5)
+    }()
+    
+}
+```
+
+Also the grouping of configurations is possible:
+
+```swift
+
+let standartConfiguration = UIView.configure
+    .backgroundColor(.blue)
+    .alpha(0.8)
+    .cornerRadius(8)
+    .borderColor(UIColor.red.cgColor)
+    .borderWidth(0.5)
+
+let view = standartConfiguration.build() // Creates a view from the standart configuration
+
+let otherView = UIView.build { set in
+    set.apply(standartConfiguration) // Apply's the standart configuration
+        .backgroundColor(.green) // Overrides the background color set by the standart configuration
+}
+
+```
+
+
 
 ## Requirements
 
@@ -118,16 +220,9 @@ $ git submodule update --init --recursive
 
 > The `Configurator.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
-#### Embeded Binaries
-
-- Download the latest release from https://github.com/ImagineOn GmbH/Configurator/releases
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `Configurator.framework`.
-- And that's it!
-
 ## Usage
+
+TODO
 
 ## License
 
