@@ -121,8 +121,9 @@ let otherView = UIView.build { set in
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 8.0+
 - Xcode 8.0+
+- Swift 3+
 
 ## Installation
 
