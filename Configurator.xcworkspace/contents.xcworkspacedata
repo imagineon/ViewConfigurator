@@ -5,7 +5,7 @@
       location = "group:Configurator.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Configurator.playground">
+      location = "group:ConfiguratorPlayground.playground">
    </FileRef>
    <FileRef
       location = "group:scripts">

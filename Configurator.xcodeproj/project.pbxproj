@@ -14,9 +14,9 @@
 		3549BB661DA38ADB00C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* Configurator.framework */; };
 		3549BB751DA38AEF00C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB481DA389F300C63030 /* Configurator.framework */; };
 		3549BB841DA38B0000C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB3B1DA389E800C63030 /* Configurator.framework */; };
-		3549BB8B1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
-		3549BB8C1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
-		3549BB8D1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */; };
+		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
+		3549BB8C1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
+		3549BB8D1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
 		35CA2AC81E12927100147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A931E12920400147290 /* Nimble.framework */; };
@@ -24,6 +24,15 @@
 		35CA2AD21E12928C00147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A9B1E12920400147290 /* Nimble.framework */; };
 		35CA2AD31E12928C00147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2ABB1E12920400147290 /* Quick.framework */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E43951761F2C7E0100543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E43951771F2C7E0200543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
+		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
+		E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45B54231F2BBBA1001F20E3 /* UIView.swift */; };
+		E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */; };
+		E4FEB66E1F2CEB2900EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E4FEB66F1F2CEB2A00EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
+		E4FEB6701F2CEB2B00EE6D8C /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,7 +240,7 @@
 		3549BB611DA38ADB00C63030 /* ConfiguratorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB701DA38AEF00C63030 /* ConfiguratorTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB7F1DA38B0000C63030 /* ConfiguratorTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorSpec.swift; sourceTree = "<group>"; };
+		3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorSetSpec.swift; sourceTree = "<group>"; };
 		35CA2A861E12920400147290 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		35CA2A891E12920400147290 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
 		35CD64E81E60192300AF060B /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
@@ -260,6 +269,10 @@
 		35CD65171E60192300AF060B /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
+		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
+		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
+		E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContainingSpecs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,7 +374,9 @@
 		3549BB191DA3890B00C63030 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB8A1DA38C0A00C63030 /* ConfiguratorSpec.swift */,
+				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
+				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
+				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 			);
 			path = Tests;
@@ -536,6 +551,8 @@
 		E409D8F51F2BB7C8004964AE /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
+				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
 			);
 			name = UIKitExtensions;
 			sourceTree = "<group>";
@@ -582,6 +599,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "Configurator-iOS" */;
 			buildPhases = (
+				E4B349131F2BD08C00CD7F53 /* Run SwiftLint */,
 				3549BB1C1DA389CD00C63030 /* Sources */,
 				3549BB1D1DA389CD00C63030 /* Frameworks */,
 				3549BB1E1DA389CD00C63030 /* Headers */,
@@ -968,11 +986,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E4B349131F2BD08C00CD7F53 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3549BB1C1DA389CD00C63030 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
+				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
 				E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,6 +1018,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB6701F2CEB2B00EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,6 +1026,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB66E1F2CEB2900EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +1034,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FEB66F1F2CEB2A00EE6D8C /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,7 +1042,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8B1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
+				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,7 +1052,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8D1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				3549BB8D1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951771F2C7E0200543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,7 +1061,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB8C1DA38C0A00C63030 /* ConfiguratorSpec.swift in Sources */,
+				3549BB8C1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
+				E43951761F2C7E0100543B34 /* UIViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,6 +1166,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1169,6 +1214,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1195,7 +1241,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1222,7 +1268,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1242,7 +1288,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1265,7 +1311,7 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1290,7 +1336,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1313,7 +1359,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1333,7 +1379,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1355,7 +1401,7 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.Configurator;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
 				PRODUCT_NAME = Configurator;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1406,6 +1452,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65101E60192300AF060B /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1426,6 +1473,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65101E60192300AF060B /* tvOS-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1445,6 +1493,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65091E60192300AF060B /* Mac-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1467,6 +1516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35CD65091E60192300AF060B /* Mac-Application.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
