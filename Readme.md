@@ -7,15 +7,15 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
 
-<!-- [![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/ImagineOn GmbH/Configurator/branches) -->
-<!-- [![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework) -->
+[![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/ImagineOn GmbH/Configurator/branches)
+[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
 
 The clean way to setup your views!
 
 - [Motivation](#motivation)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
+- [TODOs](#todos)
 - [License](#license)
 
 ## Motivation
@@ -92,7 +92,7 @@ class ExampleViewController: UIViewController {
             .cornerRadius(8)
             .borderColor(self.model.secondaryColor.cgColor)
             .borderWidth(0.5)
-    }()
+    }
     
 }
 ```
@@ -220,9 +220,12 @@ $ git submodule update --init --recursive
 
 > The `Configurator.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
-## Usage
+## TODOs
 
-TODO
+At the moment Only UIView Specific Properties are supportet. We want to expand that to all UIKit View Subclasses like UILabel.
+Also we want to provide some convenice configurations, like using UIColor for CGColor configurations. Or a shadow configuration set.
+
+Also we want to provide extensions for third party libraries like ReactiveCocoa.
 
 ## License
 
