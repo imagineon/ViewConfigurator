@@ -94,15 +94,15 @@ class LayerContainingSpecs: QuickSpec {
                 }
                 expect(testView.layer.cornerRadius).to(equal(radius))
             }
-            if #available(iOS 11.0, *) {
-                it("can set maskedCorners") {
-                    let mask: CACornerMask = CACornerMask.layerMaxXMaxYCorner
-                    let testView: UIView = .build { set in
-                        set.maskedCorners(mask)
-                    }
-                    expect(testView.layer.maskedCorners).to(equal(mask))
-                }
-            }
+//            if #available(iOS 11.0, *) {
+//                it("can set maskedCorners") {
+//                    let mask: CACornerMask = CACornerMask.layerMaxXMaxYCorner
+//                    let testView: UIView = .build { set in
+//                        set.maskedCorners(mask)
+//                    }
+//                    expect(testView.layer.maskedCorners).to(equal(mask))
+//                }
+//            }
             it("can set layer zPosition") {
                 let newPosition: CGFloat = 8
                 let testView: UIView = .build { set in

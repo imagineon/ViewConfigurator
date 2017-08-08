@@ -85,12 +85,12 @@ extension ConfigurationSet where Base: LayerContaining {
         }
     }
 
-    @available(iOS 11.0, *)
-    func maskedCorners(_ mask: CACornerMask) -> ConfigurationSet<Base> {
-        return set { (container: LayerContaining) in
-            container.layer.maskedCorners = mask
-        }
-    }
+//    @available(iOS 11.0, *)
+//    func maskedCorners(_ mask: CACornerMask) -> ConfigurationSet<Base> {
+//        return set { (container: LayerContaining) in
+//            container.layer.maskedCorners = mask
+//        }
+//    }
 
     func layerZPosition(_ position: CGFloat) -> ConfigurationSet<Base> {
         return set { (container: LayerContaining) in
