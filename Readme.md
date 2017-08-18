@@ -1,13 +1,13 @@
 ## Configurator
 
 [![Platforms](https://img.shields.io/cocoapods/p/Configurator.svg)](https://cocoapods.org/pods/Configurator)
-[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/ImagineOn GmbH/Configurator/master/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineonConfigurator/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
 
-[![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/ImagineOn GmbH/Configurator/branches)
+[![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/imagineon/Configurator/branches)
 [![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
 
 The clean way to setup your views!
@@ -127,7 +127,7 @@ let otherView = UIView.build { set in
 
 ## Installation
 
-### CocoaPods
+<!-- ### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
@@ -168,7 +168,7 @@ To integrate Configurator into your Xcode project using Carthage, specify it in 
 
 ```ogdl
 github "Configurator/Configurator" ~> 0.0.1
-```
+``` -->
 ### Swift Package Manager
 
 To use Configurator as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
@@ -179,7 +179,7 @@ import PackageDescription
 let package = Package(
     name: "HelloConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/ImagineOn GmbH/Configurator.git", "0.0.1")
+        .Package(url: "https://github.com/imagineon/Configurator.git", "0.0.1")
     ]
 )
 ```
@@ -199,7 +199,7 @@ $ git init
 - Add Configurator as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/ImagineOn GmbH/Configurator.git
+$ git submodule add https://github.com/imagineon/Configurator.git
 $ git submodule update --init --recursive
 ```
 
@@ -230,4 +230,4 @@ Also we want to provide extensions for third party libraries like ReactiveCocoa.
 
 ## License
 
-Configurator is released under the MIT license. See [LICENSE](https://github.com/ImagineOn GmbH/Configurator/blob/master/LICENSE) for details.
+Configurator is released under the MIT license. See [LICENSE](https://github.com/imagineon/Configurator/blob/master/LICENSE) for details.

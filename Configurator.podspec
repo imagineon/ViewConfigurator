@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
  s.homepage = 'www.imagineon.de'
  s.social_media_url = 'https://twitter.com/imagineoncgn'
  s.authors = { "ImagineOn GmbH" => "hi@imagineon.de" }
- s.source = { :git => "https://github.com/ImagineOn GmbH/Configurator.git", :tag => "v"+s.version.to_s }
+ s.source = { :git => "https://github.com/imagineon/Configurator.git", :tag => "v"+s.version.to_s }
  s.platforms     = { :ios => "8.0", :osx => "10.10", :tvos => "9.0", :watchos => "2.0" }
  s.requires_arc = true
 
