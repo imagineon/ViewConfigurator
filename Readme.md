@@ -190,7 +190,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 #### Git Submodules
 
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
+- Open up Terminal, `cd` into your top-level project directory, and run the following command if your project is *not* initialized as a git repository:
 
 ```bash
 $ git init
@@ -223,10 +223,8 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-At the moment Only UIView Specific Properties are supportet. We want to expand that to all UIKit View Subclasses like UILabel.
-Also we want to provide some convenice configurations, like using UIColor for CGColor configurations. Or a shadow configuration set.
-
-Also we want to provide extensions for third party libraries like ReactiveCocoa.
+At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UILabel e.g.).
+Also we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
 
 ## License
 
