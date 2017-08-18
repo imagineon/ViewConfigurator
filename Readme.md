@@ -1,13 +1,13 @@
 ## Configurator
 
 [![Platforms](https://img.shields.io/cocoapods/p/Configurator.svg)](https://cocoapods.org/pods/Configurator)
-[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineonConfigurator/master/LICENSE)
+[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineon/Configurator/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
 
-[![Travis](https://img.shields.io/travis/ImagineOn GmbH/Configurator/master.svg)](https://travis-ci.org/imagineon/Configurator/branches)
+[![Travis](https://img.shields.io/travis/imagineon/Configurator/master.svg)](https://travis-ci.org/imagineon/Configurator/branches)
 [![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
 
 The clean way to setup your views!
