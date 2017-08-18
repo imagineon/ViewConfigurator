@@ -20,7 +20,7 @@ The clean way to setup your views!
 
 ## Motivation
 Some iOS developers like to use storyboards, some like to create all their views and constraints in code.
-While we don't want to favor one approach over the other, this Library is for the latter.
+While we don't want to favor one approach over the other, this library is for the latter.
 
 When creating and configuring views in code there's many lines to be written.
 And doing it all in `viewDidLoad()` makes for one behemoth of a method.
@@ -72,9 +72,9 @@ class ExampleViewController: UIViewController {
 }
 ```
 
-With this Libary we want to archive an even higher level of Swiftiness.
+With this libary we want to achieve an even higher level of 'swiftiness'.
 
-With Configurator our example looks like this:
+With Configurator our example now looks like this:
 
 ```swift
 
@@ -101,17 +101,17 @@ Also the grouping of configurations is possible:
 
 ```swift
 
-let standartConfiguration = UIView.configure
+let standardConfiguration = UIView.configure
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
     .borderColor(UIColor.red.cgColor)
     .borderWidth(0.5)
 
-let view = standartConfiguration.build() // Creates a view from the standart configuration
+let view = standardConfiguration.build() // Creates a view from the standard configuration
 
 let otherView = UIView.build { set in
-    set.apply(standartConfiguration) // Applies the standard configuration
+    set.apply(standardConfiguration) // Applies the standard configuration
         .backgroundColor(.green) // Overrides the background color set by the standard configuration
 }
 
