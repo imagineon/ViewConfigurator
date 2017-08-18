@@ -19,13 +19,13 @@ The clean way to setup your views!
 - [License](#license)
 
 ## Motivation
-Some iOS Developers like to use Storyboards some like to create all views and Constraints in Code.
-While we don't want to give preferance for either approach, this Library is for the latter.
+Some iOS developers like to use storyboards, some like to create all their views and constraints in code.
+While we don't want to favor one approach over the other, this Library is for the latter.
 
-When creating and configuring Views in Code there are a lot of Lines to write.
-And doing it all in `viewDidLoad()` makes for one f*ing big method.
+When creating and configuring views in code there's many lines to be written.
+And doing it all in `viewDidLoad()` makes for one behemoth of a method.
 
-Swift allows us to instantiate and configure our Views right where we declare them.
+Swift allows to instantiate and configure our views right where we declare them.
 For Example:
 
 ```swift
@@ -46,8 +46,8 @@ class ExampleViewController: UIViewController {
 
 ```
 
-There is even the Possibility to use Instance Variables if you declare them lazy.
-For Example:
+There even is the possibility to use instance variables, if you declare them lazy.
+For example:
 
 ```swift
 
@@ -74,7 +74,7 @@ class ExampleViewController: UIViewController {
 
 With this Libary we want to archive an even higher level of Swiftiness.
 
-With Configurator Our Example looks like this:
+With Configurator our example looks like this:
 
 ```swift
 
@@ -111,8 +111,8 @@ let standartConfiguration = UIView.configure
 let view = standartConfiguration.build() // Creates a view from the standart configuration
 
 let otherView = UIView.build { set in
-    set.apply(standartConfiguration) // Apply's the standart configuration
-        .backgroundColor(.green) // Overrides the background color set by the standart configuration
+    set.apply(standartConfiguration) // Applies the standard configuration
+        .backgroundColor(.green) // Overrides the background color set by the standard configuration
 }
 
 ```
