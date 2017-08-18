@@ -1,5 +1,5 @@
-language: objective-c
-osx_image: xcode8.2
+language: swift
+osx_image: xcode8.3
 
 git:
   submodules: false
@@ -64,25 +64,3 @@ script:
   - if [ $POD_LINT == "YES" ]; then
      pod lib lint;
    fi
-
-before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive Configurator
-
-deploy:
-  - provider: releases
-    api_key:
-      secure:
-    file:
-      - Configurator.framework.zip
-    skip_cleanup: true
-    overwrite: true
-    on:
-      repo: imagineon/Configurator
-      tags: true
-      condition: $RELEASE_READY = YES
-  - provider: script
-    script: pod trunk push
-    on:
-      tags: true
-      condition: $RELEASE_READY = YES
