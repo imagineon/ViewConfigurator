@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
 
  s.default_subspec = "Core"
  s.subspec "Core" do |ss|
-     ss.source_files  = "Sources/*.swift"
-     ss.framework  = "Foundation"
+     ss.source_files  = "Sources/**/*.swift"
+     ss.framework  = 'Foundation', 'UIKit', 'QuartzCore'
  end
 
 end
