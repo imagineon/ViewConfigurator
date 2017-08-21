@@ -8,7 +8,7 @@
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
 
 [![Travis](https://img.shields.io/travis/imagineon/Configurator/master.svg)](https://travis-ci.org/imagineon/Configurator/branches)
-[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
+[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/FrameworkTemplate)
 
 The clean way to setup your views!
 
