@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
  s.version = '0.1.0'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'The clean way to setup your views'
- s.homepage = 'www.imagineon.de'
+ s.homepage = 'http://www.imagineon.de'
  s.social_media_url = 'https://twitter.com/imagineoncgn'
  s.authors = { "ImagineOn GmbH" => "hi@imagineon.de" }
  s.source = { :git => "https://github.com/imagineon/Configurator.git", :tag => "v"+s.version.to_s }
