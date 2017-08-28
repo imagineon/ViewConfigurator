@@ -24,6 +24,7 @@ before_script:
   - sh scripts/bootstrap
 
 script:
+  - xcrun instruments -w "$DESTINATION" || sleep 15
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
