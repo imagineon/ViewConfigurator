@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-@testable import Configurator
+@testable import ViewConfigurator
 
 class TestConfiguratable: Configurable {
     var configuratableProperty: Int = 0

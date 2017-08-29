@@ -5,7 +5,7 @@
       location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfigurator.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ConfiguratorPlayground.playground">
+      location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfiguratorPlayground.playground">
    </FileRef>
    <FileRef
       location = "group:scripts">
@@ -17,7 +17,7 @@
       location = "group:Cartfile.private">
    </FileRef>
    <FileRef
-      location = "group:Configurator.podspec">
+      location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfigurator.podspec">
    </FileRef>
    <FileRef
       location = "group:LICENSE">

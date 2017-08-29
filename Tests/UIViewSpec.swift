@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Configurator
+import ViewConfigurator
 
 class UIViewSpec: QuickSpec {
     
