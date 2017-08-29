@@ -230,4 +230,4 @@ Also we want to provide some convenice configurations, like using UIColor for CG
 
 ## License
 
-Configurator is released under the MIT license. See [LICENSE](https://github.com/imagineon/ViewConfigurator/blob/master/LICENSE) for details.
+ViewConfigurator is released under the MIT license. See [LICENSE](https://github.com/imagineon/ViewConfigurator/blob/master/LICENSE) for details.
