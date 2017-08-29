@@ -22,7 +22,7 @@ before_install:
 
 before_script:
   - sh scripts/bootstrap
-
+  
 script:
   - set -o pipefail
   - xcodebuild -version
@@ -36,11 +36,11 @@ script:
     fi
 
   # Build Framework in Release and Run Tests if specified
-  - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty -c;
-    else
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
-    fi
+  # - if [ $RUN_TESTS == "YES" ]; then
+  #     xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty -c;
+  #   else
+  #     xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty -c;
+  #   fi
 
   # Build Example in Debug if specified
   # - if [ $BUILD_EXAMPLE == "YES" ]; then
