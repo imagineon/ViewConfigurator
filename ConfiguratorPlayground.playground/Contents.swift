@@ -23,16 +23,18 @@ class TestViewController: UIViewController {
         return view
     }()
     
-    let someOtherView: UIView = .build { set in
-        set.backgroundColor(.blue)
+    let someOtherView: UIView = .build { config in
+        config
+            .backgroundColor(.blue)
             .alpha(0.8)
             .cornerRadius(8)
             .borderColor(UIColor.red.cgColor)
             .borderWidth(0.5)
     }
 
-    lazy var someLazyView: UIView = .build { set in
-        set.backgroundColor(self.model.primaryColor)
+    lazy var someLazyView: UIView = .build { config in
+        config
+            .backgroundColor(self.model.primaryColor)
             .alpha(0.8)
             .cornerRadius(8)
             .borderColor(self.model.secondaryColor.cgColor)
@@ -41,17 +43,24 @@ class TestViewController: UIViewController {
     
 }
 
-let standartViewConfiguration = UIView.configure
+let standardViewConfiguration: ConfigurationSet<UIView> = UIView.configure
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
     .borderColor(UIColor.red.cgColor)
     .borderWidth(0.5)
 
-let standartView = standartViewConfiguration.build()
+let specialViewConfiguration = UIView.configure
+    .backgroundColor(.red)
+    .alpha(0.5)
+    .cornerRadius(16)
+    .borderColor(UIColor.green.cgColor)
+    .borderWidth(2)
 
-let otherView = UIView.build { set in
-    set.apply(standartViewConfiguration)
-        .backgroundColor(.green)
+let standardView = standardViewConfiguration.build()
+
+let specialView = UIView.build { set in
+    set.apply(specialViewConfiguration)
+        .backgroundColor(.yellow)
 }
 
