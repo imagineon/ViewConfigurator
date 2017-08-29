@@ -33,7 +33,7 @@ For Example:
 class ExampleViewController: UIViewController {
 	
 	let view: UIView = {
-    	let view = UIView()
+    	    let view = UIView()
 		view.backgroundColor = .blue
 		view.alpha = 0.8
 		view.layer.cornerRadius = 8
