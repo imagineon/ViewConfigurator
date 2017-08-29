@@ -12,8 +12,8 @@ env:
     - IOS_FRAMEWORK_SCHEME="ViewConfigurator-iOS"
     - IOS_SDK=iphonesimulator10.3
   matrix:
-    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" DEVICE_NAME="iPhone 7 Plus" SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"  BUILD_EXAMPLE="YES" RELEASE_READY="YES" POD_LINT="YES"
-    - DESTINATION="OS=9.0,name=iPhone 6s" DEVICE_NAME="iPhone 6s" SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"  BUILD_EXAMPLE="YES" RELEASE_READY="NO"  POD_LINT="NO"
+    - DESTINATION="OS=10.3.1,name=iPhone 7 Plus" DEVICE_NAME="iPhone 7 Plus (10.3.1) +" SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"  BUILD_EXAMPLE="YES" RELEASE_READY="YES" POD_LINT="YES"
+    - DESTINATION="OS=9.0,name=iPhone 6s" DEVICE_NAME="iPhone 6s (10.3.1) +" SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"  BUILD_EXAMPLE="YES" RELEASE_READY="NO"  POD_LINT="NO"
 
 before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
