@@ -129,7 +129,7 @@ let otherView = UIView.build { config in
 
 ## Installation
 
-<!-- ### CocoaPods
+### CocoaPods
 
 [CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
@@ -137,16 +137,16 @@ let otherView = UIView.build { config in
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1.0+ is required to build Configurator 0.0.1+.
+> CocoaPods 1.1.0+ is required to build ViewConfigurator 0.1.0+.
 
-To integrate Configurator into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate ViewConfigurator into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ViewConfigurator', '~> 0.0.1'
+pod 'ViewConfigurator', '~> 0.1.0'
 ```
 
 Then, run the following command:
@@ -166,11 +166,11 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate Configurator into your Xcode project using Carthage, specify it in your `Cartfile`:
+To integrate ViewConfigurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ImagineOn/ViewConfigurator" ~> 0.0.1
-``` -->
+github "ImagineOn/ViewConfigurator" ~> 0.1.0
+```
 ### Swift Package Manager
 
 To use Configurator as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
