@@ -1,13 +1,13 @@
-## Configurator
+## ViewConfigurator
 
-[![Platforms](https://img.shields.io/cocoapods/p/Configurator.svg)](https://cocoapods.org/pods/Configurator)
-[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineon/Configurator/master/LICENSE)
+[![Platforms](https://img.shields.io/cocoapods/p/Configurator.svg)](https://cocoapods.org/pods/ViewConfigurator)
+[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineon/ViewConfigurator/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/Configurator.svg)](https://cocoapods.org/pods/Configurator)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/ViewConfigurator.svg)](https://cocoapods.org/pods/ViewConfigurator)
 
-[![Travis](https://img.shields.io/travis/imagineon/Configurator/master.svg)](https://travis-ci.org/imagineon/Configurator/branches)
+[![Travis](https://img.shields.io/travis/imagineon/ViewConfigurator/master.svg)](https://travis-ci.org/imagineon/ViewConfigurator/branches)
 [![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/FrameworkTemplate)
 
 The clean way to setup your views!
@@ -86,8 +86,9 @@ struct ExampleColorModel {
 class ExampleViewController: UIViewController {
     let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
     
-    lazy var someLazyView: UIView = .build { set in
-        set.backgroundColor(self.model.primaryColor)
+    lazy var someLazyView: UIView = .build { config in
+        config
+            .backgroundColor(self.model.primaryColor)
             .alpha(0.8)
             .cornerRadius(8)
             .borderColor(self.model.secondaryColor.cgColor)
@@ -110,8 +111,9 @@ let standardConfiguration = UIView.configure
 
 let view = standardConfiguration.build() // Creates a view from the standard configuration
 
-let otherView = UIView.build { set in
-    set.apply(standardConfiguration) // Applies the standard configuration
+let otherView = UIView.build { config in
+    config
+        .apply(standardConfiguration) // Applies the standard configuration
         .backgroundColor(.green) // Overrides the background color set by the standard configuration
 }
 
@@ -144,7 +146,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'Configurator', '~> 0.0.1'
+pod 'ViewConfigurator', '~> 0.0.1'
 ```
 
 Then, run the following command:
@@ -167,7 +169,7 @@ $ brew install carthage
 To integrate Configurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "Configurator/Configurator" ~> 0.0.1
+github "ImagineOn/ViewConfigurator" ~> 0.0.1
 ``` -->
 ### Swift Package Manager
 
@@ -177,9 +179,9 @@ To use Configurator as a [Swift Package Manager](https://swift.org/package-manag
 import PackageDescription
 
 let package = Package(
-    name: "HelloConfigurator",
+    name: "ViewConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/imagineon/Configurator.git", "0.0.1")
+        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.0.1")
     ]
 )
 ```
@@ -199,27 +201,27 @@ $ git init
 - Add Configurator as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
 ```bash
-$ git submodule add https://github.com/imagineon/Configurator.git
+$ git submodule add https://github.com/imagineon/ViewConfigurator.git
 $ git submodule update --init --recursive
 ```
 
-- Open the new `Configurator` folder, and drag the `Configurator.xcodeproj` into the Project Navigator of your application's Xcode project.
+- Open the new `ViewConfigurator` folder, and drag the `ViewConfigurator.xcodeproj` into the Project Navigator of your application's Xcode project.
 
     > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
 
-- Select the `Configurator.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
+- Select the `ViewConfigurator.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
 - Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 - In the tab bar at the top of that window, open the "General" panel.
 - Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `Configurator.xcodeproj` folders each with two different versions of the `Configurator.framework` nested inside a `Products` folder.
+- You will see two different `ViewConfigurator.xcodeproj` folders each with two different versions of the `ViewConfigurator.framework` nested inside a `Products` folder.
 
     > It does not matter which `Products` folder you choose from.
 
-- Select the `Configurator.framework`.
+- Select the `ViewConfigurator.framework`.
 
 - And that's it!
 
-> The `Configurator.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+> The `ViewConfigurator.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
 ## TODOs
 
@@ -228,4 +230,4 @@ Also we want to provide some convenice configurations, like using UIColor for CG
 
 ## License
 
-Configurator is released under the MIT license. See [LICENSE](https://github.com/imagineon/Configurator/blob/master/LICENSE) for details.
+Configurator is released under the MIT license. See [LICENSE](https://github.com/imagineon/ViewConfigurator/blob/master/LICENSE) for details.

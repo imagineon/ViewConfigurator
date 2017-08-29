@@ -9,7 +9,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Configurator",
+    name: "ViewConfigurator",
     dependencies: [],
     exclude: ["Tests"]
 )

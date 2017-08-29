@@ -8,8 +8,8 @@ env:
   global:
     - LC_CTYPE=en_US.UTF-8
     - LANG=en_US.UTF-8
-    - WORKSPACE=Configurator.xcworkspace
-    - IOS_FRAMEWORK_SCHEME="Configurator-iOS"
+    - WORKSPACE=ViewConfigurator.xcworkspace
+    - IOS_FRAMEWORK_SCHEME="ViewConfigurator-iOS"
     - IOS_SDK=iphonesimulator10.3
   matrix:
     - DESTINATION="OS=10.3.1,name=iPhone 7 Plus"              SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES"  BUILD_EXAMPLE="YES" RELEASE_READY="YES" POD_LINT="YES"

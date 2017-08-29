@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3549BB501DA38A2000C63030 /* Configurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* Configurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3549BB661DA38ADB00C63030 /* Configurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* Configurator.framework */; };
+		3549BB661DA38ADB00C63030 /* ViewConfigurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* ViewConfigurator.framework */; };
 		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
@@ -172,11 +172,11 @@
 /* Begin PBXFileReference section */
 		3549BB171DA3890B00C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3549BB181DA3890B00C63030 /* Configurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurator.h; sourceTree = "<group>"; };
-		3549BB211DA389CD00C63030 /* Configurator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Configurator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB211DA389CD00C63030 /* ViewConfigurator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewConfigurator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB551DA38A5E00C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		3549BB571DA38A8800C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		3549BB581DA38A8800C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3549BB611DA38ADB00C63030 /* ConfiguratorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfiguratorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB611DA38ADB00C63030 /* ViewConfiguratorTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ViewConfiguratorTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguratorSetSpec.swift; sourceTree = "<group>"; };
 		35CA2A861E12920400147290 /* Quick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Quick.xcodeproj; path = Carthage/Checkouts/Quick/Quick.xcodeproj; sourceTree = "<group>"; };
 		35CA2A891E12920400147290 /* Nimble.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Nimble.xcodeproj; path = Carthage/Checkouts/Nimble/Nimble.xcodeproj; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 			files = (
 				35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */,
 				35CA2AC71E12925700147290 /* Quick.framework in Frameworks */,
-				3549BB661DA38ADB00C63030 /* Configurator.framework in Frameworks */,
+				3549BB661DA38ADB00C63030 /* ViewConfigurator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +247,8 @@
 		3549BB061DA387DB00C63030 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB211DA389CD00C63030 /* Configurator.framework */,
-				3549BB611DA38ADB00C63030 /* ConfiguratorTests-iOS.xctest */,
+				3549BB211DA389CD00C63030 /* ViewConfigurator.framework */,
+				3549BB611DA38ADB00C63030 /* ViewConfiguratorTests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,9 +462,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3549BB201DA389CD00C63030 /* Configurator-iOS */ = {
+		3549BB201DA389CD00C63030 /* ViewConfigurator-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "Configurator-iOS" */;
+			buildConfigurationList = 3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "ViewConfigurator-iOS" */;
 			buildPhases = (
 				E4B349131F2BD08C00CD7F53 /* Run SwiftLint */,
 				3549BB1C1DA389CD00C63030 /* Sources */,
@@ -476,14 +476,14 @@
 			);
 			dependencies = (
 			);
-			name = "Configurator-iOS";
+			name = "ViewConfigurator-iOS";
 			productName = "Configurator-iOS";
-			productReference = 3549BB211DA389CD00C63030 /* Configurator.framework */;
+			productReference = 3549BB211DA389CD00C63030 /* ViewConfigurator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3549BB601DA38ADB00C63030 /* ConfiguratorTests-iOS */ = {
+		3549BB601DA38ADB00C63030 /* ViewConfiguratorTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3549BB691DA38ADB00C63030 /* Build configuration list for PBXNativeTarget "ConfiguratorTests-iOS" */;
+			buildConfigurationList = 3549BB691DA38ADB00C63030 /* Build configuration list for PBXNativeTarget "ViewConfiguratorTests-iOS" */;
 			buildPhases = (
 				3549BB5D1DA38ADB00C63030 /* Sources */,
 				3549BB5E1DA38ADB00C63030 /* Frameworks */,
@@ -496,9 +496,9 @@
 				35CA2AC51E12922F00147290 /* PBXTargetDependency */,
 				3549BB681DA38ADB00C63030 /* PBXTargetDependency */,
 			);
-			name = "ConfiguratorTests-iOS";
+			name = "ViewConfiguratorTests-iOS";
 			productName = "ConfiguratorTests-iOS";
-			productReference = 3549BB611DA38ADB00C63030 /* ConfiguratorTests-iOS.xctest */;
+			productReference = 3549BB611DA38ADB00C63030 /* ViewConfiguratorTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -523,7 +523,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3549BAFF1DA387DB00C63030 /* Build configuration list for PBXProject "Configurator" */;
+			buildConfigurationList = 3549BAFF1DA387DB00C63030 /* Build configuration list for PBXProject "ViewConfigurator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -545,8 +545,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				3549BB201DA389CD00C63030 /* Configurator-iOS */,
-				3549BB601DA38ADB00C63030 /* ConfiguratorTests-iOS */,
+				3549BB201DA389CD00C63030 /* ViewConfigurator-iOS */,
+				3549BB601DA38ADB00C63030 /* ViewConfiguratorTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -740,7 +740,7 @@
 /* Begin PBXTargetDependency section */
 		3549BB681DA38ADB00C63030 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3549BB201DA389CD00C63030 /* Configurator-iOS */;
+			target = 3549BB201DA389CD00C63030 /* ViewConfigurator-iOS */;
 			targetProxy = 3549BB671DA38ADB00C63030 /* PBXContainerItemProxy */;
 		};
 		35CA2AC31E12922F00147290 /* PBXTargetDependency */ = {
@@ -881,7 +881,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
-				PRODUCT_NAME = Configurator;
+				PRODUCT_NAME = ViewConfigurator;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -908,7 +908,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.Configurator;
-				PRODUCT_NAME = Configurator;
+				PRODUCT_NAME = ViewConfigurator;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -954,7 +954,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3549BAFF1DA387DB00C63030 /* Build configuration list for PBXProject "Configurator" */ = {
+		3549BAFF1DA387DB00C63030 /* Build configuration list for PBXProject "ViewConfigurator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3549BB0B1DA387DB00C63030 /* Debug */,
@@ -963,7 +963,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "Configurator-iOS" */ = {
+		3549BB261DA389CD00C63030 /* Build configuration list for PBXNativeTarget "ViewConfigurator-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3549BB271DA389CD00C63030 /* Debug */,
@@ -972,7 +972,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3549BB691DA38ADB00C63030 /* Build configuration list for PBXNativeTarget "ConfiguratorTests-iOS" */ = {
+		3549BB691DA38ADB00C63030 /* Build configuration list for PBXNativeTarget "ViewConfiguratorTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3549BB6A1DA38ADB00C63030 /* Debug */,
