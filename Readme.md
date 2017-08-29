@@ -34,12 +34,12 @@ class ExampleViewController: UIViewController {
 	
 	let view: UIView = {
     	    let view = UIView()
-		view.backgroundColor = .blue
-		view.alpha = 0.8
-		view.layer.cornerRadius = 8
-		view.layer.borderColor = UIColor.red.cgColor
-		view.layer.borderWidth = 0.5
-		return view
+	    view.backgroundColor = .blue
+	    view.alpha = 0.8
+	    view.layer.cornerRadius = 8
+	    view.layer.borderColor = UIColor.red.cgColor
+	    view.layer.borderWidth = 0.5
+	    return view
 	}()
 	
 }
