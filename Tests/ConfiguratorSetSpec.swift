@@ -2,7 +2,7 @@ import Quick
 import Nimble
 @testable import Configurator
 
-class TestConfiguratable: Configurateable {
+class TestConfiguratable: Configurable {
     var configuratableProperty: Int = 0
     var anotherProperty: String = ""
     required init() {}

@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIView: Configurateable {}
+extension UIView: Configurable {}
 extension UIView: LayerContaining {}
 
 public extension ConfigurationSet where Base: UIView {

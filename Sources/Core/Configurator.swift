@@ -1,10 +1,10 @@
 import Foundation
 
-public protocol Configurateable: class {
+public protocol Configurable: class {
     init()
 }
 
-extension Configurateable {
+extension Configurable {
     public static var configure: ConfigurationSet<Self> {
         return .init()
     }
@@ -14,7 +14,7 @@ extension Configurateable {
     }
 }
 
-public class ConfigurationSet<Base: Configurateable> {
+public class ConfigurationSet<Base: Configurable> {
     typealias Configuration = (Base) -> Base
 
     private var configurations: [Configuration]
