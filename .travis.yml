@@ -27,6 +27,8 @@ script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
+  - xcrun instruments -w "$DESTINATION" || sleep 15
+
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
