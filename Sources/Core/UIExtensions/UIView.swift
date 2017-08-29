@@ -226,27 +226,3 @@ public extension ConfigurationSet where Base: UIView {
         }
     }
 }
-
-//extension ConfigurationSet where Base: UIView {
-//    func content(compressionResistancePriority priority: LayoutPriority,
-//                 for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-//        return content(compressionResistancePriority: priority.priority, for: axis)
-//    }
-//
-//    func content(compressionResistancePriority priority: LayoutPriority) -> ConfigurationSet<Base> {
-//        return self
-//            .content(compressionResistancePriority: priority, for: .horizontal)
-//            .content(compressionResistancePriority: priority, for: .vertical)
-//    }
-//
-//    func content(huggingPriority priority: LayoutPriority,
-//                 for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-//        return content(huggingPriority: priority.priority, for: axis)
-//    }
-//
-//    func content(huggingPriority priority: LayoutPriority) -> ConfigurationSet<Base> {
-//        return self
-//            .content(huggingPriority: priority, for: .horizontal)
-//            .content(huggingPriority: priority, for: .vertical)
-//    }
-//}
