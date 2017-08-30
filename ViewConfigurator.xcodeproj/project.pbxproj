@@ -16,6 +16,8 @@
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
 		E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45B54231F2BBBA1001F20E3 /* UIView.swift */; };
+		E4EC0D6D1F56C1E30053621D /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC0D6C1F56C1E30053621D /* UILabel.swift */; };
+		E4EC0D821F56C2FD0053621D /* UILabelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */; };
 		E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +211,8 @@
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
+		E4EC0D6C1F56C1E30053621D /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpecs.swift; sourceTree = "<group>"; };
 		E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContainingSpecs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -269,6 +273,7 @@
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
+				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 			children = (
 				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
+				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
 			);
 			name = UIKitExtensions;
 			sourceTree = "<group>";
@@ -722,6 +728,7 @@
 			files = (
 				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
 				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
+				E4EC0D6D1F56C1E30053621D /* UILabel.swift in Sources */,
 				E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
+				E4EC0D821F56C2FD0053621D /* UILabelSpecs.swift in Sources */,
 				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 				E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */,
 			);
