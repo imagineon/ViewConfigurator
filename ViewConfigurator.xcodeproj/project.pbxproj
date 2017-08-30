@@ -347,7 +347,8 @@
 			children = (
 				35CD64E51E60192300AF060B /* xcconfigs */,
 			);
-			path = Configuration;
+			name = Configuration;
+			path = Carthage/Checkouts;
 			sourceTree = "<group>";
 		};
 		35CD64E51E60192300AF060B /* xcconfigs */ = {
