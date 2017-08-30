@@ -63,29 +63,36 @@ class UIControlSpec: QuickSpec {
             }
             it("can add a Target defaulting to .touchUpInside") {
                 let target = UIView()
+                let action = #selector(target.removeFromSuperview)
                 let testView: UIControl = .build { set in
-                    set.addTarget(target, action: #selector(target.removeFromSuperview))
+                    set.addTarget(target, action: action)
                 }
                 expect(testView.allTargets).to(contain(target))
                 expect(testView.allControlEvents).to(equal(UIControlEvents.touchUpInside))
+                expect(testView.actions(forTarget: target, forControlEvent: .touchUpInside)).to(contain(action.description))
             }
             it("can add a Target defaulting to .touchUpInside") {
                 let target = UIView()
+                let action = #selector(target.removeFromSuperview)
                 let controlEvent = UIControlEvents.touchDown
                 let testView: UIControl = .build { set in
-                    set.addTarget(target, action: #selector(target.removeFromSuperview), for: controlEvent)
+                    set.addTarget(target, action: action, for: controlEvent)
                 }
                 expect(testView.allTargets).to(contain(target))
                 expect(testView.allControlEvents).to(equal(controlEvent))
+                expect(testView.actions(forTarget: target, forControlEvent: controlEvent)).to(contain(action.description))
             }
             it("can add a Target and remove it") {
                 let target = UIView()
+                let action = #selector(target.removeFromSuperview)
+                let controlEvent = UIControlEvents.touchDown
                 let testView: UIControl = .build { set in
-                    set.addTarget(target, action: #selector(target.removeFromSuperview))
-                        .removeTarget(target, action: #selector(target.removeFromSuperview))
+                    set.addTarget(target, action: action, for: controlEvent)
+                        .removeTarget(target, action: action, for: controlEvent)
                 }
                 expect(testView.allTargets).to(beEmpty())
                 expect(testView.allControlEvents).to(equal(UIControlEvents()))
+                expect(testView.actions(forTarget: target, forControlEvent: controlEvent)).to(beNil())
             }
         }
     }

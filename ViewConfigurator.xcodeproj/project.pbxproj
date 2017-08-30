@@ -276,9 +276,9 @@
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
-				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
+				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
