@@ -47,6 +47,32 @@ class UIControlSpec: QuickSpec {
                 }
                 expect(testView.contentHorizontalAlignment).to(equal(contentHorizontalAlignment))
             }
+            it("can add a Target defaulting to .touchUpInside") {
+                let target = UIView()
+                let testView: UIControl = .build { set in
+                    set.addTarget(target, action: #selector(target.removeFromSuperview))
+                }
+                expect(testView.allTargets).to(contain(target))
+                expect(testView.allControlEvents).to(equal(UIControlEvents.touchUpInside))
+            }
+            it("can add a Target defaulting to .touchUpInside") {
+                let target = UIView()
+                let controlEvent = UIControlEvents.touchDown
+                let testView: UIControl = .build { set in
+                    set.addTarget(target, action: #selector(target.removeFromSuperview), for: controlEvent)
+                }
+                expect(testView.allTargets).to(contain(target))
+                expect(testView.allControlEvents).to(equal(controlEvent))
+            }
+            it("can add a Target and remove it") {
+                let target = UIView()
+                let testView: UIControl = .build { set in
+                    set.addTarget(target, action: #selector(target.removeFromSuperview))
+                        .removeTarget(target, action: #selector(target.removeFromSuperview))
+                }
+                expect(testView.allTargets).to(beEmpty())
+                expect(testView.allControlEvents).to(equal(UIControlEvents()))
+            }
         }
     }
 }
