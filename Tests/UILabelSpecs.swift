@@ -164,6 +164,20 @@ class UILabelSpec: QuickSpec {
                 }
                 expect(testView.preferredMaxLayoutWidth).to(equal(preferredMaxLayoutWidth))
             }
+            it("can set lineBreakMode Value") {
+                let lineBreakMode: NSLineBreakMode = .byTruncatingHead
+                let testView: UILabel = .build { set in
+                    set.lineBreakMode(lineBreakMode)
+                }
+                expect(testView.lineBreakMode).to(equal(lineBreakMode))
+            }
+            it("can set numberOfLines Value") {
+                let numberOfLines: Int = 42
+                let testView: UILabel = .build { set in
+                    set.numberOfLines(numberOfLines)
+                }
+                expect(testView.numberOfLines).to(equal(numberOfLines))
+            }
         }
     }
 }
