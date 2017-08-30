@@ -33,6 +33,20 @@ class UIControlSpec: QuickSpec {
                 }
                 expect(testView.isHighlighted).to(equal(highlighted))
             }
+            it("can set contentVerticalAlignment Value") {
+                let contentVerticalAlignment: UIControlContentVerticalAlignment = .top
+                let testView: UIControl = .build { set in
+                    set.contentVerticalAlignment(contentVerticalAlignment)
+                }
+                expect(testView.contentVerticalAlignment).to(equal(contentVerticalAlignment))
+            }
+            it("can set contentHorizontalAlignment Value") {
+                let contentHorizontalAlignment: UIControlContentHorizontalAlignment = .right
+                let testView: UIControl = .build { set in
+                    set.contentHorizontalAlignment(contentHorizontalAlignment)
+                }
+                expect(testView.contentHorizontalAlignment).to(equal(contentHorizontalAlignment))
+            }
         }
     }
 }

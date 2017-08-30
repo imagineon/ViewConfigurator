@@ -9,4 +9,17 @@ public extension ConfigurationSet where Base: UIControl {
             control.isSelected = selected
         }
     }
+
+    func contentVerticalAlignment(_ alignment: UIControlContentVerticalAlignment) -> ConfigurationSet<Base> {
+        return set { (control: Base) in
+            control.contentVerticalAlignment = alignment
+        }
+    }
+
+    func contentHorizontalAlignment(_ alignment: UIControlContentHorizontalAlignment) -> ConfigurationSet<Base> {
+        return set { (control: Base) in
+            control.contentHorizontalAlignment = alignment
+        }
+    }
+    
 }
