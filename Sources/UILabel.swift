@@ -97,7 +97,7 @@ public extension ConfigurationSet where Base: UILabel {
         }
     }
 
-    @available(iOSApplicationExtension 9.0, *)
+    @available(iOS 9.0, *)
     func allowsDefaultTighteningForTruncation(_ allowsDefaultTighteningForTruncation: Bool) -> ConfigurationSet<Base> {
         return set { (label: UILabel) in
             label.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation
