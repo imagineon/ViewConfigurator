@@ -1,5 +1,31 @@
 import UIKit
 
+public protocol Highlightable: class {
+    var isHighlighted: Bool { get set }
+}
+
+public protocol Enableable: class {
+    var isEnabled: Bool { get set }
+}
+
+extension UILabel: Highlightable, Enableable {}
+
+public extension ConfigurationSet where Base: Highlightable {
+    func isHighlighted(_ highlighted: Bool) -> ConfigurationSet<Base> {
+        return set { (label: Base) in
+            label.isHighlighted = highlighted
+        }
+    }
+}
+
+public extension ConfigurationSet where Base: Enableable {
+    func isEnabled(_ enabled: Bool) -> ConfigurationSet<Base> {
+        return set { (label: Base) in
+            label.isEnabled = enabled
+        }
+    }
+}
+
 public extension ConfigurationSet where Base: UILabel {
     func text(_ text: String) -> ConfigurationSet<Base> {
         return set { (label: UILabel) in
@@ -55,21 +81,9 @@ public extension ConfigurationSet where Base: UILabel {
         }
     }
 
-    func isHighlighted(_ highlighted: Bool) -> ConfigurationSet<Base> {
-        return set { (label: UILabel) in
-            label.isHighlighted = highlighted
-        }
-    }
-
     func isUserInteractionEnabled(_ userInteractionEnabled: Bool) -> ConfigurationSet<Base> {
         return set { (label: UILabel) in
             label.isUserInteractionEnabled = userInteractionEnabled
-        }
-    }
-
-    func isEnabled(_ enabled: Bool) -> ConfigurationSet<Base> {
-        return set { (label: UILabel) in
-            label.isEnabled = enabled
         }
     }
 
