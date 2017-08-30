@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfigurator.xcodeproj">
+      location = "group:ViewConfigurator.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfiguratorPlayground.playground">
+      location = "group:ViewConfiguratorPlayground.playground">
    </FileRef>
    <FileRef
       location = "group:scripts">
@@ -17,7 +17,7 @@
       location = "group:Cartfile.private">
    </FileRef>
    <FileRef
-      location = "group:/Users/peterschumacher/ImagineOn/Configurator/ViewConfigurator.podspec">
+      location = "group:ViewConfigurator.podspec">
    </FileRef>
    <FileRef
       location = "group:LICENSE">
