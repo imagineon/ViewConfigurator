@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3549BB501DA38A2000C63030 /* Configurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* Configurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3549BB501DA38A2000C63030 /* ViewConfigurator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3549BB181DA3890B00C63030 /* ViewConfigurator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3549BB661DA38ADB00C63030 /* ViewConfigurator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3549BB211DA389CD00C63030 /* ViewConfigurator.framework */; };
 		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
@@ -25,7 +25,7 @@
 			containerPortal = 3549BAFC1DA387DB00C63030 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3549BB201DA389CD00C63030;
-			remoteInfo = "Configurator-iOS";
+			remoteInfo = "ViewConfigurator-iOS";
 		};
 		35CA2A921E12920400147290 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -171,7 +171,7 @@
 
 /* Begin PBXFileReference section */
 		3549BB171DA3890B00C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3549BB181DA3890B00C63030 /* Configurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configurator.h; sourceTree = "<group>"; };
+		3549BB181DA3890B00C63030 /* ViewConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewConfigurator.h; sourceTree = "<group>"; };
 		3549BB211DA389CD00C63030 /* ViewConfigurator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewConfigurator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB551DA38A5E00C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		3549BB571DA38A8800C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 		3549BB541DA38A4000C63030 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB181DA3890B00C63030 /* Configurator.h */,
+				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
 				3549BB171DA3890B00C63030 /* Info.plist */,
 				3549BB551DA38A5E00C63030 /* Info-tvOS.plist */,
 			);
@@ -455,7 +455,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3549BB501DA38A2000C63030 /* Configurator.h in Headers */,
+				3549BB501DA38A2000C63030 /* ViewConfigurator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +477,7 @@
 			dependencies = (
 			);
 			name = "ViewConfigurator-iOS";
-			productName = "Configurator-iOS";
+			productName = "ViewConfigurator-iOS";
 			productReference = 3549BB211DA389CD00C63030 /* ViewConfigurator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -926,7 +926,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.ConfiguratorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -945,7 +945,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.configurator.ConfiguratorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
