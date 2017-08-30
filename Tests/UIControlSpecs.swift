@@ -33,6 +33,20 @@ class UIControlSpec: QuickSpec {
                 }
                 expect(testView.isHighlighted).to(equal(highlighted))
             }
+            it("can set isSelected Value to true") {
+                let selected = true
+                let testView: UIControl = .build { set in
+                    set.isSelected(selected)
+                }
+                expect(testView.isSelected).to(equal(selected))
+            }
+            it("can set isSelected Value to false") {
+                let selected = false
+                let testView: UIControl = .build { set in
+                    set.isSelected(selected)
+                }
+                expect(testView.isSelected).to(equal(selected))
+            }
             it("can set contentVerticalAlignment Value") {
                 let contentVerticalAlignment: UIControlContentVerticalAlignment = .top
                 let testView: UIControl = .build { set in
