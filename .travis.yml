@@ -24,7 +24,7 @@ before_script:
   - sh scripts/bootstrap
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -cF iOS
+  - bash <(curl -s https://codecov.io/bash) -cF iOS;
 
 script:
   - set -o pipefail
