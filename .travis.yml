@@ -22,7 +22,10 @@ before_install:
 
 before_script:
   - sh scripts/bootstrap
-  
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -cF iOS
+
 script:
   - set -o pipefail
   - xcodebuild -version
@@ -32,7 +35,7 @@ script:
 
   # Build Framework in Debug and Run Tests if specified
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES ENABLE_TESTABILITY=YES test
+      xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -enableCodeCoverage YES -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test
     else
       xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build
     fi
@@ -53,6 +56,3 @@ script:
   - if [ $POD_LINT == "YES" ]; then
      pod lib lint --verbose;
    fi
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -cF iOS
