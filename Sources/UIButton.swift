@@ -42,4 +42,40 @@ public extension ConfigurationSet where Base: UIButton {
             button.showsTouchWhenHighlighted = show
         }
     }
+
+    func title(_ title: String, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setTitle(title, for: state)
+        }
+    }
+
+    func titleColor(_ color: UIColor, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setTitleColor(color, for: state)
+        }
+    }
+
+    func titleShadowColor(_ color: UIColor, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setTitleShadowColor(color, for: state)
+        }
+    }
+
+    func image(_ image: UIImage, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setImage(image, for: state)
+        }
+    }
+
+    func backgroundImage(_ image: UIImage, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setBackgroundImage(image, for: state)
+        }
+    }
+
+    func attributedTitle(_ title: NSAttributedString, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+        return set { (button: Base) in
+            button.setAttributedTitle(title, for: state)
+        }
+    }
 }
