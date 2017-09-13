@@ -104,13 +104,6 @@ class UILabelSpec: QuickSpec {
                 }
                 expect(testView.isEnabled).to(equal(enabled))
             }
-            it("can set isEnabled Value to false") {
-                let enabled = false
-                let testView: UILabel = .build { set in
-                    set.isEnabled(enabled)
-                }
-                expect(testView.isEnabled).to(equal(enabled))
-            }
             it("can set adjustsFontSizeToFitWidth Value to false") {
                 let adjustsFontSizeToFitWidth = false
                 let testView: UILabel = .build { set in
