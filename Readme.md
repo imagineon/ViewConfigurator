@@ -1,7 +1,7 @@
 ## ViewConfigurator
 
-[![Platforms](https://img.shields.io/cocoapods/p/Configurator.svg)](https://cocoapods.org/pods/ViewConfigurator)
-[![License](https://img.shields.io/cocoapods/l/Configurator.svg)](https://raw.githubusercontent.com/imagineon/ViewConfigurator/master/LICENSE)
+[![Platforms](https://img.shields.io/cocoapods/p/ViewConfigurator.svg)](https://cocoapods.org/pods/ViewConfigurator)
+[![License](https://img.shields.io/cocoapods/l/ViewConfigurator.svg)](https://raw.githubusercontent.com/imagineon/ViewConfigurator/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
