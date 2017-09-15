@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name = 'ViewConfigurator'
- s.version = '0.2.0'
+ s.version = '0.3.0'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'The clean way to setup your views'
  s.homepage = 'http://www.imagineon.de'
