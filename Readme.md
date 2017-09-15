@@ -120,12 +120,20 @@ let otherView = UIView.build { config in
 ```
 
 
+## Supported Classes
+
+- UIView
+- UIControl
+- UIButton
+- UILabel
+- UIImageView
+
 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.0+
-- Swift 3+
+- Xcode 9.0+
+- Swift 4+
 
 ## Installation
 
@@ -146,7 +154,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ViewConfigurator', '~> 0.1.0'
+pod 'ViewConfigurator', '~> 0.3.0'
 ```
 
 Then, run the following command:
@@ -169,7 +177,7 @@ $ brew install carthage
 To integrate ViewConfigurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ImagineOn/ViewConfigurator" ~> 0.1.0
+github "ImagineOn/ViewConfigurator" ~> 0.3.0
 ```
 ### Swift Package Manager
 
@@ -181,7 +189,7 @@ import PackageDescription
 let package = Package(
     name: "ViewConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.0.1")
+        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.3.0")
     ]
 )
 ```
@@ -225,7 +233,7 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UILabel e.g.).
+At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UIPageControl, UIScrollView e.g.).
 Also we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
 
 ## License
