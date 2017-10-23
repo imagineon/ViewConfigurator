@@ -213,13 +213,13 @@
 		35CD65161E60192300AF060B /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
 		35CD65171E60192300AF060B /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
+		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		E45621451F57162100FBD730 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
-		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
-		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = SOURCE_ROOT; };
+		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControl.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
 		E4EA601C1F69834400A2BF3A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
@@ -252,11 +252,11 @@
 		3549BAFB1DA387DB00C63030 = {
 			isa = PBXGroup;
 			children = (
-				3549BB161DA3890B00C63030 /* Sources */,
-				3549BB191DA3890B00C63030 /* Tests */,
-				3549BB061DA387DB00C63030 /* Products */,
 				35CA2AD51E12933000147290 /* Configuration */,
 				357D954B1DA3F2B400AEC55F /* Frameworks */,
+				3549BB061DA387DB00C63030 /* Products */,
+				3549BB161DA3890B00C63030 /* Sources */,
+				3549BB191DA3890B00C63030 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -273,7 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				3549BB5C1DA38AA500C63030 /* Core */,
+				E4E706F31F9E41FB004CACBD /* QuartzCoreExtension */,
 				3549BB541DA38A4000C63030 /* Supporting Files */,
+				E409D8F51F2BB7C8004964AE /* UIKitExtensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -281,14 +283,14 @@
 		3549BB191DA3890B00C63030 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
-				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
-				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
+				E45621471F5718E000FBD730 /* UIButtonSpecs.swift */,
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
-				E45621471F5718E000FBD730 /* UIButtonSpecs.swift */,
-				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
+				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
+				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -296,29 +298,31 @@
 		3549BB541DA38A4000C63030 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
-				3549BB171DA3890B00C63030 /* Info.plist */,
 				3549BB551DA38A5E00C63030 /* Info-tvOS.plist */,
+				3549BB171DA3890B00C63030 /* Info.plist */,
+				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3549BB5B1DA38A8C00C63030 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB581DA38A8800C63030 /* Info.plist */,
 				3549BB571DA38A8800C63030 /* Info-tvOS.plist */,
+				3549BB581DA38A8800C63030 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3549BB5C1DA38AA500C63030 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E409D8F51F2BB7C8004964AE /* UIKitExtensions */,
 				E409D8E61F2BB3F0004964AE /* Configurator.swift */,
 			);
 			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		357D954B1DA3F2B400AEC55F /* Frameworks */ = {
@@ -368,28 +372,28 @@
 				35CD64E51E60192300AF060B /* xcconfigs */,
 			);
 			name = Configuration;
-			path = Carthage/Checkouts;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		35CD64E51E60192300AF060B /* xcconfigs */ = {
 			isa = PBXGroup;
 			children = (
 				35CD64E71E60192300AF060B /* Base */,
-				35CD65031E60192300AF060B /* iOS */,
 				35CD65081E60192300AF060B /* Mac OS X */,
+				35CD65031E60192300AF060B /* iOS */,
 				35CD650F1E60192300AF060B /* tvOS */,
 				35CD65141E60192300AF060B /* watchOS */,
 			);
 			name = xcconfigs;
-			path = Carthage/Checkouts/xcconfigs;
-			sourceTree = SOURCE_ROOT;
+			path = xcconfigs;
+			sourceTree = "<group>";
 		};
 		35CD64E71E60192300AF060B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				35CD64E81E60192300AF060B /* Common.xcconfig */,
 				35CD64E91E60192300AF060B /* Configurations */,
 				35CD64EE1E60192300AF060B /* Targets */,
+				35CD64E81E60192300AF060B /* Common.xcconfig */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -463,14 +467,23 @@
 		E409D8F51F2BB7C8004964AE /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
-				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
-				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
+				E45621451F57162100FBD730 /* UIButton.swift */,
 				E4A317921F56F9E300649294 /* UIControl.swift */,
 				E4EA601C1F69834400A2BF3A /* UIImageView.swift */,
-				E45621451F57162100FBD730 /* UIButton.swift */,
+				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
+				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 			);
 			name = UIKitExtensions;
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		E4E706F31F9E41FB004CACBD /* QuartzCoreExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
+			);
+			name = QuartzCoreExtension;
+			path = QuartzCoreExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -922,7 +935,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator;
@@ -949,7 +962,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator;
@@ -969,7 +982,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -988,7 +1001,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

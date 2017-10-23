@@ -1,6 +1,5 @@
 import UIKit
 
-
 extension UIControl: Highlightable, Enableable {}
 
 public extension ConfigurationSet where Base: UIControl {
