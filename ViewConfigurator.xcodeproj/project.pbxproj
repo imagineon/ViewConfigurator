@@ -15,6 +15,7 @@
 		7C59413C1FB9A0B4002F10CE /* Highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413B1FB9A0B4002F10CE /* Highlightable.swift */; };
 		7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413D1FB9A0C2002F10CE /* Enableable.swift */; };
 		7C5941401FB9A326002F10CE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */; };
+		7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
@@ -219,6 +220,7 @@
 		7C59413B1FB9A0B4002F10CE /* Highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlightable.swift; sourceTree = "<group>"; };
 		7C59413D1FB9A0C2002F10CE /* Enableable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enableable.swift; sourceTree = "<group>"; };
 		7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewSpecs.swift; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
+				7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */,
 				E45621471F5718E000FBD730 /* UIButtonSpecs.swift */,
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
@@ -784,6 +787,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */,
 				E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */,
 				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
 				E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */,
