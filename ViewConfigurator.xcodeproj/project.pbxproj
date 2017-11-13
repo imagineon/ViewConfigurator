@@ -12,6 +12,8 @@
 		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
+		7C59413C1FB9A0B4002F10CE /* Highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413B1FB9A0B4002F10CE /* Highlightable.swift */; };
+		7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413D1FB9A0C2002F10CE /* Enableable.swift */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
@@ -213,13 +215,15 @@
 		35CD65161E60192300AF060B /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
 		35CD65171E60192300AF060B /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
-		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		7C59413B1FB9A0B4002F10CE /* Highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlightable.swift; sourceTree = "<group>"; };
+		7C59413D1FB9A0C2002F10CE /* Enableable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enableable.swift; sourceTree = "<group>"; };
+		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		E45621451F57162100FBD730 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
-		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = UIView.swift; sourceTree = "<group>"; };
-		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIControl.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
 		E4EA601C1F69834400A2BF3A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
@@ -302,7 +306,6 @@
 				3549BB171DA3890B00C63030 /* Info.plist */,
 				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -312,7 +315,6 @@
 				3549BB571DA38A8800C63030 /* Info-tvOS.plist */,
 				3549BB581DA38A8800C63030 /* Info.plist */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -321,7 +323,6 @@
 			children = (
 				E409D8E61F2BB3F0004964AE /* Configurator.swift */,
 			);
-			name = Core;
 			path = Core;
 			sourceTree = "<group>";
 		};
@@ -371,7 +372,6 @@
 			children = (
 				35CD64E51E60192300AF060B /* xcconfigs */,
 			);
-			name = Configuration;
 			path = Configuration;
 			sourceTree = "<group>";
 		};
@@ -384,7 +384,6 @@
 				35CD650F1E60192300AF060B /* tvOS */,
 				35CD65141E60192300AF060B /* watchOS */,
 			);
-			name = xcconfigs;
 			path = xcconfigs;
 			sourceTree = "<group>";
 		};
@@ -464,16 +463,25 @@
 			path = watchOS;
 			sourceTree = "<group>";
 		};
+		7C59413A1FB9A09A002F10CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7C59413B1FB9A0B4002F10CE /* Highlightable.swift */,
+				7C59413D1FB9A0C2002F10CE /* Enableable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E409D8F51F2BB7C8004964AE /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				7C59413A1FB9A09A002F10CE /* Protocols */,
 				E45621451F57162100FBD730 /* UIButton.swift */,
 				E4A317921F56F9E300649294 /* UIControl.swift */,
 				E4EA601C1F69834400A2BF3A /* UIImageView.swift */,
 				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
 				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 			);
-			name = UIKitExtensions;
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
@@ -482,7 +490,6 @@
 			children = (
 				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
 			);
-			name = QuartzCoreExtension;
 			path = QuartzCoreExtension;
 			sourceTree = "<group>";
 		};
@@ -757,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */,
 				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
 				E4A317931F56F9E300649294 /* UIControl.swift in Sources */,
 				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
@@ -764,6 +772,7 @@
 				E4EC0D6D1F56C1E30053621D /* UILabel.swift in Sources */,
 				E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */,
 				E45621461F57162100FBD730 /* UIButton.swift in Sources */,
+				7C59413C1FB9A0B4002F10CE /* Highlightable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
