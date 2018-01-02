@@ -16,6 +16,7 @@
 		7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413D1FB9A0C2002F10CE /* Enableable.swift */; };
 		7C5941401FB9A326002F10CE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */; };
 		7C8A4A011FFBD12B00C69F3C /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A4A001FFBD12B00C69F3C /* UIScrollView.swift */; };
+		7C8A4A151FFBEC1200C69F3C /* UIScrollViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8A4A131FFBEB4A00C69F3C /* UIScrollViewSpecs.swift */; };
 		7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
@@ -223,6 +224,7 @@
 		7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewSpecs.swift; sourceTree = "<group>"; };
 		7C8A4A001FFBD12B00C69F3C /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
+		7C8A4A131FFBEB4A00C69F3C /* UIScrollViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewSpecs.swift; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
 				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
+				7C8A4A131FFBEB4A00C69F3C /* UIScrollViewSpecs.swift */,
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 			);
 			path = Tests;
@@ -488,8 +491,8 @@
 				E4A317921F56F9E300649294 /* UIControl.swift */,
 				E4EA601C1F69834400A2BF3A /* UIImageView.swift */,
 				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
-				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 				7C8A4A001FFBD12B00C69F3C /* UIScrollView.swift */,
+				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8A4A151FFBEC1200C69F3C /* UIScrollViewSpecs.swift in Sources */,
 				7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */,
 				E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */,
 				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
