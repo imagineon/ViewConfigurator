@@ -126,6 +126,150 @@ class UIScrollViewSpecs: QuickSpec {
                 }
                 expect(testViewTrue.alwaysBounceHorizontal).to(equal(true))
             }
+            it("can set decelerationRate") {
+                let rateNormal = UIScrollViewDecelerationRateNormal
+                let testViewNormal: UIScrollView = .build { set in
+                    set.decelerationRate(rateNormal)
+                }
+                expect(testViewNormal.decelerationRate).to(equal(rateNormal))
+                
+                let rateFast = UIScrollViewDecelerationRateNormal
+                let testViewFast: UIScrollView = .build { set in
+                    set.decelerationRate(rateFast)
+                }
+                expect(testViewFast.decelerationRate).to(equal(rateFast))
+            }
+            it("can set indicatorStyle") {
+                let styleBlack = UIScrollViewIndicatorStyle.black
+                let testViewBlack: UIScrollView = .build { set in
+                    set.indicatorStyle(styleBlack)
+                }
+                expect(testViewBlack.indicatorStyle).to(equal(styleBlack))
+                
+                let styleWhite = UIScrollViewIndicatorStyle.white
+                let testViewWhite: UIScrollView = .build { set in
+                    set.indicatorStyle(styleWhite)
+                }
+                expect(testViewWhite.indicatorStyle).to(equal(styleWhite))
+            }
+            it("can set scrollIndicatorInsets") {
+                let inset = UIEdgeInsets(top: 42.0, left: 43.0, bottom: 44.0, right: 45.0)
+                let testView: UIScrollView = .build { set in
+                    set.scrollIndicatorInsets(inset)
+                }
+                expect(testView.scrollIndicatorInsets).to(equal(inset))
+            }
+            it("can set showsVerticalScrollIndicator") {
+                let testViewFalse: UIScrollView = .build { set in
+                    set.showsVerticalScrollIndicator(false)
+                }
+                expect(testViewFalse.showsVerticalScrollIndicator).to(equal(false))
+                
+                let testViewTrue: UIScrollView = .build { set in
+                    set.showsVerticalScrollIndicator(true)
+                }
+                expect(testViewTrue.showsVerticalScrollIndicator).to(equal(true))
+            }
+            it("can set showsHorizontalScrollIndicator") {
+                let testViewFalse: UIScrollView = .build { set in
+                    set.showsHorizontalScrollIndicator(false)
+                }
+                expect(testViewFalse.showsHorizontalScrollIndicator).to(equal(false))
+                
+                let testViewTrue: UIScrollView = .build { set in
+                    set.showsHorizontalScrollIndicator(true)
+                }
+                expect(testViewTrue.showsHorizontalScrollIndicator).to(equal(true))
+            }
+            if #available(iOS 10.0, *) {
+                it("can set refreshControl") {
+                    let control = UIRefreshControl()
+                    let testView: UIScrollView = .build { set in
+                        set.refreshControl(control)
+                    }
+                    expect(testView.refreshControl).to(be(control))
+                }
+            }
+            it("can set canCancelContentTouches") {
+                let testViewFalse: UIScrollView = .build { set in
+                    set.canCancelContentTouches(false)
+                }
+                expect(testViewFalse.canCancelContentTouches).to(equal(false))
+                
+                let testViewTrue: UIScrollView = .build { set in
+                    set.canCancelContentTouches(true)
+                }
+                expect(testViewTrue.canCancelContentTouches).to(equal(true))
+            }
+            it("can set delaysContentTouches") {
+                let testViewFalse: UIScrollView = .build { set in
+                    set.delaysContentTouches(false)
+                }
+                expect(testViewFalse.delaysContentTouches).to(equal(false))
+                
+                let testViewTrue: UIScrollView = .build { set in
+                    set.delaysContentTouches(true)
+                }
+                expect(testViewTrue.delaysContentTouches).to(equal(true))
+            }
+            it("can set zoomScale") {
+                let scale: CGFloat = 42.0
+                let testView: UIScrollView = .build { set in
+                    set.zoomScale(scale)
+                }
+                expect(testView.zoomScale).to(equal(scale))
+            }
+            it("can set minimumZoomScale") {
+                let scale: CGFloat = 42.0
+                let testView: UIScrollView = .build { set in
+                    set.minimumZoomScale(scale)
+                }
+                expect(testView.minimumZoomScale).to(equal(scale))
+            }
+            it("can set maximumZoomScale") {
+                let scale: CGFloat = 42.0
+                let testView: UIScrollView = .build { set in
+                    set.maximumZoomScale(scale)
+                }
+                expect(testView.maximumZoomScale).to(equal(scale))
+            }
+            it("can set bouncesZoom") {
+                let testViewFalse: UIScrollView = .build { set in
+                    set.bouncesZoom(false)
+                }
+                expect(testViewFalse.bouncesZoom).to(equal(false))
+                
+                let testViewTrue: UIScrollView = .build { set in
+                    set.bouncesZoom(true)
+                }
+                expect(testViewTrue.bouncesZoom).to(equal(true))
+            }
+            it("can set keyboardDismissMode") {
+                let modeInteractive = UIScrollViewKeyboardDismissMode.interactive
+                let testViewInteractive: UIScrollView = .build { set in
+                    set.keyboardDismissMode(modeInteractive)
+                }
+                expect(testViewInteractive.keyboardDismissMode).to(equal(modeInteractive))
+                
+                let modeOnDrag = UIScrollViewKeyboardDismissMode.onDrag
+                let testViewOnDrag: UIScrollView = .build { set in
+                    set.keyboardDismissMode(modeOnDrag)
+                }
+                expect(testViewOnDrag.keyboardDismissMode).to(equal(modeOnDrag))
+            }
+            it("can set indexDisplayMode") {
+                let modeHidden = UIScrollViewIndexDisplayMode.alwaysHidden
+                let testViewHidden: UIScrollView = .build { set in
+                    set.indexDisplayMode(modeHidden)
+                }
+                expect(testViewHidden.indexDisplayMode).to(equal(modeHidden))
+                
+                let modeAutomatic = UIScrollViewIndexDisplayMode.automatic
+                let testViewAutomatic: UIScrollView = .build { set in
+                    set.indexDisplayMode(modeAutomatic)
+                }
+                expect(testViewAutomatic.indexDisplayMode).to(equal(modeAutomatic))
+            }
         }
     }
 }
