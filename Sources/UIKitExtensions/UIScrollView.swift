@@ -123,6 +123,35 @@ public extension ConfigurationSet where Base: UIScrollView {
         }
     }
     
+    /**
+     - note: This method only has the desired effect if applied after the scroll view gets a `delegate`, and the delegate's class
+     must implement the method `viewForZooming(in scrollView: UIScrollView)`. Also, note that the `zoomScale` property of
+     the scroll view does not necessarily get set to the value of the parameter `zoomScale`, but rather to value in the interval
+     `[minimumZoomScale, maximumZoomScale]` that is closest to this parameter. Since both `minimumZoomScale` and `maximumZoomScale`
+     have default value 1.0, setting the `zoomScale` before changing them will have no effect.
+     
+     These remarks are not specific to the `ConfigurationSet.zoomScale` method but rather general observations about the behavior of
+     the `UIScrollView` class. Remember that `ConfigurationSet` applies concatenated configurations in the order they appear, so you
+     can successfully set the `zoomScale` with a single `build` call as follows:
+     
+     ```
+     class MyDelegate: NSObject, UIScrollViewDelegate {
+         let zoomView = UIView()
+         func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+             return zoomView
+         }
+     }
+
+     let delegate = MyDelegate()
+     let scrollView = UIScrollView.build { set in
+         set
+             .delegate(delegate)
+             .minimumZoomScale(3.14)
+             .maximumZoomScale(99.9)
+             .zoomScale(42.0)
+     }
+     ```
+     */
     func zoomScale(_ zoomScale: CGFloat) -> ConfigurationSet<Base> {
         return set { (scrollView: Base) in
             scrollView.zoomScale = zoomScale
