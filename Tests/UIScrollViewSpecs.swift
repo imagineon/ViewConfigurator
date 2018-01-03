@@ -213,9 +213,20 @@ class UIScrollViewSpecs: QuickSpec {
                 expect(testViewTrue.delaysContentTouches).to(equal(true))
             }
             it("can set zoomScale") {
+                class DummyScrollViewDelegate: NSObject, UIScrollViewDelegate {
+                    let zoomView = UIView()
+                    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+                        return zoomView
+                    }
+                }
+                let dummyDelegate = DummyScrollViewDelegate()
                 let scale: CGFloat = 42.0
+                let maximum: CGFloat = 100.0
                 let testView: UIScrollView = .build { set in
-                    set.zoomScale(scale)
+                    set
+                        .delegate(dummyDelegate)
+                        .maximumZoomScale(maximum)
+                        .zoomScale(scale)
                 }
                 expect(testView.zoomScale).to(equal(scale))
             }
