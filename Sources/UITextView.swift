@@ -103,12 +103,6 @@ public extension ConfigurationSet where Base: UITextView {
         })
     }
     
-    func setSomething(_ attributes: [String : Any]) -> ConfigurationSet<Base> {
-        return set({ (textView: UITextView) in
-            textView.linkTextAttributes = attributes
-        })
-    }
-    
     func setDelegate(_ delegate: UITextViewDelegate) -> ConfigurationSet<Base> {
         return set({ (textView: UITextView) in
             textView.delegate = delegate
