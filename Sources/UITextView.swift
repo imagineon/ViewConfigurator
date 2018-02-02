@@ -75,12 +75,6 @@ public extension ConfigurationSet where Base: UITextView {
         })
     }
     
-    func scrollRangeToVisible(_ range: NSRange) -> ConfigurationSet<Base> {
-        return set({ (textView: UITextView) in
-            textView.scrollRangeToVisible(range)
-        })
-    }
-    
     func inputAccesssoryView(_ view: UIView) -> ConfigurationSet<Base> {
         return set({ (textView: UITextView) in
             textView.inputAccessoryView = view
@@ -108,22 +102,20 @@ public extension ConfigurationSet where Base: UITextView {
             textView.linkTextAttributes = attributes
         })
     }
+    
+    func setSomething(_ attributes: [String : Any]) -> ConfigurationSet<Base> {
+        return set({ (textView: UITextView) in
+            textView.linkTextAttributes = attributes
+        })
+    }
+    
+    func setDelegate(_ delegate: UITextViewDelegate) -> ConfigurationSet<Base> {
+        return set({ (textView: UITextView) in
+            textView.delegate = delegate
+        })
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
