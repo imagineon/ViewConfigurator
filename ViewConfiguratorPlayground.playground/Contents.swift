@@ -10,8 +10,16 @@ struct TestColorModel {
     let secondaryColor: UIColor
 }
 
+let standardConfiguration = UIView.configure
+    .backgroundColor(.blue)
+    .alpha(0.8)
+    .cornerRadius(8)
+    .borderColor(UIColor.red.cgColor)
+
+
 class TestViewController: UIViewController {
     let model: TestColorModel = TestColorModel(primaryColor: .blue, secondaryColor: .red)
+
     
     lazy var someView: UIView = {
         let view = UIView()

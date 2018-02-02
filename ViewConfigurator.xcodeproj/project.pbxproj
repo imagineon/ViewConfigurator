@@ -14,6 +14,10 @@
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
 		7A541B292024520800DC3B49 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A541B282024520800DC3B49 /* UITextView.swift */; };
 		7A541B3D2024523300DC3B49 /* UITextViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */; };
+		7C59413C1FB9A0B4002F10CE /* Highlightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413B1FB9A0B4002F10CE /* Highlightable.swift */; };
+		7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413D1FB9A0C2002F10CE /* Enableable.swift */; };
+		7C5941401FB9A326002F10CE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */; };
+		7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
@@ -218,12 +222,17 @@
 		7A541B282024520800DC3B49 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewSpecs.swift; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
+		7C59413B1FB9A0B4002F10CE /* Highlightable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlightable.swift; sourceTree = "<group>"; };
+		7C59413D1FB9A0C2002F10CE /* Enableable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enableable.swift; sourceTree = "<group>"; };
+		7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewSpecs.swift; sourceTree = "<group>"; };
+		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		E45621451F57162100FBD730 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
-		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Core/UIExtensions/UIView.swift; sourceTree = "<group>"; };
-		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = SOURCE_ROOT; };
+		E45B54231F2BBBA1001F20E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		E4A317921F56F9E300649294 /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
 		E4EA601C1F69834400A2BF3A /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
@@ -256,11 +265,11 @@
 		3549BAFB1DA387DB00C63030 = {
 			isa = PBXGroup;
 			children = (
-				3549BB161DA3890B00C63030 /* Sources */,
-				3549BB191DA3890B00C63030 /* Tests */,
-				3549BB061DA387DB00C63030 /* Products */,
 				35CA2AD51E12933000147290 /* Configuration */,
 				357D954B1DA3F2B400AEC55F /* Frameworks */,
+				3549BB061DA387DB00C63030 /* Products */,
+				3549BB161DA3890B00C63030 /* Sources */,
+				3549BB191DA3890B00C63030 /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,7 +286,9 @@
 			isa = PBXGroup;
 			children = (
 				3549BB5C1DA38AA500C63030 /* Core */,
+				E4E706F31F9E41FB004CACBD /* QuartzCoreExtension */,
 				3549BB541DA38A4000C63030 /* Supporting Files */,
+				E409D8F51F2BB7C8004964AE /* UIKitExtensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -285,15 +296,17 @@
 		3549BB191DA3890B00C63030 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
-				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
 				7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */,
 				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
+				7C5941411FB9A3FD002F10CE /* UIActivityIndicatorViewSpecs.swift */,
+				E45621471F5718E000FBD730 /* UIButtonSpecs.swift */,
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
-				E45621471F5718E000FBD730 /* UIButtonSpecs.swift */,
-				3549BB5B1DA38A8C00C63030 /* Supporting Files */,
+				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
+				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -301,29 +314,28 @@
 		3549BB541DA38A4000C63030 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
-				3549BB171DA3890B00C63030 /* Info.plist */,
 				3549BB551DA38A5E00C63030 /* Info-tvOS.plist */,
+				3549BB171DA3890B00C63030 /* Info.plist */,
+				3549BB181DA3890B00C63030 /* ViewConfigurator.h */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3549BB5B1DA38A8C00C63030 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3549BB581DA38A8800C63030 /* Info.plist */,
 				3549BB571DA38A8800C63030 /* Info-tvOS.plist */,
+				3549BB581DA38A8800C63030 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		3549BB5C1DA38AA500C63030 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E409D8F51F2BB7C8004964AE /* UIKitExtensions */,
 				E409D8E61F2BB3F0004964AE /* Configurator.swift */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		357D954B1DA3F2B400AEC55F /* Frameworks */ = {
@@ -372,29 +384,27 @@
 			children = (
 				35CD64E51E60192300AF060B /* xcconfigs */,
 			);
-			name = Configuration;
-			path = Carthage/Checkouts;
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		35CD64E51E60192300AF060B /* xcconfigs */ = {
 			isa = PBXGroup;
 			children = (
 				35CD64E71E60192300AF060B /* Base */,
-				35CD65031E60192300AF060B /* iOS */,
 				35CD65081E60192300AF060B /* Mac OS X */,
+				35CD65031E60192300AF060B /* iOS */,
 				35CD650F1E60192300AF060B /* tvOS */,
 				35CD65141E60192300AF060B /* watchOS */,
 			);
-			name = xcconfigs;
-			path = Carthage/Checkouts/xcconfigs;
-			sourceTree = SOURCE_ROOT;
+			path = xcconfigs;
+			sourceTree = "<group>";
 		};
 		35CD64E71E60192300AF060B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				35CD64E81E60192300AF060B /* Common.xcconfig */,
 				35CD64E91E60192300AF060B /* Configurations */,
 				35CD64EE1E60192300AF060B /* Targets */,
+				35CD64E81E60192300AF060B /* Common.xcconfig */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -465,18 +475,37 @@
 			path = watchOS;
 			sourceTree = "<group>";
 		};
+		7C59413A1FB9A09A002F10CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7C59413B1FB9A0B4002F10CE /* Highlightable.swift */,
+				7C59413D1FB9A0C2002F10CE /* Enableable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		E409D8F51F2BB7C8004964AE /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
-				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
-				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
+				7C59413A1FB9A09A002F10CE /* Protocols */,
+				7C59413F1FB9A325002F10CE /* UIActivityIndicatorView.swift */,
+				E45621451F57162100FBD730 /* UIButton.swift */,
 				E4A317921F56F9E300649294 /* UIControl.swift */,
 				E4EA601C1F69834400A2BF3A /* UIImageView.swift */,
 				7A541B282024520800DC3B49 /* UITextView.swift */,
 				E45621451F57162100FBD730 /* UIButton.swift */,
+				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
+				E45B54231F2BBBA1001F20E3 /* UIView.swift */,
 			);
-			name = UIKitExtensions;
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		E4E706F31F9E41FB004CACBD /* QuartzCoreExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E44F9F4C1F2C9EC500D2683D /* CALayer.swift */,
+			);
+			path = QuartzCoreExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -750,14 +779,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C59413E1FB9A0C2002F10CE /* Enableable.swift in Sources */,
 				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
 				7A541B292024520800DC3B49 /* UITextView.swift in Sources */,
 				E4A317931F56F9E300649294 /* UIControl.swift in Sources */,
 				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
 				E4EA601D1F69834400A2BF3A /* UIImageView.swift in Sources */,
+				7C5941401FB9A326002F10CE /* UIActivityIndicatorView.swift in Sources */,
 				E4EC0D6D1F56C1E30053621D /* UILabel.swift in Sources */,
 				E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */,
 				E45621461F57162100FBD730 /* UIButton.swift in Sources */,
+				7C59413C1FB9A0B4002F10CE /* Highlightable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A541B3D2024523300DC3B49 /* UITextViewSpecs.swift in Sources */,
+				7C9760FB1FB9A68900DC0BF8 /* UIActivityIndicatorViewSpecs.swift in Sources */,
 				E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */,
 				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
 				E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */,
@@ -930,7 +963,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator;
@@ -957,7 +990,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Checkouts/xcconfigs/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator;
@@ -977,7 +1010,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -996,7 +1029,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
