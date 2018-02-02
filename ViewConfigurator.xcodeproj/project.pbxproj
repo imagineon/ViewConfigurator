@@ -12,6 +12,8 @@
 		3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */; };
 		35CA2AC61E12925700147290 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2A971E12920400147290 /* Nimble.framework */; };
 		35CA2AC71E12925700147290 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA2AB31E12920400147290 /* Quick.framework */; };
+		7A541B292024520800DC3B49 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A541B282024520800DC3B49 /* UITextView.swift */; };
+		7A541B3D2024523300DC3B49 /* UITextViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F9F4C1F2C9EC500D2683D /* CALayer.swift */; };
@@ -213,6 +215,8 @@
 		35CD65161E60192300AF060B /* watchOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Base.xcconfig"; sourceTree = "<group>"; };
 		35CD65171E60192300AF060B /* watchOS-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-Framework.xcconfig"; sourceTree = "<group>"; };
 		35CD65181E60192300AF060B /* watchOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "watchOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		7A541B282024520800DC3B49 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewSpecs.swift; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configurator.swift; path = Core/Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E44F9F4C1F2C9EC500D2683D /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 				3549BB8A1DA38C0A00C63030 /* ConfiguratorSetSpec.swift */,
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
 				E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */,
+				7A541B3C2024523300DC3B49 /* UITextViewSpecs.swift */,
 				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
 				E4A317A51F56FA1600649294 /* UIControlSpecs.swift */,
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
@@ -468,6 +473,7 @@
 				E4EC0D6C1F56C1E30053621D /* UILabel.swift */,
 				E4A317921F56F9E300649294 /* UIControl.swift */,
 				E4EA601C1F69834400A2BF3A /* UIImageView.swift */,
+				7A541B282024520800DC3B49 /* UITextView.swift */,
 				E45621451F57162100FBD730 /* UIButton.swift */,
 			);
 			name = UIKitExtensions;
@@ -745,6 +751,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E44F9F4D1F2C9EC500D2683D /* CALayer.swift in Sources */,
+				7A541B292024520800DC3B49 /* UITextView.swift in Sources */,
 				E4A317931F56F9E300649294 /* UIControl.swift in Sources */,
 				E45B54241F2BBBA1001F20E3 /* UIView.swift in Sources */,
 				E4EA601D1F69834400A2BF3A /* UIImageView.swift in Sources */,
@@ -758,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A541B3D2024523300DC3B49 /* UITextViewSpecs.swift in Sources */,
 				E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */,
 				E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */,
 				E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */,
