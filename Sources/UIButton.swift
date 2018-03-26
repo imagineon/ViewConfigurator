@@ -1,12 +1,11 @@
 import UIKit
 
 public extension ConfigurationSet where Base: UIButton {
-    func contentEdgeInsets(_ edgeInsets: UIEdgeInsets) -> ConfigurationSet<Base> {
-        return set { (button: Base) in
-            button.contentEdgeInsets = edgeInsets
+    func contentEdgeInsets(_ newValue: UIEdgeInsets) -> ConfigurationSet<Base> {
+        return set{ (UIButton: UIButton) in
+            UIButton.contentEdgeInsets = newValue
         }
     }
-
     func titleEdgeInsets(_ edgeInsets: UIEdgeInsets) -> ConfigurationSet<Base> {
         return set { (button: Base) in
             button.titleEdgeInsets = edgeInsets

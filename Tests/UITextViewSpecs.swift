@@ -95,7 +95,7 @@ class UITextViewSpecs: QuickSpec {
                 yellowView.backgroundColor = .yellow
                 
                 let testView: UITextView = .build { set in
-                    set.inputAccesssoryView(yellowView)
+                    set.inputAccessoryView(yellowView)
                 }
                 expect(testView.inputAccessoryView).to(equal(yellowView))
             }
