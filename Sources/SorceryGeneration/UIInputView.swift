@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIInputView {
-    func inputViewStyle(_ newValue: UIInputViewStyle) -> ConfigurationSet<Base> {
-        return set{ (UIInputView: UIInputView) in
-            UIInputView.inputViewStyle = newValue
-        }
-    }
 
     @available(iOS 9.0, *)
     func allowsSelfSizing(_ newValue: Bool) -> ConfigurationSet<Base> {
@@ -15,4 +10,5 @@ public extension ConfigurationSet where Base: UIInputView {
             UIInputView.allowsSelfSizing = newValue
         }
     }
+
 }

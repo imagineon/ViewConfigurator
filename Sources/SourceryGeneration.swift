@@ -2,6 +2,7 @@
 import UIKit
 protocol SourceryGeneration { }
 
+extension UIKit.UIView: SourceryGeneration {}
 extension UIKit.MKTransitIncidentItemCellBackgroundView: SourceryGeneration {}
 extension UIKit.MKStarRatingAndLabelView: SourceryGeneration {}
 extension UIKit.MKStarRatingView: SourceryGeneration {}

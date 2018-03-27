@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UILabel {
-    func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> ConfigurationSet<Base> {
-        return set { ( UILabel: Base ) in
-            UILabel.textRect(forBounds: bounds, limitedToNumberOfLines: numberOfLines)
-        }
-    }
     func text(_ newValue: String?) -> ConfigurationSet<Base> {
         return set{ (UILabel: UILabel) in
             UILabel.text = newValue
@@ -119,4 +114,5 @@ public extension ConfigurationSet where Base: UILabel {
             UILabel.preferredMaxLayoutWidth = newValue
         }
     }
+
 }

@@ -3,35 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UINavigationBar {
-    func popItem(animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.popItem(animated: animated)
-        }
-    }
-
-    func setItems(_ items: [UINavigationItem]?, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.setItems(items, animated: animated)
-        }
-    }
-
-    func backgroundImage(for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.backgroundImage(for: barPosition, barMetrics: barMetrics)
-        }
-    }
-
-    func backgroundImage(for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.backgroundImage(for: barMetrics)
-        }
-    }
-
-    func titleVerticalPositionAdjustment(for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.titleVerticalPositionAdjustment(for: barMetrics)
-        }
-    }
     func barStyle(_ newValue: UIBarStyle) -> ConfigurationSet<Base> {
         return set{ (UINavigationBar: UINavigationBar) in
             UINavigationBar.barStyle = newValue
@@ -48,18 +19,6 @@ public extension ConfigurationSet where Base: UINavigationBar {
     func isTranslucent(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UINavigationBar: UINavigationBar) in
             UINavigationBar.isTranslucent = newValue
-        }
-    }
-
-    func topItem(_ newValue: UINavigationItem?) -> ConfigurationSet<Base> {
-        return set{ (UINavigationBar: UINavigationBar) in
-            UINavigationBar.topItem = newValue
-        }
-    }
-
-    func backItem(_ newValue: UINavigationItem?) -> ConfigurationSet<Base> {
-        return set{ (UINavigationBar: UINavigationBar) in
-            UINavigationBar.backItem = newValue
         }
     }
 
@@ -123,4 +82,5 @@ public extension ConfigurationSet where Base: UINavigationBar {
             UINavigationBar.backIndicatorTransitionMaskImage = newValue
         }
     }
+
 }

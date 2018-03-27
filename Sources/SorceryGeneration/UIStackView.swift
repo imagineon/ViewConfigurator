@@ -2,17 +2,8 @@
 // DO NOT EDIT
 
 import UIKit
+@available(iOSApplicationExtension 9.0, *)
 public extension ConfigurationSet where Base: UIStackView {
-    func customSpacing(after arrangedSubview: UIView) -> ConfigurationSet<Base> {
-        return set { ( UIStackView: Base ) in
-            UIStackView.customSpacing(after: arrangedSubview)
-        }
-    }
-    func arrangedSubviews(_ newValue: [UIView]) -> ConfigurationSet<Base> {
-        return set{ (UIStackView: UIStackView) in
-            UIStackView.arrangedSubviews = newValue
-        }
-    }
 
     func axis(_ newValue: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
         return set{ (UIStackView: UIStackView) in
@@ -49,4 +40,5 @@ public extension ConfigurationSet where Base: UIStackView {
             UIStackView.isLayoutMarginsRelativeArrangement = newValue
         }
     }
+
 }

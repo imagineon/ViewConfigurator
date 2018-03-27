@@ -3,23 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UITabBar {
-    func setItems(_ items: [UITabBarItem]?, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UITabBar: Base ) in
-            UITabBar.setItems(items, animated: animated)
-        }
-    }
-
-    func beginCustomizingItems(_ items: [UITabBarItem]) -> ConfigurationSet<Base> {
-        return set { ( UITabBar: Base ) in
-            UITabBar.beginCustomizingItems(items)
-        }
-    }
-
-    func endCustomizing(animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UITabBar: Base ) in
-            UITabBar.endCustomizing(animated: animated)
-        }
-    }
     func delegate(_ newValue: UITabBarDelegate?) -> ConfigurationSet<Base> {
         return set{ (UITabBar: UITabBar) in
             UITabBar.delegate = newValue
@@ -35,12 +18,6 @@ public extension ConfigurationSet where Base: UITabBar {
     func selectedItem(_ newValue: UITabBarItem?) -> ConfigurationSet<Base> {
         return set{ (UITabBar: UITabBar) in
             UITabBar.selectedItem = newValue
-        }
-    }
-
-    func isCustomizing(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UITabBar: UITabBar) in
-            UITabBar.isCustomizing = newValue
         }
     }
 
@@ -62,12 +39,6 @@ public extension ConfigurationSet where Base: UITabBar {
     func unselectedItemTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
         return set{ (UITabBar: UITabBar) in
             UITabBar.unselectedItemTintColor = newValue
-        }
-    }
-
-    func selectedImageTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
-        return set{ (UITabBar: UITabBar) in
-            UITabBar.selectedImageTintColor = newValue
         }
     }
 
@@ -126,4 +97,5 @@ public extension ConfigurationSet where Base: UITabBar {
             UITabBar.isTranslucent = newValue
         }
     }
+
 }

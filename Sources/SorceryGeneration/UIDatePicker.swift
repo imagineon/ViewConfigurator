@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIDatePicker {
-    func setDate(_ date: Date, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UIDatePicker: Base ) in
-            UIDatePicker.setDate(date, animated: animated)
-        }
-    }
     func datePickerMode(_ newValue: UIDatePickerMode) -> ConfigurationSet<Base> {
         return set{ (UIDatePicker: UIDatePicker) in
             UIDatePicker.datePickerMode = newValue
@@ -61,4 +56,5 @@ public extension ConfigurationSet where Base: UIDatePicker {
             UIDatePicker.minuteInterval = newValue
         }
     }
+
 }

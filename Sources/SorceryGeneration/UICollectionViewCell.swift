@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UICollectionViewCell {
-    func contentView(_ newValue: UIView) -> ConfigurationSet<Base> {
-        return set{ (UICollectionViewCell: UICollectionViewCell) in
-            UICollectionViewCell.contentView = newValue
-        }
-    }
 
     func isSelected(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UICollectionViewCell: UICollectionViewCell) in
@@ -32,4 +27,5 @@ public extension ConfigurationSet where Base: UICollectionViewCell {
             UICollectionViewCell.selectedBackgroundView = newValue
         }
     }
+
 }

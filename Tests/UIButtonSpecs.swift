@@ -92,14 +92,14 @@ class UIButtonSpecs: QuickSpec {
             it("can set title for default state normal") {
                 let title = "Some Title"
                 let testView: UIButton = .build { set in
-                    set.title(title)
+                    set.setTitle(title)
                 }
                 expect(testView.title(for: .normal)).to(equal(title))
             }
             it("can set title for state highlighted and only that") {
                 let title = "Some Title"
                 let testView: UIButton = .build { set in
-                    set.title(title, for: .highlighted)
+                    set.setTitle(title, for: .highlighted)
                 }
                 expect(testView.title(for: .highlighted)).to(equal(title))
                 expect(testView.title(for: .normal)).to(beNil())
@@ -109,70 +109,70 @@ class UIButtonSpecs: QuickSpec {
             it("can set titleColor for default state normal") {
                 let color = UIColor.red
                 let testView: UIButton = .build { set in
-                    set.titleColor(color)
+                    set.setTitleColor(color)
                 }
                 expect(testView.titleColor(for: .normal)).to(equal(color))
             }
             it("can set titleColor for state highlighted") {
                 let color = UIColor.red
                 let testView: UIButton = .build { set in
-                    set.titleColor(color, for: .highlighted)
+                    set.setTitleColor(color, for: .highlighted)
                 }
                 expect(testView.titleColor(for: .highlighted)).to(equal(color))
             }
             it("can set titleShadowColor for default state normal") {
                 let color = UIColor.red
                 let testView: UIButton = .build { set in
-                    set.titleShadowColor(color)
+                    set.setTitleShadowColor(color)
                 }
                 expect(testView.titleShadowColor(for: .normal)).to(equal(color))
             }
             it("can set titleShadowColor for state highlighted") {
                 let color = UIColor.red
                 let testView: UIButton = .build { set in
-                    set.titleShadowColor(color, for: .highlighted)
+                    set.setTitleShadowColor(color, for: .highlighted)
                 }
                 expect(testView.titleShadowColor(for: .highlighted)).to(equal(color))
             }
             it("can set image for default state normal") {
                 let image = UIImage()
                 let testView: UIButton = .build { set in
-                    set.image(image)
+                    set.setImage(image)
                 }
                 expect(testView.image(for: .normal)).to(equal(image))
             }
             it("can set image for state highlighted") {
                 let image = UIImage()
                 let testView: UIButton = .build { set in
-                    set.image(image, for: .highlighted)
+                    set.setImage(image, for: .highlighted)
                 }
                 expect(testView.image(for: .highlighted)).to(equal(image))
             }
             it("can set backgroundImage for default state normal") {
                 let image = UIImage()
                 let testView: UIButton = .build { set in
-                    set.backgroundImage(image)
+                    set.setBackgroundImage(image)
                 }
                 expect(testView.backgroundImage(for: .normal)).to(equal(image))
             }
             it("can set backgroundImage for state highlighted") {
                 let image = UIImage()
                 let testView: UIButton = .build { set in
-                    set.backgroundImage(image, for: .highlighted)
+                    set.setBackgroundImage(image, for: .highlighted)
                 }
                 expect(testView.backgroundImage(for: .highlighted)).to(equal(image))
             }
             it("can set attributedTitle for default state normal") {
                 let title = NSAttributedString(string: "Some Title")
                 let testView: UIButton = .build { set in
-                    set.attributedTitle(title)
+                    set.setAttributedTitle(title)
                 }
                 expect(testView.attributedTitle(for: .normal)).to(equal(title))
             }
             it("can set title for state highlighted and only that") {
                 let title = NSAttributedString(string: "Some Title")
                 let testView: UIButton = .build { set in
-                    set.attributedTitle(title, for: .highlighted)
+                    set.setAttributedTitle(title, for: .highlighted)
                 }
                 expect(testView.attributedTitle(for: .highlighted)).to(equal(title))
                 expect(testView.attributedTitle(for: .normal)).to(beNil())

@@ -3,45 +3,9 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIWebView {
-    func stringByEvaluatingJavaScript(from script: String) -> ConfigurationSet<Base> {
-        return set { ( UIWebView: Base ) in
-            UIWebView.stringByEvaluatingJavaScript(from: script)
-        }
-    }
     func delegate(_ newValue: UIWebViewDelegate?) -> ConfigurationSet<Base> {
         return set{ (UIWebView: UIWebView) in
             UIWebView.delegate = newValue
-        }
-    }
-
-    @available(iOS 5.0, *)
-    func scrollView(_ newValue: UIScrollView) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.scrollView = newValue
-        }
-    }
-
-    func request(_ newValue: URLRequest?) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.request = newValue
-        }
-    }
-
-    func canGoBack(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.canGoBack = newValue
-        }
-    }
-
-    func canGoForward(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.canGoForward = newValue
-        }
-    }
-
-    func isLoading(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.isLoading = newValue
         }
     }
 
@@ -121,13 +85,6 @@ public extension ConfigurationSet where Base: UIWebView {
         }
     }
 
-    @available(iOS 7.0, *)
-    func pageCount(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIWebView: UIWebView) in
-            UIWebView.pageCount = newValue
-        }
-    }
-
     @available(iOS 9.0, *)
     func allowsPictureInPictureMediaPlayback(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UIWebView: UIWebView) in
@@ -141,4 +98,5 @@ public extension ConfigurationSet where Base: UIWebView {
             UIWebView.allowsLinkPreview = newValue
         }
     }
+
 }

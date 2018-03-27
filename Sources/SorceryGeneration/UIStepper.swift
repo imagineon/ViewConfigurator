@@ -3,29 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIStepper {
-    func backgroundImage(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UIStepper: Base ) in
-            UIStepper.backgroundImage(for: state)
-        }
-    }
-
-    func dividerImage(forLeftSegmentState state: UIControlState, rightSegmentState state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UIStepper: Base ) in
-            UIStepper.dividerImage(forLeftSegmentState: state, rightSegmentState: state)
-        }
-    }
-
-    func incrementImage(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UIStepper: Base ) in
-            UIStepper.incrementImage(for: state)
-        }
-    }
-
-    func decrementImage(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UIStepper: Base ) in
-            UIStepper.decrementImage(for: state)
-        }
-    }
     func isContinuous(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UIStepper: UIStepper) in
             UIStepper.isContinuous = newValue
@@ -74,4 +51,5 @@ public extension ConfigurationSet where Base: UIStepper {
             UIStepper.tintColor = newValue
         }
     }
+
 }

@@ -3,53 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UISearchBar {
-    func setBackgroundImage(_ backgroundImage: UIImage?, for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
-        }
-    }
-
-    func backgroundImage(for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.backgroundImage(for: barPosition, barMetrics: barMetrics)
-        }
-    }
-
-    func searchFieldBackgroundImage(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.searchFieldBackgroundImage(for: state)
-        }
-    }
-
-    func image(for icon: UISearchBarIcon, state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.image(for: icon, state: state)
-        }
-    }
-
-    func scopeBarButtonBackgroundImage(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.scopeBarButtonBackgroundImage(for: state)
-        }
-    }
-
-    func scopeBarButtonDividerImage(forLeftSegmentState leftState: UIControlState, rightSegmentState rightState: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.scopeBarButtonDividerImage(forLeftSegmentState: leftState, rightSegmentState: rightState)
-        }
-    }
-
-    func scopeBarButtonTitleTextAttributes(for state: UIControlState) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.scopeBarButtonTitleTextAttributes(for: state)
-        }
-    }
-
-    func positionAdjustment(for icon: UISearchBarIcon) -> ConfigurationSet<Base> {
-        return set { ( UISearchBar: Base ) in
-            UISearchBar.positionAdjustment(for: icon)
-        }
-    }
     func barStyle(_ newValue: UIBarStyle) -> ConfigurationSet<Base> {
         return set{ (UISearchBar: UISearchBar) in
             UISearchBar.barStyle = newValue
@@ -103,13 +56,6 @@ public extension ConfigurationSet where Base: UISearchBar {
     func isSearchResultsButtonSelected(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UISearchBar: UISearchBar) in
             UISearchBar.isSearchResultsButtonSelected = newValue
-        }
-    }
-
-    @available(iOS 9.0, *)
-    func inputAssistantItem(_ newValue: UITextInputAssistantItem) -> ConfigurationSet<Base> {
-        return set{ (UISearchBar: UISearchBar) in
-            UISearchBar.inputAssistantItem = newValue
         }
     }
 
@@ -194,4 +140,5 @@ public extension ConfigurationSet where Base: UISearchBar {
             UISearchBar.searchTextPositionAdjustment = newValue
         }
     }
+
 }

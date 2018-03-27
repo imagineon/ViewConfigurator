@@ -3,17 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIActionSheet {
-    func addButton(withTitle title: String?) -> ConfigurationSet<Base> {
-        return set { ( UIActionSheet: Base ) in
-            UIActionSheet.addButton(withTitle: title)
-        }
-    }
-
-    func buttonTitle(at buttonIndex: Int) -> ConfigurationSet<Base> {
-        return set { ( UIActionSheet: Base ) in
-            UIActionSheet.buttonTitle(at: buttonIndex)
-        }
-    }
     func delegate(_ newValue: UIActionSheetDelegate?) -> ConfigurationSet<Base> {
         return set{ (UIActionSheet: UIActionSheet) in
             UIActionSheet.delegate = newValue
@@ -32,12 +21,6 @@ public extension ConfigurationSet where Base: UIActionSheet {
         }
     }
 
-    func numberOfButtons(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIActionSheet: UIActionSheet) in
-            UIActionSheet.numberOfButtons = newValue
-        }
-    }
-
     func cancelButtonIndex(_ newValue: Int) -> ConfigurationSet<Base> {
         return set{ (UIActionSheet: UIActionSheet) in
             UIActionSheet.cancelButtonIndex = newValue
@@ -50,15 +33,4 @@ public extension ConfigurationSet where Base: UIActionSheet {
         }
     }
 
-    func firstOtherButtonIndex(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIActionSheet: UIActionSheet) in
-            UIActionSheet.firstOtherButtonIndex = newValue
-        }
-    }
-
-    func isVisible(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIActionSheet: UIActionSheet) in
-            UIActionSheet.isVisible = newValue
-        }
-    }
 }

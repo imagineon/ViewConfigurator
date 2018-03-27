@@ -61,9 +61,5 @@ public extension ConfigurationSet where Base: UIImageView {
         }
     }
 
-    func isAnimating(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIImageView: UIImageView) in
-            UIImageView.isAnimating = newValue
-        }
-    }
 }
+

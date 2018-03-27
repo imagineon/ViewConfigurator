@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UISwitch {
-    func setOn(_ on: Bool, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UISwitch: Base ) in
-            UISwitch.setOn(on, animated: animated)
-        }
-    }
     @available(iOS 5.0, *)
     func onTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
         return set{ (UISwitch: UISwitch) in
@@ -48,4 +43,5 @@ public extension ConfigurationSet where Base: UISwitch {
             UISwitch.isOn = newValue
         }
     }
+
 }

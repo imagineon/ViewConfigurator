@@ -3,14 +3,5 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UICollectionReusableView {
-    func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> ConfigurationSet<Base> {
-        return set { ( UICollectionReusableView: Base ) in
-            UICollectionReusableView.preferredLayoutAttributesFitting(layoutAttributes)
-        }
-    }
-    func reuseIdentifier(_ newValue: String?) -> ConfigurationSet<Base> {
-        return set{ (UICollectionReusableView: UICollectionReusableView) in
-            UICollectionReusableView.reuseIdentifier = newValue
-        }
-    }
+
 }

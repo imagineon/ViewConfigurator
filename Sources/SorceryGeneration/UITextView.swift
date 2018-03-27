@@ -100,30 +100,9 @@ public extension ConfigurationSet where Base: UITextView {
     }
 
     @available(iOS 7.0, *)
-    func textContainer(_ newValue: NSTextContainer) -> ConfigurationSet<Base> {
-        return set{ (UITextView: UITextView) in
-            UITextView.textContainer = newValue
-        }
-    }
-
-    @available(iOS 7.0, *)
     func textContainerInset(_ newValue: UIEdgeInsets) -> ConfigurationSet<Base> {
         return set{ (UITextView: UITextView) in
             UITextView.textContainerInset = newValue
-        }
-    }
-
-    @available(iOS 7.0, *)
-    func layoutManager(_ newValue: NSLayoutManager) -> ConfigurationSet<Base> {
-        return set{ (UITextView: UITextView) in
-            UITextView.layoutManager = newValue
-        }
-    }
-
-    @available(iOS 7.0, *)
-    func textStorage(_ newValue: NSTextStorage) -> ConfigurationSet<Base> {
-        return set{ (UITextView: UITextView) in
-            UITextView.textStorage = newValue
         }
     }
 
@@ -133,4 +112,5 @@ public extension ConfigurationSet where Base: UITextView {
             UITextView.linkTextAttributes = newValue
         }
     }
+
 }

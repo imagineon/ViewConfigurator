@@ -22,9 +22,4 @@ public extension ConfigurationSet where Base: UIActivityIndicatorView {
         }
     }
 
-    func isAnimating(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIActivityIndicatorView: UIActivityIndicatorView) in
-            UIActivityIndicatorView.isAnimating = newValue
-        }
-    }
 }

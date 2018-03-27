@@ -3,23 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIToolbar {
-    func setItems(_ items: [UIBarButtonItem]?, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UIToolbar: Base ) in
-            UIToolbar.setItems(items, animated: animated)
-        }
-    }
-
-    func backgroundImage(forToolbarPosition topOrBottom: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UIToolbar: Base ) in
-            UIToolbar.backgroundImage(forToolbarPosition: topOrBottom, barMetrics: barMetrics)
-        }
-    }
-
-    func shadowImage(forToolbarPosition topOrBottom: UIBarPosition) -> ConfigurationSet<Base> {
-        return set { ( UIToolbar: Base ) in
-            UIToolbar.shadowImage(forToolbarPosition: topOrBottom)
-        }
-    }
     func barStyle(_ newValue: UIBarStyle) -> ConfigurationSet<Base> {
         return set{ (UIToolbar: UIToolbar) in
             UIToolbar.barStyle = newValue
@@ -58,4 +41,5 @@ public extension ConfigurationSet where Base: UIToolbar {
             UIToolbar.delegate = newValue
         }
     }
+
 }

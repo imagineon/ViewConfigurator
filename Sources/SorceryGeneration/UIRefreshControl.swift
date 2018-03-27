@@ -3,11 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIRefreshControl {
-    func isRefreshing(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIRefreshControl: UIRefreshControl) in
-            UIRefreshControl.isRefreshing = newValue
-        }
-    }
 
     func tintColor(_ newValue: UIColor!) -> ConfigurationSet<Base> {
         return set{ (UIRefreshControl: UIRefreshControl) in
@@ -20,4 +15,5 @@ public extension ConfigurationSet where Base: UIRefreshControl {
             UIRefreshControl.attributedTitle = newValue
         }
     }
+
 }

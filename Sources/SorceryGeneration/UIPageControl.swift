@@ -3,17 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIPageControl {
-    func updateCurrentPageDisplay() -> ConfigurationSet<Base> {
-        return set { ( UIPageControl: Base ) in
-            UIPageControl.updateCurrentPageDisplay()
-        }
-    }
-
-    func size(forNumberOfPages pageCount: Int) -> ConfigurationSet<Base> {
-        return set { ( UIPageControl: Base ) in
-            UIPageControl.size(forNumberOfPages: pageCount)
-        }
-    }
     func numberOfPages(_ newValue: Int) -> ConfigurationSet<Base> {
         return set{ (UIPageControl: UIPageControl) in
             UIPageControl.numberOfPages = newValue
@@ -51,4 +40,5 @@ public extension ConfigurationSet where Base: UIPageControl {
             UIPageControl.currentPageIndicatorTintColor = newValue
         }
     }
+
 }

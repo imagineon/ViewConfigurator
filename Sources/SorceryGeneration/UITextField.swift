@@ -3,47 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UITextField {
-    func borderRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.borderRect(forBounds: bounds)
-        }
-    }
-
-    func textRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.textRect(forBounds: bounds)
-        }
-    }
-
-    func placeholderRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.placeholderRect(forBounds: bounds)
-        }
-    }
-
-    func editingRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.editingRect(forBounds: bounds)
-        }
-    }
-
-    func clearButtonRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.clearButtonRect(forBounds: bounds)
-        }
-    }
-
-    func leftViewRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.leftViewRect(forBounds: bounds)
-        }
-    }
-
-    func rightViewRect(forBounds bounds: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITextField: Base ) in
-            UITextField.rightViewRect(forBounds: bounds)
-        }
-    }
     func text(_ newValue: String?) -> ConfigurationSet<Base> {
         return set{ (UITextField: UITextField) in
             UITextField.text = newValue
@@ -137,12 +96,6 @@ public extension ConfigurationSet where Base: UITextField {
         }
     }
 
-    func isEditing(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UITextField: UITextField) in
-            UITextField.isEditing = newValue
-        }
-    }
-
     @available(iOS 6.0, *)
     func allowsEditingTextAttributes(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UITextField: UITextField) in
@@ -205,4 +158,5 @@ public extension ConfigurationSet where Base: UITextField {
             UITextField.clearsOnInsertion = newValue
         }
     }
+
 }

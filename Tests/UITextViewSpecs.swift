@@ -145,7 +145,7 @@ class UITextViewSpecs: QuickSpec {
                 let delegate = CustomDelegateTesting()
              
                 let testView: UITextView = .build { set in
-                    set.setDelegate(delegate)
+                    set.delegate(delegate)
                 }
                 expect(testView.delegate).to(be(delegate))
                 

@@ -3,94 +3,6 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UITableView {
-    func numberOfRows(inSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.numberOfRows(inSection: section)
-        }
-    }
-
-    func rect(forSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.rect(forSection: section)
-        }
-    }
-
-    func rectForHeader(inSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.rectForHeader(inSection: section)
-        }
-    }
-
-    func rectForFooter(inSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.rectForFooter(inSection: section)
-        }
-    }
-
-    func rectForRow(at indexPath: IndexPath) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.rectForRow(at: indexPath)
-        }
-    }
-
-    func indexPathForRow(at point: CGPoint) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.indexPathForRow(at: point)
-        }
-    }
-
-    func indexPath(for cell: UITableViewCell) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.indexPath(for: cell)
-        }
-    }
-
-    func indexPathsForRows(in rect: CGRect) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.indexPathsForRows(in: rect)
-        }
-    }
-
-    func cellForRow(at indexPath: IndexPath) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.cellForRow(at: indexPath)
-        }
-    }
-
-    func headerView(forSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.headerView(forSection: section)
-        }
-    }
-
-    func footerView(forSection section: Int) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.footerView(forSection: section)
-        }
-    }
-
-    func dequeueReusableCell(withIdentifier identifier: String) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.dequeueReusableCell(withIdentifier: identifier)
-        }
-    }
-
-    func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        }
-    }
-
-    func dequeueReusableHeaderFooterView(withIdentifier identifier: String) -> ConfigurationSet<Base> {
-        return set { ( UITableView: Base ) in
-            UITableView.dequeueReusableHeaderFooterView(withIdentifier: identifier)
-        }
-    }
-    func style(_ newValue: UITableViewStyle) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.style = newValue
-        }
-    }
 
     func dataSource(_ newValue: UITableViewDataSource?) -> ConfigurationSet<Base> {
         return set{ (UITableView: UITableView) in
@@ -185,31 +97,6 @@ public extension ConfigurationSet where Base: UITableView {
         }
     }
 
-    func numberOfSections(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.numberOfSections = newValue
-        }
-    }
-
-    func visibleCells(_ newValue: [UITableViewCell]) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.visibleCells = newValue
-        }
-    }
-
-    func indexPathsForVisibleRows(_ newValue: [IndexPath]?) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.indexPathsForVisibleRows = newValue
-        }
-    }
-
-    @available(iOS 11.0, *)
-    func hasUncommittedUpdates(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.hasUncommittedUpdates = newValue
-        }
-    }
-
     func isEditing(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UITableView: UITableView) in
             UITableView.isEditing = newValue
@@ -240,19 +127,6 @@ public extension ConfigurationSet where Base: UITableView {
     func allowsMultipleSelectionDuringEditing(_ newValue: Bool) -> ConfigurationSet<Base> {
         return set{ (UITableView: UITableView) in
             UITableView.allowsMultipleSelectionDuringEditing = newValue
-        }
-    }
-
-    func indexPathForSelectedRow(_ newValue: IndexPath?) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.indexPathForSelectedRow = newValue
-        }
-    }
-
-    @available(iOS 5.0, *)
-    func indexPathsForSelectedRows(_ newValue: [IndexPath]?) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.indexPathsForSelectedRows = newValue
         }
     }
 
@@ -342,17 +216,5 @@ public extension ConfigurationSet where Base: UITableView {
         }
     }
 
-    @available(iOS 11.0, *)
-    func hasActiveDrag(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.hasActiveDrag = newValue
-        }
-    }
 
-    @available(iOS 11.0, *)
-    func hasActiveDrop(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UITableView: UITableView) in
-            UITableView.hasActiveDrop = newValue
-        }
-    }
 }

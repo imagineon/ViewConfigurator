@@ -49,4 +49,5 @@ public extension ConfigurationSet where Base: UIProgressView {
             UIProgressView.observedProgress = newValue
         }
     }
+
 }

@@ -15,10 +15,4 @@ public extension ConfigurationSet where Base: UIPopoverBackgroundView {
         }
     }
 
-    @available(iOS 6.0, *)
-    func wantsDefaultContentAppearance(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIPopoverBackgroundView: UIPopoverBackgroundView) in
-            UIPopoverBackgroundView.wantsDefaultContentAppearance = newValue
-        }
-    }
 }
