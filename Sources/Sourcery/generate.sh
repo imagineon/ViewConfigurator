@@ -20,7 +20,7 @@ key.toolchains:
 mkdir -p ./Sources/Intermediates
 
 # get all types that implement SourceryGeneration
-grep "extension [A-Za-z0-9. ]*:[ ]*SourceryGeneration" ./Sources/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
+grep "extension [A-Za-z0-9. ]*:[ ]*UIKitExtensionsSorceryGeneration" ./Sources/Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
 create_yml $class
 sanitized_class_name=`echo $class | sed "s/.*\.//"`
 echo "Found $class"
@@ -28,13 +28,13 @@ sourcekitten request --yaml temp.yml |
 grep "\"key.sourcetext\" : " | 
 cut -c 22- | 
 perl -pe 's/\\n/\n/g' | 
-sed -e 's/\\\/\\\//\/\//g' -e 's/\\\/\*/\/\*/' -e 's/\*\\\//\*\//' -e 's/^"//' -e 's/"$//' > ./Sources/Intermediates/${sanitized_class_name}.swift
+sed -e 's/\\\/\\\//\/\//g' -e 's/\\\/\*/\/\*/' -e 's/\*\\\//\*\//' -e 's/^"//' -e 's/"$//' > ./Sources/Sourcery/Intermediates/${sanitized_class_name}.swift
 
-echo "extension ${sanitized_class_name}: SourceryGeneration { }" >> ./Sources/Intermediates/${sanitized_class_name}.swift
+echo "extension ${sanitized_class_name}: SourceryGeneration { }" >> ./Sources/Sourcery/Intermediates/${sanitized_class_name}.swift
 
 done
 
-sourcery --sources ./ --templates ./Sources/Stencil --output ./Sources/SorceryGeneration
+sourcery --sources ./ --templates ./Sources/Sourcery/Stencil --output ./Sources/UIKitExtensionsSorceryGeneration
 
-rm -rf ./Sources/Intermediates
+rm -rf ./Sources/Sourcery/Intermediates
 rm temp.yml
