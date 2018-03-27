@@ -17,10 +17,10 @@ key.toolchains:
 " > temp.yml
 }
 
-mkdir -p ./Sources/Intermediates
+mkdir -p ./Sources/Sourcery/Intermediates
 
 # get all types that implement SourceryGeneration
-grep "extension [A-Za-z0-9. ]*:[ ]*UIKitExtensionsSorceryGeneration" ./Sources/Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
+grep "extension [A-Za-z0-9. ]*:[ ]*SourceryGeneration" ./Sources/Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
 create_yml $class
 sanitized_class_name=`echo $class | sed "s/.*\.//"`
 echo "Found $class"
