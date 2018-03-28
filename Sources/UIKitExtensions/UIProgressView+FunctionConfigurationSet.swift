@@ -11,8 +11,8 @@ public extension ConfigurationSet where Base: UIProgressView {
     
     @available(iOS 5.0, *)
     func setProgress(_ progress: Float, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UIProgressView: Base ) in
-            UIProgressView.setProgress(progress, animated: animated)
+        return set { ( configurable: Base ) in
+            configurable.setProgress(progress, animated: animated)
         }
     }
 }

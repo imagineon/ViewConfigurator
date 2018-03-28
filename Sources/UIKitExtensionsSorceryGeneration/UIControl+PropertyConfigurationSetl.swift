@@ -11,26 +11,26 @@ public extension ConfigurationSet where Base: UIControl {
     }
     
     func isEnabled(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIControl: UIControl) in
-            UIControl.isEnabled = newValue
+        return set{ (configurable: UIControl) in
+            configurable.isEnabled = newValue
         }
     }
 
     func isHighlighted(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIControl: UIControl) in
-            UIControl.isHighlighted = newValue
+        return set{ (configurable: UIControl) in
+            configurable.isHighlighted = newValue
         }
     }
 
     func contentVerticalAlignment(_ newValue: UIControlContentVerticalAlignment) -> ConfigurationSet<Base> {
-        return set{ (UIControl: UIControl) in
-            UIControl.contentVerticalAlignment = newValue
+        return set{ (configurable: UIControl) in
+            configurable.contentVerticalAlignment = newValue
         }
     }
 
     func contentHorizontalAlignment(_ newValue: UIControlContentHorizontalAlignment) -> ConfigurationSet<Base> {
-        return set{ (UIControl: UIControl) in
-            UIControl.contentHorizontalAlignment = newValue
+        return set{ (configurable: UIControl) in
+            configurable.contentHorizontalAlignment = newValue
         }
     }
 

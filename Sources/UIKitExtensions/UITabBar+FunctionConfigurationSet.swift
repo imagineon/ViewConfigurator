@@ -10,8 +10,8 @@ import UIKit
 public extension ConfigurationSet where Base: UITabBar {
     
     func setItems(_ items: [UITabBarItem]?, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UITabBar: Base ) in
-            UITabBar.setItems(items, animated: animated)
+        return set { ( configurable: Base ) in
+            configurable.setItems(items, animated: animated)
         }
     }
     

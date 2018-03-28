@@ -10,39 +10,39 @@ import UIKit
 public extension ConfigurationSet where Base: UIButton {
     
     func setTitle(_ title: String?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setTitle(title, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setTitle(title, for: state)
         }
     }
     
     func setTitleColor(_ color: UIColor?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setTitleColor(color, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setTitleColor(color, for: state)
         }
     }
     
     func setTitleShadowColor(_ color: UIColor?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setTitleShadowColor(color, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setTitleShadowColor(color, for: state)
         }
     }
     
     func setImage(_ image: UIImage?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setImage(image, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setImage(image, for: state)
         }
     }
     
     func setBackgroundImage(_ image: UIImage?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setBackgroundImage(image, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setBackgroundImage(image, for: state)
         }
     }
     
     @available(iOS 6.0, *)
     func setAttributedTitle(_ title: NSAttributedString?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
-        return set { ( UIButton: Base ) in
-            UIButton.setAttributedTitle(title, for: state)
+        return set { ( configurable: Base ) in
+            configurable.setAttributedTitle(title, for: state)
         }
     }
     

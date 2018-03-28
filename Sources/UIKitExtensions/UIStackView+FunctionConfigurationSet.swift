@@ -12,8 +12,8 @@ public extension ConfigurationSet where Base: UIStackView {
 
     @available(iOS 11.0, *)
     func setCustomSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> ConfigurationSet<Base> {
-        return set { ( UIStackView: Base ) in
-            UIStackView.setCustomSpacing(spacing, after: arrangedSubview)
+        return set { ( configurable: Base ) in
+            configurable.setCustomSpacing(spacing, after: arrangedSubview)
         }
     }
 

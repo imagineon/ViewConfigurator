@@ -11,15 +11,15 @@ import UIKit
 public extension ConfigurationSet where Base: UIScrollView {
     
     func setContentOffset(_ contentOffset: CGPoint, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UIScrollView: Base ) in
-            UIScrollView.setContentOffset(contentOffset, animated: animated)
+        return set { ( configurable: Base ) in
+            configurable.setContentOffset(contentOffset, animated: animated)
         }
     }
     
     @available(iOS 3.0, *)
     func setZoomScale(_ scale: CGFloat, animated: Bool) -> ConfigurationSet<Base> {
-        return set { ( UIScrollView: Base ) in
-            UIScrollView.setZoomScale(scale, animated: animated)
+        return set { ( configurable: Base ) in
+            configurable.setZoomScale(scale, animated: animated)
         }
     }
 }

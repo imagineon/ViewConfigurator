@@ -1,8 +1,8 @@
 {% macro createSetter variable %}
     {{ variable.attributes.available }}
     func {{ variable.name }}(_ newValue: {{ variable.typeName }}) -> ConfigurationSet<Base> {
-        return set{ ({{ type.name  }}: {{ type.name }}) in
-            {{ type.name }}.{{variable.name}} = newValue
+        return set{ (configurable: {{ type.name }}) in
+            configurable.{{variable.name}} = newValue
         }
     }
 {% endmacro %}
@@ -16,8 +16,8 @@
 {% macro getMethodsForUIView method%}
     {{method.attributes.available}}
     func {{ method.name }} -> ConfigurationSet<Base> {
-        return set { ( {{type.name}}: Base ) in
-            {{type.name}}.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }
     }
 {% call newlineIfNotLast forloop.last %}
@@ -26,8 +26,8 @@
 {% macro getMethodsForUIViewSubclass method%}
     {{method.attributes.available}}
     func {{ method.name }} -> ConfigurationSet<Base> {
-        return set { ( {{type.name}}: Base ) in
-            {{type.name}}.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }
     }
 {% call newlineIfNotLast forloop.last %}
@@ -69,10 +69,12 @@ import UIKit
 public extension ConfigurationSet where Base: {{ type.name }} {
 {% if type.name == "UIView"%}
     {% for method in type.allMethods|instance where not method.isInitializer %}
+        {#{% call getMethodsForUIView method%}#}
     {% endfor %}
     {% call createVariablesForUIView %}
 {% else %}
     {% for method in type.methods|instance where not method.isInitializer %}
+        {#{% call getMethodsForUIViewSubclass method%}#}
     {% endfor %}
     {% call createVariablesForUIViewSubclasses %}
 {% endif %}

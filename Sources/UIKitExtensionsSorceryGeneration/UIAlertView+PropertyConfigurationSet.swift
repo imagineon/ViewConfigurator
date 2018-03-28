@@ -4,33 +4,33 @@
 import UIKit
 public extension ConfigurationSet where Base: UIAlertView {
     func delegate(_ newValue: AnyObject?) -> ConfigurationSet<Base> {
-        return set{ (UIAlertView: UIAlertView) in
-            UIAlertView.delegate = newValue
+        return set{ (configurable: UIAlertView) in
+            configurable.delegate = newValue
         }
     }
 
     func title(_ newValue: String) -> ConfigurationSet<Base> {
-        return set{ (UIAlertView: UIAlertView) in
-            UIAlertView.title = newValue
+        return set{ (configurable: UIAlertView) in
+            configurable.title = newValue
         }
     }
 
     func message(_ newValue: String?) -> ConfigurationSet<Base> {
-        return set{ (UIAlertView: UIAlertView) in
-            UIAlertView.message = newValue
+        return set{ (configurable: UIAlertView) in
+            configurable.message = newValue
         }
     }
 
     func cancelButtonIndex(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIAlertView: UIAlertView) in
-            UIAlertView.cancelButtonIndex = newValue
+        return set{ (configurable: UIAlertView) in
+            configurable.cancelButtonIndex = newValue
         }
     }
 
     @available(iOS 5.0, *)
     func alertViewStyle(_ newValue: UIAlertViewStyle) -> ConfigurationSet<Base> {
-        return set{ (UIAlertView: UIAlertView) in
-            UIAlertView.alertViewStyle = newValue
+        return set{ (configurable: UIAlertView) in
+            configurable.alertViewStyle = newValue
         }
     }
 

@@ -12,23 +12,23 @@ public extension ConfigurationSet where Base: UINavigationBar {
     
     @available(iOS 7.0, *)
     func setBackgroundImage(_ backgroundImage: UIImage?, for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
+        return set { ( configurable: Base ) in
+            configurable.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
         }
     }
     
     
     @available(iOS 5.0, *)
     func setBackgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.setBackgroundImage(backgroundImage, for: barMetrics)
+        return set { ( configurable: Base ) in
+            configurable.setBackgroundImage(backgroundImage, for: barMetrics)
         }
     }
     
     @available(iOS 5.0, *)
     func setTitleVerticalPositionAdjustment(_ adjustment: CGFloat, for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
-        return set { ( UINavigationBar: Base ) in
-            UINavigationBar.setTitleVerticalPositionAdjustment(adjustment, for: barMetrics)
+        return set { ( configurable: Base ) in
+            configurable.setTitleVerticalPositionAdjustment(adjustment, for: barMetrics)
         }
     }
     

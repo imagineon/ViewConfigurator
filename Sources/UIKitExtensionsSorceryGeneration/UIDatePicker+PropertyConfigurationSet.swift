@@ -4,56 +4,56 @@
 import UIKit
 public extension ConfigurationSet where Base: UIDatePicker {
     func datePickerMode(_ newValue: UIDatePickerMode) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.datePickerMode = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.datePickerMode = newValue
         }
     }
 
     func locale(_ newValue: Locale?) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.locale = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.locale = newValue
         }
     }
 
     func calendar(_ newValue: Calendar!) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.calendar = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.calendar = newValue
         }
     }
 
     func timeZone(_ newValue: TimeZone?) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.timeZone = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.timeZone = newValue
         }
     }
 
     func date(_ newValue: Date) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.date = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.date = newValue
         }
     }
 
     func minimumDate(_ newValue: Date?) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.minimumDate = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.minimumDate = newValue
         }
     }
 
     func maximumDate(_ newValue: Date?) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.maximumDate = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.maximumDate = newValue
         }
     }
 
     func countDownDuration(_ newValue: TimeInterval) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.countDownDuration = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.countDownDuration = newValue
         }
     }
 
     func minuteInterval(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIDatePicker: UIDatePicker) in
-            UIDatePicker.minuteInterval = newValue
+        return set{ (configurable: UIDatePicker) in
+            configurable.minuteInterval = newValue
         }
     }
 

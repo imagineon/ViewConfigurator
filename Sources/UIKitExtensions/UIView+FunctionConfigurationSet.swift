@@ -66,22 +66,15 @@ public extension ConfigurationSet where Base: UIView {
     
     @available(iOS 6.0, *)
     func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-        return set { ( UIView: Base ) in
-            UIView.setContentHuggingPriority(priority, for: axis)
-        }
-    }
-    
-    @available(iOS 6.0, *)
-    func systemLayoutSizeFitting(_ targetSize: CGSize) -> ConfigurationSet<Base> {
-        return set { ( UIView: Base ) in
-            UIView.systemLayoutSizeFitting(targetSize)
+        return set { ( configurable: Base ) in
+            configurable.setContentHuggingPriority(priority, for: axis)
         }
     }
     
     @available(iOS 6.0, *)
     func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
-        return set { ( UIView: Base ) in
-            UIView.setContentCompressionResistancePriority(priority, for: axis)
+        return set { ( configurable: Base ) in
+            configurable.setContentCompressionResistancePriority(priority, for: axis)
         }
     }
 

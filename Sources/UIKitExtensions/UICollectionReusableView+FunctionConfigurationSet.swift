@@ -10,15 +10,9 @@ import UIKit
 public extension ConfigurationSet where Base: UICollectionReusableView {
     
     func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> ConfigurationSet<Base> {
-        return set { ( UICollectionReusableView: Base ) in
-            UICollectionReusableView.apply(layoutAttributes)
+        return set { ( configurable: Base ) in
+            configurable.apply(layoutAttributes)
         }
     }
     
-    @available(iOS 8.0, *)
-    func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> ConfigurationSet<Base> {
-        return set { ( UICollectionReusableView: Base ) in
-            UICollectionReusableView.preferredLayoutAttributesFitting(layoutAttributes)
-        }
-    }
 }

@@ -4,40 +4,40 @@
 import UIKit
 public extension ConfigurationSet where Base: UIPageControl {
     func numberOfPages(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.numberOfPages = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.numberOfPages = newValue
         }
     }
 
     func currentPage(_ newValue: Int) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.currentPage = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.currentPage = newValue
         }
     }
 
     func hidesForSinglePage(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.hidesForSinglePage = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.hidesForSinglePage = newValue
         }
     }
 
     func defersCurrentPageDisplay(_ newValue: Bool) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.defersCurrentPageDisplay = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.defersCurrentPageDisplay = newValue
         }
     }
 
     @available(iOS 6.0, *)
     func pageIndicatorTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.pageIndicatorTintColor = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.pageIndicatorTintColor = newValue
         }
     }
 
     @available(iOS 6.0, *)
     func currentPageIndicatorTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
-        return set{ (UIPageControl: UIPageControl) in
-            UIPageControl.currentPageIndicatorTintColor = newValue
+        return set{ (configurable: UIPageControl) in
+            configurable.currentPageIndicatorTintColor = newValue
         }
     }
 

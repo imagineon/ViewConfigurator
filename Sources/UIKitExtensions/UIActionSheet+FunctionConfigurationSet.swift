@@ -9,8 +9,8 @@ import UIKit
 public extension ConfigurationSet where Base: UIActionSheet {
     
     func addButton(withTitle title: String?) -> ConfigurationSet<Base> {
-        return set { ( UIActionSheet: Base ) in
-            UIActionSheet.addButton(withTitle: title)
+        return set { ( configurable: Base ) in
+            configurable.addButton(withTitle: title)
         }
     }
     

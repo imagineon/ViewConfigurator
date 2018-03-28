@@ -10,8 +10,8 @@ import UIKit
 public extension ConfigurationSet where Base: UIAlertView {
     
     func addButton(withTitle title: String?) -> ConfigurationSet<Base> {
-        return set { ( UIAlertView: Base ) in
-            UIAlertView.addButton(withTitle: title)
+        return set { ( configurable: Base ) in
+            configurable.addButton(withTitle: title)
         }
     }
     

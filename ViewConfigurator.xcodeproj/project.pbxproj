@@ -32,7 +32,6 @@
 		7AB4AFA0206A46A400D93171 /* UITableView+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AF8B206A46A400D93171 /* UITableView+FunctionConfigurationSet.swift */; };
 		7AB4AFA1206A46A400D93171 /* UIToolBar+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AF8C206A46A400D93171 /* UIToolBar+FunctionConfigurationSet.swift */; };
 		7AB4AFA2206A46A400D93171 /* UIActionSheet+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AF8D206A46A400D93171 /* UIActionSheet+FunctionConfigurationSet.swift */; };
-		7AB4AFA3206A46A400D93171 /* UITableViewCell+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AF8E206A46A400D93171 /* UITableViewCell+FunctionConfigurationSet.swift */; };
 		7AB4AFCC206A471A00D93171 /* UIAlertView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AFA8206A471700D93171 /* UIAlertView+PropertyConfigurationSet.swift */; };
 		7AB4AFCD206A471A00D93171 /* UICollectionReusableView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AFA9206A471700D93171 /* UICollectionReusableView+PropertyConfigurationSet.swift */; };
 		7AB4AFCE206A471A00D93171 /* UIImageView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB4AFAA206A471700D93171 /* UIImageView+PropertyConfigurationSet.swift */; };
@@ -284,7 +283,6 @@
 		7AB4AF8B206A46A400D93171 /* UITableView+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+FunctionConfigurationSet.swift"; path = "UIKitExtensions/UITableView+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		7AB4AF8C206A46A400D93171 /* UIToolBar+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIToolBar+FunctionConfigurationSet.swift"; path = "UIKitExtensions/UIToolBar+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		7AB4AF8D206A46A400D93171 /* UIActionSheet+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIActionSheet+FunctionConfigurationSet.swift"; path = "UIKitExtensions/UIActionSheet+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
-		7AB4AF8E206A46A400D93171 /* UITableViewCell+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+FunctionConfigurationSet.swift"; path = "UIKitExtensions/UITableViewCell+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		7AB4AFA8206A471700D93171 /* UIAlertView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertView+PropertyConfigurationSet.swift"; path = "UIKitExtensionsSorceryGeneration/UIAlertView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		7AB4AFA9206A471700D93171 /* UICollectionReusableView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionReusableView+PropertyConfigurationSet.swift"; path = "UIKitExtensionsSorceryGeneration/UICollectionReusableView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		7AB4AFAA206A471700D93171 /* UIImageView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+PropertyConfigurationSet.swift"; path = "UIKitExtensionsSorceryGeneration/UIImageView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
@@ -655,7 +653,6 @@
 				7AB4AF83206A46A300D93171 /* UISwitch+FunctionConfigurationSet.swift */,
 				7AB4AF8A206A46A400D93171 /* UITabBar+FunctionConfigurationSet.swift */,
 				7AB4AF8B206A46A400D93171 /* UITableView+FunctionConfigurationSet.swift */,
-				7AB4AF8E206A46A400D93171 /* UITableViewCell+FunctionConfigurationSet.swift */,
 				7AB4AF8C206A46A400D93171 /* UIToolBar+FunctionConfigurationSet.swift */,
 				7AB4AF7B206A46A300D93171 /* UIView+FunctionConfigurationSet.swift */,
 			);
@@ -977,7 +974,6 @@
 				7AB4AFE7206A471A00D93171 /* UILabel+PropertyConfigurationSet.swift in Sources */,
 				7AB4AF9C206A46A400D93171 /* UIAlertView+FunctionConfigurationSet.swift in Sources */,
 				7AB4AFE1206A471A00D93171 /* UITableViewHeaderFooterView+PropertyConfigurationSet.swift in Sources */,
-				7AB4AFA3206A46A400D93171 /* UITableViewCell+FunctionConfigurationSet.swift in Sources */,
 				7AB4AFF1206A47A900D93171 /* CALayer+ConfigurationSet.swift in Sources */,
 				7AB4AFDC206A471A00D93171 /* UIWindow+PropertyConfigurationSet.swift in Sources */,
 				7AB4AF92206A46A400D93171 /* UICollectionView+FunctionConfigurationSet.swift in Sources */,
