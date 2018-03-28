@@ -122,11 +122,7 @@ let otherView = UIView.build { config in
 
 ## Supported Classes
 
-- UIView
-- UIControl
-- UIButton
-- UILabel
-- UIImageView
+- UIView and all its subclasses
 
 
 ## Requirements
@@ -233,8 +229,23 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UIPageControl, UIScrollView e.g.).
-Also we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
+In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa. Also we want to improve on the convenience Configurations.
+Provide a version which will generate on every build and includes Custom UIView Subclasses.
+
+## Attributions
+
+Most of the library is generated with the help of Sourcery (https://github.com/krzysztofzablocki/Sourcery/), SourceKitten (https://github.com/jpsim/SourceKitten) frameworks and Stencil template language (https://github.com/kylef/Stencil).
+
+## Philosophy
+
+The library is generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
+We choose not to regenerate during every Build for several reasons. At the moment we can't distinguish between readOnly Properties and settable Properties, so a lot of generated Code will not compile.
+Also most of the functions on UIView subclasses are not useful during configuration and are removed after generation. And finally it removes the dependency to Sourcery.
+With the code generation we will be able to quickly update the framework after UIKit updates.
+
+## Current Issues
+
+Cannot filter out get-only properties during the library generation process.
 
 ## License
 
