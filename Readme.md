@@ -229,8 +229,7 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa. Also we want to improve on the convenience Configurations.
-Provide a version which will generate on every build and includes Custom UIView Subclasses.
+In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa. Also we want to improve on the convenience Configurations and provide a version which will generate on every build and includes Custom UIView Subclasses.
 
 ## Attributions
 
