@@ -120,12 +120,16 @@ let otherView = UIView.build { config in
 ```
 
 
+## Supported Classes
+
+- UIView and all its subclasses
+
 
 ## Requirements
 
 - iOS 8.0+
-- Xcode 8.0+
-- Swift 3+
+- Xcode 9.0+
+- Swift 4+
 
 ## Installation
 
@@ -146,7 +150,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ViewConfigurator', '~> 0.1.0'
+pod 'ViewConfigurator', '~> 0.3.0'
 ```
 
 Then, run the following command:
@@ -169,7 +173,7 @@ $ brew install carthage
 To integrate ViewConfigurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ImagineOn/ViewConfigurator" ~> 0.1.0
+github "ImagineOn/ViewConfigurator" ~> 0.3.0
 ```
 ### Swift Package Manager
 
@@ -181,7 +185,7 @@ import PackageDescription
 let package = Package(
     name: "ViewConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.0.1")
+        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.3.0")
     ]
 )
 ```
@@ -225,8 +229,22 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UILabel e.g.).
-Also we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
+In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa. Also we want to improve on the convenience Configurations and provide a version which will generate on every build and includes Custom UIView Subclasses.
+
+## Attributions
+
+Most of the library is generated with the help of Sourcery (https://github.com/krzysztofzablocki/Sourcery/), SourceKitten (https://github.com/jpsim/SourceKitten) frameworks and Stencil template language (https://github.com/kylef/Stencil).
+
+## Philosophy
+
+The library is generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
+We choose not to regenerate during every Build for several reasons. At the moment we can't distinguish between readOnly Properties and settable Properties, so a lot of generated Code will not compile.
+Also most of the functions on UIView subclasses are not useful during configuration and are removed after generation. And finally it removes the dependency to Sourcery.
+With the code generation we will be able to quickly update the framework after UIKit updates.
+
+## Current Issues
+
+Cannot filter out get-only properties during the library generation process.
 
 ## License
 

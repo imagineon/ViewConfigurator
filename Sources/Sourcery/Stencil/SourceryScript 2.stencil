@@ -1,0 +1,85 @@
+{% macro createSetter variable %}
+    {{ variable.attributes.available }}
+    func {{ variable.name }}(_ newValue: {{ variable.typeName }}) -> ConfigurationSet<Base> {
+        return set{ (configurable: {{ type.name }}) in
+            configurable.{{variable.name}} = newValue
+        }
+    }
+{% endmacro %}
+
+{% macro newlineIfNotLast isLast %}
+{% if not isLast %}
+
+{% endif %}
+{% endmacro %}
+
+{% macro getMethodsForUIView method%}
+    {{method.attributes.available}}
+    func {{ method.name }} -> ConfigurationSet<Base> {
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        }
+    }
+{% call newlineIfNotLast forloop.last %}
+{% endmacro %}
+
+{% macro getMethodsForUIViewSubclass method%}
+    {{method.attributes.available}}
+    func {{ method.name }} -> ConfigurationSet<Base> {
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        }
+    }
+{% call newlineIfNotLast forloop.last %}
+{% endmacro %}
+
+{% macro createVariablesForUIView %}
+{% for variable in type.allVariables|instance|openSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% for variable in type.allVariables|instance|publicSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% for variable in type.allVariables|instance|internalSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% endmacro %}
+
+{% macro createVariablesForUIViewSubclasses %}
+{% for variable in type.variables|instance|openSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% for variable in type.variables|instance|publicSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% for variable in type.variables|instance|internalSet where variable.isMutable %}
+{% call createSetter variable %}
+{% call newlineIfNotLast forloop.last %}
+{% endfor %}
+{% endmacro %}
+
+{% for type in types.implementing.SourceryGeneration|class %}
+// sourcery:file:{{ type.name }}+PropertyConfigurationSet.swift
+import UIKit
+public extension ConfigurationSet where Base: {{ type.name }} {
+{% if type.name == "UIView"%}
+    {% for method in type.allMethods|instance where not method.isInitializer %}
+        {#{% call getMethodsForUIView method%}#}
+    {% endfor %}
+    {% call createVariablesForUIView %}
+{% else %}
+    {% for method in type.methods|instance where not method.isInitializer %}
+        {#{% call getMethodsForUIViewSubclass method%}#}
+    {% endfor %}
+    {% call createVariablesForUIViewSubclasses %}
+{% endif %}
+
+}
+
+// sourcery:end
+{% endfor %}

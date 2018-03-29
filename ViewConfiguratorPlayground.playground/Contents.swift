@@ -74,3 +74,23 @@ let specialView = UIView.configure
     .backgroundColor(.yellow)
     .build()
 
+let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
+let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
+let attributesLink = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red, NSAttributedStringKey.font.rawValue : UIFont(name: "Helvetica", size: 30)!, NSAttributedStringKey.underlineStyle.rawValue : NSUnderlineStyle.styleNone.rawValue] as [String : Any]
+
+class TextViewDelegate: NSObject, UITextViewDelegate{}
+
+let delegate = TextViewDelegate()
+
+let customTextViewConfiguration = UITextView.configure
+    .backgroundColor(UIColor.black)
+    .textColor(.red)
+    .text("some text")
+    .textAlignment(.left)
+    .selectedRange(NSMakeRange(6, 0))
+    .attributedText(attributedText)
+    .linkTextAttributes(attributesLink)
+    .setDelegate(delegate)
+
+
+
