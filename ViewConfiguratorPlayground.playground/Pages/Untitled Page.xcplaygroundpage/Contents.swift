@@ -10,7 +10,7 @@ struct TestColorModel {
     let secondaryColor: UIColor
 }
 
-let standardConfiguration = UIView.configure
+let standardConfiguration = UIView.config
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
@@ -31,7 +31,7 @@ class TestViewController: UIViewController {
         return view
     }()
     
-    let someOtherView = UIView.configure
+    let someOtherView = UIView.config
         .backgroundColor(.blue)
         .alpha(0.8)
         .cornerRadius(8)
@@ -39,7 +39,7 @@ class TestViewController: UIViewController {
         .borderWidth(0.5)
         .build()
 
-    lazy var someLazyView = UIView.configure
+    lazy var someLazyView = UIView.config
         .backgroundColor(self.model.primaryColor)
         .alpha(0.8)
         .cornerRadius(8)
@@ -48,7 +48,7 @@ class TestViewController: UIViewController {
         .build()
 }
 
-let standardViewConfiguration: ConfigurationSet<UIView> = UIView.configure
+let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
@@ -56,7 +56,7 @@ let standardViewConfiguration: ConfigurationSet<UIView> = UIView.configure
     .borderWidth(0.5)
     .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
 
-let specialViewConfiguration = UIView.configure
+let specialViewConfiguration = UIView.config
     .backgroundColor(.red)
     .alpha(0.5)
     .cornerRadius(15)
@@ -69,8 +69,8 @@ let standardView = standardViewConfiguration.build()
 let view = UIView().apply(standardViewConfiguration)
 
 
-let specialView = UIView.configure
-    .apply(specialViewConfiguration)
+let specialView = UIView.config
+    .append(specialViewConfiguration)
     .backgroundColor(.yellow)
     .build()
 
@@ -82,7 +82,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate{}
 
 let delegate = TextViewDelegate()
 
-let customTextViewConfiguration = UITextView.configure
+let customTextViewConfiguration = UITextView.config
     .backgroundColor(UIColor.black)
     .textColor(.red)
     .text("some text")
@@ -90,7 +90,7 @@ let customTextViewConfiguration = UITextView.configure
     .selectedRange(NSMakeRange(6, 0))
     .attributedText(attributedText)
     .linkTextAttributes(attributesLink)
-    .setDelegate(delegate)
+    .delegate(delegate)
 
 
 

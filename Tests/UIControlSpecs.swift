@@ -7,7 +7,7 @@ class UIControlSpec: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set isEnabled Value to true") {
                 let enabled = true
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isEnabled(enabled)
                     .build()
                 
@@ -15,7 +15,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set isEnabled Value to false") {
                 let enabled = false
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isEnabled(enabled)
                     .build()
                 
@@ -23,7 +23,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set isHighlighted Value to true") {
                 let highlighted = true
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isHighlighted(highlighted)
                     .build()
                 
@@ -31,7 +31,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set isHighlighted Value to false") {
                 let highlighted = false
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isHighlighted(highlighted)
                     .build()
                 
@@ -39,7 +39,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set isSelected Value to true") {
                 let selected = true
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isSelected(selected)
                     .build()
                 
@@ -47,7 +47,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set isSelected Value to false") {
                 let selected = false
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .isSelected(selected)
                     .build()
                 
@@ -55,7 +55,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set contentVerticalAlignment Value") {
                 let contentVerticalAlignment: UIControlContentVerticalAlignment = .top
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .contentVerticalAlignment(contentVerticalAlignment)
                     .build()
                 
@@ -63,7 +63,7 @@ class UIControlSpec: QuickSpec {
             }
             it("can set contentHorizontalAlignment Value") {
                 let contentHorizontalAlignment: UIControlContentHorizontalAlignment = .right
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .contentHorizontalAlignment(contentHorizontalAlignment)
                     .build()
                 
@@ -72,7 +72,7 @@ class UIControlSpec: QuickSpec {
             it("can add a Target defaulting to .touchUpInside") {
                 let target = UIView()
                 let action = #selector(target.removeFromSuperview)
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .addTarget(target, action: action)
                     .build()
                 
@@ -84,7 +84,7 @@ class UIControlSpec: QuickSpec {
                 let target = UIView()
                 let action = #selector(target.removeFromSuperview)
                 let controlEvent = UIControlEvents.touchDown
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .addTarget(target, action: action, for: controlEvent)
                     .build()
                 
@@ -96,7 +96,7 @@ class UIControlSpec: QuickSpec {
                 let target = UIView()
                 let action = #selector(target.removeFromSuperview)
                 let controlEvent = UIControlEvents.touchDown
-                let testView = UIControl.configure
+                let testView = UIControl.config
                     .addTarget(target, action: action, for: controlEvent)
                     .removeTarget(target, action: action, for: controlEvent)
                     .build()

@@ -7,7 +7,7 @@ class UIImageViewSpec: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set image") {
                 let image = UIImage()
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .image(image)
                     .build()
                 
@@ -15,7 +15,7 @@ class UIImageViewSpec: QuickSpec {
             }
             it("can set highlighted image") {
                 let image = UIImage()
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .highlightedImage(image)
                     .build()
                 
@@ -23,7 +23,7 @@ class UIImageViewSpec: QuickSpec {
             }
             it("can set animation images") {
                 let images = [UIImage(), UIImage()]
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .animationImages(images)
                     .build()
                 
@@ -31,7 +31,7 @@ class UIImageViewSpec: QuickSpec {
             }
             it("can set highlighted animation images") {
                 let images = [UIImage(), UIImage()]
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .highlightedAnimationImages(images)
                     .build()
                 
@@ -39,7 +39,7 @@ class UIImageViewSpec: QuickSpec {
             }
             it("can set animation duration") {
                 let duration = TimeInterval(50)
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .animationDuration(duration)
                     .build()
                 
@@ -47,7 +47,7 @@ class UIImageViewSpec: QuickSpec {
             }
             it("can set animation duration") {
                 let count = 50
-                let testView = UIImageView.configure
+                let testView = UIImageView.config
                     .animationRepeatCount(count)
                     .build()
                 

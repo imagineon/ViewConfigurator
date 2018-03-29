@@ -7,7 +7,7 @@ class UIButtonSpecs: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set contentEdgeInsets Value") {
                 let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .contentEdgeInsets(edgeInset)
                     .build()
                 
@@ -15,7 +15,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set titleEdgeInsets Value") {
                 let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .titleEdgeInsets(edgeInset)
                     .build()
                 
@@ -23,7 +23,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set imageEdgeInsets Value") {
                 let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .imageEdgeInsets(edgeInset)
                     .build()
                 
@@ -31,7 +31,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set reversesTitleShadowWhenHighlighted Value to true") {
                 let reverse = true
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .reversesTitleShadowWhenHighlighted(reverse)
                     .build()
                 
@@ -39,7 +39,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set reversesTitleShadowWhenHighlighted Value to false") {
                 let reverse = false
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .reversesTitleShadowWhenHighlighted(reverse)
                     .build()
                 
@@ -47,7 +47,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set adjustsImageWhenHighlighted Value to true") {
                 let adjust = true
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .adjustsImageWhenHighlighted(adjust)
                     .build()
                 
@@ -55,7 +55,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set adjustsImageWhenHighlighted Value to false") {
                 let adjust = false
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .adjustsImageWhenHighlighted(adjust)
                     .build()
                 
@@ -63,7 +63,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set adjustsImageWhenDisabled Value to true") {
                 let adjust = true
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .adjustsImageWhenDisabled(adjust)
                     .build()
                 
@@ -71,7 +71,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set adjustsImageWhenDisabled Value to false") {
                 let adjust = false
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .adjustsImageWhenDisabled(adjust)
                     .build()
                 
@@ -79,7 +79,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set showsTouchWhenHighlighted Value to true") {
                 let show = true
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .showsTouchWhenHighlighted(show)
                     .build()
                 
@@ -87,7 +87,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set showsTouchWhenHighlighted Value to false") {
                 let show = false
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .showsTouchWhenHighlighted(show)
                     .build()
                 
@@ -95,7 +95,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set tintColor") {
                 let color = UIColor.blue
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .tintColor(color)
                     .build()
                 
@@ -103,7 +103,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set title for default state normal") {
                 let title = "Some Title"
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .title(title)
                     .build()
                 
@@ -111,7 +111,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set title for state highlighted and only that") {
                 let title = "Some Title"
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .title(title, for: .highlighted)
                     .build()
                 
@@ -122,7 +122,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set titleColor for default state normal") {
                 let color = UIColor.red
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .titleColor(color)
                     .build()
                 
@@ -130,7 +130,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set titleColor for state highlighted") {
                 let color = UIColor.red
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .titleColor(color, for: .highlighted)
                     .build()
                 
@@ -138,7 +138,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set titleShadowColor for default state normal") {
                 let color = UIColor.red
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .titleShadowColor(color)
                     .build()
                 
@@ -146,7 +146,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set titleShadowColor for state highlighted") {
                 let color = UIColor.red
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .titleShadowColor(color, for: .highlighted)
                     .build()
                 
@@ -154,7 +154,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set image for default state normal") {
                 let image = UIImage()
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .image(image)
                     .build()
                 
@@ -162,7 +162,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set image for state highlighted") {
                 let image = UIImage()
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .image(image, for: .highlighted)
                     .build()
                 
@@ -170,7 +170,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set backgroundImage for default state normal") {
                 let image = UIImage()
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .backgroundImage(image)
                     .build()
                 
@@ -178,7 +178,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set backgroundImage for state highlighted") {
                 let image = UIImage()
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .backgroundImage(image, for: .highlighted)
                     .build()
                 
@@ -186,7 +186,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set attributedTitle for default state normal") {
                 let title = NSAttributedString(string: "Some Title")
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .attributedTitle(title)
                     .build()
                 
@@ -194,7 +194,7 @@ class UIButtonSpecs: QuickSpec {
             }
             it("can set title for state highlighted and only that") {
                 let title = NSAttributedString(string: "Some Title")
-                let testView = UIButton.configure
+                let testView = UIButton.config
                     .attributedTitle(title, for: .highlighted)
                     .build()
                 

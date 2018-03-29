@@ -8,7 +8,7 @@ class UITextViewSpecs: QuickSpec {
         describe("UITextViewConfigurator"){
             it("can set text") {
                 let text = "Testing setting the text"
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .text(text)
                 	.build()
                 expect(testView.text).to(equal(text))
@@ -17,7 +17,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set font") {
                 let font = UIFont(name: "BradleyHandITCTT-Bold", size: 14)
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .font(font!)
                 	.build()
                 expect(testView.font).to(equal(font))
@@ -25,7 +25,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set text colour") {
                 let color = UIColor.red
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .textColor(color)
                 	.build()
                 expect(testView.textColor).to(equal(color))
@@ -33,7 +33,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set text allignment") {
                 let textAlignment = NSTextAlignment.right
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .textAlignment(textAlignment)
                 	.build()
                 expect(testView.textAlignment).to(equal(textAlignment))
@@ -41,7 +41,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set selected Range") {
                 let selectedRange = NSMakeRange(6, 0)
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .text("random text").selectedRange(selectedRange)
                 	.build()
                 expect(testView.selectedRange).to(equal(selectedRange))
@@ -49,7 +49,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set isEditable") {
                 let editable = true
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .isEditable(editable)
                 	.build()
                 expect(testView.isEditable).to(equal(editable))
@@ -57,7 +57,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set isSelectable") {
                 let selectable = false
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .isSelectable(selectable)
                 	.build()
 					
@@ -66,7 +66,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set data Detector Types") {
                 let dataDetectorTypes = UIDataDetectorTypes.address
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .dataDetectorTypes(dataDetectorTypes)
                 	.build()
 					
@@ -75,7 +75,7 @@ class UITextViewSpecs: QuickSpec {
             
             it("can allow editing text attributes") {
                 let allows = true
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .allowsEditingTextAttributes(allows)
                 	.build()
 					
@@ -85,7 +85,7 @@ class UITextViewSpecs: QuickSpec {
             it("can set attributedText") {
                 let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue,  NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 18.0)!]
                 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .attributedText(attributedText)
                 	.build()
 					
@@ -98,7 +98,7 @@ class UITextViewSpecs: QuickSpec {
                 let yellowView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
                 yellowView.backgroundColor = .yellow
                 
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .inputAccessoryView(yellowView)
                 	.build()
 					
@@ -108,7 +108,7 @@ class UITextViewSpecs: QuickSpec {
             it("can clearsOnInsertion") {
                 let clears = true
                 
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .clearsOnInsertion(clears)
                 	.build()
 					
@@ -118,7 +118,7 @@ class UITextViewSpecs: QuickSpec {
             it("can set textContainerInset") {
                 let edgeInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
                 
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .textContainerInset(edgeInset)
                 	.build()
 					
@@ -128,7 +128,7 @@ class UITextViewSpecs: QuickSpec {
             it("can set linkTextAttributes") {
                 
                 let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .linkTextAttributes(attributes)
                 	.build()
 					
@@ -140,7 +140,7 @@ class UITextViewSpecs: QuickSpec {
             it("can set typingAttributes") {
                 
                 let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .typingAttributes(attributes)
                 	.build()
 					
@@ -153,7 +153,7 @@ class UITextViewSpecs: QuickSpec {
                 class CustomDelegateTesting: NSObject, UITextViewDelegate{}
                 let delegate = CustomDelegateTesting()
              
-                let testView = UITextView.configure
+                let testView = UITextView.config
                     .delegate(delegate)
                 	.build()
 					

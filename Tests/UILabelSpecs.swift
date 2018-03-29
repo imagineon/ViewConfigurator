@@ -8,7 +8,7 @@ class UILabelSpec: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set Text Value") {
                 let text = "Test Text"
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .text(text)
                 	.build()
 					
@@ -16,7 +16,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set Font Value") {
                 let font = UIFont.boldSystemFont(ofSize: 30)
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .font(font)
                 	.build()
 					
@@ -24,7 +24,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set textColor Value") {
                 let color = UIColor.red
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .textColor(color)
                 	.build()
 					
@@ -32,7 +32,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set shadowColor Value") {
                 let color = UIColor.red
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .shadowColor(color)
                 	.build()
 					
@@ -40,7 +40,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set shadowOffset Value") {
                 let offset = CGSize(width: 23, height: 42)
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .shadowOffset(offset)
                 	.build()
 					
@@ -48,7 +48,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set textAlignment Value") {
                 let alignment: NSTextAlignment = .center
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .textAlignment(alignment)
                 	.build()
 					
@@ -56,7 +56,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set attributedText Value") {
                 let attributedText: NSAttributedString = NSAttributedString(string: "Test Attributed String")
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .attributedText(attributedText)
                 	.build()
 					
@@ -64,7 +64,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set highlightedTextColor Value") {
                 let highlightedTextColor: UIColor = .red
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .highlightedTextColor(highlightedTextColor)
                 	.build()
 					
@@ -72,7 +72,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isHighlighted Value to true") {
                 let highlighted = true
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isHighlighted(highlighted)
                 	.build()
 					
@@ -80,7 +80,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isHighlighted Value to false") {
                 let highlighted = false
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isHighlighted(highlighted)
                 	.build()
 					
@@ -88,7 +88,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isUserInteractionEnabled Value to true") {
                 let enabled = true
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isUserInteractionEnabled(enabled)
                 	.build()
 					
@@ -96,7 +96,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isUserInteractionEnabled Value to false") {
                 let enabled = false
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isUserInteractionEnabled(enabled)
                 	.build()
 					
@@ -104,7 +104,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isEnabled Value to true") {
                 let enabled = true
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isEnabled(enabled)
                 	.build()
 					
@@ -112,7 +112,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set isEnabled Value to false") {
                 let enabled = false
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .isEnabled(enabled)
                 	.build()
 					
@@ -120,7 +120,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set adjustsFontSizeToFitWidth Value to false") {
                 let adjustsFontSizeToFitWidth = false
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .adjustsFontSizeToFitWidth(adjustsFontSizeToFitWidth)
                 	.build()
 					
@@ -128,7 +128,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set adjustsFontSizeToFitWidth Value to true") {
                 let adjustsFontSizeToFitWidth = true
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .adjustsFontSizeToFitWidth(adjustsFontSizeToFitWidth)
                 	.build()
 					
@@ -136,7 +136,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set baselineAdjustment Value") {
                 let baselineAdjustment: UIBaselineAdjustment = .alignCenters
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .baselineAdjustment(baselineAdjustment)
                 	.build()
 					
@@ -145,7 +145,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set minimumScaleFactor Value") {
                 let minimumScaleFactor: CGFloat = 0.5
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .minimumScaleFactor(minimumScaleFactor)
                 	.build()
 					
@@ -154,7 +154,7 @@ class UILabelSpec: QuickSpec {
             if #available(iOS 9.0, *) {
                 it("can set allowsDefaultTighteningForTruncation Value to true") {
                     let allowsDefaultTighteningForTruncation = true
-                    let testView = UILabel.configure
+                    let testView = UILabel.config
                         .allowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation)
                     	.build()
 						
@@ -163,7 +163,7 @@ class UILabelSpec: QuickSpec {
                 }
                 it("can set allowsDefaultTighteningForTruncation Value to false") {
                     let allowsDefaultTighteningForTruncation = false
-                    let testView = UILabel.configure
+                    let testView = UILabel.config
                         .allowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation)
                     	.build()
 						
@@ -172,7 +172,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set preferredMaxLayoutWidth Value") {
                 let preferredMaxLayoutWidth: CGFloat = 23
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .preferredMaxLayoutWidth(preferredMaxLayoutWidth)
                 	.build()
 					
@@ -180,7 +180,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set lineBreakMode Value") {
                 let lineBreakMode: NSLineBreakMode = .byTruncatingHead
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .lineBreakMode(lineBreakMode)
                 	.build()
 					
@@ -188,7 +188,7 @@ class UILabelSpec: QuickSpec {
             }
             it("can set numberOfLines Value") {
                 let numberOfLines: Int = 42
-                let testView = UILabel.configure
+                let testView = UILabel.config
                     .numberOfLines(numberOfLines)
                 	.build()
 					

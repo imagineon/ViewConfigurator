@@ -8,7 +8,7 @@ class UIViewSpec: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set Alpha Value") {
                 let alphaValue: CGFloat = 0.5
-                let testView = UIView.configure
+                let testView = UIView.config
                     .alpha(alphaValue)
                 	.build()
 					
@@ -16,7 +16,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set Background Color") {
                 let newColor: UIColor = .black
-                let testView = UIView.configure
+                let testView = UIView.config
                     .backgroundColor(newColor)
                 	.build()
 					
@@ -24,7 +24,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set Frame") {
                 let newFrame = CGRect(x: 12, y: 23, width: 250, height: 250)
-                let testView = UIView.configure
+                let testView = UIView.config
                     .frame(newFrame)
                 	.build()
 					
@@ -32,7 +32,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set Bounds") {
                 let newBounds = CGRect(x: 0, y: 0, width: 250, height: 250)
-                let testView = UIView.configure
+                let testView = UIView.config
                     .bounds(newBounds)
                 	.build()
 					
@@ -40,7 +40,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set Center") {
                 let newCenter = CGPoint(x: 7, y:2)
-                let testView = UIView.configure
+                let testView = UIView.config
                     .center(newCenter)
                 	.build()
 					
@@ -48,7 +48,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set clear Context before Drawing") {
                 let newClearContext = false
-                let testView = UIView.configure
+                let testView = UIView.config
                     .clearsContextBeforeDrawing(newClearContext)
                 	.build()
 					
@@ -56,7 +56,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set clipsToBounds") {
                 let newValue = true
-                let testView = UIView.configure
+                let testView = UIView.config
                     .clipsToBounds(newValue)
                 	.build()
 					
@@ -64,7 +64,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set contentMode") {
                 let newContentMode: UIViewContentMode = .bottomRight
-                let testView = UIView.configure
+                let testView = UIView.config
                     .contentMode(newContentMode)
                 	.build()
 					
@@ -72,7 +72,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set contentScaleFactor") {
                 let newScaleFactor: CGFloat = 1.5
-                let testView = UIView.configure
+                let testView = UIView.config
                     .contentScaleFactor(newScaleFactor)
                 	.build()
 					
@@ -80,7 +80,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set exclusiveTouch") {
                 let newValue = true
-                let testView = UIView.configure
+                let testView = UIView.config
                     .isExclusiveTouch(newValue)
                 	.build()
 					
@@ -88,7 +88,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set isHidden") {
                 let newValue = true
-                let testView = UIView.configure
+                let testView = UIView.config
                     .isHidden(newValue)
                 	.build()
 					
@@ -96,7 +96,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set isMultipleTouchEnabled") {
                 let newValue = true
-                let testView = UIView.configure
+                let testView = UIView.config
                     .isMultipleTouchEnabled(newValue)
                 	.build()
 					
@@ -104,7 +104,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set isOpaque") {
                 let newValue = false
-                let testView = UIView.configure
+                let testView = UIView.config
                     .isOpaque(newValue)
                 	.build()
 					
@@ -112,7 +112,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set isUserInteractionEnabled") {
                 let newValue = false
-                let testView = UIView.configure
+                let testView = UIView.config
                     .isUserInteractionEnabled(newValue)
                 	.build()
 					
@@ -120,7 +120,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set layout margins") {
                 let newMargins = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
-                let testView = UIView.configure
+                let testView = UIView.config
                     .layoutMargins(newMargins)
                 	.build()
 					
@@ -128,7 +128,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set view mask") {
                 let maskView = UIView()
-                let testView = UIView.configure
+                let testView = UIView.config
                     .mask(maskView)
                 	.build()
 					
@@ -136,7 +136,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set preservesSuperviewLayoutMargins") {
                 let newValue = true
-                let testView = UIView.configure
+                let testView = UIView.config
                     .preservesSuperviewLayoutMargins(newValue)
                 	.build()
 					
@@ -145,7 +145,7 @@ class UIViewSpec: QuickSpec {
             if #available(iOS 9.0, *) {
                 it("can set semanticContentAttribute") {
                     let newAttribute: UISemanticContentAttribute = .playback
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .semanticContentAttribute(newAttribute)
                     	.build()
 						
@@ -154,7 +154,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set tag") {
                 let newValue = 42
-                let testView = UIView.configure
+                let testView = UIView.config
                     .tag(newValue)
                 	.build()
 					
@@ -162,7 +162,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set tintAdjustmentMode") {
                 let newMode: UIViewTintAdjustmentMode = .dimmed
-                let testView = UIView.configure
+                let testView = UIView.config
                     .tintAdjustmentMode(newMode)
                 	.build()
 					
@@ -170,7 +170,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set tintColor") {
                 let newColor: UIColor = .black
-                let testView = UIView.configure
+                let testView = UIView.config
                     .tintColor(newColor)
                 	.build()
 					
@@ -178,7 +178,7 @@ class UIViewSpec: QuickSpec {
             }
             it("can set translatesAutoresizingMaskIntoConstraints") {
                 let newValue = false
-                let testView = UIView.configure
+                let testView = UIView.config
                     .translatesAutoresizingMaskIntoConstraints(newValue)
                 	.build()
 					
@@ -187,7 +187,7 @@ class UIViewSpec: QuickSpec {
             describe("handle Transforms") {
                 it("can set transform") {
                     let newTransform: CGAffineTransform = CGAffineTransform(rotationAngle: 5)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .transform(newTransform)
                     	.build()
 						
@@ -196,7 +196,7 @@ class UIViewSpec: QuickSpec {
                 it("can add a transform") {
                     let newTransform: CGAffineTransform = CGAffineTransform(rotationAngle: 5)
                     let secondTransform: CGAffineTransform = CGAffineTransform(scaleX: 0.3, y: 0.6)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .transform(newTransform)
                         .additionalTransform(secondTransform)
                     	.build()
@@ -207,7 +207,7 @@ class UIViewSpec: QuickSpec {
             describe("handle Motion Effects") {
                 it("can set an Array of Motion Effects") {
                     let newMotionEffects = [UIMotionEffect()]
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .motionEffects(newMotionEffects)
                     	.build()
 						
@@ -215,7 +215,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can add an Motion Effect") {
                     let newMotionEffect = UIMotionEffect()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalMotionEffect(newMotionEffect)
                     	.build()
 						
@@ -224,7 +224,7 @@ class UIViewSpec: QuickSpec {
                 it("can add a variadic list of Motion Effects") {
                     let newMotionEffect = UIMotionEffect()
                     let secondMotionEffect = UIMotionEffect()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalMotionEffects(newMotionEffect, secondMotionEffect)
                     	.build()
 						
@@ -232,7 +232,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can add an array of Motion Effects") {
                     let newMotionEffects = [UIMotionEffect(), UIMotionEffect()]
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalMotionEffects(newMotionEffects)
                     	.build()
 						
@@ -242,7 +242,7 @@ class UIViewSpec: QuickSpec {
             describe("handle GestureRecognizers") {
                 it("can add one GestureRecognizer") {
                     let newGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizer(newGestureRecognizer)
                     	.build()
 						
@@ -252,7 +252,7 @@ class UIViewSpec: QuickSpec {
                 it("can add multiple GestureRecognizer with variadic Parameter") {
                     let newGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
                     let secondGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizers(newGestureRecognizer, secondGestureRecognizer)
                     	.build()
 						
@@ -262,7 +262,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can add an Array of GestureRecognizers") {
                     let newGestureRecognizers: [UIGestureRecognizer] = [UIGestureRecognizer(),UIGestureRecognizer()]
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizers(newGestureRecognizers)
                     	.build()
 						
@@ -272,7 +272,7 @@ class UIViewSpec: QuickSpec {
                 it("can add multiple GestureRecognizer in succession") {
                     let newGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
                     let secondGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizer(newGestureRecognizer)
                         .additionalGestureRecognizer(secondGestureRecognizer)
                     	.build()
@@ -284,7 +284,7 @@ class UIViewSpec: QuickSpec {
                 it("can add an array GestureRecognizer to already existing Recognizers") {
                     let newGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
                     let recognizerArray: [UIGestureRecognizer] = [UIGestureRecognizer(),UIGestureRecognizer()]
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizer(newGestureRecognizer)
                         .additionalGestureRecognizers(recognizerArray)
                     	.build()
@@ -296,7 +296,7 @@ class UIViewSpec: QuickSpec {
                     let newGestureRecognizer: UIGestureRecognizer = UIGestureRecognizer()
                     let secondRecognizer: UIGestureRecognizer = UIGestureRecognizer()
                     let thirdRecognizer: UIGestureRecognizer = UIGestureRecognizer()
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .additionalGestureRecognizer(newGestureRecognizer)
                         .additionalGestureRecognizers(secondRecognizer, thirdRecognizer)
                     	.build()
@@ -308,7 +308,7 @@ class UIViewSpec: QuickSpec {
             describe("handle Compression Resistance and Hugging Priority") {
                 it("can set content compression resistance for both axis at once") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .content(compressionResistancePriority: newPriority)
                     	.build()
 						
@@ -317,7 +317,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can set content compression resistance for vertical Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .contentCompressionResistancePriority(newPriority, for: .vertical)
                     	.build()
 						
@@ -326,7 +326,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can set content compression resistance for horizontal Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .contentCompressionResistancePriority(newPriority, for: .horizontal)
                     	.build()
 						
@@ -335,7 +335,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can set content hugging priority for both axis at once") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .content(huggingPriority: newPriority)
                     	.build()
 						
@@ -344,7 +344,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can set content hugging priority for vertical Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .contentHuggingPriority(newPriority, for: .vertical)
                     	.build()
 						
@@ -353,7 +353,7 @@ class UIViewSpec: QuickSpec {
                 }
                 it("can set content hugging priority for horizontal Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
-                    let testView = UIView.configure
+                    let testView = UIView.config
                         .contentHuggingPriority(newPriority, for: .horizontal)
                     	.build()
 						

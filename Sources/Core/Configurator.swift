@@ -5,7 +5,7 @@ public protocol Configurable: class {
 }
 
 extension Configurable {
-    public static var configure: ConfigurationSet<Self> {
+    public static var config: ConfigurationSet<Self> {
         return .init()
     }
 
@@ -38,7 +38,7 @@ public class ConfigurationSet<Base: Configurable> {
     }
 
     @discardableResult
-    public func apply(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
+    public func append(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
         configurations.append(contentsOf: configuration.configurations)
 
         return self
