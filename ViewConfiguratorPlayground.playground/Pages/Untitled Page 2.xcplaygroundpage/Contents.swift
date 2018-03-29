@@ -19,7 +19,8 @@ struct ExampleConfigurations {
         .shadowColor(UIColor.yellow.cgColor)
         .shadowOffset(CGSize(width: 3, height: 3))
     
-    static let newConfig = standart
+    static let standardWithShadow = ExampleConfigurations.standard
+        .append(ExampleConfigurations.shadow)
     
 }
 
@@ -31,7 +32,12 @@ class ExampleViewController: UIViewController {
     lazy var someLazyView = ExampleConfigurations.standard
         .append(ExampleConfigurations.shadow)
         .backgroundColor(self.model.primaryColor)
+        .set({
+            $0.customProperty = "i am special"
+        })
         .build()
+    
+    let anotherView = ExampleConfigurations.standardWithShadow.build()
 }
 
 let blub = ExampleViewController().someLazyView
