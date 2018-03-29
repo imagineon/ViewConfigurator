@@ -8,83 +8,87 @@ class UITextViewSpecs: QuickSpec {
         describe("UITextViewConfigurator"){
             it("can set text") {
                 let text = "Testing setting the text"
-                let testView: UITextView = .build { set in
-                    set.text(text)
-                }
+                let testView = UITextView.configure
+                    .text(text)
+                	.build()
                 expect(testView.text).to(equal(text))
             }
             
             
             it("can set font") {
                 let font = UIFont(name: "BradleyHandITCTT-Bold", size: 14)
-                let testView: UITextView = .build { set in
-                    set.font(font!)
-                }
+                let testView = UITextView.configure
+                    .font(font!)
+                	.build()
                 expect(testView.font).to(equal(font))
             }
             
             it("can set text colour") {
                 let color = UIColor.red
-                let testView: UITextView = .build { set in
-                    set.textColor(color)
-                }
+                let testView = UITextView.configure
+                    .textColor(color)
+                	.build()
                 expect(testView.textColor).to(equal(color))
             }
             
             it("can set text allignment") {
                 let textAlignment = NSTextAlignment.right
-                let testView: UITextView = .build { set in
-                    set.textAlignment(textAlignment)
-                }
+                let testView = UITextView.configure
+                    .textAlignment(textAlignment)
+                	.build()
                 expect(testView.textAlignment).to(equal(textAlignment))
             }
             
             it("can set selected Range") {
                 let selectedRange = NSMakeRange(6, 0)
-                let testView: UITextView = .build { set in
-                    set.text("random text").selectedRange(selectedRange)
-                }
+                let testView = UITextView.configure
+                    .text("random text").selectedRange(selectedRange)
+                	.build()
                 expect(testView.selectedRange).to(equal(selectedRange))
             }
             
             it("can set isEditable") {
                 let editable = true
-                let testView: UITextView = .build { set in
-                    set.isEditable(editable)
-                }
+                let testView = UITextView.configure
+                    .isEditable(editable)
+                	.build()
                 expect(testView.isEditable).to(equal(editable))
             }
             
             it("can set isSelectable") {
                 let selectable = false
-                let testView: UITextView = .build { set in
-                    set.isSelectable(selectable)
-                }
+                let testView = UITextView.configure
+                    .isSelectable(selectable)
+                	.build()
+					
                 expect(testView.isSelectable).to(equal(selectable))
             }
             
             it("can set data Detector Types") {
                 let dataDetectorTypes = UIDataDetectorTypes.address
-                let testView: UITextView = .build { set in
-                    set.dataDetectorTypes(dataDetectorTypes)
-                }
+                let testView = UITextView.configure
+                    .dataDetectorTypes(dataDetectorTypes)
+                	.build()
+					
                 expect(testView.dataDetectorTypes).to(equal(dataDetectorTypes))
             }
             
             it("can allow editing text attributes") {
                 let allows = true
-                let testView: UITextView = .build { set in
-                    set.allowsEditingTextAttributes(allows)
-                }
+                let testView = UITextView.configure
+                    .allowsEditingTextAttributes(allows)
+                	.build()
+					
                 expect(testView.allowsEditingTextAttributes).to(equal(true))
             }
             
             it("can set attributedText") {
                 let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue,  NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 18.0)!]
                 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
-                let testView: UITextView = .build { set in
-                    set.attributedText(attributedText)
-                }
+                let testView = UITextView.configure
+                    .attributedText(attributedText)
+                	.build()
+					
                 
                 
                 expect(testView.attributedText).to(equal(attributedText))
@@ -94,36 +98,40 @@ class UITextViewSpecs: QuickSpec {
                 let yellowView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
                 yellowView.backgroundColor = .yellow
                 
-                let testView: UITextView = .build { set in
-                    set.inputAccessoryView(yellowView)
-                }
+                let testView = UITextView.configure
+                    .inputAccessoryView(yellowView)
+                	.build()
+					
                 expect(testView.inputAccessoryView).to(equal(yellowView))
             }
             
             it("can clearsOnInsertion") {
                 let clears = true
                 
-                let testView: UITextView = .build { set in
-                    set.clearsOnInsertion(clears)
-                }
+                let testView = UITextView.configure
+                    .clearsOnInsertion(clears)
+                	.build()
+					
                 expect(testView.clearsOnInsertion).to(equal(clears))
             }
             
             it("can set textContainerInset") {
                 let edgeInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
                 
-                let testView: UITextView = .build { set in
-                    set.textContainerInset(edgeInset)
-                }
+                let testView = UITextView.configure
+                    .textContainerInset(edgeInset)
+                	.build()
+					
                 expect(testView.textContainerInset).to(equal(edgeInset))
             }
             
             it("can set linkTextAttributes") {
                 
                 let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
-                let testView: UITextView = .build { set in
-                    set.linkTextAttributes(attributes)
-                }
+                let testView = UITextView.configure
+                    .linkTextAttributes(attributes)
+                	.build()
+					
                 let configuredAttributes = testView.linkTextAttributes as? [String: UIColor]
                 expect(configuredAttributes).to(equal(attributes))
             }
@@ -132,9 +140,10 @@ class UITextViewSpecs: QuickSpec {
             it("can set typingAttributes") {
                 
                 let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
-                let testView: UITextView = .build { set in
-                    set.typingAttributes(attributes)
-                }
+                let testView = UITextView.configure
+                    .typingAttributes(attributes)
+                	.build()
+					
                 let configuredAttributes = testView.typingAttributes as? [String: UIColor]
                 expect(configuredAttributes).to(equal(attributes))
                 
@@ -144,9 +153,10 @@ class UITextViewSpecs: QuickSpec {
                 class CustomDelegateTesting: NSObject, UITextViewDelegate{}
                 let delegate = CustomDelegateTesting()
              
-                let testView: UITextView = .build { set in
-                    set.delegate(delegate)
-                }
+                let testView = UITextView.configure
+                    .delegate(delegate)
+                	.build()
+					
                 expect(testView.delegate).to(be(delegate))
                 
             }

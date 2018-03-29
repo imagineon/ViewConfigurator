@@ -121,7 +121,7 @@ class UIViewSpec: QuickSpec {
             it("can set layout margins") {
                 let newMargins = UIEdgeInsets(top: 1, left: 2, bottom: 3, right: 4)
                 let testView = UIView.configure
-                    .layout(margins: newMargins)
+                    .layoutMargins(newMargins)
                 	.build()
 					
                 expect(testView.layoutMargins).to(equal(newMargins))
@@ -318,7 +318,7 @@ class UIViewSpec: QuickSpec {
                 it("can set content compression resistance for vertical Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
                     let testView = UIView.configure
-                        .content(compressionResistancePriority: newPriority, for: .vertical)
+                        .contentCompressionResistancePriority(newPriority, for: .vertical)
                     	.build()
 						
                     expect(testView.contentCompressionResistancePriority(for: .vertical)).to(equal(newPriority))
@@ -327,7 +327,7 @@ class UIViewSpec: QuickSpec {
                 it("can set content compression resistance for horizontal Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
                     let testView = UIView.configure
-                        .content(compressionResistancePriority: newPriority, for: .horizontal)
+                        .contentCompressionResistancePriority(newPriority, for: .horizontal)
                     	.build()
 						
                     expect(testView.contentCompressionResistancePriority(for: .horizontal)).to(equal(newPriority))
@@ -345,7 +345,7 @@ class UIViewSpec: QuickSpec {
                 it("can set content hugging priority for vertical Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
                     let testView = UIView.configure
-                        .content(huggingPriority: newPriority, for: .vertical)
+                        .contentHuggingPriority(newPriority, for: .vertical)
                     	.build()
 						
                     expect(testView.contentHuggingPriority(for: .vertical)).to(equal(newPriority))
@@ -354,7 +354,7 @@ class UIViewSpec: QuickSpec {
                 it("can set content hugging priority for horizontal Axis alone") {
                     let newPriority: UILayoutPriority = UILayoutPriority(rawValue: 123)
                     let testView = UIView.configure
-                        .content(huggingPriority: newPriority, for: .horizontal)
+                        .contentHuggingPriority(newPriority, for: .horizontal)
                     	.build()
 						
                     expect(testView.contentHuggingPriority(for: .horizontal)).to(equal(newPriority))
