@@ -70,8 +70,6 @@
 		E40643B8206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064394206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift */; };
 		E40643B9206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064395206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift */; };
 		E40643BA206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064396206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift */; };
-		E40643C2206CD7D40093DC31 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = E40643BD206CD7D40093DC31 /* generate.sh */; };
-		E40643C3206CD7D40093DC31 /* SourceryScript.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E40643BF206CD7D40093DC31 /* SourceryScript.stencil */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45621471F5718E000FBD730 /* UIButtonSpecs.swift */; };
@@ -325,9 +323,6 @@
 		E4064394206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E4064395206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E4064396206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
-		E40643BC206CD7D40093DC31 /* SourceryGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryGeneration.swift; sourceTree = "<group>"; };
-		E40643BD206CD7D40093DC31 /* generate.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
-		E40643BF206CD7D40093DC31 /* SourceryScript.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SourceryScript.stencil; sourceTree = "<group>"; };
 		E409D8E61F2BB3F0004964AE /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
@@ -384,7 +379,6 @@
 				3549BB5C1DA38AA500C63030 /* Core */,
 				7AB4AFA5206A46C500D93171 /* QuartzCoreExtensions */,
 				7AAA91D02069261D0080885E /* UIKitExtensionsSorceryGeneration */,
-				7A8DE80A2065235200420643 /* Sorcery */,
 				3549BB541DA38A4000C63030 /* Supporting Files */,
 				E409D8F51F2BB7C8004964AE /* UIKitExtensions */,
 			);
@@ -571,17 +565,6 @@
 			path = watchOS;
 			sourceTree = "<group>";
 		};
-		7A8DE80A2065235200420643 /* Sorcery */ = {
-			isa = PBXGroup;
-			children = (
-				E40643BD206CD7D40093DC31 /* generate.sh */,
-				E40643BC206CD7D40093DC31 /* SourceryGeneration.swift */,
-				E40643BE206CD7D40093DC31 /* Stencil */,
-			);
-			name = Sorcery;
-			path = Sourcery;
-			sourceTree = "<group>";
-		};
 		7AAA91D02069261D0080885E /* UIKitExtensionsSorceryGeneration */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,14 +614,6 @@
 				E4064371206CD77E0093DC31 /* CALayer+ConfigurationSet.swift */,
 			);
 			path = QuartzCoreExtensions;
-			sourceTree = "<group>";
-		};
-		E40643BE206CD7D40093DC31 /* Stencil */ = {
-			isa = PBXGroup;
-			children = (
-				E40643BF206CD7D40093DC31 /* SourceryScript.stencil */,
-			);
-			path = Stencil;
 			sourceTree = "<group>";
 		};
 		E409D8F51F2BB7C8004964AE /* UIKitExtensions */ = {
@@ -906,8 +881,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40643C2206CD7D40093DC31 /* generate.sh in Resources */,
-				E40643C3206CD7D40093DC31 /* SourceryScript.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
