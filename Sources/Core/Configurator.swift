@@ -8,10 +8,6 @@ extension Configurable {
     public static var configure: ConfigurationSet<Self> {
         return .init()
     }
-
-    public static func build(from configuraton: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
-        return configuraton(self.configure).build()
-    }
 }
 
 public class ConfigurationSet<Base: Configurable> {
