@@ -8,6 +8,10 @@ extension Configurable {
     public static var configure: ConfigurationSet<Self> {
         return .init()
     }
+
+    @discardableResult public func apply(_ configuration: ConfigurationSet<Self>) -> Self {
+        return configuration.apply(on: self)
+    }
 }
 
 public class ConfigurationSet<Base: Configurable> {
@@ -40,13 +44,13 @@ public class ConfigurationSet<Base: Configurable> {
         return self
     }
 
-    fileprivate func apply(_ base: Base) -> Base {
+    fileprivate func apply(on base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
 }
 
 extension ConfigurationSet {
     public func build() -> Base {
-        return apply(Base())
+        return apply(on: Base())
     }
 }
