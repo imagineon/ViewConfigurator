@@ -70,7 +70,6 @@
 		E40643B8206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064394206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift */; };
 		E40643B9206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064395206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift */; };
 		E40643BA206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4064396206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift */; };
-		E40643C1206CD7D40093DC31 /* SourceryGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40643BC206CD7D40093DC31 /* SourceryGeneration.swift */; };
 		E40643C2206CD7D40093DC31 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = E40643BD206CD7D40093DC31 /* generate.sh */; };
 		E40643C3206CD7D40093DC31 /* SourceryScript.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E40643BF206CD7D40093DC31 /* SourceryScript.stencil */; };
 		E409D8E71F2BB3F0004964AE /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8E61F2BB3F0004964AE /* Configurator.swift */; };
@@ -984,7 +983,6 @@
 				E40643AA206CD7AF0093DC31 /* UIVisualEffectView+PropertyConfigurationSet.swift in Sources */,
 				E40643AB206CD7AF0093DC31 /* UIAlertView+PropertyConfigurationSet.swift in Sources */,
 				E4064348206CD6EE0093DC31 /* UIProgressView+FunctionConfigurationSet.swift in Sources */,
-				E40643C1206CD7D40093DC31 /* SourceryGeneration.swift in Sources */,
 				E4064357206CD6EE0093DC31 /* UINavigationBarItems+FunctionConfigurationSet.swift in Sources */,
 				E40643B0206CD7AF0093DC31 /* UIStackView+PropertyConfigurationSet.swift in Sources */,
 				E4064351206CD6EE0093DC31 /* UISegementedControl+FunctionConfigurationSet.swift in Sources */,
