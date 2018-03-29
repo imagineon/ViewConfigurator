@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 public extension ConfigurationSet where Base: UIToolbar {
-    
+
     @available(iOS 5.0, *)
     func setBackgroundImage(_ backgroundImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
@@ -25,4 +25,3 @@ public extension ConfigurationSet where Base: UIToolbar {
     }
 
 }
-

@@ -8,11 +8,11 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UICollectionReusableView {
-    
+
     func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.apply(layoutAttributes)
         }
     }
-    
+
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UISegmentedControl {
-    
+
     func setTitle(_ title: String?, forSegmentAt segment: Int) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setTitle(title, forSegmentAt: segment)
@@ -68,4 +68,3 @@ public extension ConfigurationSet where Base: UISegmentedControl {
     }
 
 }
-

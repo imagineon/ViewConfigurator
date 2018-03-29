@@ -1,4 +1,3 @@
-
 import UIKit
 protocol SourceryGeneration { }
 
@@ -838,5 +837,3 @@ extension UIKit._UIDatePickerView: SourceryGeneration {}
 extension UIKit.UIPrintRangePickerView: SourceryGeneration {}
 extension UIKit.UIWebSelectMultiplePicker: SourceryGeneration {}
 extension UIKit.UIWebSelectSinglePicker: SourceryGeneration {}
-
-

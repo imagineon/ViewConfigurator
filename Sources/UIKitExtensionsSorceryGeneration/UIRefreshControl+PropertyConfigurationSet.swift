@@ -5,13 +5,13 @@ import UIKit
 public extension ConfigurationSet where Base: UIRefreshControl {
 
     func tintColor(_ newValue: UIColor!) -> ConfigurationSet<Base> {
-        return set{ (configurable: UIRefreshControl) in
+        return set { (configurable: UIRefreshControl) in
             configurable.tintColor = newValue
         }
     }
 
     func attributedTitle(_ newValue: NSAttributedString?) -> ConfigurationSet<Base> {
-        return set{ (configurable: UIRefreshControl) in
+        return set { (configurable: UIRefreshControl) in
             configurable.attributedTitle = newValue
         }
     }

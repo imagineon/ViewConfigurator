@@ -7,7 +7,8 @@
 //
 
 import UIKit
-@available(iOSApplicationExtension 9.0, *)
+
+@available(iOS 9.0, *)
 public extension ConfigurationSet where Base: UIStackView {
 
     @available(iOS 11.0, *)
@@ -18,4 +19,3 @@ public extension ConfigurationSet where Base: UIStackView {
     }
 
 }
-

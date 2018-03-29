@@ -5,7 +5,7 @@ import UIKit
 public extension ConfigurationSet where Base: UITableViewHeaderFooterView {
 
     func backgroundView(_ newValue: UIView?) -> ConfigurationSet<Base> {
-        return set{ (configurable: UITableViewHeaderFooterView) in
+        return set { (configurable: UITableViewHeaderFooterView) in
             configurable.backgroundView = newValue
         }
     }

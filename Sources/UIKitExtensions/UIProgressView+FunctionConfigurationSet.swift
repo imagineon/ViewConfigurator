@@ -8,7 +8,7 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIProgressView {
-    
+
     @available(iOS 5.0, *)
     func setProgress(_ progress: Float, animated: Bool) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
@@ -16,4 +16,3 @@ public extension ConfigurationSet where Base: UIProgressView {
         }
     }
 }
-

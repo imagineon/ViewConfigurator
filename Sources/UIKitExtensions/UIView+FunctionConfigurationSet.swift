@@ -5,20 +5,17 @@ extension UIView: LayerContaining {}
 
 public extension ConfigurationSet where Base: UIView {
 
-
     func content(compressionResistancePriority priority: UILayoutPriority) -> ConfigurationSet<Base> {
         return self
             .setContentCompressionResistancePriority(priority, for: .horizontal)
             .setContentCompressionResistancePriority(priority, for: .vertical)
     }
 
-
     func content(huggingPriority priority: UILayoutPriority) -> ConfigurationSet<Base> {
         return self
             .setContentHuggingPriority(priority, for: .horizontal)
             .setContentHuggingPriority(priority, for: .vertical)
     }
-
 
     @available(iOS 3.2, *)
     func additionalGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) -> ConfigurationSet<Base> {
@@ -63,14 +60,14 @@ public extension ConfigurationSet where Base: UIView {
             view.transform = view.transform.concatenating(transform)
         }
     }
-    
+
     @available(iOS 6.0, *)
     func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setContentHuggingPriority(priority, for: axis)
         }
     }
-    
+
     @available(iOS 6.0, *)
     func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
