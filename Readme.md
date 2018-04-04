@@ -278,6 +278,7 @@ Also most of the functions on UIView subclasses are not useful during configurat
 Cannot filter out get-only properties during the library generation process.
 Generation of code for Functions has to be filtered manualy for useful functions at the moment.
 ConfigurationsSets of superclasses can not be applied to subclasses, `ConfigurationsSet<UIView>` can not be applied to `UIButton` for example.
+It is nessesary to provide an initilizer without parameters to conform to Configurable, which may not be feasible for custom UIView subclasses.
 
 ## License
 
