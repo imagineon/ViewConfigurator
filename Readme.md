@@ -12,10 +12,11 @@
 
 The clean way to setup your views!
 
-- [Motivation](#motivation)
+- [Motivation and Usage](#motivation)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [TODOs](#todos)
+- [Current Issues](#current)
 - [License](#license)
 
 ## Motivation and Usage
@@ -79,11 +80,12 @@ The idea is to create reusable ConfigurationSets and then either apply them or b
 With ViewConfigurator our example now looks like this:
 
 ```swift
-static let standardConfiguration = UIView.config
+let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
+    .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
+    .borderColor(UIColor.red.cgColor)
     .borderWidth(0.5)
-    .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
     
 let createdView = standardConfiguration.build()
 
@@ -111,6 +113,7 @@ class ExampleViewController: UIViewController {
 
     lazy var someLazyView = ExampleConfigurations.standard
         .backgroundColor(self.model.primaryColor)
+        .borderColor(self.model.secondaryColor.cgColor)
         .build()
 }
 ```
@@ -133,20 +136,23 @@ static let standardWithShadow = ExampleConfigurations.standard
 
 ```
 
-For custom setup:
+To enable your UIView Subclasses to be Configurable they only need to adopt the Configurable Protocol.
 
 ```swift
-static let custom = CustomView.config
+extension MyCustomView: Configurable {}
+```
+
+If your UIView Subclasses have custom Properties and you want to configure them you can use the generic set.
+This will invoke a custom closure during Configuration.
+Be careful while using this. There is nothing stoping you from introducing sideeffects through this, and it is strongly discouraged.
+
+```swift
+static let custom = MyCustomView.config
     .alpha(0.8)
     .set({
         $0.customProperty = "i am special"
     })
 ```
-
-## Supported Classes
-
-- UIView and all its subclasses
-
 
 ## Requirements
 
@@ -253,7 +259,7 @@ $ git submodule update --init --recursive
 ## TODOs
 
 In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
-We also want to provide a version which will generate on every build and enable configuration of properties added by custom UIView subclasses..
+We also want to provide a version which will generate on every build and enable configuration of properties added by custom UIView subclasses.
 At the moment the Base of the ConfigurationSet has to be the same Type as the View it is applied on. It would be convinient to allow application of configurations on Subclasses.
 
 ## Attributions
@@ -261,17 +267,17 @@ At the moment the Base of the ConfigurationSet has to be the same Type as the Vi
 Most of the library is generated with the help of Sourcery (https://github.com/krzysztofzablocki/Sourcery/), SourceKitten (https://github.com/jpsim/SourceKitten) frameworks and Stencil template language (https://github.com/kylef/Stencil).
 A big help was the Framework https://github.com/sidmani/Chain where we got the solution to enable SourceKitten to analyse UIKit.
 
-## Philosophy
+## Code Generation
 
-The library is generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
+Most parts of the library are generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
 We choose not to regenerate during every Build for several reasons. At the moment we can't distinguish between readOnly Properties and settable Properties, so a lot of generated Code will not compile.
-Also most of the functions on UIView subclasses are not useful during configuration and are removed after generation. And finally it removes the dependency to Sourcery.
-With the code generation we will be able to quickly update the framework after UIKit updates.
+Also most of the functions on UIView subclasses are not useful during configuration and are currently not excludet from generation, but manually removed after generation. And finally it removes the dependency to Sourcery.
 
 ## Current Issues
 
 Cannot filter out get-only properties during the library generation process.
 Generation of code for Functions has to be filtered manualy for useful functions at the moment.
+ConfigurationsSets of superclasses can not be applied to subclasses, `ConfigurationsSet<UIView>` can not be applied to `UIButton` for example.
 
 ## License
 
