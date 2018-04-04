@@ -136,12 +136,6 @@ static let standardWithShadow = ExampleConfigurations.standard
 
 ```
 
-To enable your UIView Subclasses to be Configurable they only need to adopt the Configurable Protocol.
-
-```swift
-extension MyCustomView: Configurable {}
-```
-
 If your UIView Subclasses have custom Properties and you want to configure them you can use the generic set.
 This will invoke a custom closure during Configuration.
 Be careful while using this. There is nothing stoping you from introducing sideeffects through this, and it is strongly discouraged.
