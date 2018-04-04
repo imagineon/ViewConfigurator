@@ -12,11 +12,11 @@
 
 The clean way to setup your views!
 
-- [Motivation and Usage](#motivation)
+- [Motivation and Usage](#motivation-and-usage)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [TODOs](#todos)
-- [Current Issues](#current)
+- [Current Issues](#current-issues)
 - [License](#license)
 
 ## Motivation and Usage
