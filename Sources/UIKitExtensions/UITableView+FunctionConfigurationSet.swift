@@ -9,29 +9,9 @@
 import UIKit
 public extension ConfigurationSet where Base: UITableView {
 
-    func setEditing(_ editing: Bool, animated: Bool) -> ConfigurationSet<Base> {
+    func editing(_ editing: Bool, animated: Bool) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setEditing(editing, animated: animated)
-        }
-    }
-
-    func dequeueReusableCell(withIdentifier identifier: String) -> ConfigurationSet<Base> {
-        return set { ( configurable: Base ) in
-            configurable.dequeueReusableCell(withIdentifier: identifier)
-        }
-    }
-
-    @available(iOS 6.0, *)
-    func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> ConfigurationSet<Base> {
-        return set { ( configurable: Base ) in
-            configurable.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        }
-    }
-
-    @available(iOS 6.0, *)
-    func dequeueReusableHeaderFooterView(withIdentifier identifier: String) -> ConfigurationSet<Base> {
-        return set { ( configurable: Base ) in
-            configurable.dequeueReusableHeaderFooterView(withIdentifier: identifier)
         }
     }
 

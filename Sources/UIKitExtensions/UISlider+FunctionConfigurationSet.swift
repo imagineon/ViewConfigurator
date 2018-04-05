@@ -9,25 +9,25 @@
 import UIKit
 public extension ConfigurationSet where Base: UISlider {
 
-    func setValue(_ value: Float, animated: Bool) -> ConfigurationSet<Base> {
+    func value(_ value: Float, animated: Bool) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setValue(value, animated: animated)
         }
     }
 
-    func setThumbImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
+    func thumbImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setThumbImage(image, for: state)
         }
     }
 
-    func setMinimumTrackImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
+    func minimumTrackImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setMinimumTrackImage(image, for: state)
         }
     }
 
-    func setMaximumTrackImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
+    func maximumTrackImage(_ image: UIImage?, for state: UIControlState) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setMaximumTrackImage(image, for: state)
         }

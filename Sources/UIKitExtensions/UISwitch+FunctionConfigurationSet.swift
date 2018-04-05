@@ -9,7 +9,7 @@
 import UIKit
 public extension ConfigurationSet where Base: UISwitch {
 
-    func setOn(_ on: Bool, animated: Bool) -> ConfigurationSet<Base> {
+    func isOn(_ on: Bool, animated: Bool) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setOn(on, animated: animated)
         }

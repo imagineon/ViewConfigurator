@@ -7,14 +7,14 @@ public extension ConfigurationSet where Base: UIView {
 
     func content(compressionResistancePriority priority: UILayoutPriority) -> ConfigurationSet<Base> {
         return self
-            .setContentCompressionResistancePriority(priority, for: .horizontal)
-            .setContentCompressionResistancePriority(priority, for: .vertical)
+            .contentCompressionResistancePriority(priority, for: .horizontal)
+            .contentCompressionResistancePriority(priority, for: .vertical)
     }
 
     func content(huggingPriority priority: UILayoutPriority) -> ConfigurationSet<Base> {
         return self
-            .setContentHuggingPriority(priority, for: .horizontal)
-            .setContentHuggingPriority(priority, for: .vertical)
+            .contentHuggingPriority(priority, for: .horizontal)
+            .contentHuggingPriority(priority, for: .vertical)
     }
 
     @available(iOS 3.2, *)
@@ -62,14 +62,14 @@ public extension ConfigurationSet where Base: UIView {
     }
 
     @available(iOS 6.0, *)
-    func setContentHuggingPriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
+    func contentHuggingPriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setContentHuggingPriority(priority, for: axis)
         }
     }
 
     @available(iOS 6.0, *)
-    func setContentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
+    func contentCompressionResistancePriority(_ priority: UILayoutPriority, for axis: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
         return set { ( configurable: Base ) in
             configurable.setContentCompressionResistancePriority(priority, for: axis)
         }

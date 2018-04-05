@@ -10,7 +10,7 @@ struct TestColorModel {
     let secondaryColor: UIColor
 }
 
-let standardConfiguration = UIView.configure
+let standardConfiguration = UIView.config
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
@@ -31,46 +31,48 @@ class TestViewController: UIViewController {
         return view
     }()
     
-    let someOtherView: UIView = .build { config in
-        config
-            .backgroundColor(.blue)
-            .alpha(0.8)
-            .cornerRadius(8)
-            .borderColor(UIColor.red.cgColor)
-            .borderWidth(0.5)
-    }
+    let someOtherView = UIView.config
+        .backgroundColor(.blue)
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderColor(UIColor.red.cgColor)
+        .borderWidth(0.5)
+        .build()
 
-    lazy var someLazyView: UIView = .build { config in
-        config
-            .backgroundColor(self.model.primaryColor)
-            .alpha(0.8)
-            .cornerRadius(8)
-            .borderColor(self.model.secondaryColor.cgColor)
-            .borderWidth(0.5)
-    }
-    
+    lazy var someLazyView = UIView.config
+        .backgroundColor(self.model.primaryColor)
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderColor(self.model.secondaryColor.cgColor)
+        .borderWidth(0.5)
+        .build()
 }
 
-let standardViewConfiguration: ConfigurationSet<UIView> = UIView.configure
+let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
     .backgroundColor(.blue)
     .alpha(0.8)
     .cornerRadius(8)
     .borderColor(UIColor.red.cgColor)
     .borderWidth(0.5)
+    .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
 
-let specialViewConfiguration = UIView.configure
+let specialViewConfiguration = UIView.config
     .backgroundColor(.red)
     .alpha(0.5)
-    .cornerRadius(16)
+    .cornerRadius(15)
     .borderColor(UIColor.green.cgColor)
     .borderWidth(2)
+    .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
 
 let standardView = standardViewConfiguration.build()
 
-let specialView = UIView.build { set in
-    set.apply(specialViewConfiguration)
-        .backgroundColor(.yellow)
-}
+let view = UIView().apply(standardViewConfiguration)
+
+
+let specialView = UIView.config
+    .append(specialViewConfiguration)
+    .backgroundColor(.yellow)
+    .build()
 
 let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
@@ -80,7 +82,7 @@ class TextViewDelegate: NSObject, UITextViewDelegate{}
 
 let delegate = TextViewDelegate()
 
-let customTextViewConfiguration = UITextView.configure
+let customTextViewConfiguration = UITextView.config
     .backgroundColor(UIColor.black)
     .textColor(.red)
     .text("some text")
@@ -88,7 +90,7 @@ let customTextViewConfiguration = UITextView.configure
     .selectedRange(NSMakeRange(6, 0))
     .attributedText(attributedText)
     .linkTextAttributes(attributesLink)
-    .setDelegate(delegate)
+    .delegate(delegate)
 
 
 

@@ -5,12 +5,12 @@ public protocol Configurable: class {
 }
 
 extension Configurable {
-    public static var configure: ConfigurationSet<Self> {
+    public static var config: ConfigurationSet<Self> {
         return .init()
     }
 
-    public static func build(from configuraton: (ConfigurationSet<Self>) -> ConfigurationSet<Self>) -> Self {
-        return configuraton(self.configure).build()
+    @discardableResult public func apply(_ configuration: ConfigurationSet<Self>) -> Self {
+        return configuration.apply(on: self)
     }
 }
 
@@ -38,19 +38,19 @@ public class ConfigurationSet<Base: Configurable> {
     }
 
     @discardableResult
-    public func apply(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
+    public func append(_ configuration: ConfigurationSet<Base>) -> ConfigurationSet<Base> {
         configurations.append(contentsOf: configuration.configurations)
 
         return self
     }
 
-    fileprivate func apply(_ base: Base) -> Base {
+    fileprivate func apply(on base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
 }
 
 extension ConfigurationSet {
     public func build() -> Base {
-        return apply(Base())
+        return apply(on: Base())
     }
 }
