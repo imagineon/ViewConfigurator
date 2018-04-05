@@ -1,8 +1,6 @@
 import Foundation
 
-public protocol Configurable: class {}
-
-public protocol EmptyInitilizable {
+public protocol Configurable: class {
     init()
 }
 
@@ -12,7 +10,7 @@ extension Configurable {
     }
 
     @discardableResult public func apply(_ configuration: ConfigurationSet<Self>) -> Self {
-        return configuration.build(on: self)
+        return configuration.apply(on: self)
     }
 }
 
@@ -45,14 +43,14 @@ public class ConfigurationSet<Base: Configurable> {
 
         return self
     }
-    
-    public func build(on instance: Base) -> Base {
-       return configurations.reduce(instance, { $1($0) })
+
+    fileprivate func apply(on base: Base) -> Base {
+        return configurations.reduce(base, { $1($0) })
     }
 }
 
-extension ConfigurationSet where Base: EmptyInitilizable {
+extension ConfigurationSet {
     public func build() -> Base {
-        return build(on: Base())
+        return apply(on: Base())
     }
 }
