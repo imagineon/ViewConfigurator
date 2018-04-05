@@ -1,8 +1,6 @@
 import Foundation
 
-public protocol Configurable: class {
-    init()
-}
+public protocol Configurable: class {}
 
 extension Configurable {
     public static var config: ConfigurationSet<Self> {
@@ -46,11 +44,5 @@ public class ConfigurationSet<Base: Configurable> {
 
     fileprivate func apply(on base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
-    }
-}
-
-extension ConfigurationSet {
-    public func build() -> Base {
-        return apply(on: Base())
     }
 }
