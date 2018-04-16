@@ -3,31 +3,31 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIActionSheet {
-    func delegate(_ newValue: UIActionSheetDelegate?) -> ConfigurationSet<Base> {
+    func delegate(_ newValue: UIActionSheetDelegate?) -> Self {
         return set { (configurable: UIActionSheet) in
             configurable.delegate = newValue
         }
     }
 
-    func title(_ newValue: String) -> ConfigurationSet<Base> {
+    func title(_ newValue: String) -> Self {
         return set { (configurable: UIActionSheet) in
             configurable.title = newValue
         }
     }
 
-    func actionSheetStyle(_ newValue: UIActionSheetStyle) -> ConfigurationSet<Base> {
+    func actionSheetStyle(_ newValue: UIActionSheetStyle) -> Self {
         return set { (configurable: UIActionSheet) in
             configurable.actionSheetStyle = newValue
         }
     }
 
-    func cancelButtonIndex(_ newValue: Int) -> ConfigurationSet<Base> {
+    func cancelButtonIndex(_ newValue: Int) -> Self {
         return set { (configurable: UIActionSheet) in
             configurable.cancelButtonIndex = newValue
         }
     }
 
-    func destructiveButtonIndex(_ newValue: Int) -> ConfigurationSet<Base> {
+    func destructiveButtonIndex(_ newValue: Int) -> Self {
         return set { (configurable: UIActionSheet) in
             configurable.destructiveButtonIndex = newValue
         }

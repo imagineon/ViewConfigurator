@@ -9,7 +9,7 @@
 import UIKit
 public extension ConfigurationSet where Base: UICollectionReusableView {
 
-    func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> ConfigurationSet<Base> {
+    func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) -> Self {
         return set { ( configurable: Base ) in
             configurable.apply(layoutAttributes)
         }

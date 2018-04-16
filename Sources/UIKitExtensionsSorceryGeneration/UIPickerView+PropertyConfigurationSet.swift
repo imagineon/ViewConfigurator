@@ -3,19 +3,19 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIPickerView {
-    func dataSource(_ newValue: UIPickerViewDataSource?) -> ConfigurationSet<Base> {
+    func dataSource(_ newValue: UIPickerViewDataSource?) -> Self {
         return set { (configurable: UIPickerView) in
             configurable.dataSource = newValue
         }
     }
 
-    func delegate(_ newValue: UIPickerViewDelegate?) -> ConfigurationSet<Base> {
+    func delegate(_ newValue: UIPickerViewDelegate?) -> Self {
         return set { (configurable: UIPickerView) in
             configurable.delegate = newValue
         }
     }
 
-    func showsSelectionIndicator(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func showsSelectionIndicator(_ newValue: Bool) -> Self {
         return set { (configurable: UIPickerView) in
             configurable.showsSelectionIndicator = newValue
         }

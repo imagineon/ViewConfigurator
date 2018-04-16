@@ -3,40 +3,40 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIToolbar {
-    func barStyle(_ newValue: UIBarStyle) -> ConfigurationSet<Base> {
+    func barStyle(_ newValue: UIBarStyle) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.barStyle = newValue
         }
     }
 
-    func items(_ newValue: [UIBarButtonItem]?) -> ConfigurationSet<Base> {
+    func items(_ newValue: [UIBarButtonItem]?) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.items = newValue
         }
     }
 
     @available(iOS 3.0, *)
-    func isTranslucent(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isTranslucent(_ newValue: Bool) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.isTranslucent = newValue
         }
     }
 
-    func tintColor(_ newValue: UIColor!) -> ConfigurationSet<Base> {
+    func tintColor(_ newValue: UIColor!) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.tintColor = newValue
         }
     }
 
     @available(iOS 7.0, *)
-    func barTintColor(_ newValue: UIColor?) -> ConfigurationSet<Base> {
+    func barTintColor(_ newValue: UIColor?) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.barTintColor = newValue
         }
     }
 
     @available(iOS 7.0, *)
-    func delegate(_ newValue: UIToolbarDelegate?) -> ConfigurationSet<Base> {
+    func delegate(_ newValue: UIToolbarDelegate?) -> Self {
         return set { (configurable: UIToolbar) in
             configurable.delegate = newValue
         }

@@ -9,7 +9,7 @@
 import UIKit
 public extension ConfigurationSet where Base: UIDatePicker {
 
-    func date(_ date: Date, animated: Bool) -> ConfigurationSet<Base> {
+    func date(_ date: Date, animated: Bool) -> Self {
         return set { ( configurable: Base ) in
             configurable.setDate(date, animated: animated)
         }

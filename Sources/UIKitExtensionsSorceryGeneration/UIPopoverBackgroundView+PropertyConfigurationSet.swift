@@ -3,13 +3,13 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIPopoverBackgroundView {
-    func arrowOffset(_ newValue: CGFloat) -> ConfigurationSet<Base> {
+    func arrowOffset(_ newValue: CGFloat) -> Self {
         return set { (configurable: UIPopoverBackgroundView) in
             configurable.arrowOffset = newValue
         }
     }
 
-    func arrowDirection(_ newValue: UIPopoverArrowDirection) -> ConfigurationSet<Base> {
+    func arrowDirection(_ newValue: UIPopoverArrowDirection) -> Self {
         return set { (configurable: UIPopoverBackgroundView) in
             configurable.arrowDirection = newValue
         }

@@ -9,38 +9,38 @@
 import UIKit
 public extension ConfigurationSet where Base: UIButton {
 
-    func title(_ title: String?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func title(_ title: String?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setTitle(title, for: state)
         }
     }
 
-    func titleColor(_ color: UIColor?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func titleColor(_ color: UIColor?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setTitleColor(color, for: state)
         }
     }
 
-    func titleShadowColor(_ color: UIColor?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func titleShadowColor(_ color: UIColor?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setTitleShadowColor(color, for: state)
         }
     }
 
-    func image(_ image: UIImage?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func image(_ image: UIImage?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setImage(image, for: state)
         }
     }
 
-    func backgroundImage(_ image: UIImage?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func backgroundImage(_ image: UIImage?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(image, for: state)
         }
     }
 
     @available(iOS 6.0, *)
-    func attributedTitle(_ title: NSAttributedString?, for state: UIControlState = .normal) -> ConfigurationSet<Base> {
+    func attributedTitle(_ title: NSAttributedString?, for state: UIControlState = .normal) -> Self {
         return set { ( configurable: Base ) in
             configurable.setAttributedTitle(title, for: state)
         }

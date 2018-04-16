@@ -5,128 +5,128 @@ public protocol LayerContaining {
 }
 
 public extension ConfigurationSet where Base: LayerContaining {
-    func layerDelegate(_ delegate: CALayerDelegate) -> ConfigurationSet<Base> {
+    func layerDelegate(_ delegate: CALayerDelegate) -> Self {
         return set { (container: LayerContaining) in
             container.layer.delegate = delegate
         }
     }
 
-    func shadowRadius(_ radius: CGFloat) -> ConfigurationSet<Base> {
+    func shadowRadius(_ radius: CGFloat) -> Self {
         return set { (container: LayerContaining) in
             container.layer.shadowRadius = radius
         }
     }
 
-    func shadowPath(_ path: CGPath) -> ConfigurationSet<Base> {
+    func shadowPath(_ path: CGPath) -> Self {
         return set { (container: LayerContaining) in
             container.layer.shadowPath = path
         }
     }
 
-    func shadowOffset(_ offset: CGSize) -> ConfigurationSet<Base> {
+    func shadowOffset(_ offset: CGSize) -> Self {
         return set { (container: LayerContaining) in
             container.layer.shadowOffset = offset
         }
     }
 
-    func shadowOpacity(_ opacity: Float) -> ConfigurationSet<Base> {
+    func shadowOpacity(_ opacity: Float) -> Self {
         return set { (container: LayerContaining) in
             container.layer.shadowOpacity = opacity
         }
     }
 
-    func shadowColor(_ shadowColor: CGColor) -> ConfigurationSet<Base> {
+    func shadowColor(_ shadowColor: CGColor) -> Self {
         return set { (container: LayerContaining) in
             container.layer.shadowColor = shadowColor
         }
     }
 
-    func layerRasterizationScale(_ rasterizationScale: CGFloat) -> ConfigurationSet<Base> {
+    func layerRasterizationScale(_ rasterizationScale: CGFloat) -> Self {
         return set { (container: LayerContaining) in
             container.layer.rasterizationScale = rasterizationScale
         }
     }
 
-    func layerOpacity(_ opacity: Float) -> ConfigurationSet<Base> {
+    func layerOpacity(_ opacity: Float) -> Self {
         return set { (container: LayerContaining) in
             container.layer.opacity = opacity
         }
     }
 
-    func layerAllowsGroupOpacity(_ allowsGroupOpacity: Bool) -> ConfigurationSet<Base> {
+    func layerAllowsGroupOpacity(_ allowsGroupOpacity: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.allowsGroupOpacity = allowsGroupOpacity
         }
     }
 
-    func borderWidth(_ borderWidth: CGFloat) -> ConfigurationSet<Base> {
+    func borderWidth(_ borderWidth: CGFloat) -> Self {
         return set { (container: LayerContaining) in
             container.layer.borderWidth = borderWidth
         }
     }
 
-    func borderColor(_ borderColor: CGColor) -> ConfigurationSet<Base> {
+    func borderColor(_ borderColor: CGColor) -> Self {
         return set { (container: LayerContaining) in
             container.layer.borderColor = borderColor
         }
     }
 
-    func cornerRadius(_ cornerRadius: CGFloat) -> ConfigurationSet<Base> {
+    func cornerRadius(_ cornerRadius: CGFloat) -> Self {
         return set { (container: LayerContaining) in
             container.layer.cornerRadius = cornerRadius
         }
     }
 
 //    @available(iOS 11.0, *)
-//    func maskedCorners(_ mask: CACornerMask) -> ConfigurationSet<Base> {
+//    func maskedCorners(_ mask: CACornerMask) -> Self {
 //        return set { (container: LayerContaining) in
 //            container.layer.maskedCorners = mask
 //        }
 //    }
 
-    func layerZPosition(_ position: CGFloat) -> ConfigurationSet<Base> {
+    func layerZPosition(_ position: CGFloat) -> Self {
         return set { (container: LayerContaining) in
             container.layer.zPosition = position
         }
     }
 
-    func layerIsDoubleSided(_ isDoubleSided: Bool) -> ConfigurationSet<Base> {
+    func layerIsDoubleSided(_ isDoubleSided: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.isDoubleSided = isDoubleSided
         }
     }
 
-    func layerIsGeometryFlipped(_ isGeometryFlipped: Bool) -> ConfigurationSet<Base> {
+    func layerIsGeometryFlipped(_ isGeometryFlipped: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.isGeometryFlipped = isGeometryFlipped
         }
     }
 
-    func addSublayer(_ layer: CALayer) -> ConfigurationSet<Base> {
+    func addSublayer(_ layer: CALayer) -> Self {
         return set { (container: LayerContaining) in
             container.layer.addSublayer(layer)
         }
     }
 
-    func layerMask(_ mask: CALayer) -> ConfigurationSet<Base> {
+    func layerMask(_ mask: CALayer) -> Self {
         return set { (container: LayerContaining) in
             container.layer.mask = mask
         }
     }
 
-    func layerMasksToBounds(_ masksToBounds: Bool) -> ConfigurationSet<Base> {
+    func layerMasksToBounds(_ masksToBounds: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.masksToBounds = masksToBounds
         }
     }
 
-    func layerNeedsDisplayOnBoundsChange(_ needsDisplayOnBoundsChange: Bool) -> ConfigurationSet<Base> {
+    func layerNeedsDisplayOnBoundsChange(_ needsDisplayOnBoundsChange: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.needsDisplayOnBoundsChange = needsDisplayOnBoundsChange
         }
     }
 
-    func layerDrawsAsynchronously(_ drawsAsynchronously: Bool) -> ConfigurationSet<Base> {
+    func layerDrawsAsynchronously(_ drawsAsynchronously: Bool) -> Self {
         return set { (container: LayerContaining) in
             container.layer.drawsAsynchronously = drawsAsynchronously
         }
