@@ -30,7 +30,7 @@ class TestViewController: UIViewController {
         return view
     }()
     
-    let someOtherView = UIView().configure
+    let someOtherView = UIView().config
         .backgroundColor(.blue)
         .alpha(0.8)
         .cornerRadius(8)
@@ -38,7 +38,7 @@ class TestViewController: UIViewController {
         .borderWidth(0.5)
         .finish()
 
-    lazy var someLazyView = UIView().configure
+    lazy var someLazyView = UIView().config
         .backgroundColor(self.model.primaryColor)
         .alpha(0.8)
         .cornerRadius(8)
@@ -65,10 +65,10 @@ let specialViewConfiguration = UIView.config
 
 let view = UIView().apply(standardViewConfiguration)
 
-let specialView = UIView().apply(UIView.config
+let specialView = UIView().config
     .append(specialViewConfiguration)
     .backgroundColor(.yellow)
-)
+    .finish()
 
 let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
@@ -87,6 +87,27 @@ let customTextViewConfiguration = UITextView.config
     .attributedText(attributedText)
     .linkTextAttributes(attributesLink)
     .delegate(delegate)
+
+class TestConfiguratable: UIView {
+    var configuratableProperty: Int = 0
+    var anotherProperty: String = ""
+    required init() {
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+}
+
+
+let testBuild: IntermediateConfigurationSet<TestConfiguratable> = TestConfiguratable().config.backgroundColor(UIColor.black)
+//    .set({ testObject -> Void in
+//        testObject.configuratableProperty = 1
+//    })
+
+let blub = testBuild.finish()
+
 
 
 

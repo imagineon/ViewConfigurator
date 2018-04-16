@@ -7,7 +7,7 @@ extension Configurable {
         return .init()
     }
 
-    public var configure: IntermediateConfigurationSet<Self> {
+    public var config: IntermediateConfigurationSet<Self> {
         return .init(target: self)
     }
 
@@ -19,16 +19,18 @@ extension Configurable {
 public class ConfigurationSet<Base: Configurable> {
     typealias Configuration = (Base) -> Base
 
-    private var configurations: [Configuration]
+    private let configurations: [Configuration]
+
+    init(configurations: [Configuration]) {
+        self.configurations = configurations
+    }
 
     fileprivate init() {
         self.configurations = .init()
     }
 
     private func set(_ block: @escaping Configuration) -> Self {
-        configurations.append(block)
-
-        return self
+        return new(configurations: configurations + [block])
     }
 
     public func set(_ block: @escaping (Base) -> Void) -> Self {
@@ -41,22 +43,33 @@ public class ConfigurationSet<Base: Configurable> {
 
     @discardableResult
     public func append(_ configuration: ConfigurationSet<Base>) -> Self {
-        configurations.append(contentsOf: configuration.configurations)
-
-        return self
+        return new(configurations: configurations + configuration.configurations)
     }
 
     fileprivate func apply(on base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
+
+    func new(configurations: [Configuration]) -> Self {
+        return .init(configurations: configurations)
+    }
 }
 
 public class IntermediateConfigurationSet<Base: Configurable>: ConfigurationSet<Base> {
-    private var target: Base
+    private let target: Base
 
-    fileprivate init(target: Base) {
+    init(target: Base) {
         self.target = target
         super.init()
+    }
+
+    init(target: Base, configurations: [Configuration]) {
+        self.target = target
+        super.init(configurations: configurations)
+    }
+
+    override func new(configurations: [(Base) -> Base]) -> Self {
+        return .init(target: self.target, configurations: configurations)
     }
 
     public func finish() -> Base {

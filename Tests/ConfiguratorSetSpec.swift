@@ -12,14 +12,23 @@ class ConfiguratorSetSpec: QuickSpec {
 
     override func spec() {
         
-        describe("Configurateable") {
-            it("can be changed by adding Configuration Closures on build") {
+        describe("Configurateable Views") {
+            it("can be changed by applying a Configuration") {
                 let testBuildConfig = TestConfiguratable.config
                     .set({ testObject -> Void in
                         testObject.configuratableProperty = 1
                     })
                 
                 let testBuild = TestConfiguratable().apply(testBuildConfig)
+                
+                expect(testBuild.configuratableProperty).to(equal(1))
+            }
+            it("can be changed by dynamicly creating an configuration and applying it") {
+                let testBuild = TestConfiguratable().config
+                    .set({ testObject -> Void in
+                        testObject.configuratableProperty = 1
+                    })
+                    .finish()
                 
                 expect(testBuild.configuratableProperty).to(equal(1))
             }
@@ -46,6 +55,18 @@ class ConfiguratorSetSpec: QuickSpec {
                 
                 expect(testBuild.configuratableProperty).to(equal(1))
                 expect(testBuild.anotherProperty).to(equal("foo"))
+            }
+            it("Configuration sets are imutable") {
+                let firstConfiguration = TestConfiguratable.config.set({ $0.configuratableProperty = 1 })
+                let _ = firstConfiguration.set({ $0.anotherProperty = "foo" })
+                
+                let testBuildConfig = TestConfiguratable.config
+                    .append(firstConfiguration)
+                
+                let testBuild = TestConfiguratable().apply(testBuildConfig)
+                
+                expect(testBuild.configuratableProperty).to(equal(1))
+                expect(testBuild.anotherProperty).toNot(equal("foo"))
             }
         }
 
