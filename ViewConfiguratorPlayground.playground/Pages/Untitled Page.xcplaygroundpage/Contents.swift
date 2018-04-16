@@ -20,7 +20,6 @@ let standardConfiguration = UIView.config
 class TestViewController: UIViewController {
     let model: TestColorModel = TestColorModel(primaryColor: .blue, secondaryColor: .red)
 
-    
     lazy var someView: UIView = {
         let view = UIView()
         view.backgroundColor = self.model.primaryColor
@@ -31,21 +30,21 @@ class TestViewController: UIViewController {
         return view
     }()
     
-    let someOtherView = UIView.config
+    let someOtherView = UIView().configure
         .backgroundColor(.blue)
         .alpha(0.8)
         .cornerRadius(8)
         .borderColor(UIColor.red.cgColor)
         .borderWidth(0.5)
-        .build()
+        .finish()
 
-    lazy var someLazyView = UIView.config
+    lazy var someLazyView = UIView().configure
         .backgroundColor(self.model.primaryColor)
         .alpha(0.8)
         .cornerRadius(8)
         .borderColor(self.model.secondaryColor.cgColor)
         .borderWidth(0.5)
-        .build()
+        .finish()
 }
 
 let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
@@ -64,15 +63,12 @@ let specialViewConfiguration = UIView.config
     .borderWidth(2)
     .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
 
-let standardView = standardViewConfiguration.build()
-
 let view = UIView().apply(standardViewConfiguration)
 
-
-let specialView = UIView.config
+let specialView = UIView().apply(UIView.config
     .append(specialViewConfiguration)
     .backgroundColor(.yellow)
-    .build()
+)
 
 let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
