@@ -5,109 +5,93 @@ import ViewConfigurator
 
 var str = "Hello, playground"
 
-struct TestColorModel {
+struct ExampleColorModel {
     let primaryColor: UIColor
     let secondaryColor: UIColor
 }
 
-let standardConfiguration = UIView.config
-    .backgroundColor(.blue)
-    .alpha(0.8)
-    .cornerRadius(8)
-    .borderColor(UIColor.red.cgColor)
+// Example without ViewConfigurator
 
-
-class TestViewController: UIViewController {
-    let model: TestColorModel = TestColorModel(primaryColor: .blue, secondaryColor: .red)
-
-    lazy var someView: UIView = {
+class ExampleViewControllerWithoutViewConfigurator: UIViewController {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
+    
+    let myView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.alpha = 0.8
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = UIColor.red.cgColor
+        view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        return view
+    }()
+    
+    lazy var someLazyView: UIView = {
         let view = UIView()
         view.backgroundColor = self.model.primaryColor
         view.alpha = 0.8
         view.layer.cornerRadius = 8
         view.layer.borderColor = self.model.secondaryColor.cgColor
         view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         return view
     }()
-    
-    let someOtherView = UIView().config
-        .backgroundColor(.blue)
-        .alpha(0.8)
-        .cornerRadius(8)
-        .borderColor(UIColor.red.cgColor)
-        .borderWidth(0.5)
-        .finish()
+}
 
-    lazy var someLazyView = UIView().config
-        .backgroundColor(self.model.primaryColor)
+let vc = ExampleViewControllerWithoutViewConfigurator()
+let subview = vc.myView
+let lazyView = vc.someLazyView
+
+
+// Example with ViewConfigurator
+
+struct ExampleConfigurations {
+    static let standard = UIView.config
         .alpha(0.8)
         .cornerRadius(8)
-        .borderColor(self.model.secondaryColor.cgColor)
         .borderWidth(0.5)
+        .backgroundColor(.blue)
+        .borderColor(UIColor.red.cgColor)
+        .frame(CGRect(x: 0, y: 0, width: 50, height: 50))
+}
+
+class ExampleViewController: UIViewController {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
+    
+    let myView = UIView()
+        .apply(ExampleConfigurations.standard)
+    
+    lazy var modelConfiguration = UIView.config
+        .backgroundColor(self.model.primaryColor)
+        .borderColor(self.model.secondaryColor.cgColor)
+    
+    lazy var someLazyView = UIView()
+        .apply(ExampleConfigurations.standard)
+        .apply(self.modelConfiguration)
+    
+    lazy var anotherView = UIView().config
+        .append(ExampleConfigurations.standard)
+        .backgroundColor(self.model.primaryColor)
+        .borderColor(self.model.secondaryColor.cgColor)
         .finish()
 }
 
-let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
-    .backgroundColor(.blue)
+let vc2 = ExampleViewController()
+let subview2 = vc2.myView
+let lazyView2 = vc2.someLazyView
+
+// Grouped Configurations
+
+let standardConfiguration = UIView.config
     .alpha(0.8)
     .cornerRadius(8)
-    .borderColor(UIColor.red.cgColor)
     .borderWidth(0.5)
-    .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
 
-let specialViewConfiguration = UIView.config
-    .backgroundColor(.red)
-    .alpha(0.5)
-    .cornerRadius(15)
-    .borderColor(UIColor.green.cgColor)
-    .borderWidth(2)
-    .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
+let shadowConfiguration = UIView.config
+    .shadowColor(UIColor.yellow.cgColor)
+    .shadowOffset(CGSize(width: 3, height: 3))
 
-let view = UIView().apply(standardViewConfiguration)
+let standardWithShadowConfiguration = standardConfiguration
+    .append(shadowConfiguration)
 
-let specialView = UIView().config
-    .append(specialViewConfiguration)
-    .backgroundColor(.yellow)
-    .finish()
-
-let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue ]
-let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
-let attributesLink = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red, NSAttributedStringKey.font.rawValue : UIFont(name: "Helvetica", size: 30)!, NSAttributedStringKey.underlineStyle.rawValue : NSUnderlineStyle.styleNone.rawValue] as [String : Any]
-
-class TextViewDelegate: NSObject, UITextViewDelegate{}
-
-let delegate = TextViewDelegate()
-
-let customTextViewConfiguration = UITextView.config
-    .backgroundColor(UIColor.black)
-    .textColor(.red)
-    .text("some text")
-    .textAlignment(.left)
-    .selectedRange(NSMakeRange(6, 0))
-    .attributedText(attributedText)
-    .linkTextAttributes(attributesLink)
-    .delegate(delegate)
-
-class TestConfiguratable: UIView {
-    var configuratableProperty: Int = 0
-    var anotherProperty: String = ""
-    required init() {
-        super.init(frame: .zero)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
-    }
-}
-
-
-let testBuild: IntermediateConfigurationSet<TestConfiguratable> = TestConfiguratable().config.backgroundColor(UIColor.black)
-//    .set({ testObject -> Void in
-//        testObject.configuratableProperty = 1
-//    })
-
-let blub = testBuild.finish()
-
-
-
-
+let standartViewWithShadow = UIView().apply(standardWithShadowConfiguration)

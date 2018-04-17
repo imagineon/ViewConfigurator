@@ -1,45 +1,26 @@
-//: [Previous](@previous)
-
 import UIKit
 import ViewConfigurator
 
-struct ExampleColorModel {
-    let primaryColor: UIColor
-    let secondaryColor: UIColor
+// Example for Custom Subviews
+
+class MyViewSubclass: UIView {
+    var anotherConfiguration: Bool = false
 }
 
-struct ExampleConfigurations {
-    static let standard = UIView.config
-        .alpha(0.8)
-        .cornerRadius(8)
-        .borderWidth(0.5)
-        .frame(CGRect(x: 0, y: 0, width: 30, height: 30))
-    
-    static let shadow = UIView.config
-        .shadowColor(UIColor.yellow.cgColor)
-        .shadowOffset(CGSize(width: 3, height: 3))
-    
-    static let standardWithShadow = ExampleConfigurations.standard
-        .append(ExampleConfigurations.shadow)
-    
+extension ConfigurationSet where Base: MyViewSubclass  {
+    func anotherConfiguration(_ newValue: Bool) -> Self {
+        return set { (configurable: MyViewSubclass) in
+            configurable.anotherConfiguration = newValue
+        }
+    }
 }
 
-class ExampleViewController: UIViewController {
-    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
-    
-    let oneView = ExampleConfigurations.standard.build()
-    
-    lazy var someLazyView = ExampleConfigurations.standard
-        .append(ExampleConfigurations.shadow)
-        .backgroundColor(self.model.primaryColor)
-        .set({
-            $0.customProperty = "i am special"
-        })
-        .build()
-    
-    let anotherView = ExampleConfigurations.standardWithShadow.build()
+let myCustomView = MyViewSubclass().config
+    .anotherConfiguration(true)
+    .finish
+
+let anotherCustomView = MyViewSubclass().config
+    .set { myView in
+        myView.anotherConfiguration = true
+    }
 }
-
-let blub = ExampleViewController().someLazyView
-
-//: [Next](@next)
