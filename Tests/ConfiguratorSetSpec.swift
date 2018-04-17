@@ -45,11 +45,14 @@ class ConfiguratorSetSpec: QuickSpec {
                 expect(testBuild.configuratableProperty).to(equal(2))
             }
             it("Configuration sets can be combined") {
-                let firstConfiguration = TestConfiguratable.config.set({ $0.configuratableProperty = 1 })
-                let secondConfiguration = TestConfiguratable.config.set({ $0.anotherProperty = "foo" })
-                let testBuildConfig = TestConfiguratable.config
-                    .append(firstConfiguration)
-                    .append(secondConfiguration)
+                let firstConfiguration = TestConfiguratable.config
+                    .set({ $0.configuratableProperty = 1 })
+                    .set({ $0.anotherProperty = "bar" })
+                
+                let secondConfiguration = TestConfiguratable.config
+                    .set({ $0.anotherProperty = "foo" })
+                
+                let testBuildConfig = firstConfiguration.append(secondConfiguration)
                 
                 let testBuild = TestConfiguratable().apply(testBuildConfig)
                 

@@ -21,7 +21,7 @@ public class ConfigurationSet<Base: Configurable> {
 
     private let configurations: [Configuration]
 
-    init(configurations: [Configuration]) {
+    fileprivate init(configurations: [Configuration]) {
         self.configurations = configurations
     }
 
@@ -58,12 +58,12 @@ public class ConfigurationSet<Base: Configurable> {
 public class IntermediateConfigurationSet<Base: Configurable>: ConfigurationSet<Base> {
     private let target: Base
 
-    init(target: Base) {
+    fileprivate init(target: Base) {
         self.target = target
         super.init()
     }
 
-    init(target: Base, configurations: [Configuration]) {
+    fileprivate init(target: Base, configurations: [Configuration]) {
         self.target = target
         super.init(configurations: configurations)
     }
