@@ -89,3 +89,10 @@ public extension ConfigurationSet where Base: UICollectionView {
     }
 
 }
+
+extension Configurable where Self: UICollectionView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UICollectionView>) -> Self {
+        _ = configuration.apply(on: self as UICollectionView)
+        return self
+    }
+}

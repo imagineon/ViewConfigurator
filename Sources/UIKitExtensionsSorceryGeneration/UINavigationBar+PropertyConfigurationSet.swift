@@ -84,3 +84,10 @@ public extension ConfigurationSet where Base: UINavigationBar {
     }
 
 }
+
+extension Configurable where Self: UINavigationBar {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UINavigationBar>) -> Self {
+        _ = configuration.apply(on: self as UINavigationBar)
+        return self
+    }
+}

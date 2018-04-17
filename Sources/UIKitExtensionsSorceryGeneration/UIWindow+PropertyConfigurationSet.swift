@@ -24,3 +24,10 @@ public extension ConfigurationSet where Base: UIWindow {
     }
 
 }
+
+extension Configurable where Self: UIWindow {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIWindow>) -> Self {
+        _ = configuration.apply(on: self as UIWindow)
+        return self
+    }
+}

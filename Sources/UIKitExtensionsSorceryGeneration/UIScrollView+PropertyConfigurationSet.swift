@@ -165,3 +165,10 @@ public extension ConfigurationSet where Base: UIScrollView {
     }
 
 }
+
+extension Configurable where Self: UIScrollView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIScrollView>) -> Self {
+        _ = configuration.apply(on: self as UIScrollView)
+        return self
+    }
+}

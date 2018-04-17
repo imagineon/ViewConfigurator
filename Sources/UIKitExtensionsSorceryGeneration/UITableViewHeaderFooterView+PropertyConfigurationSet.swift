@@ -11,3 +11,10 @@ public extension ConfigurationSet where Base: UITableViewHeaderFooterView {
     }
 
 }
+
+extension Configurable where Self: UITableViewHeaderFooterView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITableViewHeaderFooterView>) -> Self {
+        _ = configuration.apply(on: self as UITableViewHeaderFooterView)
+        return self
+    }
+}

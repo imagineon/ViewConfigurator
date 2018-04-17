@@ -197,3 +197,10 @@ public extension ConfigurationSet where Base: UIView {
     }
 
 }
+
+extension Configurable where Self: UIView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIView>) -> Self {
+        _ = configuration.apply(on: self as UIView)
+        return self
+    }
+}

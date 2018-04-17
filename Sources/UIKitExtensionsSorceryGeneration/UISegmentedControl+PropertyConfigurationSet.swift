@@ -29,3 +29,10 @@ public extension ConfigurationSet where Base: UISegmentedControl {
     }
 
 }
+
+extension Configurable where Self: UISegmentedControl {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UISegmentedControl>) -> Self {
+        _ = configuration.apply(on: self as UISegmentedControl)
+        return self
+    }
+}

@@ -117,3 +117,10 @@ public extension ConfigurationSet where Base: UITableViewCell {
     }
 
 }
+
+extension Configurable where Self: UITableViewCell {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITableViewCell>) -> Self {
+        _ = configuration.apply(on: self as UITableViewCell)
+        return self
+    }
+}

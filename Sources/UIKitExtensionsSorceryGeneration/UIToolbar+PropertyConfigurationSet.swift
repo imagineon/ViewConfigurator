@@ -43,3 +43,10 @@ public extension ConfigurationSet where Base: UIToolbar {
     }
 
 }
+
+extension Configurable where Self: UIToolbar {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIToolbar>) -> Self {
+        _ = configuration.apply(on: self as UIToolbar)
+        return self
+    }
+}

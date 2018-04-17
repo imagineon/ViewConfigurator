@@ -32,5 +32,11 @@ public extension ConfigurationSet where Base: UIActionSheet {
             configurable.destructiveButtonIndex = newValue
         }
     }
+}
 
+extension Configurable where Self: UIActionSheet {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIActionSheet>) -> Self {
+        _ = configuration.apply(on: self as UIActionSheet)
+        return self
+    }
 }

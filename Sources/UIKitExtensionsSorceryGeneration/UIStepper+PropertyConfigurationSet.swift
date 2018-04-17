@@ -53,3 +53,12 @@ public extension ConfigurationSet where Base: UIStepper {
     }
 
 }
+
+extension Configurable where Self: UIStepper {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIStepper>) -> Self {
+        _ = configuration.apply(on: self as UIStepper)
+        return self
+    }
+}
+
+

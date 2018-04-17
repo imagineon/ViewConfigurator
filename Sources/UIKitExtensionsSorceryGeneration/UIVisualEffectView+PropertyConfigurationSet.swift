@@ -11,3 +11,10 @@ public extension ConfigurationSet where Base: UIVisualEffectView {
     }
 
 }
+
+extension Configurable where Self: UIVisualEffectView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIVisualEffectView>) -> Self {
+        _ = configuration.apply(on: self as UIVisualEffectView)
+        return self
+    }
+}

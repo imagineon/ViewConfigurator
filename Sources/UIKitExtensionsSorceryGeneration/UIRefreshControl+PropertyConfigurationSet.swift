@@ -17,3 +17,10 @@ public extension ConfigurationSet where Base: UIRefreshControl {
     }
 
 }
+
+extension Configurable where Self: UIRefreshControl {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIRefreshControl>) -> Self {
+        _ = configuration.apply(on: self as UIRefreshControl)
+        return self
+    }
+}

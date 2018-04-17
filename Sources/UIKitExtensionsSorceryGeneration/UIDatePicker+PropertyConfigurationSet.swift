@@ -58,3 +58,10 @@ public extension ConfigurationSet where Base: UIDatePicker {
     }
 
 }
+
+extension Configurable where Self: UIDatePicker {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIDatePicker>) -> Self {
+        _ = configuration.apply(on: self as UIDatePicker)
+        return self
+    }
+}

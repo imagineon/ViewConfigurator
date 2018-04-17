@@ -116,3 +116,10 @@ public extension ConfigurationSet where Base: UILabel {
     }
 
 }
+
+extension Configurable where Self: UILabel {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UILabel>) -> Self {
+        _ = configuration.apply(on: self as UILabel)
+        return self
+    }
+}

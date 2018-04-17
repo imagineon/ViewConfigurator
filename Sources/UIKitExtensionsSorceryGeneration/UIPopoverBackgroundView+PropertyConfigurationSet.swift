@@ -16,3 +16,10 @@ public extension ConfigurationSet where Base: UIPopoverBackgroundView {
     }
 
 }
+
+extension Configurable where Self: UIPopoverBackgroundView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPopoverBackgroundView>) -> Self {
+        _ = configuration.apply(on: self as UIPopoverBackgroundView)
+        return self
+    }
+}

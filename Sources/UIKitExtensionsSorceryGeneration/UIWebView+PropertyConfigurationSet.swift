@@ -100,3 +100,10 @@ public extension ConfigurationSet where Base: UIWebView {
     }
 
 }
+
+extension Configurable where Self: UIWebView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIWebView>) -> Self {
+        _ = configuration.apply(on: self as UIWebView)
+        return self
+    }
+}

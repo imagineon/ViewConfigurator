@@ -45,3 +45,10 @@ public extension ConfigurationSet where Base: UISwitch {
     }
 
 }
+
+extension Configurable where Self: UISwitch {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UISwitch>) -> Self {
+        _ = configuration.apply(on: self as UISwitch)
+        return self
+    }
+}

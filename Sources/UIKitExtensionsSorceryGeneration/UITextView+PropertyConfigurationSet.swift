@@ -114,3 +114,10 @@ public extension ConfigurationSet where Base: UITextView {
     }
 
 }
+
+extension Configurable where Self: UITextView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITextView>) -> Self {
+        _ = configuration.apply(on: self as UITextView)
+        return self
+    }
+}

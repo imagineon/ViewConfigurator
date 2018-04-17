@@ -23,3 +23,10 @@ public extension ConfigurationSet where Base: UIActivityIndicatorView {
     }
 
 }
+
+extension Configurable where Self: UIActivityIndicatorView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIActivityIndicatorView>) -> Self {
+        _ = configuration.apply(on: self as UIActivityIndicatorView)
+        return self
+    }
+}

@@ -51,3 +51,10 @@ public extension ConfigurationSet where Base: UIProgressView {
     }
 
 }
+
+extension Configurable where Self: UIProgressView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIProgressView>) -> Self {
+        _ = configuration.apply(on: self as UIProgressView)
+        return self
+    }
+}

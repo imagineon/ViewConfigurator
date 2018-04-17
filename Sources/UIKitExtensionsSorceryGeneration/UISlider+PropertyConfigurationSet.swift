@@ -61,3 +61,10 @@ public extension ConfigurationSet where Base: UISlider {
     }
 
 }
+
+extension Configurable where Self: UISlider {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UISlider>) -> Self {
+        _ = configuration.apply(on: self as UISlider)
+        return self
+    }
+}

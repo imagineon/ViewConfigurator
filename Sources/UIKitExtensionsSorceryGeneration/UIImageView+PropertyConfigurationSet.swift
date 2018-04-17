@@ -62,3 +62,10 @@ public extension ConfigurationSet where Base: UIImageView {
     }
 
 }
+
+extension Configurable where Self: UIImageView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIImageView>) -> Self {
+        _ = configuration.apply(on: self as UIImageView)
+        return self
+    }
+}
