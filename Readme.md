@@ -125,8 +125,8 @@ struct ExampleConfigurations {
         .shadowColor(UIColor.yellow.cgColor)
         .shadowOffset(CGSize(width: 3, height: 3))
 
-    static let standardWithShadow = ExampleConfigurations.standard
-        .append(ExampleConfigurations.shadow)
+    static let standardWithShadow = standard
+        .append(shadow)
 }
 ```
 
