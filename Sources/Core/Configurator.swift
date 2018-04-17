@@ -41,7 +41,6 @@ public class ConfigurationSet<Base: Configurable> {
         }
     }
 
-    @discardableResult
     public func append(_ configuration: ConfigurationSet<Base>) -> Self {
         return new(configurations: configurations + configuration.configurations)
     }
