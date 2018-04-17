@@ -82,16 +82,30 @@ let lazyView2 = vc2.someLazyView
 
 // Grouped Configurations
 
-let standardConfiguration = UIView.config
-    .alpha(0.8)
-    .cornerRadius(8)
-    .borderWidth(0.5)
+extension ExampleConfigurations {
+    static let standardConfiguration = UIView.config
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderWidth(0.5)
+        .backgroundColor(.red)
+        .frame(CGRect(x: 0, y: 0, width: 50, height: 50))
+    
+    static let shadowConfiguration = UIView.config
+        .shadowColor(UIColor.yellow.cgColor)
+        .shadowOffset(CGSize(width: 3, height: 3))
+    
+    static let standardWithShadowConfiguration = standardConfiguration
+        .append(shadowConfiguration)
+}
 
-let shadowConfiguration = UIView.config
-    .shadowColor(UIColor.yellow.cgColor)
-    .shadowOffset(CGSize(width: 3, height: 3))
+let standartViewWithShadow = UIView().apply(ExampleConfigurations.standardWithShadowConfiguration)
 
-let standardWithShadowConfiguration = standardConfiguration
-    .append(shadowConfiguration)
+// Apply on Subclasses
 
-let standartViewWithShadow = UIView().apply(standardWithShadowConfiguration)
+let controlConfig = UIControl.config.isEnabled(true)
+
+let button = UIButton()
+    .apply(ExampleConfigurations.standardConfiguration)
+    .apply(controlConfig)
+
+
