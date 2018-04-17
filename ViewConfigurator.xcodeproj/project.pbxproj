@@ -74,6 +74,7 @@
 		E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43951661F2C7C9800543B34 /* UIViewSpec.swift */; };
 		E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45621471F5718E000FBD730 /* UIButtonSpecs.swift */; };
 		E4A317A71F56FA8300649294 /* UIControlSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A317A51F56FA1600649294 /* UIControlSpecs.swift */; };
+		E4CFDD0F2085E6AA0092EDDB /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFDD0E2085E6AA0092EDDB /* Performance.swift */; };
 		E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */; };
 		E4EC0D821F56C2FD0053621D /* UILabelSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */; };
 		E4FEB6601F2CA00700EE6D8C /* LayerContainingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */; };
@@ -327,6 +328,7 @@
 		E43951661F2C7C9800543B34 /* UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSpec.swift; sourceTree = "<group>"; };
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
+		E4CFDD0E2085E6AA0092EDDB /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
 		E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelSpecs.swift; sourceTree = "<group>"; };
 		E4FEB65F1F2CA00700EE6D8C /* LayerContainingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContainingSpecs.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */,
 				E4EC0D811F56C2FD0053621D /* UILabelSpecs.swift */,
 				E43951661F2C7C9800543B34 /* UIViewSpec.swift */,
+				E4CFDD0E2085E6AA0092EDDB /* Performance.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */,
 				E4EC0D821F56C2FD0053621D /* UILabelSpecs.swift in Sources */,
 				E4A317A71F56FA8300649294 /* UIControlSpecs.swift in Sources */,
+				E4CFDD0F2085E6AA0092EDDB /* Performance.swift in Sources */,
 				3549BB8B1DA38C0A00C63030 /* ConfiguratorSetSpec.swift in Sources */,
 				E43951751F2C7DFB00543B34 /* UIViewSpec.swift in Sources */,
 			);

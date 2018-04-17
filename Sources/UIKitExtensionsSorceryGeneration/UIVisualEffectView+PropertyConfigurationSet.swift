@@ -4,7 +4,7 @@
 import UIKit
 public extension ConfigurationSet where Base: UIVisualEffectView {
 
-    func effect(_ newValue: UIVisualEffect?) -> ConfigurationSet<Base> {
+    func effect(_ newValue: UIVisualEffect?) -> Self {
         return set { (configurable: UIVisualEffectView) in
             configurable.effect = newValue
         }

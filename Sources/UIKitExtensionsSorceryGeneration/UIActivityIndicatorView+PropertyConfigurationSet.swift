@@ -3,20 +3,20 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UIActivityIndicatorView {
-    func activityIndicatorViewStyle(_ newValue: UIActivityIndicatorViewStyle) -> ConfigurationSet<Base> {
+    func activityIndicatorViewStyle(_ newValue: UIActivityIndicatorViewStyle) -> Self {
         return set { (configurable: UIActivityIndicatorView) in
             configurable.activityIndicatorViewStyle = newValue
         }
     }
 
-    func hidesWhenStopped(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func hidesWhenStopped(_ newValue: Bool) -> Self {
         return set { (configurable: UIActivityIndicatorView) in
             configurable.hidesWhenStopped = newValue
         }
     }
 
     @available(iOS 5.0, *)
-    func color(_ newValue: UIColor?) -> ConfigurationSet<Base> {
+    func color(_ newValue: UIColor?) -> Self {
         return set { (configurable: UIActivityIndicatorView) in
             configurable.color = newValue
         }

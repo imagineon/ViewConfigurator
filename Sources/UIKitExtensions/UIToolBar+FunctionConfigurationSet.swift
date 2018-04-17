@@ -11,14 +11,14 @@ import UIKit
 public extension ConfigurationSet where Base: UIToolbar {
 
     @available(iOS 5.0, *)
-    func backgroundImage(_ backgroundImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
+    func backgroundImage(_ backgroundImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition, barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(backgroundImage, forToolbarPosition: topOrBottom, barMetrics: barMetrics)
         }
     }
 
     @available(iOS 6.0, *)
-    func shadowImage(_ shadowImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition) -> ConfigurationSet<Base> {
+    func shadowImage(_ shadowImage: UIImage?, forToolbarPosition topOrBottom: UIBarPosition) -> Self {
         return set { ( configurable: Base ) in
             configurable.setShadowImage(shadowImage, forToolbarPosition: topOrBottom)
         }

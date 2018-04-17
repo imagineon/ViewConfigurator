@@ -7,49 +7,49 @@ class UIImageViewSpec: QuickSpec {
         describe("UIViewConfigurator") {
             it("can set image") {
                 let image = UIImage()
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .image(image)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.image).to(equal(image))
             }
             it("can set highlighted image") {
                 let image = UIImage()
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .highlightedImage(image)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.highlightedImage).to(equal(image))
             }
             it("can set animation images") {
                 let images = [UIImage(), UIImage()]
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .animationImages(images)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.animationImages).to(equal(images))
             }
             it("can set highlighted animation images") {
                 let images = [UIImage(), UIImage()]
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .highlightedAnimationImages(images)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.highlightedAnimationImages).to(equal(images))
             }
             it("can set animation duration") {
                 let duration = TimeInterval(50)
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .animationDuration(duration)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.animationDuration).to(equal(duration))
             }
             it("can set animation duration") {
                 let count = 50
-                let testView = UIImageView.config
+                let testViewConfig = UIImageView.config
                     .animationRepeatCount(count)
-                    .build()
+                let testView = UIImageView().apply(testViewConfig)
                 
                 expect(testView.animationRepeatCount).to(equal(count))
             }

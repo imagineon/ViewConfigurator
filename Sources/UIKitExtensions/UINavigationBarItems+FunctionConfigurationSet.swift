@@ -10,21 +10,21 @@ import UIKit
 public extension ConfigurationSet where Base: UINavigationBar {
 
     @available(iOS 7.0, *)
-    func backgroundImage(_ backgroundImage: UIImage?, for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
+    func backgroundImage(_ backgroundImage: UIImage?, for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(backgroundImage, for: barPosition, barMetrics: barMetrics)
         }
     }
 
     @available(iOS 5.0, *)
-    func backgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
+    func backgroundImage(_ backgroundImage: UIImage?, for barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(backgroundImage, for: barMetrics)
         }
     }
 
     @available(iOS 5.0, *)
-    func titleVerticalPositionAdjustment(_ adjustment: CGFloat, for barMetrics: UIBarMetrics) -> ConfigurationSet<Base> {
+    func titleVerticalPositionAdjustment(_ adjustment: CGFloat, for barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setTitleVerticalPositionAdjustment(adjustment, for: barMetrics)
         }

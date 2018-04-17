@@ -4,13 +4,13 @@
 import UIKit
 public extension ConfigurationSet where Base: UIRefreshControl {
 
-    func tintColor(_ newValue: UIColor!) -> ConfigurationSet<Base> {
+    func tintColor(_ newValue: UIColor!) -> Self {
         return set { (configurable: UIRefreshControl) in
             configurable.tintColor = newValue
         }
     }
 
-    func attributedTitle(_ newValue: NSAttributedString?) -> ConfigurationSet<Base> {
+    func attributedTitle(_ newValue: NSAttributedString?) -> Self {
         return set { (configurable: UIRefreshControl) in
             configurable.attributedTitle = newValue
         }

@@ -3,26 +3,26 @@
 
 import UIKit
 public extension ConfigurationSet where Base: UISegmentedControl {
-    func isMomentary(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isMomentary(_ newValue: Bool) -> Self {
         return set { (configurable: UISegmentedControl) in
             configurable.isMomentary = newValue
         }
     }
 
     @available(iOS 5.0, *)
-    func apportionsSegmentWidthsByContent(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func apportionsSegmentWidthsByContent(_ newValue: Bool) -> Self {
         return set { (configurable: UISegmentedControl) in
             configurable.apportionsSegmentWidthsByContent = newValue
         }
     }
 
-    func selectedSegmentIndex(_ newValue: Int) -> ConfigurationSet<Base> {
+    func selectedSegmentIndex(_ newValue: Int) -> Self {
         return set { (configurable: UISegmentedControl) in
             configurable.selectedSegmentIndex = newValue
         }
     }
 
-    func tintColor(_ newValue: UIColor!) -> ConfigurationSet<Base> {
+    func tintColor(_ newValue: UIColor!) -> Self {
         return set { (configurable: UISegmentedControl) in
             configurable.tintColor = newValue
         }

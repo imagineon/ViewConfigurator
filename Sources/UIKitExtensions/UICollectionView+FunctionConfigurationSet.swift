@@ -9,25 +9,25 @@
 import UIKit
 public extension ConfigurationSet where Base: UICollectionView {
 
-    func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: String) -> ConfigurationSet<Base> {
+    func register(_ cellClass: Swift.AnyClass?, forCellWithReuseIdentifier identifier: String) -> Self {
         return set { ( configurable: Base ) in
             configurable.register(cellClass, forCellWithReuseIdentifier: identifier)
         }
     }
 
-    func register(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) -> ConfigurationSet<Base> {
+    func register(_ nib: UINib?, forCellWithReuseIdentifier identifier: String) -> Self {
         return set { ( configurable: Base ) in
             configurable.register(nib, forCellWithReuseIdentifier: identifier)
         }
     }
 
-    func register(_ viewClass: Swift.AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) -> ConfigurationSet<Base> {
+    func register(_ viewClass: Swift.AnyClass?, forSupplementaryViewOfKind elementKind: String, withReuseIdentifier identifier: String) -> Self {
         return set { ( configurable: Base ) in
             configurable.register(viewClass, forSupplementaryViewOfKind: elementKind, withReuseIdentifier: identifier)
         }
     }
 
-    func register(_ nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: String) -> ConfigurationSet<Base> {
+    func register(_ nib: UINib?, forSupplementaryViewOfKind kind: String, withReuseIdentifier identifier: String) -> Self {
         return set { ( configurable: Base ) in
             configurable.register(nib, forSupplementaryViewOfKind: kind, withReuseIdentifier: identifier)
         }

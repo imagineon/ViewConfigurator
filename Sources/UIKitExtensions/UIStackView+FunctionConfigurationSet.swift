@@ -12,7 +12,7 @@ import UIKit
 public extension ConfigurationSet where Base: UIStackView {
 
     @available(iOS 11.0, *)
-    func customSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> ConfigurationSet<Base> {
+    func customSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> Self {
         return set { ( configurable: Base ) in
             configurable.setCustomSpacing(spacing, after: arrangedSubview)
         }

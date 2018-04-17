@@ -27,75 +27,49 @@ When creating and configuring views in code there's many lines to be written.
 And doing it all in `viewDidLoad()` makes for one behemoth of a method.
 
 Swift allows to instantiate and configure our views right where we declare them.
+There even is the possibility to use instance variables, if you declare the Views lazy.
 For Example:
 
 ```swift
-
-class ExampleViewController: UIViewController {
-	
-	let view: UIView = {
-    	    let view = UIView()
-	    view.backgroundColor = .blue
-	    view.alpha = 0.8
-	    view.layer.cornerRadius = 8
-	    view.layer.borderColor = UIColor.red.cgColor
-	    view.layer.borderWidth = 0.5
-	    return view
-	}()
-	
-}
-
-```
-
-There even is the possibility to use instance variables, if you declare the Views lazy.
-For example:
-
-```swift
-
 struct ExampleColorModel {
     let primaryColor: UIColor
     let secondaryColor: UIColor
 }
 
 class ExampleViewController: UIViewController {
-    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
-    
-    lazy var someView: UIView = {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
+
+    let myView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.alpha = 0.8
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = UIColor.red.cgColor
+        view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        return view
+    }()
+
+    lazy var someLazyView: UIView = {
         let view = UIView()
         view.backgroundColor = self.model.primaryColor
         view.alpha = 0.8
         view.layer.cornerRadius = 8
         view.layer.borderColor = self.model.secondaryColor.cgColor
         view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         return view
     }()
-    
 }
 ```
 
 With this libary we want to achieve an even higher level of 'swiftiness'.
 
-The idea is to create reusable ConfigurationSets and then either apply them or build an instance out of them.
+The idea is to create reusable ConfigurationSets and then either apply them on instances.
 
 With ViewConfigurator our example now looks like this:
 
 ```swift
-let standardViewConfiguration: ConfigurationSet<UIView> = UIView.config
-    .backgroundColor(.blue)
-    .alpha(0.8)
-    .cornerRadius(8)
-    .borderColor(UIColor.red.cgColor)
-    .borderWidth(0.5)
-    
-let createdView = standardConfiguration.build()
-
-existingView.apply(standardConfiguration)
-```
-
-Here an example with lazy Properties:
-
-```swift
-
 struct ExampleColorModel {
     let primaryColor: UIColor
     let secondaryColor: UIColor
@@ -106,37 +80,57 @@ struct ExampleConfigurations {
         .alpha(0.8)
         .cornerRadius(8)
         .borderWidth(0.5)
+        .backgroundColor(.blue)
+        .borderColor(UIColor.red.cgColor)
+        .frame(CGRect(x: 0, y: 0, width: 50, height: 50))
 }
 
 class ExampleViewController: UIViewController {
-    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
 
-    lazy var someLazyView = ExampleConfigurations.standard
+    let myView = UIView()
+        .apply(ExampleConfigurations.standard)
+
+    lazy var modelConfiguration = UIView.config
         .backgroundColor(self.model.primaryColor)
         .borderColor(self.model.secondaryColor.cgColor)
-        .build()
+
+    lazy var someLazyView = UIView()
+        .apply(ExampleConfigurations.standard)
+        .apply(self.modelConfiguration)
 }
+
 ```
+
+If you have a configuration which is only used once you can also do this directly without creating an configuration object beforehand.
+
+```swift
+lazy var anotherView = UIView().config
+    .backgroundColor(self.model.primaryColor)
+    .borderColor(self.model.secondaryColor.cgColor)
+    .finish()
+```
+
 
 Also the grouping of configurations is possible:
 
 ```swift
+struct ExampleConfigurations {
+    static let standard = UIView.config
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderWidth(0.5)
 
-static let standard = UIView.config
-    .alpha(0.8)
-    .cornerRadius(8)
-    .borderWidth(0.5)
+    static let shadow = UIView.config
+        .shadowColor(UIColor.yellow.cgColor)
+        .shadowOffset(CGSize(width: 3, height: 3))
 
-static let shadow = UIView.config
-    .shadowColor(UIColor.yellow.cgColor)
-    .shadowOffset(CGSize(width: 3, height: 3))
-
-static let standardWithShadow = ExampleConfigurations.standard
-    .append(ExampleConfigurations.shadow)
-
+    static let standardWithShadow = standard
+        .append(shadow)
+}
 ```
 
-If your UIView Subclasses have custom Properties and you want to configure them you can use the generic set.
+If your UIView Subclasses have custom Properties and you want to configure them you can use the generic set method.
 This will invoke a custom closure during Configuration.
 Be careful while using this. There is nothing stoping you from introducing sideeffects through this, and it is strongly discouraged.
 
@@ -146,6 +140,22 @@ static let custom = MyCustomView.config
     .set({
         $0.customProperty = "i am special"
     })
+```
+
+A better solution would be to extend ConfigurationSet to support your custom properties.
+
+```swift
+class MyViewSubclass: UIView {
+    var anotherConfiguration: Bool = false
+}
+
+extension ConfigurationSet where Base: MyViewSubclass  {
+    func anotherConfiguration(_ newValue: Bool) -> Self {
+        return set { (configurable: MyViewSubclass) in
+            configurable.anotherConfiguration = newValue
+        }
+    }
+}
 ```
 
 ## Requirements
@@ -272,7 +282,6 @@ Also most of the functions on UIView subclasses are not useful during configurat
 Cannot filter out get-only properties during the library generation process.
 Generation of code for Functions has to be filtered manualy for useful functions at the moment.
 ConfigurationsSets of superclasses can not be applied to subclasses, `ConfigurationsSet<UIView>` can not be applied to `UIButton` for example.
-It is nessesary to provide an initilizer without parameters to conform to Configurable, which may not be feasible for custom UIView subclasses.
 
 ## License
 

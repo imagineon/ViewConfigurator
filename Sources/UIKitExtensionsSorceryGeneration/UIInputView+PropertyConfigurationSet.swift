@@ -5,7 +5,7 @@ import UIKit
 public extension ConfigurationSet where Base: UIInputView {
 
     @available(iOS 9.0, *)
-    func allowsSelfSizing(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func allowsSelfSizing(_ newValue: Bool) -> Self {
         return set { (configurable: UIInputView) in
             configurable.allowsSelfSizing = newValue
         }

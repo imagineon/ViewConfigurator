@@ -5,37 +5,37 @@ import UIKit
 @available(iOSApplicationExtension 9.0, *)
 public extension ConfigurationSet where Base: UIStackView {
 
-    func axis(_ newValue: UILayoutConstraintAxis) -> ConfigurationSet<Base> {
+    func axis(_ newValue: UILayoutConstraintAxis) -> Self {
         return set { (configurable: UIStackView) in
             configurable.axis = newValue
         }
     }
 
-    func distribution(_ newValue: UIStackViewDistribution) -> ConfigurationSet<Base> {
+    func distribution(_ newValue: UIStackViewDistribution) -> Self {
         return set { (configurable: UIStackView) in
             configurable.distribution = newValue
         }
     }
 
-    func alignment(_ newValue: UIStackViewAlignment) -> ConfigurationSet<Base> {
+    func alignment(_ newValue: UIStackViewAlignment) -> Self {
         return set { (configurable: UIStackView) in
             configurable.alignment = newValue
         }
     }
 
-    func spacing(_ newValue: CGFloat) -> ConfigurationSet<Base> {
+    func spacing(_ newValue: CGFloat) -> Self {
         return set { (configurable: UIStackView) in
             configurable.spacing = newValue
         }
     }
 
-    func isBaselineRelativeArrangement(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isBaselineRelativeArrangement(_ newValue: Bool) -> Self {
         return set { (configurable: UIStackView) in
             configurable.isBaselineRelativeArrangement = newValue
         }
     }
 
-    func isLayoutMarginsRelativeArrangement(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isLayoutMarginsRelativeArrangement(_ newValue: Bool) -> Self {
         return set { (configurable: UIStackView) in
             configurable.isLayoutMarginsRelativeArrangement = newValue
         }

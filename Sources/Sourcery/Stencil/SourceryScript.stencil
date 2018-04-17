@@ -1,6 +1,6 @@
 {% macro createSetter variable %}
     {{ variable.attributes.available }}
-    func {{ variable.name }}(_ newValue: {{ variable.typeName }}) -> ConfigurationSet<Base> {
+    func {{ variable.name }}(_ newValue: {{ variable.typeName }}) -> Self {
         return set{ (configurable: {{ type.name }}) in
             configurable.{{variable.name}} = newValue
         }
@@ -15,7 +15,7 @@
 
 {% macro getMethodsForUIView method%}
     {{method.attributes.available}}
-    func {{ method.name }} -> ConfigurationSet<Base> {
+    func {{ method.name }} -> Self {
         return set { ( configurable: Base ) in
             configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }
@@ -25,7 +25,7 @@
 
 {% macro getMethodsForUIViewSubclass method%}
     {{method.attributes.available}}
-    func {{ method.name }} -> ConfigurationSet<Base> {
+    func {{ method.name }} -> Self {
         return set { ( configurable: Base ) in
             configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }

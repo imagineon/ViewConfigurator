@@ -4,25 +4,25 @@
 import UIKit
 public extension ConfigurationSet where Base: UICollectionViewCell {
 
-    func isSelected(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isSelected(_ newValue: Bool) -> Self {
         return set { (configurable: UICollectionViewCell) in
             configurable.isSelected = newValue
         }
     }
 
-    func isHighlighted(_ newValue: Bool) -> ConfigurationSet<Base> {
+    func isHighlighted(_ newValue: Bool) -> Self {
         return set { (configurable: UICollectionViewCell) in
             configurable.isHighlighted = newValue
         }
     }
 
-    func backgroundView(_ newValue: UIView?) -> ConfigurationSet<Base> {
+    func backgroundView(_ newValue: UIView?) -> Self {
         return set { (configurable: UICollectionViewCell) in
             configurable.backgroundView = newValue
         }
     }
 
-    func selectedBackgroundView(_ newValue: UIView?) -> ConfigurationSet<Base> {
+    func selectedBackgroundView(_ newValue: UIView?) -> Self {
         return set { (configurable: UICollectionViewCell) in
             configurable.selectedBackgroundView = newValue
         }
