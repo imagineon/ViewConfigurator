@@ -280,8 +280,7 @@ Also most of the functions on UIView subclasses are not useful during configurat
 ## Current Issues
 
 Cannot filter out get-only properties during the library generation process.
-Generation of code for Functions has to be filtered manualy for useful functions at the moment.
-ConfigurationsSets of superclasses can not be applied to subclasses, `ConfigurationsSet<UIView>` can not be applied to `UIButton` for example.
+Generation of code for Functions is based on function prefixes ("set", "add", "remove"), there may be others which could be usefull. For "set" prefix we try to remove it from the generated Function, but the filter capabilities of Stencil allow only replacement. 
 
 ## License
 
