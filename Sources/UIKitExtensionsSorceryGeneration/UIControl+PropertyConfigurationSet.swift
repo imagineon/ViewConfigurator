@@ -1,18 +1,17 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.11.2 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
 public extension ConfigurationSet where Base: UIControl {
-
-    func isSelected(_ selected: Bool) -> Self {
-        return set { (control: Base) in
-            control.isSelected = selected
-        }
-    }
-
     func isEnabled(_ newValue: Bool) -> Self {
         return set { (configurable: UIControl) in
             configurable.isEnabled = newValue
+        }
+    }
+
+    func isSelected(_ newValue: Bool) -> Self {
+        return set { (configurable: UIControl) in
+            configurable.isSelected = newValue
         }
     }
 
@@ -34,11 +33,4 @@ public extension ConfigurationSet where Base: UIControl {
         }
     }
 
-}
-
-extension Configurable where Self: UIControl {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIControl>) -> Self {
-        _ = configuration.apply(on: self as UIControl)
-        return self
-    }
 }
