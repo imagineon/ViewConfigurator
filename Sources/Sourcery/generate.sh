@@ -17,7 +17,7 @@ key.toolchains:
 " > temp.yml
 }
 
-mkdir -p ./Sources/Sourcery/Intermediates
+mkdir -p ./Intermediates
 
 # get all types that implement SourceryGeneration
 grep "extension [A-Za-z0-9. ]*:[ ]*SourceryGeneration" ./Sources/Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
@@ -28,13 +28,13 @@ sourcekitten request --yaml temp.yml |
 grep "\"key.sourcetext\" : " | 
 cut -c 22- | 
 perl -pe 's/\\n/\n/g' | 
-sed -e 's/\\\/\\\//\/\//g' -e 's/\\\/\*/\/\*/' -e 's/\*\\\//\*\//' -e 's/^"//' -e 's/"$//' > ./Sources/Sourcery/Intermediates/${sanitized_class_name}.swift
+sed -e 's/\\\/\\\//\/\//g' -e 's/\\\/\*/\/\*/' -e 's/\*\\\//\*\//' -e 's/^"//' -e 's/"$//' > ./Intermediates/${sanitized_class_name}.swift
 
-echo "extension ${sanitized_class_name}: SourceryGeneration { }" >> ./Sources/Sourcery/Intermediates/${sanitized_class_name}.swift
+echo "extension ${sanitized_class_name}: SourceryGeneration { }" >> ./Intermediates/${sanitized_class_name}.swift
 
 done
 
 sourcery --sources ./ --templates ./Sources/Sourcery/Stencil --output ./Sources/UIKitExtensionsSorceryGeneration
 
-rm -rf ./Sources/Sourcery/Intermediates
+rm -rf ./Intermediates
 rm temp.yml
