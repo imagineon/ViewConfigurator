@@ -2,6 +2,7 @@
 // sourcery:file:{{ type.name }}+SubAndSuperclassInterop.swift
 import UIKit
 
+{{ type.attributes.available}}
 extension Configurable where Self: {{ type.name }} {
     @discardableResult public func apply(_ configuration: ConfigurationSet<{{ type.name }}>) -> Self {
         _ = configuration.apply(on: self as {{ type.name }})

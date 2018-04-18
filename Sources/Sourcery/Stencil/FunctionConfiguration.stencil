@@ -1,0 +1,36 @@
+{% macro newlineIfNotLast isLast %}
+{% if not isLast %}
+
+{% endif %}
+{% endmacro %}
+
+{% macro getMethods method%}
+    {{method.attributes.available}}
+    func {{ method.name|replace:"set",""|lowerFirstLetter }} -> Self {
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        }
+    }
+{% call newlineIfNotLast forloop.last %}
+{% endmacro %}
+
+{% for type in types.implementing.SourceryGeneration|class %}
+// sourcery:file:{{ type.name }}+FunctionConfigurationSet.swift
+import UIKit
+
+{{ type.attributes.available}}
+public extension ConfigurationSet where Base: {{ type.name }} {
+{% if type.name == "UIView"%}
+    {% for method in type.allMethods|instance where not method.isInitializer %}
+        {% if method.name|hasPrefix:"set" %}
+            {% call getMethods method%}
+        {% endif %}
+    {% endfor %}
+{% else %}
+    {% for method in type.methods|instance where not method.isInitializer %}
+        {% call getMethods method%}
+    {% endfor %}
+{% endif %}
+}
+// sourcery:end
+{% endfor %}
