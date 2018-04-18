@@ -91,4 +91,4 @@ fastlane/screenshots
 fastlane/test_output
 
 # Sourcery
-Intermediates
+GeneratedInterfaces
