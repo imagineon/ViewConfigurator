@@ -75,7 +75,43 @@
 		E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45621471F5718E000FBD730 /* UIButtonSpecs.swift */; };
 		E45796AC2086382200F26617 /* SourceryScript.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E45796972086382200F26617 /* SourceryScript.stencil */; };
 		E45796AE2086382200F26617 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = E45796992086382200F26617 /* generate.sh */; };
-		E45796B42087343F00F26617 /* ApplyingExtension.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E45796B32087343F00F26617 /* ApplyingExtension.stencil */; };
+		E45796B42087343F00F26617 /* SubAndSuperclassInteropExtension.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.stencil */; };
+		E45796EC20874DBD00F26617 /* UITextView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796C820874DB800F26617 /* UITextView+SubAndSuperclassInterop.swift */; };
+		E45796ED20874DBD00F26617 /* UIVisualEffectView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796C920874DB800F26617 /* UIVisualEffectView+SubAndSuperclassInterop.swift */; };
+		E45796EE20874DBD00F26617 /* UIToolbar+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CA20874DB800F26617 /* UIToolbar+SubAndSuperclassInterop.swift */; };
+		E45796EF20874DBD00F26617 /* UITextField+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CB20874DB800F26617 /* UITextField+SubAndSuperclassInterop.swift */; };
+		E45796F020874DBD00F26617 /* UITabBar+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CC20874DB900F26617 /* UITabBar+SubAndSuperclassInterop.swift */; };
+		E45796F120874DBD00F26617 /* UIAlertView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CD20874DB900F26617 /* UIAlertView+SubAndSuperclassInterop.swift */; };
+		E45796F220874DBD00F26617 /* UIImageView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CE20874DB900F26617 /* UIImageView+SubAndSuperclassInterop.swift */; };
+		E45796F320874DBD00F26617 /* UIInputView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796CF20874DB900F26617 /* UIInputView+SubAndSuperclassInterop.swift */; };
+		E45796F420874DBD00F26617 /* UIStackView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D020874DB900F26617 /* UIStackView+SubAndSuperclassInterop.swift */; };
+		E45796F520874DBD00F26617 /* UISwitch+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D120874DB900F26617 /* UISwitch+SubAndSuperclassInterop.swift */; };
+		E45796F620874DBD00F26617 /* UIActionSheet+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D220874DBA00F26617 /* UIActionSheet+SubAndSuperclassInterop.swift */; };
+		E45796F720874DBD00F26617 /* UITableView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D320874DBA00F26617 /* UITableView+SubAndSuperclassInterop.swift */; };
+		E45796F820874DBD00F26617 /* UICollectionViewCell+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D420874DBA00F26617 /* UICollectionViewCell+SubAndSuperclassInterop.swift */; };
+		E45796F920874DBD00F26617 /* UIControl+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D520874DBA00F26617 /* UIControl+SubAndSuperclassInterop.swift */; };
+		E45796FA20874DBD00F26617 /* UIDatePicker+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D620874DBA00F26617 /* UIDatePicker+SubAndSuperclassInterop.swift */; };
+		E45796FB20874DBD00F26617 /* UIRefreshControl+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D720874DBA00F26617 /* UIRefreshControl+SubAndSuperclassInterop.swift */; };
+		E45796FC20874DBD00F26617 /* UIProgressView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D820874DBA00F26617 /* UIProgressView+SubAndSuperclassInterop.swift */; };
+		E45796FD20874DBD00F26617 /* UICollectionReusableView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796D920874DBA00F26617 /* UICollectionReusableView+SubAndSuperclassInterop.swift */; };
+		E45796FE20874DBD00F26617 /* UICollectionView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DA20874DBB00F26617 /* UICollectionView+SubAndSuperclassInterop.swift */; };
+		E45796FF20874DBD00F26617 /* UISearchBar+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DB20874DBB00F26617 /* UISearchBar+SubAndSuperclassInterop.swift */; };
+		E457970020874DBD00F26617 /* UISlider+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DC20874DBB00F26617 /* UISlider+SubAndSuperclassInterop.swift */; };
+		E457970120874DBD00F26617 /* UILabel+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DD20874DBB00F26617 /* UILabel+SubAndSuperclassInterop.swift */; };
+		E457970220874DBD00F26617 /* UISegmentedControl+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DE20874DBB00F26617 /* UISegmentedControl+SubAndSuperclassInterop.swift */; };
+		E457970320874DBD00F26617 /* UIPageControl+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796DF20874DBB00F26617 /* UIPageControl+SubAndSuperclassInterop.swift */; };
+		E457970420874DBD00F26617 /* UIStepper+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E020874DBB00F26617 /* UIStepper+SubAndSuperclassInterop.swift */; };
+		E457970520874DBD00F26617 /* UIWebView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E120874DBB00F26617 /* UIWebView+SubAndSuperclassInterop.swift */; };
+		E457970620874DBD00F26617 /* UIWindow+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E220874DBC00F26617 /* UIWindow+SubAndSuperclassInterop.swift */; };
+		E457970720874DBD00F26617 /* UITableViewCell+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E320874DBC00F26617 /* UITableViewCell+SubAndSuperclassInterop.swift */; };
+		E457970820874DBD00F26617 /* UITableViewHeaderFooterView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E420874DBC00F26617 /* UITableViewHeaderFooterView+SubAndSuperclassInterop.swift */; };
+		E457970920874DBD00F26617 /* UIView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E520874DBC00F26617 /* UIView+SubAndSuperclassInterop.swift */; };
+		E457970A20874DBD00F26617 /* UIButton+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E620874DBC00F26617 /* UIButton+SubAndSuperclassInterop.swift */; };
+		E457970B20874DBD00F26617 /* UIPickerView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E720874DBC00F26617 /* UIPickerView+SubAndSuperclassInterop.swift */; };
+		E457970C20874DBD00F26617 /* UIScrollView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E820874DBC00F26617 /* UIScrollView+SubAndSuperclassInterop.swift */; };
+		E457970D20874DBD00F26617 /* UIActivityIndicatorView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796E920874DBD00F26617 /* UIActivityIndicatorView+SubAndSuperclassInterop.swift */; };
+		E457970E20874DBD00F26617 /* UINavigationBar+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796EA20874DBD00F26617 /* UINavigationBar+SubAndSuperclassInterop.swift */; };
+		E457970F20874DBD00F26617 /* UIPopoverBackgroundView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45796EB20874DBD00F26617 /* UIPopoverBackgroundView+SubAndSuperclassInterop.swift */; };
 		E4A317A71F56FA8300649294 /* UIControlSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A317A51F56FA1600649294 /* UIControlSpecs.swift */; };
 		E4CFDD0F2085E6AA0092EDDB /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFDD0E2085E6AA0092EDDB /* Performance.swift */; };
 		E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */; };
@@ -333,7 +369,43 @@
 		E45796972086382200F26617 /* SourceryScript.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SourceryScript.stencil; sourceTree = "<group>"; };
 		E45796982086382200F26617 /* SourceryGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryGeneration.swift; sourceTree = "<group>"; };
 		E45796992086382200F26617 /* generate.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
-		E45796B32087343F00F26617 /* ApplyingExtension.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = ApplyingExtension.stencil; sourceTree = "<group>"; };
+		E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SubAndSuperclassInteropExtension.stencil; sourceTree = "<group>"; };
+		E45796C820874DB800F26617 /* UITextView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796C920874DB800F26617 /* UIVisualEffectView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CA20874DB800F26617 /* UIToolbar+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CB20874DB800F26617 /* UITextField+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CC20874DB900F26617 /* UITabBar+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CD20874DB900F26617 /* UIAlertView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CE20874DB900F26617 /* UIImageView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796CF20874DB900F26617 /* UIInputView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIInputView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D020874DB900F26617 /* UIStackView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStackView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D120874DB900F26617 /* UISwitch+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D220874DBA00F26617 /* UIActionSheet+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActionSheet+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D320874DBA00F26617 /* UITableView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D420874DBA00F26617 /* UICollectionViewCell+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D520874DBA00F26617 /* UIControl+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D620874DBA00F26617 /* UIDatePicker+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D720874DBA00F26617 /* UIRefreshControl+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D820874DBA00F26617 /* UIProgressView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIProgressView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796D920874DBA00F26617 /* UICollectionReusableView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DA20874DBB00F26617 /* UICollectionView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DB20874DBB00F26617 /* UISearchBar+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DC20874DBB00F26617 /* UISlider+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DD20874DBB00F26617 /* UILabel+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DE20874DBB00F26617 /* UISegmentedControl+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796DF20874DBB00F26617 /* UIPageControl+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageControl+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E020874DBB00F26617 /* UIStepper+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E120874DBB00F26617 /* UIWebView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E220874DBC00F26617 /* UIWindow+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E320874DBC00F26617 /* UITableViewCell+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E420874DBC00F26617 /* UITableViewHeaderFooterView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E520874DBC00F26617 /* UIView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E620874DBC00F26617 /* UIButton+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E720874DBC00F26617 /* UIPickerView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E820874DBC00F26617 /* UIScrollView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796E920874DBD00F26617 /* UIActivityIndicatorView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796EA20874DBD00F26617 /* UINavigationBar+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
+		E45796EB20874DBD00F26617 /* UIPopoverBackgroundView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPopoverBackgroundView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
 		E4CFDD0E2085E6AA0092EDDB /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
@@ -615,6 +687,42 @@
 				E4064386206CD7AE0093DC31 /* UIVisualEffectView+PropertyConfigurationSet.swift */,
 				E4064375206CD7AD0093DC31 /* UIWebView+PropertyConfigurationSet.swift */,
 				E4064391206CD7AF0093DC31 /* UIWindow+PropertyConfigurationSet.swift */,
+				E45796D220874DBA00F26617 /* UIActionSheet+SubAndSuperclassInterop.swift */,
+				E45796E920874DBD00F26617 /* UIActivityIndicatorView+SubAndSuperclassInterop.swift */,
+				E45796CD20874DB900F26617 /* UIAlertView+SubAndSuperclassInterop.swift */,
+				E45796E620874DBC00F26617 /* UIButton+SubAndSuperclassInterop.swift */,
+				E45796D920874DBA00F26617 /* UICollectionReusableView+SubAndSuperclassInterop.swift */,
+				E45796DA20874DBB00F26617 /* UICollectionView+SubAndSuperclassInterop.swift */,
+				E45796D420874DBA00F26617 /* UICollectionViewCell+SubAndSuperclassInterop.swift */,
+				E45796D520874DBA00F26617 /* UIControl+SubAndSuperclassInterop.swift */,
+				E45796D620874DBA00F26617 /* UIDatePicker+SubAndSuperclassInterop.swift */,
+				E45796CE20874DB900F26617 /* UIImageView+SubAndSuperclassInterop.swift */,
+				E45796CF20874DB900F26617 /* UIInputView+SubAndSuperclassInterop.swift */,
+				E45796DD20874DBB00F26617 /* UILabel+SubAndSuperclassInterop.swift */,
+				E45796EA20874DBD00F26617 /* UINavigationBar+SubAndSuperclassInterop.swift */,
+				E45796DF20874DBB00F26617 /* UIPageControl+SubAndSuperclassInterop.swift */,
+				E45796E720874DBC00F26617 /* UIPickerView+SubAndSuperclassInterop.swift */,
+				E45796EB20874DBD00F26617 /* UIPopoverBackgroundView+SubAndSuperclassInterop.swift */,
+				E45796D820874DBA00F26617 /* UIProgressView+SubAndSuperclassInterop.swift */,
+				E45796D720874DBA00F26617 /* UIRefreshControl+SubAndSuperclassInterop.swift */,
+				E45796E820874DBC00F26617 /* UIScrollView+SubAndSuperclassInterop.swift */,
+				E45796DB20874DBB00F26617 /* UISearchBar+SubAndSuperclassInterop.swift */,
+				E45796DE20874DBB00F26617 /* UISegmentedControl+SubAndSuperclassInterop.swift */,
+				E45796DC20874DBB00F26617 /* UISlider+SubAndSuperclassInterop.swift */,
+				E45796D020874DB900F26617 /* UIStackView+SubAndSuperclassInterop.swift */,
+				E45796E020874DBB00F26617 /* UIStepper+SubAndSuperclassInterop.swift */,
+				E45796D120874DB900F26617 /* UISwitch+SubAndSuperclassInterop.swift */,
+				E45796CC20874DB900F26617 /* UITabBar+SubAndSuperclassInterop.swift */,
+				E45796D320874DBA00F26617 /* UITableView+SubAndSuperclassInterop.swift */,
+				E45796E320874DBC00F26617 /* UITableViewCell+SubAndSuperclassInterop.swift */,
+				E45796E420874DBC00F26617 /* UITableViewHeaderFooterView+SubAndSuperclassInterop.swift */,
+				E45796CB20874DB800F26617 /* UITextField+SubAndSuperclassInterop.swift */,
+				E45796C820874DB800F26617 /* UITextView+SubAndSuperclassInterop.swift */,
+				E45796CA20874DB800F26617 /* UIToolbar+SubAndSuperclassInterop.swift */,
+				E45796E520874DBC00F26617 /* UIView+SubAndSuperclassInterop.swift */,
+				E45796C920874DB800F26617 /* UIVisualEffectView+SubAndSuperclassInterop.swift */,
+				E45796E120874DBB00F26617 /* UIWebView+SubAndSuperclassInterop.swift */,
+				E45796E220874DBC00F26617 /* UIWindow+SubAndSuperclassInterop.swift */,
 			);
 			path = UIKitExtensionsSorceryGeneration;
 			sourceTree = "<group>";
@@ -668,7 +776,7 @@
 			isa = PBXGroup;
 			children = (
 				E45796972086382200F26617 /* SourceryScript.stencil */,
-				E45796B32087343F00F26617 /* ApplyingExtension.stencil */,
+				E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.stencil */,
 			);
 			path = Stencil;
 			sourceTree = "<group>";
@@ -911,7 +1019,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E45796B42087343F00F26617 /* ApplyingExtension.stencil in Resources */,
+				E45796B42087343F00F26617 /* SubAndSuperclassInteropExtension.stencil in Resources */,
 				E45796AC2086382200F26617 /* SourceryScript.stencil in Resources */,
 				E45796AE2086382200F26617 /* generate.sh in Resources */,
 			);
@@ -965,49 +1073,84 @@
 				E406439A206CD7AF0093DC31 /* UIActivityIndicatorView+PropertyConfigurationSet.swift in Sources */,
 				E40643B6206CD7AF0093DC31 /* UIView+PropertyConfigurationSet.swift in Sources */,
 				E4064358206CD6EE0093DC31 /* UIStackView+FunctionConfigurationSet.swift in Sources */,
+				E457970720874DBD00F26617 /* UITableViewCell+SubAndSuperclassInterop.swift in Sources */,
 				E4064352206CD6EE0093DC31 /* UITabBar+FunctionConfigurationSet.swift in Sources */,
 				E40643BA206CD7AF0093DC31 /* UITextView+PropertyConfigurationSet.swift in Sources */,
+				E45796EF20874DBD00F26617 /* UITextField+SubAndSuperclassInterop.swift in Sources */,
 				E406435A206CD6EE0093DC31 /* UICollectionReusableView+FunctionConfigurationSet.swift in Sources */,
+				E45796FF20874DBD00F26617 /* UISearchBar+SubAndSuperclassInterop.swift in Sources */,
 				E406439C206CD7AF0093DC31 /* UIDatePicker+PropertyConfigurationSet.swift in Sources */,
+				E45796F420874DBD00F26617 /* UIStackView+SubAndSuperclassInterop.swift in Sources */,
 				E406434F206CD6EE0093DC31 /* UISlider+FunctionConfigurationSet.swift in Sources */,
 				E4064350206CD6EE0093DC31 /* UIStepper+FunctionConfigurationSet.swift in Sources */,
 				E40643B1206CD7AF0093DC31 /* UITabBar+PropertyConfigurationSet.swift in Sources */,
+				E45796F820874DBD00F26617 /* UICollectionViewCell+SubAndSuperclassInterop.swift in Sources */,
 				E40643A2206CD7AF0093DC31 /* UIPickerView+PropertyConfigurationSet.swift in Sources */,
 				E4064353206CD6EE0093DC31 /* UIToolBar+FunctionConfigurationSet.swift in Sources */,
+				E457970220874DBD00F26617 /* UISegmentedControl+SubAndSuperclassInterop.swift in Sources */,
 				E4064359206CD6EE0093DC31 /* UITableView+FunctionConfigurationSet.swift in Sources */,
 				E4064355206CD6EE0093DC31 /* UIDatePicker+FunctionConfigurationSet.swift in Sources */,
 				E4064398206CD7AF0093DC31 /* UIButton+PropertyConfigurationSet.swift in Sources */,
 				E406434D206CD6EE0093DC31 /* UIButton+FunctionConfigurationSet.swift in Sources */,
+				E45796FE20874DBD00F26617 /* UICollectionView+SubAndSuperclassInterop.swift in Sources */,
 				E406434A206CD6EE0093DC31 /* UIView+FunctionConfigurationSet.swift in Sources */,
 				E406439E206CD7AF0093DC31 /* UIPageControl+PropertyConfigurationSet.swift in Sources */,
 				E4064372206CD77E0093DC31 /* CALayer+ConfigurationSet.swift in Sources */,
 				E406434C206CD6EE0093DC31 /* UISearchBar+FunctionConfigurationSet.swift in Sources */,
+				E45796FD20874DBD00F26617 /* UICollectionReusableView+SubAndSuperclassInterop.swift in Sources */,
+				E45796F920874DBD00F26617 /* UIControl+SubAndSuperclassInterop.swift in Sources */,
+				E457970D20874DBD00F26617 /* UIActivityIndicatorView+SubAndSuperclassInterop.swift in Sources */,
+				E457970F20874DBD00F26617 /* UIPopoverBackgroundView+SubAndSuperclassInterop.swift in Sources */,
 				E40643AD206CD7AF0093DC31 /* UIInputView+PropertyConfigurationSet.swift in Sources */,
+				E457970120874DBD00F26617 /* UILabel+SubAndSuperclassInterop.swift in Sources */,
+				E457970020874DBD00F26617 /* UISlider+SubAndSuperclassInterop.swift in Sources */,
 				E40643B9206CD7AF0093DC31 /* UILabel+PropertyConfigurationSet.swift in Sources */,
+				E457970420874DBD00F26617 /* UIStepper+SubAndSuperclassInterop.swift in Sources */,
 				E40643AC206CD7AF0093DC31 /* UIImageView+PropertyConfigurationSet.swift in Sources */,
 				E40643A5206CD7AF0093DC31 /* UITableViewCell+PropertyConfigurationSet.swift in Sources */,
 				E40643AA206CD7AF0093DC31 /* UIVisualEffectView+PropertyConfigurationSet.swift in Sources */,
+				E45796F720874DBD00F26617 /* UITableView+SubAndSuperclassInterop.swift in Sources */,
+				E457970920874DBD00F26617 /* UIView+SubAndSuperclassInterop.swift in Sources */,
+				E45796FA20874DBD00F26617 /* UIDatePicker+SubAndSuperclassInterop.swift in Sources */,
 				E40643AB206CD7AF0093DC31 /* UIAlertView+PropertyConfigurationSet.swift in Sources */,
+				E457970A20874DBD00F26617 /* UIButton+SubAndSuperclassInterop.swift in Sources */,
+				E45796F320874DBD00F26617 /* UIInputView+SubAndSuperclassInterop.swift in Sources */,
 				E4064348206CD6EE0093DC31 /* UIProgressView+FunctionConfigurationSet.swift in Sources */,
 				E4064357206CD6EE0093DC31 /* UINavigationBarItems+FunctionConfigurationSet.swift in Sources */,
+				E457970C20874DBD00F26617 /* UIScrollView+SubAndSuperclassInterop.swift in Sources */,
+				E45796F520874DBD00F26617 /* UISwitch+SubAndSuperclassInterop.swift in Sources */,
+				E457970520874DBD00F26617 /* UIWebView+SubAndSuperclassInterop.swift in Sources */,
 				E40643B0206CD7AF0093DC31 /* UIStackView+PropertyConfigurationSet.swift in Sources */,
 				E4064351206CD6EE0093DC31 /* UISegementedControl+FunctionConfigurationSet.swift in Sources */,
 				E406435B206CD6EE0093DC31 /* UIControl+FunctionConfigurationSet.swift in Sources */,
 				E40643AE206CD7AF0093DC31 /* UINavigationBar+PropertyConfigurationSet.swift in Sources */,
+				E45796F620874DBD00F26617 /* UIActionSheet+SubAndSuperclassInterop.swift in Sources */,
 				E40643AF206CD7AF0093DC31 /* UISlider+PropertyConfigurationSet.swift in Sources */,
+				E457970320874DBD00F26617 /* UIPageControl+SubAndSuperclassInterop.swift in Sources */,
 				E4064356206CD6EE0093DC31 /* UICollectionView+FunctionConfigurationSet.swift in Sources */,
+				E45796F120874DBD00F26617 /* UIAlertView+SubAndSuperclassInterop.swift in Sources */,
+				E45796FC20874DBD00F26617 /* UIProgressView+SubAndSuperclassInterop.swift in Sources */,
 				E40643A4206CD7AF0093DC31 /* UIScrollView+PropertyConfigurationSet.swift in Sources */,
+				E45796ED20874DBD00F26617 /* UIVisualEffectView+SubAndSuperclassInterop.swift in Sources */,
 				E4064349206CD6EE0093DC31 /* UIScrollView+FunctionConfigurationSet.swift in Sources */,
 				E40643B7206CD7AF0093DC31 /* UITextField+PropertyConfigurationSet.swift in Sources */,
 				E40643B8206CD7AF0093DC31 /* UICollectionView+PropertyConfigurationSet.swift in Sources */,
+				E457970E20874DBD00F26617 /* UINavigationBar+SubAndSuperclassInterop.swift in Sources */,
+				E45796FB20874DBD00F26617 /* UIRefreshControl+SubAndSuperclassInterop.swift in Sources */,
 				E40643B3206CD7AF0093DC31 /* UIActionSheet+PropertyConfigurationSet.swift in Sources */,
 				E40643A6206CD7AF0093DC31 /* UITableViewHeaderFooterView+PropertyConfigurationSet.swift in Sources */,
+				E45796EE20874DBD00F26617 /* UIToolbar+SubAndSuperclassInterop.swift in Sources */,
 				E406439D206CD7AF0093DC31 /* UICollectionViewCell+PropertyConfigurationSet.swift in Sources */,
+				E457970820874DBD00F26617 /* UITableViewHeaderFooterView+SubAndSuperclassInterop.swift in Sources */,
+				E45796F220874DBD00F26617 /* UIImageView+SubAndSuperclassInterop.swift in Sources */,
 				E4064397206CD7AF0093DC31 /* UIRefreshControl+PropertyConfigurationSet.swift in Sources */,
 				E40643B2206CD7AF0093DC31 /* UITableView+PropertyConfigurationSet.swift in Sources */,
 				E40643A0206CD7AF0093DC31 /* UIStepper+PropertyConfigurationSet.swift in Sources */,
 				E40643B4206CD7AF0093DC31 /* UISegmentedControl+PropertyConfigurationSet.swift in Sources */,
+				E45796F020874DBD00F26617 /* UITabBar+SubAndSuperclassInterop.swift in Sources */,
 				E406434B206CD6EE0093DC31 /* UISwitch+FunctionConfigurationSet.swift in Sources */,
+				E45796EC20874DBD00F26617 /* UITextView+SubAndSuperclassInterop.swift in Sources */,
+				E457970B20874DBD00F26617 /* UIPickerView+SubAndSuperclassInterop.swift in Sources */,
 				E40643A7206CD7AF0093DC31 /* UICollectionReusableView+PropertyConfigurationSet.swift in Sources */,
 				E40643A3206CD7AF0093DC31 /* UIProgressView+PropertyConfigurationSet.swift in Sources */,
 				E40643B5206CD7AF0093DC31 /* UIWindow+PropertyConfigurationSet.swift in Sources */,
@@ -1017,6 +1160,7 @@
 				E406439F206CD7AF0093DC31 /* UISearchBar+PropertyConfigurationSet.swift in Sources */,
 				E40643A8206CD7AF0093DC31 /* UIControl+PropertyConfigurationSetl.swift in Sources */,
 				E406439B206CD7AF0093DC31 /* UIPopoverBackgroundView+PropertyConfigurationSet.swift in Sources */,
+				E457970620874DBD00F26617 /* UIWindow+SubAndSuperclassInterop.swift in Sources */,
 				E4064399206CD7AF0093DC31 /* UIWebView+PropertyConfigurationSet.swift in Sources */,
 				E406434E206CD6EE0093DC31 /* UIActionSheet+FunctionConfigurationSet.swift in Sources */,
 				E4064354206CD6EE0093DC31 /* UIAlertView+FunctionConfigurationSet.swift in Sources */,
