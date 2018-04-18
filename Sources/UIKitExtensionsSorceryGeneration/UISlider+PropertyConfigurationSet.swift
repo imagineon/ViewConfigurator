@@ -60,5 +60,5 @@ public extension ConfigurationSet where Base: UISlider {
         return set { (configurable: UISlider) in
             configurable.thumbTintColor = newValue
         }
-
+    }
 }
