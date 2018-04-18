@@ -75,6 +75,7 @@
 		E45621481F5718E000FBD730 /* UIButtonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45621471F5718E000FBD730 /* UIButtonSpecs.swift */; };
 		E45796AC2086382200F26617 /* SourceryScript.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E45796972086382200F26617 /* SourceryScript.stencil */; };
 		E45796AE2086382200F26617 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = E45796992086382200F26617 /* generate.sh */; };
+		E45796B42087343F00F26617 /* ApplyingExtension.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E45796B32087343F00F26617 /* ApplyingExtension.stencil */; };
 		E4A317A71F56FA8300649294 /* UIControlSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A317A51F56FA1600649294 /* UIControlSpecs.swift */; };
 		E4CFDD0F2085E6AA0092EDDB /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CFDD0E2085E6AA0092EDDB /* Performance.swift */; };
 		E4EA60311F69868A00A2BF3A /* UIImageViewSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */; };
@@ -332,6 +333,7 @@
 		E45796972086382200F26617 /* SourceryScript.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SourceryScript.stencil; sourceTree = "<group>"; };
 		E45796982086382200F26617 /* SourceryGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryGeneration.swift; sourceTree = "<group>"; };
 		E45796992086382200F26617 /* generate.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
+		E45796B32087343F00F26617 /* ApplyingExtension.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = ApplyingExtension.stencil; sourceTree = "<group>"; };
 		E4A317A51F56FA1600649294 /* UIControlSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSpecs.swift; sourceTree = "<group>"; };
 		E4CFDD0E2085E6AA0092EDDB /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 		E4EA60301F69868A00A2BF3A /* UIImageViewSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewSpecs.swift; sourceTree = "<group>"; };
@@ -666,6 +668,7 @@
 			isa = PBXGroup;
 			children = (
 				E45796972086382200F26617 /* SourceryScript.stencil */,
+				E45796B32087343F00F26617 /* ApplyingExtension.stencil */,
 			);
 			path = Stencil;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45796B42087343F00F26617 /* ApplyingExtension.stencil in Resources */,
 				E45796AC2086382200F26617 /* SourceryScript.stencil in Resources */,
 				E45796AE2086382200F26617 /* generate.sh in Resources */,
 			);
@@ -935,7 +939,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#./Sources/Sourcery/generate.sh\n";
+			shellScript = "./Sources/Sourcery/generate.sh\n";
 		};
 		E4B349131F2BD08C00CD7F53 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;

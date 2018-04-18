@@ -1,7 +1,7 @@
 {% macro createSetter variable %}
     {{ variable.attributes.available }}
     func {{ variable.name }}(_ newValue: {{ variable.typeName }}) -> Self {
-        return set{ (configurable: {{ type.name }}) in
+        return set { (configurable: {{ type.name }}) in
             configurable.{{variable.name}} = newValue
         }
     }
@@ -13,17 +13,7 @@
 {% endif %}
 {% endmacro %}
 
-{% macro getMethodsForUIView method%}
-    {{method.attributes.available}}
-    func {{ method.name }} -> Self {
-        return set { ( configurable: Base ) in
-            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
-        }
-    }
-{% call newlineIfNotLast forloop.last %}
-{% endmacro %}
-
-{% macro getMethodsForUIViewSubclass method%}
+{% macro getMethods method%}
     {{method.attributes.available}}
     func {{ method.name }} -> Self {
         return set { ( configurable: Base ) in
@@ -69,23 +59,15 @@ import UIKit
 public extension ConfigurationSet where Base: {{ type.name }} {
 {% if type.name == "UIView"%}
     {% for method in type.allMethods|instance where not method.isInitializer %}
-        {#{% call getMethodsForUIView method%}#}
+        {#{% call getMethods method%}#}
     {% endfor %}
     {% call createVariablesForUIView %}
 {% else %}
     {% for method in type.methods|instance where not method.isInitializer %}
-        {#{% call getMethodsForUIViewSubclass method%}#}
+        {#{% call getMethods method%}#}
     {% endfor %}
     {% call createVariablesForUIViewSubclasses %}
 {% endif %}
 }
-
-extension Configurable where Self: {{ type.name }} {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<{{ type.name }}>) -> Self {
-        _ = configuration.apply(on: self as {{ type.name }})
-        return self
-    }
-}
-
 // sourcery:end
 {% endfor %}
