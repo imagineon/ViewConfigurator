@@ -4,14 +4,24 @@
 {% endif %}
 {% endmacro %}
 
-{% macro getMethods method%}
+{% macro generateConfigurationForMethod method prefix %}
     {{method.attributes.available}}
-    func {{ method.name|replace:"set",""|lowerFirstLetter }} -> Self {
+    func {{ method.name|replaceFirst:prefix,""|lowerFirstLetter }} -> Self {
         return set { ( configurable: Base ) in
             configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }
     }
-{% call newlineIfNotLast forloop.last %}
+
+{% endmacro %}
+
+{% macro generationForMethod method %}
+{% if method.name|hasPrefix:"set" %}
+    {% call generateConfigurationForMethod method "set" %}
+{% elif method.name|hasPrefix:"add" %}
+     {% call generateConfigurationForMethod method "" %}
+{% elif method.name|hasPrefix:"remove" %}
+    {% call generateConfigurationForMethod method "" %}
+{% endif %}
 {% endmacro %}
 
 {% for type in types.implementing.SourceryGeneration|class %}
@@ -20,15 +30,14 @@ import UIKit
 
 {{ type.attributes.available}}
 public extension ConfigurationSet where Base: {{ type.name }} {
+
 {% if type.name == "UIView"%}
     {% for method in type.allMethods|instance where not method.isInitializer %}
-        {% if method.name|hasPrefix:"set" %}
-            {% call getMethods method%}
-        {% endif %}
+        {% call generationForMethod method %}
     {% endfor %}
 {% else %}
     {% for method in type.methods|instance where not method.isInitializer %}
-        {% call getMethods method%}
+        {% call generationForMethod method %}
     {% endfor %}
 {% endif %}
 }
