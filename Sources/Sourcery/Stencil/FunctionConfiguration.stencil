@@ -6,7 +6,7 @@
 
 {% macro generateConfigurationForMethod method prefix %}
     {{method.attributes.available}}
-    func {{ method.name|replaceFirst:prefix,""|lowerFirstLetter }} -> Self {
+    func {{ method.name|replace:prefix,""|lowerFirstLetter }} -> Self {
         return set { ( configurable: Base ) in
             configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
         }
