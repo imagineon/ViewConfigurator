@@ -327,9 +327,9 @@
 		E45621471F5718E000FBD730 /* UIButtonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonSpecs.swift; sourceTree = "<group>"; };
 		E45796982086382200F26617 /* SourceryGeneration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceryGeneration.swift; sourceTree = "<group>"; };
 		E45796992086382200F26617 /* generate.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
-		E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.22stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SubAndSuperclassInteropExtension.22stencil; sourceTree = "<group>"; };
+		E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = SubAndSuperclassInteropExtension.stencil; sourceTree = "<group>"; };
 		E49A1D902087928200257A1A /* FunctionConfiguration.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FunctionConfiguration.stencil; sourceTree = "<group>"; };
-		E49A1D912087928200257A1A /* PropertyConfiguration.22stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PropertyConfiguration.22stencil; sourceTree = "<group>"; };
+		E49A1D912087928200257A1A /* PropertyConfiguration.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PropertyConfiguration.stencil; sourceTree = "<group>"; };
 		E49A1D94208792AF00257A1A /* UIPageControl+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageControl+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1D95208792AF00257A1A /* UISwitch+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1D96208792AF00257A1A /* UILabel+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
@@ -825,8 +825,8 @@
 			isa = PBXGroup;
 			children = (
 				E49A1D902087928200257A1A /* FunctionConfiguration.stencil */,
-				E49A1D912087928200257A1A /* PropertyConfiguration.22stencil */,
-				E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.22stencil */,
+				E49A1D912087928200257A1A /* PropertyConfiguration.stencil */,
+				E45796B32087343F00F26617 /* SubAndSuperclassInteropExtension.stencil */,
 			);
 			path = Stencil;
 			sourceTree = "<group>";
