@@ -8,7 +8,7 @@ key.compilerargs:
 - \"-target\"
 - \"arm64-apple-ios11.0\"
 - \"-sdk\"
-- \"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk\"
+- \""${SDKROOT}"\"
 - \"-I\"
 - \"-Xcc\"
 key.modulename: \"$1\"
