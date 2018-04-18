@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 5.0, *)
 public extension ConfigurationSet where Base: UIPopoverBackgroundView {
     func arrowOffset(_ newValue: CGFloat) -> Self {
         return set { (configurable: UIPopoverBackgroundView) in
@@ -13,13 +15,5 @@ public extension ConfigurationSet where Base: UIPopoverBackgroundView {
         return set { (configurable: UIPopoverBackgroundView) in
             configurable.arrowDirection = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIPopoverBackgroundView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPopoverBackgroundView>) -> Self {
-        _ = configuration.apply(on: self as UIPopoverBackgroundView)
-        return self
     }
 }

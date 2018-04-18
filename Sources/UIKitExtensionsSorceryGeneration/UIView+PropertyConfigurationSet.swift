@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIView {
     func isUserInteractionEnabled(_ newValue: Bool) -> Self {
         return set { (configurable: UIView) in
@@ -194,13 +196,5 @@ public extension ConfigurationSet where Base: UIView {
         return set { (configurable: UIView) in
             configurable.restorationIdentifier = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIView>) -> Self {
-        _ = configuration.apply(on: self as UIView)
-        return self
     }
 }

@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIDatePicker {
     func datePickerMode(_ newValue: UIDatePickerMode) -> Self {
         return set { (configurable: UIDatePicker) in
@@ -55,13 +57,5 @@ public extension ConfigurationSet where Base: UIDatePicker {
         return set { (configurable: UIDatePicker) in
             configurable.minuteInterval = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIDatePicker {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIDatePicker>) -> Self {
-        _ = configuration.apply(on: self as UIDatePicker)
-        return self
     }
 }

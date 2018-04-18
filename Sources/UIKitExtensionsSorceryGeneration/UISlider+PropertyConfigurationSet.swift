@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UISlider {
     func value(_ newValue: Float) -> Self {
         return set { (configurable: UISlider) in
@@ -58,13 +60,5 @@ public extension ConfigurationSet where Base: UISlider {
         return set { (configurable: UISlider) in
             configurable.thumbTintColor = newValue
         }
-    }
 
-}
-
-extension Configurable where Self: UISlider {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UISlider>) -> Self {
-        _ = configuration.apply(on: self as UISlider)
-        return self
-    }
 }

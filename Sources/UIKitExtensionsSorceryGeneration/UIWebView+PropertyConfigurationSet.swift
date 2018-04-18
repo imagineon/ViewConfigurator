@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIWebView {
     func delegate(_ newValue: UIWebViewDelegate?) -> Self {
         return set { (configurable: UIWebView) in
@@ -97,13 +99,5 @@ public extension ConfigurationSet where Base: UIWebView {
         return set { (configurable: UIWebView) in
             configurable.allowsLinkPreview = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIWebView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIWebView>) -> Self {
-        _ = configuration.apply(on: self as UIWebView)
-        return self
     }
 }

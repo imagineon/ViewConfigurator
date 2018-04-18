@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIPageControl {
     func numberOfPages(_ newValue: Int) -> Self {
         return set { (configurable: UIPageControl) in
@@ -39,13 +41,5 @@ public extension ConfigurationSet where Base: UIPageControl {
         return set { (configurable: UIPageControl) in
             configurable.currentPageIndicatorTintColor = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIPageControl {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPageControl>) -> Self {
-        _ = configuration.apply(on: self as UIPageControl)
-        return self
     }
 }

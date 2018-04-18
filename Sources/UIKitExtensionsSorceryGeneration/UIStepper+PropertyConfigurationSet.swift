@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 5.0, *)
 public extension ConfigurationSet where Base: UIStepper {
     func isContinuous(_ newValue: Bool) -> Self {
         return set { (configurable: UIStepper) in
@@ -51,14 +53,4 @@ public extension ConfigurationSet where Base: UIStepper {
             configurable.tintColor = newValue
         }
     }
-
 }
-
-extension Configurable where Self: UIStepper {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIStepper>) -> Self {
-        _ = configuration.apply(on: self as UIStepper)
-        return self
-    }
-}
-
-

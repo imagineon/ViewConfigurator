@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIPickerView {
     func dataSource(_ newValue: UIPickerViewDataSource?) -> Self {
         return set { (configurable: UIPickerView) in
@@ -21,11 +23,4 @@ public extension ConfigurationSet where Base: UIPickerView {
         }
     }
 
-}
-
-extension Configurable where Self: UIPickerView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPickerView>) -> Self {
-        _ = configuration.apply(on: self as UIPickerView)
-        return self
-    }
 }

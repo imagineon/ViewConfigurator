@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UISegmentedControl {
     func isMomentary(_ newValue: Bool) -> Self {
         return set { (configurable: UISegmentedControl) in
@@ -26,13 +28,5 @@ public extension ConfigurationSet where Base: UISegmentedControl {
         return set { (configurable: UISegmentedControl) in
             configurable.tintColor = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UISegmentedControl {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UISegmentedControl>) -> Self {
-        _ = configuration.apply(on: self as UISegmentedControl)
-        return self
     }
 }

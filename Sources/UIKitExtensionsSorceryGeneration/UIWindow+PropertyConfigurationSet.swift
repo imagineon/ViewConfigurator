@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIWindow {
     @available(iOS 3.2, *)
     func screen(_ newValue: UIScreen) -> Self {
@@ -21,13 +23,5 @@ public extension ConfigurationSet where Base: UIWindow {
         return set { (configurable: UIWindow) in
             configurable.rootViewController = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIWindow {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIWindow>) -> Self {
-        _ = configuration.apply(on: self as UIWindow)
-        return self
     }
 }

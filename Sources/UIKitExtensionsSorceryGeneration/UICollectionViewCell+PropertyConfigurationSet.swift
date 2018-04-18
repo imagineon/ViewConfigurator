@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 6.0, *)
 public extension ConfigurationSet where Base: UICollectionViewCell {
 
     func isSelected(_ newValue: Bool) -> Self {
@@ -26,13 +28,5 @@ public extension ConfigurationSet where Base: UICollectionViewCell {
         return set { (configurable: UICollectionViewCell) in
             configurable.selectedBackgroundView = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UICollectionViewCell {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UICollectionViewCell>) -> Self {
-        _ = configuration.apply(on: self as UICollectionViewCell)
-        return self
     }
 }

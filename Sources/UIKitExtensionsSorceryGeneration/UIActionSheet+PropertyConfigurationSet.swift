@@ -1,7 +1,8 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
 public extension ConfigurationSet where Base: UIActionSheet {
     func delegate(_ newValue: UIActionSheetDelegate?) -> Self {
         return set { (configurable: UIActionSheet) in
@@ -32,11 +33,5 @@ public extension ConfigurationSet where Base: UIActionSheet {
             configurable.destructiveButtonIndex = newValue
         }
     }
-}
 
-extension Configurable where Self: UIActionSheet {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIActionSheet>) -> Self {
-        _ = configuration.apply(on: self as UIActionSheet)
-        return self
-    }
 }
