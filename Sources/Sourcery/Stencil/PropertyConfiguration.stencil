@@ -45,7 +45,7 @@
 
 {% for type in types.implementing.SourceryGeneration|class %}
 // sourcery:file:{{ type.name }}+PropertyConfigurationSet.swift
-// swiftlint:disable line_length identifier_name
+// swiftlint:disable line_length identifier_name colon
 
 import UIKit
 
