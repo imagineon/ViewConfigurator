@@ -29,3 +29,10 @@ public extension ConfigurationSet where Base: UICollectionViewCell {
     }
 
 }
+
+extension Configurable where Self: UICollectionViewCell {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UICollectionViewCell>) -> Self {
+        _ = configuration.apply(on: self as UICollectionViewCell)
+        return self
+    }
+}

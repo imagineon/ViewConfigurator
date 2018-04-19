@@ -78,7 +78,13 @@ public extension ConfigurationSet where Base: {{ type.name }} {
     {% endfor %}
     {% call createVariablesForUIViewSubclasses %}
 {% endif %}
+}
 
+extension Configurable where Self: {{ type.name }} {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<{{ type.name }}>) -> Self {
+        _ = configuration.apply(on: self as {{ type.name }})
+        return self
+    }
 }
 
 // sourcery:end

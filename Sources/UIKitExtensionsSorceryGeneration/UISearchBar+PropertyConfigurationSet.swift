@@ -142,3 +142,10 @@ public extension ConfigurationSet where Base: UISearchBar {
     }
 
 }
+
+extension Configurable where Self: UISearchBar {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UISearchBar>) -> Self {
+        _ = configuration.apply(on: self as UISearchBar)
+        return self
+    }
+}

@@ -53,3 +53,10 @@ public extension ConfigurationSet where Base: UIButton {
     }
 
 }
+
+extension Configurable where Self: UIButton {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIButton>) -> Self {
+        _ = configuration.apply(on: self as UIButton)
+        return self
+    }
+}

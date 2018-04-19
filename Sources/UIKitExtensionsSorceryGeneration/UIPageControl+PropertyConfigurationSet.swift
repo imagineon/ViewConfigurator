@@ -42,3 +42,10 @@ public extension ConfigurationSet where Base: UIPageControl {
     }
 
 }
+
+extension Configurable where Self: UIPageControl {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPageControl>) -> Self {
+        _ = configuration.apply(on: self as UIPageControl)
+        return self
+    }
+}

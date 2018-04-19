@@ -99,3 +99,10 @@ public extension ConfigurationSet where Base: UITabBar {
     }
 
 }
+
+extension Configurable where Self: UITabBar {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITabBar>) -> Self {
+        _ = configuration.apply(on: self as UITabBar)
+        return self
+    }
+}

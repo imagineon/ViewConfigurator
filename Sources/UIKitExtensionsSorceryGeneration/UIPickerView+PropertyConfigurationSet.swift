@@ -22,3 +22,10 @@ public extension ConfigurationSet where Base: UIPickerView {
     }
 
 }
+
+extension Configurable where Self: UIPickerView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIPickerView>) -> Self {
+        _ = configuration.apply(on: self as UIPickerView)
+        return self
+    }
+}

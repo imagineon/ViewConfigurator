@@ -160,3 +160,10 @@ public extension ConfigurationSet where Base: UITextField {
     }
 
 }
+
+extension Configurable where Self: UITextField {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITextField>) -> Self {
+        _ = configuration.apply(on: self as UITextField)
+        return self
+    }
+}

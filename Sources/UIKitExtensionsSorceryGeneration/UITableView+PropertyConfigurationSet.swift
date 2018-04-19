@@ -217,3 +217,10 @@ public extension ConfigurationSet where Base: UITableView {
     }
 
 }
+
+extension Configurable where Self: UITableView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UITableView>) -> Self {
+        _ = configuration.apply(on: self as UITableView)
+        return self
+    }
+}

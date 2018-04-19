@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import UIKit
 @testable import ViewConfigurator
 
 class TestConfiguratable: Configurable {
@@ -70,6 +71,17 @@ class ConfiguratorSetSpec: QuickSpec {
                 
                 expect(testBuild.configuratableProperty).to(equal(1))
                 expect(testBuild.anotherProperty).toNot(equal("foo"))
+            }
+            it("Configuration sets can be applied to instances of Subclasses") {
+                let viewConfiguraition = UIView.config.backgroundColor(.red)
+                let controlConfiguration = UIControl.config.isEnabled(false)
+                
+                let button = UIButton()
+                    .apply(viewConfiguraition)
+                    .apply(controlConfiguration)
+                
+                expect(button.backgroundColor).to(equal(UIColor.red))
+                expect(button.isEnabled).to(equal(false))
             }
         }
 

@@ -35,3 +35,10 @@ public extension ConfigurationSet where Base: UIControl {
     }
 
 }
+
+extension Configurable where Self: UIControl {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIControl>) -> Self {
+        _ = configuration.apply(on: self as UIControl)
+        return self
+    }
+}

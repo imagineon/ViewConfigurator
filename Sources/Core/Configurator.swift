@@ -45,7 +45,7 @@ public class ConfigurationSet<Base: Configurable> {
         return new(configurations: configurations + configuration.configurations)
     }
 
-    fileprivate func apply(on base: Base) -> Base {
+    func apply(on base: Base) -> Base {
         return configurations.reduce(base, { $1($0) })
     }
 

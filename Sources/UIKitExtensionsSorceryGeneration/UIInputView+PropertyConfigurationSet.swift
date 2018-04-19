@@ -12,3 +12,10 @@ public extension ConfigurationSet where Base: UIInputView {
     }
 
 }
+
+extension Configurable where Self: UIInputView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIInputView>) -> Self {
+        _ = configuration.apply(on: self as UIInputView)
+        return self
+    }
+}

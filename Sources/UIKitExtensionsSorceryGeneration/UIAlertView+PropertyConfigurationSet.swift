@@ -35,3 +35,10 @@ public extension ConfigurationSet where Base: UIAlertView {
     }
 
 }
+
+extension Configurable where Self: UIAlertView {
+    @discardableResult public func apply(_ configuration: ConfigurationSet<UIAlertView>) -> Self {
+        _ = configuration.apply(on: self as UIAlertView)
+        return self
+    }
+}
