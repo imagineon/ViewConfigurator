@@ -275,13 +275,13 @@ A big help was the Framework https://github.com/sidmani/Chain where we got the s
 
 Most parts of the library are generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
 We choose not to regenerate during every Build for several reasons. At the moment we can't distinguish between readOnly Properties and settable Properties, so a lot of generated Code will not compile.
-Also most of the functions on UIView subclasses are not useful during configuration and are currently not excludet from generation, but manually removed after generation. And finally it removes the dependency to Sourcery.
 
 ## Current Issues
 
 Cannot filter out get-only properties during the library generation process.
-Generation of code for Functions is based on function prefixes ("set", "add", "remove"), there may be others which could be usefull. For "set" prefix we try to remove it from the generated Function, but the filter capabilities of Stencil allow only replacement. 
+Generation of code for Functions is based on function with certain prefixes ("set", "add", "remove"), there may be others which could be usefull. For "set" prefix we try to remove it from the generated Function, but the filter capabilities of Stencil allow only replacement. 
 The list of UIView Subclasses is not generated at the moment.
+At the moment Interoperability between ConfigurationSets of related Types, is constraint to applying superclass Configuration to subclasses. There is no functionality to combine two ConfigurationSets at the moment.
 
 ## License
 
