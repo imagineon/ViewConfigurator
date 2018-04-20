@@ -183,7 +183,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ViewConfigurator', '~> 0.3.0'
+pod 'ViewConfigurator', '~> 1.0.0'
 ```
 
 Then, run the following command:
@@ -206,7 +206,7 @@ $ brew install carthage
 To integrate ViewConfigurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ImagineOn/ViewConfigurator" ~> 0.3.0
+github "ImagineOn/ViewConfigurator" ~> 1.0.0
 ```
 ### Swift Package Manager
 
@@ -218,7 +218,7 @@ import PackageDescription
 let package = Package(
     name: "ViewConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.3.0")
+        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "1.0.0")
     ]
 )
 ```
