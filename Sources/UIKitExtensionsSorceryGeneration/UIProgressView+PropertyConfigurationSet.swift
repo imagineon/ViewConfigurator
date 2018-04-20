@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIProgressView {
     func progressViewStyle(_ newValue: UIProgressViewStyle) -> Self {
         return set { (configurable: UIProgressView) in
@@ -48,13 +50,5 @@ public extension ConfigurationSet where Base: UIProgressView {
         return set { (configurable: UIProgressView) in
             configurable.observedProgress = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UIProgressView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIProgressView>) -> Self {
-        _ = configuration.apply(on: self as UIProgressView)
-        return self
     }
 }

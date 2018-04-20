@@ -1,5 +1,7 @@
+disabled_rules:
+  - superfluous_disable_command
 included: # paths to include during linting. `--path` is ignored if present.
   - Sources
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-    - Carthage
-    - Pods
+  - Carthage
+  - Pods

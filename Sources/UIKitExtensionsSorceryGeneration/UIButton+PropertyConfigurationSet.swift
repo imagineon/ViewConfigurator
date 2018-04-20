@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIButton {
     func contentEdgeInsets(_ newValue: UIEdgeInsets) -> Self {
         return set { (configurable: UIButton) in
@@ -52,11 +54,4 @@ public extension ConfigurationSet where Base: UIButton {
         }
     }
 
-}
-
-extension Configurable where Self: UIButton {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIButton>) -> Self {
-        _ = configuration.apply(on: self as UIButton)
-        return self
-    }
 }

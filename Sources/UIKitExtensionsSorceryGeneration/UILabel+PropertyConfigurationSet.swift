@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UILabel {
     func text(_ newValue: String?) -> Self {
         return set { (configurable: UILabel) in
@@ -113,13 +115,5 @@ public extension ConfigurationSet where Base: UILabel {
         return set { (configurable: UILabel) in
             configurable.preferredMaxLayoutWidth = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UILabel {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UILabel>) -> Self {
-        _ = configuration.apply(on: self as UILabel)
-        return self
     }
 }

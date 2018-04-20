@@ -1,8 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
-@available(iOSApplicationExtension 9.0, *)
+
+@available(iOS 9.0, *)
 public extension ConfigurationSet where Base: UIStackView {
 
     func axis(_ newValue: UILayoutConstraintAxis) -> Self {
@@ -39,14 +40,5 @@ public extension ConfigurationSet where Base: UIStackView {
         return set { (configurable: UIStackView) in
             configurable.isLayoutMarginsRelativeArrangement = newValue
         }
-    }
-
-}
-
-@available(iOSApplicationExtension 9.0, *)
-extension Configurable where Self: UIStackView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UIStackView>) -> Self {
-        _ = configuration.apply(on: self as UIStackView)
-        return self
     }
 }

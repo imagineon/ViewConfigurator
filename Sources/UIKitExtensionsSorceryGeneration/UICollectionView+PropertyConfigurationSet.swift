@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 6.0, *)
 public extension ConfigurationSet where Base: UICollectionView {
     func collectionViewLayout(_ newValue: UICollectionViewLayout) -> Self {
         return set { (configurable: UICollectionView) in
@@ -81,18 +83,4 @@ public extension ConfigurationSet where Base: UICollectionView {
         }
     }
 
-    @available(iOS 9.0, *)
-    func remembersLastFocusedIndexPath(_ newValue: Bool) -> Self {
-        return set { (configurable: UICollectionView) in
-            configurable.remembersLastFocusedIndexPath = newValue
-        }
-    }
-
-}
-
-extension Configurable where Self: UICollectionView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UICollectionView>) -> Self {
-        _ = configuration.apply(on: self as UICollectionView)
-        return self
-    }
 }

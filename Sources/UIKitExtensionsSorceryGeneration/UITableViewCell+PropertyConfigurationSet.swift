@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UITableViewCell {
 
     func backgroundView(_ newValue: UIView?) -> Self {
@@ -114,13 +116,5 @@ public extension ConfigurationSet where Base: UITableViewCell {
         return set { (configurable: UITableViewCell) in
             configurable.userInteractionEnabledWhileDragging = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UITableViewCell {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UITableViewCell>) -> Self {
-        _ = configuration.apply(on: self as UITableViewCell)
-        return self
     }
 }

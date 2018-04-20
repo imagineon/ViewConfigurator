@@ -1,7 +1,10 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+// swiftlint:disable line_length identifier_name colon
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UINavigationBar {
     func barStyle(_ newValue: UIBarStyle) -> Self {
         return set { (configurable: UINavigationBar) in
@@ -81,13 +84,5 @@ public extension ConfigurationSet where Base: UINavigationBar {
         return set { (configurable: UINavigationBar) in
             configurable.backIndicatorTransitionMaskImage = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UINavigationBar {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UINavigationBar>) -> Self {
-        _ = configuration.apply(on: self as UINavigationBar)
-        return self
     }
 }

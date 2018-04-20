@@ -1,0 +1,47 @@
+{% macro newlineIfNotLast isLast %}
+{% if not isLast %}
+
+{% endif %}
+{% endmacro %}
+
+{% macro generateConfigurationForMethod method prefix %}
+    {{method.attributes.available}}
+    func {{ method.name|replace:prefix,""|lowerFirstLetter }} -> Self {
+        return set { ( configurable: Base ) in
+            configurable.{{ method.callName }}({% for parameter in method.parameters %}{% if not parameter.argumentLabel == nil %}{{ parameter.argumentLabel }}: {{ parameter.name }}{% else %}{{ parameter.name }}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+        }
+    }
+
+{% endmacro %}
+
+{% macro generationForMethod method %}
+{% if method.name|hasPrefix:"set" %}
+    {% call generateConfigurationForMethod method "set" %}
+{% elif method.name|hasPrefix:"add" %}
+     {% call generateConfigurationForMethod method "" %}
+{% elif method.name|hasPrefix:"remove" %}
+    {% call generateConfigurationForMethod method "" %}
+{% endif %}
+{% endmacro %}
+
+{% for type in types.implementing.SourceryGeneration|class %}
+// sourcery:file:{{ type.name }}+FunctionConfigurationSet.swift
+// swiftlint:disable line_length identifier_name colon
+
+import UIKit
+
+{{ type.attributes.available}}
+public extension ConfigurationSet where Base: {{ type.name }} {
+
+{% if type.name == "UIView"%}
+    {% for method in type.allMethods|instance where not method.isInitializer %}
+        {% call generationForMethod method %}
+    {% endfor %}
+{% else %}
+    {% for method in type.methods|instance where not method.isInitializer %}
+        {% call generationForMethod method %}
+    {% endfor %}
+{% endif %}
+}
+// sourcery:end
+{% endfor %}

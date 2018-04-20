@@ -1,7 +1,10 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+// swiftlint:disable line_length identifier_name colon
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UITextField {
     func text(_ newValue: String?) -> Self {
         return set { (configurable: UITextField) in
@@ -157,13 +160,5 @@ public extension ConfigurationSet where Base: UITextField {
         return set { (configurable: UITextField) in
             configurable.clearsOnInsertion = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UITextField {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UITextField>) -> Self {
-        _ = configuration.apply(on: self as UITextField)
-        return self
     }
 }

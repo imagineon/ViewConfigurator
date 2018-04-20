@@ -1,7 +1,9 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UISwitch {
     @available(iOS 5.0, *)
     func onTintColor(_ newValue: UIColor?) -> Self {
@@ -42,13 +44,5 @@ public extension ConfigurationSet where Base: UISwitch {
         return set { (configurable: UISwitch) in
             configurable.isOn = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UISwitch {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UISwitch>) -> Self {
-        _ = configuration.apply(on: self as UISwitch)
-        return self
     }
 }

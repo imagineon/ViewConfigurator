@@ -1,7 +1,10 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
+// Generated using Sourcery 0.12.0 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
+// swiftlint:disable line_length identifier_name colon
 
 import UIKit
+
+@available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UITextView {
     func delegate(_ newValue: UITextViewDelegate?) -> Self {
         return set { (configurable: UITextView) in
@@ -111,13 +114,5 @@ public extension ConfigurationSet where Base: UITextView {
         return set { (configurable: UITextView) in
             configurable.linkTextAttributes = newValue
         }
-    }
-
-}
-
-extension Configurable where Self: UITextView {
-    @discardableResult public func apply(_ configuration: ConfigurationSet<UITextView>) -> Self {
-        _ = configuration.apply(on: self as UITextView)
-        return self
     }
 }
