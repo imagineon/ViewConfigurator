@@ -12,13 +12,14 @@
 
 The clean way to setup your views!
 
-- [Motivation](#motivation)
+- [Motivation and Usage](#motivation-and-usage)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [TODOs](#todos)
+- [Current Issues](#current-issues)
 - [License](#license)
 
-## Motivation
+## Motivation and Usage
 Some iOS developers like to use storyboards, some like to create all their views and constraints in code.
 While we don't want to favor one approach over the other, this library is for the latter.
 
@@ -26,108 +27,136 @@ When creating and configuring views in code there's many lines to be written.
 And doing it all in `viewDidLoad()` makes for one behemoth of a method.
 
 Swift allows to instantiate and configure our views right where we declare them.
+There even is the possibility to use instance variables, if you declare the Views lazy.
 For Example:
 
 ```swift
-
-class ExampleViewController: UIViewController {
-	
-	let view: UIView = {
-    	    let view = UIView()
-	    view.backgroundColor = .blue
-	    view.alpha = 0.8
-	    view.layer.cornerRadius = 8
-	    view.layer.borderColor = UIColor.red.cgColor
-	    view.layer.borderWidth = 0.5
-	    return view
-	}()
-	
-}
-
-```
-
-There even is the possibility to use instance variables, if you declare them lazy.
-For example:
-
-```swift
-
 struct ExampleColorModel {
     let primaryColor: UIColor
     let secondaryColor: UIColor
 }
 
 class ExampleViewController: UIViewController {
-    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
-    
-    lazy var someView: UIView = {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
+
+    let myView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.alpha = 0.8
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = UIColor.red.cgColor
+        view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        return view
+    }()
+
+    lazy var someLazyView: UIView = {
         let view = UIView()
         view.backgroundColor = self.model.primaryColor
         view.alpha = 0.8
         view.layer.cornerRadius = 8
         view.layer.borderColor = self.model.secondaryColor.cgColor
         view.layer.borderWidth = 0.5
+        view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         return view
     }()
-    
 }
 ```
 
 With this libary we want to achieve an even higher level of 'swiftiness'.
 
-With Configurator our example now looks like this:
+The idea is to create reusable ConfigurationSets and then either apply them on instances.
+
+With ViewConfigurator our example now looks like this:
 
 ```swift
-
 struct ExampleColorModel {
     let primaryColor: UIColor
     let secondaryColor: UIColor
 }
 
-class ExampleViewController: UIViewController {
-    let model: ExampleColorModel = ExampleColorModel(primaryColor: .blue, secondaryColor: .red)
-    
-    lazy var someLazyView: UIView = .build { config in
-        config
-            .backgroundColor(self.model.primaryColor)
-            .alpha(0.8)
-            .cornerRadius(8)
-            .borderColor(self.model.secondaryColor.cgColor)
-            .borderWidth(0.5)
-    }
-    
+struct ExampleConfigurations {
+    static let standard = UIView.config
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderWidth(0.5)
+        .backgroundColor(.blue)
+        .borderColor(UIColor.red.cgColor)
+        .frame(CGRect(x: 0, y: 0, width: 50, height: 50))
 }
+
+class ExampleViewController: UIViewController {
+    let model: ExampleColorModel = ExampleColorModel(primaryColor: .yellow, secondaryColor: .blue)
+
+    let myView = UIView()
+        .apply(ExampleConfigurations.standard)
+
+    lazy var modelConfiguration = UIView.config
+        .backgroundColor(self.model.primaryColor)
+        .borderColor(self.model.secondaryColor.cgColor)
+
+    lazy var someLazyView = UIView()
+        .apply(ExampleConfigurations.standard)
+        .apply(self.modelConfiguration)
+}
+
 ```
+
+If you have a configuration which is only used once you can also do this directly without creating an configuration object beforehand.
+
+```swift
+lazy var anotherView = UIView().config
+    .backgroundColor(self.model.primaryColor)
+    .borderColor(self.model.secondaryColor.cgColor)
+    .finish()
+```
+
 
 Also the grouping of configurations is possible:
 
 ```swift
+struct ExampleConfigurations {
+    static let standard = UIView.config
+        .alpha(0.8)
+        .cornerRadius(8)
+        .borderWidth(0.5)
 
-let standardConfiguration = UIView.configure
-    .backgroundColor(.blue)
-    .alpha(0.8)
-    .cornerRadius(8)
-    .borderColor(UIColor.red.cgColor)
-    .borderWidth(0.5)
+    static let shadow = UIView.config
+        .shadowColor(UIColor.yellow.cgColor)
+        .shadowOffset(CGSize(width: 3, height: 3))
 
-let view = standardConfiguration.build() // Creates a view from the standard configuration
-
-let otherView = UIView.build { config in
-    config
-        .apply(standardConfiguration) // Applies the standard configuration
-        .backgroundColor(.green) // Overrides the background color set by the standard configuration
+    static let standardWithShadow = standard
+        .append(shadow)
 }
-
 ```
 
+If your UIView Subclasses have custom Properties and you want to configure them you can use the generic set method.
+This will invoke a custom closure during Configuration.
+Be careful while using this. There is nothing stoping you from introducing sideeffects through this, and it is strongly discouraged.
 
-## Supported Classes
+```swift
+static let custom = MyCustomView.config
+    .alpha(0.8)
+    .set({
+        $0.customProperty = "i am special"
+    })
+```
 
-- UIView
-- UIControl
-- UIButton
-- UILabel
-- UIImageView
+A better solution would be to extend ConfigurationSet to support your custom properties.
 
+```swift
+class MyViewSubclass: UIView {
+    var anotherConfiguration: Bool = false
+}
+
+extension ConfigurationSet where Base: MyViewSubclass  {
+    func anotherConfiguration(_ newValue: Bool) -> Self {
+        return set { (configurable: MyViewSubclass) in
+            configurable.anotherConfiguration = newValue
+        }
+    }
+}
+```
 
 ## Requirements
 
@@ -154,7 +183,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'ViewConfigurator', '~> 0.3.0'
+pod 'ViewConfigurator', '~> 1.0.0'
 ```
 
 Then, run the following command:
@@ -177,7 +206,7 @@ $ brew install carthage
 To integrate ViewConfigurator into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "ImagineOn/ViewConfigurator" ~> 0.3.0
+github "ImagineOn/ViewConfigurator" ~> 1.0.0
 ```
 ### Swift Package Manager
 
@@ -189,7 +218,7 @@ import PackageDescription
 let package = Package(
     name: "ViewConfigurator",
     dependencies: [
-        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "0.3.0")
+        .Package(url: "https://github.com/imagineon/ViewConfigurator.git", "1.0.0")
     ]
 )
 ```
@@ -233,8 +262,26 @@ $ git submodule update --init --recursive
 
 ## TODOs
 
-At the moment Only UIView specific properties are supported. In the future we're going to expand Configurator to work on all UIKit View Subclasses (like UIPageControl, UIScrollView e.g.).
-Also we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
+In the future we want to provide some convenice configurations, like using UIColor for CGColor configurations, a shadow configuration set and extensions for third party libraries like ReactiveCocoa.
+We also want to provide a version which will generate on every build and enable configuration of properties added by custom UIView subclasses.
+At the moment the Base of the ConfigurationSet has to be the same Type as the View it is applied on. It would be convinient to allow application of configurations on Subclasses.
+
+## Attributions
+
+Most of the library is generated with the help of Sourcery (https://github.com/krzysztofzablocki/Sourcery/), SourceKitten (https://github.com/jpsim/SourceKitten) frameworks and Stencil template language (https://github.com/kylef/Stencil).
+A big help was the Framework https://github.com/sidmani/Chain where we got the solution to enable SourceKitten to analyse UIKit.
+
+## Code Generation
+
+Most parts of the library are generated with the help of Sourcery by analysing Swift interfaces of UIKit. These interfaces are created with the help of SourceKitten.
+We choose not to regenerate during every Build for several reasons. At the moment we can't distinguish between readOnly Properties and settable Properties, so a lot of generated Code will not compile.
+
+## Current Issues
+
+Cannot filter out get-only properties during the library generation process.
+Generation of code for Functions is based on function with certain prefixes ("set", "add", "remove"), there may be others which could be usefull. For "set" prefix we try to remove it from the generated Function, but the filter capabilities of Stencil allow only replacement. 
+The list of UIView Subclasses is not generated at the moment.
+At the moment Interoperability between ConfigurationSets of related Types, is constraint to applying superclass Configuration to subclasses. There is no functionality to combine two ConfigurationSets at the moment.
 
 ## License
 
