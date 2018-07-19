@@ -21,7 +21,7 @@ public class ConfigurationSet<Base: Configurable> {
 
     private let configurations: [Configuration]
 
-    fileprivate init(configurations: [Configuration]) {
+    internal required init(configurations: [Configuration]) {
         self.configurations = configurations
     }
 
@@ -62,9 +62,18 @@ public class IntermediateConfigurationSet<Base: Configurable>: ConfigurationSet<
         super.init()
     }
 
-    fileprivate init(target: Base, configurations: [Configuration]) {
+    internal required init(target: Base, configurations: [Configuration]) {
         self.target = target
         super.init(configurations: configurations)
+    }
+
+    internal required init(configurations: [Configuration]) {
+        fatalError(
+            """
+            init(configurations:) has not been implemented, IntermediateConfiguration needs a target: Base.
+            Use init(target: Base, configurations: [Configuration])
+            """
+        )
     }
 
     override func new(configurations: [(Base) -> Base]) -> Self {
