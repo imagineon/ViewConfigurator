@@ -25,7 +25,7 @@ public extension ConfigurationSet where Base: UITableViewCell {
         }
     }
 
-    func selectionStyle(_ newValue: UITableViewCellSelectionStyle) -> Self {
+    func selectionStyle(_ newValue: UITableViewCell.SelectionStyle) -> Self {
         return set { (configurable: UITableViewCell) in
             configurable.selectionStyle = newValue
         }
@@ -55,7 +55,7 @@ public extension ConfigurationSet where Base: UITableViewCell {
         }
     }
 
-    func accessoryType(_ newValue: UITableViewCellAccessoryType) -> Self {
+    func accessoryType(_ newValue: UITableViewCell.AccessoryType) -> Self {
         return set { (configurable: UITableViewCell) in
             configurable.accessoryType = newValue
         }
@@ -67,7 +67,7 @@ public extension ConfigurationSet where Base: UITableViewCell {
         }
     }
 
-    func editingAccessoryType(_ newValue: UITableViewCellAccessoryType) -> Self {
+    func editingAccessoryType(_ newValue: UITableViewCell.AccessoryType) -> Self {
         return set { (configurable: UITableViewCell) in
             configurable.editingAccessoryType = newValue
         }
@@ -105,7 +105,7 @@ public extension ConfigurationSet where Base: UITableViewCell {
     }
 
     @available(iOS 9.0, *)
-    func focusStyle(_ newValue: UITableViewCellFocusStyle) -> Self {
+    func focusStyle(_ newValue: UITableViewCell.FocusStyle) -> Self {
         return set { (configurable: UITableViewCell) in
             configurable.focusStyle = newValue
         }

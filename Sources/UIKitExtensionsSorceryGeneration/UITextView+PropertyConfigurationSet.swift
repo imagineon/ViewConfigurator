@@ -77,7 +77,7 @@ public extension ConfigurationSet where Base: UITextView {
     }
 
     @available(iOS 6.0, *)
-    func typingAttributes(_ newValue: [String : Any]) -> Self {
+    func typingAttributes(_ newValue: [NSAttributedString.Key: Any]) -> Self {
         return set { (configurable: UITextView) in
             configurable.typingAttributes = newValue
         }
@@ -110,7 +110,7 @@ public extension ConfigurationSet where Base: UITextView {
     }
 
     @available(iOS 7.0, *)
-    func linkTextAttributes(_ newValue: [String : Any]!) -> Self {
+    func linkTextAttributes(_ newValue: [NSAttributedString.Key: Any]!) -> Self {
         return set { (configurable: UITextView) in
             configurable.linkTextAttributes = newValue
         }

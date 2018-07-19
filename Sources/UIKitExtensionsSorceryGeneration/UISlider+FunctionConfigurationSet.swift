@@ -12,19 +12,19 @@ public extension ConfigurationSet where Base: UISlider {
         }
     }
 
-    func thumbImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func thumbImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setThumbImage(image, for: state)
         }
     }
 
-    func minimumTrackImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func minimumTrackImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setMinimumTrackImage(image, for: state)
         }
     }
 
-    func maximumTrackImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func maximumTrackImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setMaximumTrackImage(image, for: state)
         }

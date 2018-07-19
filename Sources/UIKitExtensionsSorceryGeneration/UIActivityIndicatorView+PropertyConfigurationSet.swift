@@ -5,7 +5,7 @@ import UIKit
 
 @available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIActivityIndicatorView {
-    func activityIndicatorViewStyle(_ newValue: UIActivityIndicatorViewStyle) -> Self {
+    func activityIndicatorViewStyle(_ newValue: UIActivityIndicatorView.Style) -> Self {
         return set { (configurable: UIActivityIndicatorView) in
             configurable.activityIndicatorViewStyle = newValue
         }

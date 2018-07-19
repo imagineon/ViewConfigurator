@@ -12,7 +12,7 @@ public extension ConfigurationSet where Base: UIWindow {
         }
     }
 
-    func windowLevel(_ newValue: UIWindowLevel) -> Self {
+    func windowLevel(_ newValue: UIWindow.Level) -> Self {
         return set { (configurable: UIWindow) in
             configurable.windowLevel = newValue
         }

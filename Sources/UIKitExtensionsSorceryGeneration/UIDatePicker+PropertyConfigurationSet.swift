@@ -5,7 +5,7 @@ import UIKit
 
 @available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIDatePicker {
-    func datePickerMode(_ newValue: UIDatePickerMode) -> Self {
+    func datePickerMode(_ newValue: UIDatePicker.Mode) -> Self {
         return set { (configurable: UIDatePicker) in
             configurable.datePickerMode = newValue
         }

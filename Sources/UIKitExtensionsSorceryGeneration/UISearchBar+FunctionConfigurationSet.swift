@@ -22,42 +22,42 @@ public extension ConfigurationSet where Base: UISearchBar {
     }
 
     @available(iOS 5.0, *)
-    func searchFieldBackgroundImage(_ backgroundImage: UIImage?, for state: UIControlState) -> Self {
+    func searchFieldBackgroundImage(_ backgroundImage: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setSearchFieldBackgroundImage(backgroundImage, for: state)
         }
     }
 
     @available(iOS 5.0, *)
-    func image(_ iconImage: UIImage?, for icon: UISearchBarIcon, state: UIControlState) -> Self {
+    func image(_ iconImage: UIImage?, for icon: UISearchBar.Icon, state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setImage(iconImage, for: icon, state: state)
         }
     }
 
     @available(iOS 5.0, *)
-    func scopeBarButtonBackgroundImage(_ backgroundImage: UIImage?, for state: UIControlState) -> Self {
+    func scopeBarButtonBackgroundImage(_ backgroundImage: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setScopeBarButtonBackgroundImage(backgroundImage, for: state)
         }
     }
 
     @available(iOS 5.0, *)
-    func scopeBarButtonDividerImage(_ dividerImage: UIImage?, forLeftSegmentState leftState: UIControlState, rightSegmentState rightState: UIControlState) -> Self {
+    func scopeBarButtonDividerImage(_ dividerImage: UIImage?, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setScopeBarButtonDividerImage(dividerImage, forLeftSegmentState: leftState, rightSegmentState: rightState)
         }
     }
 
     @available(iOS 5.0, *)
-    func scopeBarButtonTitleTextAttributes(_ attributes: [String : Any]?, for state: UIControlState) -> Self {
+    func scopeBarButtonTitleTextAttributes(_ attributes: [NSAttributedString.Key: Any]?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setScopeBarButtonTitleTextAttributes(attributes, for: state)
         }
     }
 
     @available(iOS 5.0, *)
-    func positionAdjustment(_ adjustment: UIOffset, for icon: UISearchBarIcon) -> Self {
+    func positionAdjustment(_ adjustment: UIOffset, for icon: UISearchBar.Icon) -> Self {
         return set { ( configurable: Base ) in
             configurable.setPositionAdjustment(adjustment, for: icon)
         }

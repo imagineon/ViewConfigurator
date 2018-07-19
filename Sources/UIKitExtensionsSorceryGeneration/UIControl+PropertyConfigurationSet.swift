@@ -23,13 +23,13 @@ public extension ConfigurationSet where Base: UIControl {
         }
     }
 
-    func contentVerticalAlignment(_ newValue: UIControlContentVerticalAlignment) -> Self {
+    func contentVerticalAlignment(_ newValue: UIControl.ContentVerticalAlignment) -> Self {
         return set { (configurable: UIControl) in
             configurable.contentVerticalAlignment = newValue
         }
     }
 
-    func contentHorizontalAlignment(_ newValue: UIControlContentHorizontalAlignment) -> Self {
+    func contentHorizontalAlignment(_ newValue: UIControl.ContentHorizontalAlignment) -> Self {
         return set { (configurable: UIControl) in
             configurable.contentHorizontalAlignment = newValue
         }

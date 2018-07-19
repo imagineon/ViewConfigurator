@@ -5,7 +5,7 @@ import UIKit
 
 @available(iOS 2.0, *)
 public extension ConfigurationSet where Base: UIProgressView {
-    func progressViewStyle(_ newValue: UIProgressViewStyle) -> Self {
+    func progressViewStyle(_ newValue: UIProgressView.Style) -> Self {
         return set { (configurable: UIProgressView) in
             configurable.progressViewStyle = newValue
         }

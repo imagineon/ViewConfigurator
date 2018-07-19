@@ -60,14 +60,14 @@ public extension ConfigurationSet where Base: UIWebView {
     }
 
     @available(iOS 7.0, *)
-    func paginationMode(_ newValue: UIWebPaginationMode) -> Self {
+    func paginationMode(_ newValue: UIWebView.PaginationMode) -> Self {
         return set { (configurable: UIWebView) in
             configurable.paginationMode = newValue
         }
     }
 
     @available(iOS 7.0, *)
-    func paginationBreakingMode(_ newValue: UIWebPaginationBreakingMode) -> Self {
+    func paginationBreakingMode(_ newValue: UIWebView.PaginationBreakingMode) -> Self {
         return set { (configurable: UIWebView) in
             configurable.paginationBreakingMode = newValue
         }

@@ -66,7 +66,7 @@ public extension ConfigurationSet where Base: UITabBar {
     }
 
     @available(iOS 7.0, *)
-    func itemPositioning(_ newValue: UITabBarItemPositioning) -> Self {
+    func itemPositioning(_ newValue: UITabBar.ItemPositioning) -> Self {
         return set { (configurable: UITabBar) in
             configurable.itemPositioning = newValue
         }

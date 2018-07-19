@@ -50,28 +50,28 @@ public extension ConfigurationSet where Base: UISegmentedControl {
     }
 
     @available(iOS 5.0, *)
-    func backgroundImage(_ backgroundImage: UIImage?, for state: UIControlState, barMetrics: UIBarMetrics) -> Self {
+    func backgroundImage(_ backgroundImage: UIImage?, for state: UIControl.State, barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(backgroundImage, for: state, barMetrics: barMetrics)
         }
     }
 
     @available(iOS 5.0, *)
-    func dividerImage(_ dividerImage: UIImage?, forLeftSegmentState leftState: UIControlState, rightSegmentState rightState: UIControlState, barMetrics: UIBarMetrics) -> Self {
+    func dividerImage(_ dividerImage: UIImage?, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State, barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setDividerImage(dividerImage, forLeftSegmentState: leftState, rightSegmentState: rightState, barMetrics: barMetrics)
         }
     }
 
     @available(iOS 5.0, *)
-    func titleTextAttributes(_ attributes: [AnyHashable : Any]?, for state: UIControlState) -> Self {
+    func titleTextAttributes(_ attributes: [NSAttributedString.Key : Any]?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setTitleTextAttributes(attributes, for: state)
         }
     }
 
     @available(iOS 5.0, *)
-    func contentPositionAdjustment(_ adjustment: UIOffset, forSegmentType leftCenterRightOrAlone: UISegmentedControlSegment, barMetrics: UIBarMetrics) -> Self {
+    func contentPositionAdjustment(_ adjustment: UIOffset, forSegmentType leftCenterRightOrAlone: UISegmentedControl.Segment, barMetrics: UIBarMetrics) -> Self {
         return set { ( configurable: Base ) in
             configurable.setContentPositionAdjustment(adjustment, forSegmentType: leftCenterRightOrAlone, barMetrics: barMetrics)
         }

@@ -83,7 +83,7 @@ class UITextViewSpecs: QuickSpec {
             }
             
             it("can set attributedText") {
-                let myAttribute = [ NSAttributedStringKey.foregroundColor: UIColor.blue,  NSAttributedStringKey.font: UIFont(name: "Chalkduster", size: 18.0)!]
+                let myAttribute = [ NSAttributedString.Key.foregroundColor: UIColor.blue,  NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 18.0)!]
                 let attributedText = NSAttributedString(string: "some text", attributes: myAttribute)
                 let testViewConfig = UITextView.config
                     .attributedText(attributedText)
@@ -127,25 +127,25 @@ class UITextViewSpecs: QuickSpec {
             
             it("can set linkTextAttributes") {
                 
-                let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
+                let attributes = [NSAttributedString.Key.foregroundColor : UIColor.red]
                 let testViewConfig = UITextView.config
                     .linkTextAttributes(attributes)
                 let testView = UITextView().apply(testViewConfig)
                 
-                let configuredAttributes = testView.linkTextAttributes as? [String: UIColor]
-                expect(configuredAttributes).to(equal(attributes))
+                let configuredAttributes = convertFromOptionalNSAttributedStringKeyDictionary(testView.linkTextAttributes) as? [String: UIColor]
+                expect(configuredAttributes).to(equal(convertFromNSAttributedStringKeyDictionary(attributes) as? [String: UIColor]))
             }
             
             
             it("can set typingAttributes") {
                 
-                let attributes: [String: UIColor] = [NSAttributedStringKey.foregroundColor.rawValue : UIColor.red]
+                let attributes = [NSAttributedString.Key.foregroundColor : UIColor.red]
                 let testViewConfig = UITextView.config
                     .typingAttributes(attributes)
                 let testView = UITextView().apply(testViewConfig)
                 
-                let configuredAttributes = testView.typingAttributes as? [String: UIColor]
-                expect(configuredAttributes).to(equal(attributes))
+                let configuredAttributes = convertFromNSAttributedStringKeyDictionary(testView.typingAttributes) as? [String: UIColor]
+                expect(configuredAttributes).to(equal(convertFromNSAttributedStringKeyDictionary(attributes) as? [String: UIColor]))
                 
             }
             
@@ -170,26 +170,13 @@ class UITextViewSpecs: QuickSpec {
 }
 
 
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromOptionalNSAttributedStringKeyDictionary(_ input: [NSAttributedString.Key: Any]?) -> [String: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKeyDictionary(_ input: [NSAttributedString.Key: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}

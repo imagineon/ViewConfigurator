@@ -8,28 +8,28 @@ import UIKit
 public extension ConfigurationSet where Base: UIStepper {
 
     @available(iOS 6.0, *)
-    func backgroundImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func backgroundImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setBackgroundImage(image, for: state)
         }
     }
 
     @available(iOS 6.0, *)
-    func dividerImage(_ image: UIImage?, forLeftSegmentState leftState: UIControlState, rightSegmentState rightState: UIControlState) -> Self {
+    func dividerImage(_ image: UIImage?, forLeftSegmentState leftState: UIControl.State, rightSegmentState rightState: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setDividerImage(image, forLeftSegmentState: leftState, rightSegmentState: rightState)
         }
     }
 
     @available(iOS 6.0, *)
-    func incrementImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func incrementImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setIncrementImage(image, for: state)
         }
     }
 
     @available(iOS 6.0, *)
-    func decrementImage(_ image: UIImage?, for state: UIControlState) -> Self {
+    func decrementImage(_ image: UIImage?, for state: UIControl.State) -> Self {
         return set { ( configurable: Base ) in
             configurable.setDecrementImage(image, for: state)
         }
