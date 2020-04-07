@@ -37,14 +37,14 @@ public extension ConfigurationSet where Base: UITextField {
         }
     }
 
-    func borderStyle(_ newValue: UITextBorderStyle) -> Self {
+    func borderStyle(_ newValue: UITextField.BorderStyle) -> Self {
         return set { (configurable: UITextField) in
             configurable.borderStyle = newValue
         }
     }
 
     @available(iOS 7.0, *)
-    func defaultTextAttributes(_ newValue: [String : Any]) -> Self {
+    func defaultTextAttributes(_ newValue: [NSAttributedString.Key: Any]) -> Self {
         return set { (configurable: UITextField) in
             configurable.defaultTextAttributes = newValue
         }
@@ -107,13 +107,13 @@ public extension ConfigurationSet where Base: UITextField {
     }
 
     @available(iOS 6.0, *)
-    func typingAttributes(_ newValue: [String : Any]?) -> Self {
+    func typingAttributes(_ newValue: [NSAttributedString.Key: Any]?) -> Self {
         return set { (configurable: UITextField) in
             configurable.typingAttributes = newValue
         }
     }
 
-    func clearButtonMode(_ newValue: UITextFieldViewMode) -> Self {
+    func clearButtonMode(_ newValue: UITextField.ViewMode) -> Self {
         return set { (configurable: UITextField) in
             configurable.clearButtonMode = newValue
         }
@@ -125,7 +125,7 @@ public extension ConfigurationSet where Base: UITextField {
         }
     }
 
-    func leftViewMode(_ newValue: UITextFieldViewMode) -> Self {
+    func leftViewMode(_ newValue: UITextField.ViewMode) -> Self {
         return set { (configurable: UITextField) in
             configurable.leftViewMode = newValue
         }
@@ -137,7 +137,7 @@ public extension ConfigurationSet where Base: UITextField {
         }
     }
 
-    func rightViewMode(_ newValue: UITextFieldViewMode) -> Self {
+    func rightViewMode(_ newValue: UITextField.ViewMode) -> Self {
         return set { (configurable: UITextField) in
             configurable.rightViewMode = newValue
         }

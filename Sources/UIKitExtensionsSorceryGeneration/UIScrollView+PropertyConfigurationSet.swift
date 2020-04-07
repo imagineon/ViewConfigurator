@@ -24,7 +24,7 @@ public extension ConfigurationSet where Base: UIScrollView {
     }
 
     @available(iOS 11.0, *)
-    func contentInsetAdjustmentBehavior(_ newValue: UIScrollViewContentInsetAdjustmentBehavior) -> Self {
+    func contentInsetAdjustmentBehavior(_ newValue: UIScrollView.ContentInsetAdjustmentBehavior) -> Self {
         return set { (configurable: UIScrollView) in
             configurable.contentInsetAdjustmentBehavior = newValue
         }
@@ -90,7 +90,7 @@ public extension ConfigurationSet where Base: UIScrollView {
         }
     }
 
-    func indicatorStyle(_ newValue: UIScrollViewIndicatorStyle) -> Self {
+    func indicatorStyle(_ newValue: UIScrollView.IndicatorStyle) -> Self {
         return set { (configurable: UIScrollView) in
             configurable.indicatorStyle = newValue
         }
@@ -99,11 +99,11 @@ public extension ConfigurationSet where Base: UIScrollView {
     @available(iOS 3.0, *)
     func decelerationRate(_ newValue: CGFloat) -> Self {
         return set { (configurable: UIScrollView) in
-            configurable.decelerationRate = newValue
+            configurable.decelerationRate = UIScrollView.DecelerationRate(rawValue: newValue)
         }
     }
 
-    func indexDisplayMode(_ newValue: UIScrollViewIndexDisplayMode) -> Self {
+    func indexDisplayMode(_ newValue: UIScrollView.IndexDisplayMode) -> Self {
         return set { (configurable: UIScrollView) in
             configurable.indexDisplayMode = newValue
         }
@@ -153,7 +153,7 @@ public extension ConfigurationSet where Base: UIScrollView {
     }
 
     @available(iOS 7.0, *)
-    func keyboardDismissMode(_ newValue: UIScrollViewKeyboardDismissMode) -> Self {
+    func keyboardDismissMode(_ newValue: UIScrollView.KeyboardDismissMode) -> Self {
         return set { (configurable: UIScrollView) in
             configurable.keyboardDismissMode = newValue
         }

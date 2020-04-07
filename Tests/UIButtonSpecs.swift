@@ -6,7 +6,7 @@ class UIButtonSpecs: QuickSpec {
     override func spec() {
         describe("UIViewConfigurator") {
             it("can set contentEdgeInsets Value") {
-                let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
+                let edgeInset = UIEdgeInsets.init(top: 23, left: 42, bottom: 69, right: 13)
                 let testViewConfig = UIButton.config
                     .contentEdgeInsets(edgeInset)
                 let testView =  UIButton().apply(testViewConfig)
@@ -14,7 +14,7 @@ class UIButtonSpecs: QuickSpec {
                 expect(testView.contentEdgeInsets).to(equal(edgeInset))
             }
             it("can set titleEdgeInsets Value") {
-                let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
+                let edgeInset = UIEdgeInsets.init(top: 23, left: 42, bottom: 69, right: 13)
                 let testViewConfig = UIButton.config
                     .titleEdgeInsets(edgeInset)
                 let testView =  UIButton().apply(testViewConfig)
@@ -22,7 +22,7 @@ class UIButtonSpecs: QuickSpec {
                 expect(testView.titleEdgeInsets).to(equal(edgeInset))
             }
             it("can set imageEdgeInsets Value") {
-                let edgeInset = UIEdgeInsetsMake(23, 42, 69, 13)
+                let edgeInset = UIEdgeInsets.init(top: 23, left: 42, bottom: 69, right: 13)
                 let testViewConfig = UIButton.config
                     .imageEdgeInsets(edgeInset)
                 let testView =  UIButton().apply(testViewConfig)
@@ -107,18 +107,18 @@ class UIButtonSpecs: QuickSpec {
                     .title(title)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.title(for: .normal)).to(equal(title))
+                expect(testView.title(for: UIControl.State.normal)).to(equal(title))
             }
             it("can set title for state highlighted and only that") {
                 let title = "Some Title"
                 let testViewConfig = UIButton.config
-                    .title(title, for: .highlighted)
+                    .title(title, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.title(for: .highlighted)).to(equal(title))
-                expect(testView.title(for: .normal)).to(beNil())
-                expect(testView.title(for: .selected)).to(beNil())
-                expect(testView.title(for: .disabled)).to(beNil())
+                expect(testView.title(for: UIControl.State.highlighted)).to(equal(title))
+                expect(testView.title(for: UIControl.State.normal)).to(beNil())
+                expect(testView.title(for: UIControl.State.selected)).to(beNil())
+                expect(testView.title(for: UIControl.State.disabled)).to(beNil())
             }
             it("can set titleColor for default state normal") {
                 let color = UIColor.red
@@ -126,15 +126,15 @@ class UIButtonSpecs: QuickSpec {
                     .titleColor(color)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.titleColor(for: .normal)).to(equal(color))
+                expect(testView.titleColor(for: UIControl.State.normal)).to(equal(color))
             }
             it("can set titleColor for state highlighted") {
                 let color = UIColor.red
                 let testViewConfig = UIButton.config
-                    .titleColor(color, for: .highlighted)
+                    .titleColor(color, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.titleColor(for: .highlighted)).to(equal(color))
+                expect(testView.titleColor(for: UIControl.State.highlighted)).to(equal(color))
             }
             it("can set titleShadowColor for default state normal") {
                 let color = UIColor.red
@@ -142,15 +142,15 @@ class UIButtonSpecs: QuickSpec {
                     .titleShadowColor(color)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.titleShadowColor(for: .normal)).to(equal(color))
+                expect(testView.titleShadowColor(for: UIControl.State.normal)).to(equal(color))
             }
             it("can set titleShadowColor for state highlighted") {
                 let color = UIColor.red
                 let testViewConfig = UIButton.config
-                    .titleShadowColor(color, for: .highlighted)
+                    .titleShadowColor(color, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.titleShadowColor(for: .highlighted)).to(equal(color))
+                expect(testView.titleShadowColor(for: UIControl.State.highlighted)).to(equal(color))
             }
             it("can set image for default state normal") {
                 let image = UIImage()
@@ -158,15 +158,15 @@ class UIButtonSpecs: QuickSpec {
                     .image(image)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.image(for: .normal)).to(equal(image))
+                expect(testView.image(for: UIControl.State.normal)).to(equal(image))
             }
             it("can set image for state highlighted") {
                 let image = UIImage()
                 let testViewConfig = UIButton.config
-                    .image(image, for: .highlighted)
+                    .image(image, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.image(for: .highlighted)).to(equal(image))
+                expect(testView.image(for: UIControl.State.highlighted)).to(equal(image))
             }
             it("can set backgroundImage for default state normal") {
                 let image = UIImage()
@@ -174,15 +174,15 @@ class UIButtonSpecs: QuickSpec {
                     .backgroundImage(image)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.backgroundImage(for: .normal)).to(equal(image))
+                expect(testView.backgroundImage(for: UIControl.State.normal)).to(equal(image))
             }
             it("can set backgroundImage for state highlighted") {
                 let image = UIImage()
                 let testViewConfig = UIButton.config
-                    .backgroundImage(image, for: .highlighted)
+                    .backgroundImage(image, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.backgroundImage(for: .highlighted)).to(equal(image))
+                expect(testView.backgroundImage(for: UIControl.State.highlighted)).to(equal(image))
             }
             it("can set attributedTitle for default state normal") {
                 let title = NSAttributedString(string: "Some Title")
@@ -190,18 +190,18 @@ class UIButtonSpecs: QuickSpec {
                     .attributedTitle(title)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.attributedTitle(for: .normal)).to(equal(title))
+                expect(testView.attributedTitle(for: UIControl.State.normal)).to(equal(title))
             }
             it("can set title for state highlighted and only that") {
                 let title = NSAttributedString(string: "Some Title")
                 let testViewConfig = UIButton.config
-                    .attributedTitle(title, for: .highlighted)
+                    .attributedTitle(title, for: UIControl.State.highlighted)
                 let testView =  UIButton().apply(testViewConfig)
                 
-                expect(testView.attributedTitle(for: .highlighted)).to(equal(title))
-                expect(testView.attributedTitle(for: .normal)).to(beNil())
-                expect(testView.attributedTitle(for: .selected)).to(beNil())
-                expect(testView.attributedTitle(for: .disabled)).to(beNil())
+                expect(testView.attributedTitle(for: UIControl.State.highlighted)).to(equal(title))
+                expect(testView.attributedTitle(for: UIControl.State.normal)).to(beNil())
+                expect(testView.attributedTitle(for: UIControl.State.selected)).to(beNil())
+                expect(testView.attributedTitle(for: UIControl.State.disabled)).to(beNil())
             }
         }
     }

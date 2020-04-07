@@ -75,7 +75,7 @@ public extension ConfigurationSet where Base: UISearchBar {
     }
 
     @available(iOS 7.0, *)
-    func searchBarStyle(_ newValue: UISearchBarStyle) -> Self {
+    func searchBarStyle(_ newValue: UISearchBar.Style) -> Self {
         return set { (configurable: UISearchBar) in
             configurable.searchBarStyle = newValue
         }

@@ -59,7 +59,7 @@ public extension ConfigurationSet where Base: UICollectionView {
     }
 
     @available(iOS 11.0, *)
-    func reorderingCadence(_ newValue: UICollectionViewReorderingCadence) -> Self {
+    func reorderingCadence(_ newValue: UICollectionView.ReorderingCadence) -> Self {
         return set { (configurable: UICollectionView) in
             configurable.reorderingCadence = newValue
         }

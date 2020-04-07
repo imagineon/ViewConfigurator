@@ -6,19 +6,19 @@ import UIKit
 @available(iOS 9.0, *)
 public extension ConfigurationSet where Base: UIStackView {
 
-    func axis(_ newValue: UILayoutConstraintAxis) -> Self {
+    func axis(_ newValue: NSLayoutConstraint.Axis) -> Self {
         return set { (configurable: UIStackView) in
             configurable.axis = newValue
         }
     }
 
-    func distribution(_ newValue: UIStackViewDistribution) -> Self {
+    func distribution(_ newValue: UIStackView.Distribution) -> Self {
         return set { (configurable: UIStackView) in
             configurable.distribution = newValue
         }
     }
 
-    func alignment(_ newValue: UIStackViewAlignment) -> Self {
+    func alignment(_ newValue: UIStackView.Alignment) -> Self {
         return set { (configurable: UIStackView) in
             configurable.alignment = newValue
         }

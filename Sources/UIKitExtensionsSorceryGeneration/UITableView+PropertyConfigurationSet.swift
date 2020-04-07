@@ -86,7 +86,7 @@ public extension ConfigurationSet where Base: UITableView {
     }
 
     @available(iOS 11.0, *)
-    func separatorInsetReference(_ newValue: UITableViewSeparatorInsetReference) -> Self {
+    func separatorInsetReference(_ newValue: UITableView.SeparatorInsetReference) -> Self {
         return set { (configurable: UITableView) in
             configurable.separatorInsetReference = newValue
         }
@@ -159,7 +159,7 @@ public extension ConfigurationSet where Base: UITableView {
         }
     }
 
-    func separatorStyle(_ newValue: UITableViewCellSeparatorStyle) -> Self {
+    func separatorStyle(_ newValue: UITableViewCell.SeparatorStyle) -> Self {
         return set { (configurable: UITableView) in
             configurable.separatorStyle = newValue
         }

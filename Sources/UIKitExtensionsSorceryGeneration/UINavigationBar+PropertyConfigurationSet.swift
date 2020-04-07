@@ -59,14 +59,14 @@ public extension ConfigurationSet where Base: UINavigationBar {
     }
 
     @available(iOS 5.0, *)
-    func titleTextAttributes(_ newValue: [NSAttributedStringKey : Any]?) -> Self {
+    func titleTextAttributes(_ newValue: [NSAttributedString.Key : Any]?) -> Self {
         return set { (configurable: UINavigationBar) in
             configurable.titleTextAttributes = newValue
         }
     }
 
     @available(iOS 11.0, *)
-    func largeTitleTextAttributes(_ newValue: [NSAttributedStringKey : Any]?) -> Self {
+    func largeTitleTextAttributes(_ newValue: [NSAttributedString.Key : Any]?) -> Self {
         return set { (configurable: UINavigationBar) in
             configurable.largeTitleTextAttributes = newValue
         }

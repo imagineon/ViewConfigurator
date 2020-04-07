@@ -73,7 +73,7 @@ public extension ConfigurationSet where Base: UIView {
         }
     }
 
-    func autoresizingMask(_ newValue: UIViewAutoresizing) -> Self {
+    func autoresizingMask(_ newValue: UIView.AutoresizingMask) -> Self {
         return set { (configurable: UIView) in
             configurable.autoresizingMask = newValue
         }
@@ -143,7 +143,7 @@ public extension ConfigurationSet where Base: UIView {
         }
     }
 
-    func contentMode(_ newValue: UIViewContentMode) -> Self {
+    func contentMode(_ newValue: UIView.ContentMode) -> Self {
         return set { (configurable: UIView) in
             configurable.contentMode = newValue
         }
@@ -164,7 +164,7 @@ public extension ConfigurationSet where Base: UIView {
     }
 
     @available(iOS 7.0, *)
-    func tintAdjustmentMode(_ newValue: UIViewTintAdjustmentMode) -> Self {
+    func tintAdjustmentMode(_ newValue: UIView.TintAdjustmentMode) -> Self {
         return set { (configurable: UIView) in
             configurable.tintAdjustmentMode = newValue
         }

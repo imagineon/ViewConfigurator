@@ -54,7 +54,7 @@ class UIControlSpec: QuickSpec {
                 expect(testView.isSelected).to(equal(selected))
             }
             it("can set contentVerticalAlignment Value") {
-                let contentVerticalAlignment: UIControlContentVerticalAlignment = .top
+                let contentVerticalAlignment: UIControl.ContentVerticalAlignment = .top
                 let testViewConfig = UIControl.config
                     .contentVerticalAlignment(contentVerticalAlignment)
                 let testView = UIControl().apply(testViewConfig)
@@ -62,7 +62,7 @@ class UIControlSpec: QuickSpec {
                 expect(testView.contentVerticalAlignment).to(equal(contentVerticalAlignment))
             }
             it("can set contentHorizontalAlignment Value") {
-                let contentHorizontalAlignment: UIControlContentHorizontalAlignment = .right
+                let contentHorizontalAlignment: UIControl.ContentHorizontalAlignment = .right
                 let testViewConfig = UIControl.config
                     .contentHorizontalAlignment(contentHorizontalAlignment)
                 let testView = UIControl().apply(testViewConfig)
@@ -77,13 +77,13 @@ class UIControlSpec: QuickSpec {
                 let testView = UIControl().apply(testViewConfig)
                 
                 expect(testView.allTargets).to(contain(target))
-                expect(testView.allControlEvents).to(equal(UIControlEvents.touchUpInside))
-                expect(testView.actions(forTarget: target, forControlEvent: .touchUpInside)).to(contain(action.description))
+                expect(testView.allControlEvents).to(equal(UIControl.Event.touchUpInside))
+                expect(testView.actions(forTarget: target, forControlEvent: UIControl.Event.touchUpInside)).to(contain(action.description))
             }
             it("can add a Target defaulting to .touchUpInside") {
                 let target = UIView()
                 let action = #selector(target.removeFromSuperview)
-                let controlEvent = UIControlEvents.touchDown
+                let controlEvent = UIControl.Event.touchDown
                 let testViewConfig = UIControl.config
                     .addTarget(target, action: action, for: controlEvent)
                 let testView = UIControl().apply(testViewConfig)
@@ -95,14 +95,14 @@ class UIControlSpec: QuickSpec {
             it("can add a Target and remove it") {
                 let target = UIView()
                 let action = #selector(target.removeFromSuperview)
-                let controlEvent = UIControlEvents.touchDown
+                let controlEvent = UIControl.Event.touchDown
                 let testViewConfig = UIControl.config
                     .addTarget(target, action: action, for: controlEvent)
                     .removeTarget(target, action: action, for: controlEvent)
                 let testView = UIControl().apply(testViewConfig)
                 
                 expect(testView.allTargets).to(beEmpty())
-                expect(testView.allControlEvents).to(equal(UIControlEvents()))
+                expect(testView.allControlEvents).to(equal(UIControl.Event()))
                 expect(testView.actions(forTarget: target, forControlEvent: controlEvent)).to(beNil())
             }
         }

@@ -63,7 +63,7 @@ class UIViewSpec: QuickSpec {
                 expect(testView.clipsToBounds).to(equal(newValue))
             }
             it("can set contentMode") {
-                let newContentMode: UIViewContentMode = .bottomRight
+                let newContentMode: UIView.ContentMode = .bottomRight
                 let testViewConfig = UIView.config
                     .contentMode(newContentMode)
                 let testView = UIView().apply(testViewConfig)
@@ -161,7 +161,7 @@ class UIViewSpec: QuickSpec {
                 expect(testView.tag).to(equal(newValue))
             }
             it("can set tintAdjustmentMode") {
-                let newMode: UIViewTintAdjustmentMode = .dimmed
+                let newMode: UIView.TintAdjustmentMode = .dimmed
                 let testViewConfig = UIView.config
                     .tintAdjustmentMode(newMode)
                 let testView = UIView().apply(testViewConfig)
