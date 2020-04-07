@@ -32,7 +32,7 @@ mkdir -p "${TEMP_DATA_FOLDER}"
 echo "${SDK_NAME}" > "${TEMP_DATA_FOLDER}"/sdkName
 
 # get all types that implement SourceryGeneration
-grep "extension [A-Za-z0-9. ]*:[ ]*SourceryGeneration" ./Sources/Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
+grep "extension [A-Za-z0-9. ]*:[ ]*SourceryGeneration" ./Sourcery/SourceryGeneration.swift | sed -e "s/extension //g" -e "s/ //g" -e "s/:.*//g" | while read -r class ; do
 create_yml $class
 sanitized_class_name=`echo $class | sed "s/.*\.//"`
 echo "Found $class"
@@ -50,5 +50,5 @@ rm temp.yml
 
 fi
  
-sourcery --sources ./ --templates ./Sources/Sourcery/Stencil --output ./Sources/UIKitExtensionsSorceryGeneration
+sourcery --sources ./ --templates ./Sourcery/Stencil --output ./Sources/UIKitExtensionsSorceryGeneration
 
