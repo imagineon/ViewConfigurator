@@ -47,7 +47,6 @@
 		E49A1E1D208792C400257A1A /* UIToolbar+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DAF208792B100257A1A /* UIToolbar+SubAndSuperclassInterop.swift */; };
 		E49A1E1E208792C400257A1A /* UIPickerView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB1208792B200257A1A /* UIPickerView+PropertyConfigurationSet.swift */; };
 		E49A1E1F208792C400257A1A /* UIScrollView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB2208792B200257A1A /* UIScrollView+PropertyConfigurationSet.swift */; };
-		E49A1E20208792C400257A1A /* UIWebView+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB3208792B200257A1A /* UIWebView+FunctionConfigurationSet.swift */; };
 		E49A1E21208792C400257A1A /* UICollectionViewCell+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB4208792B200257A1A /* UICollectionViewCell+PropertyConfigurationSet.swift */; };
 		E49A1E22208792C400257A1A /* UIControl+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB5208792B200257A1A /* UIControl+FunctionConfigurationSet.swift */; };
 		E49A1E23208792C400257A1A /* UIControl+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DB6208792B200257A1A /* UIControl+SubAndSuperclassInterop.swift */; };
@@ -108,7 +107,6 @@
 		E49A1E5B208792C400257A1A /* UIDatePicker+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DEE208792C000257A1A /* UIDatePicker+SubAndSuperclassInterop.swift */; };
 		E49A1E5C208792C400257A1A /* UIRefreshControl+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DEF208792C100257A1A /* UIRefreshControl+FunctionConfigurationSet.swift */; };
 		E49A1E5D208792C400257A1A /* UIVisualEffectView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF0208792C100257A1A /* UIVisualEffectView+PropertyConfigurationSet.swift */; };
-		E49A1E5E208792C400257A1A /* UIWebView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF1208792C100257A1A /* UIWebView+PropertyConfigurationSet.swift */; };
 		E49A1E5F208792C400257A1A /* UITextField+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF2208792C100257A1A /* UITextField+FunctionConfigurationSet.swift */; };
 		E49A1E60208792C400257A1A /* UICollectionReusableView+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF3208792C100257A1A /* UICollectionReusableView+FunctionConfigurationSet.swift */; };
 		E49A1E61208792C400257A1A /* UISlider+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF4208792C200257A1A /* UISlider+PropertyConfigurationSet.swift */; };
@@ -116,7 +114,6 @@
 		E49A1E63208792C400257A1A /* UITabBar+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF6208792C200257A1A /* UITabBar+PropertyConfigurationSet.swift */; };
 		E49A1E64208792C400257A1A /* UILabel+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF7208792C200257A1A /* UILabel+SubAndSuperclassInterop.swift */; };
 		E49A1E65208792C400257A1A /* UIStepper+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF8208792C200257A1A /* UIStepper+SubAndSuperclassInterop.swift */; };
-		E49A1E66208792C400257A1A /* UIWebView+SubAndSuperclassInterop.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DF9208792C200257A1A /* UIWebView+SubAndSuperclassInterop.swift */; };
 		E49A1E67208792C400257A1A /* UIButton+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DFA208792C200257A1A /* UIButton+PropertyConfigurationSet.swift */; };
 		E49A1E68208792C400257A1A /* UICollectionView+PropertyConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DFB208792C300257A1A /* UICollectionView+PropertyConfigurationSet.swift */; };
 		E49A1E69208792C400257A1A /* UIPageControl+FunctionConfigurationSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1DFC208792C300257A1A /* UIPageControl+FunctionConfigurationSet.swift */; };
@@ -361,7 +358,6 @@
 		E49A1DAF208792B100257A1A /* UIToolbar+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
 		E49A1DB1208792B200257A1A /* UIPickerView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPickerView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DB2208792B200257A1A /* UIScrollView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
-		E49A1DB3208792B200257A1A /* UIWebView+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DB4208792B200257A1A /* UICollectionViewCell+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DB5208792B200257A1A /* UIControl+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DB6208792B200257A1A /* UIControl+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
@@ -422,7 +418,6 @@
 		E49A1DEE208792C000257A1A /* UIDatePicker+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
 		E49A1DEF208792C100257A1A /* UIRefreshControl+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DF0208792C100257A1A /* UIVisualEffectView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
-		E49A1DF1208792C100257A1A /* UIWebView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DF2208792C100257A1A /* UITextField+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DF3208792C100257A1A /* UICollectionReusableView+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionReusableView+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DF4208792C200257A1A /* UISlider+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
@@ -430,7 +425,6 @@
 		E49A1DF6208792C200257A1A /* UITabBar+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DF7208792C200257A1A /* UILabel+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
 		E49A1DF8208792C200257A1A /* UIStepper+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
-		E49A1DF9208792C200257A1A /* UIWebView+SubAndSuperclassInterop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+SubAndSuperclassInterop.swift"; sourceTree = "<group>"; };
 		E49A1DFA208792C200257A1A /* UIButton+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DFB208792C300257A1A /* UICollectionView+PropertyConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+PropertyConfigurationSet.swift"; sourceTree = "<group>"; };
 		E49A1DFC208792C300257A1A /* UIPageControl+FunctionConfigurationSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageControl+FunctionConfigurationSet.swift"; sourceTree = "<group>"; };
@@ -789,9 +783,6 @@
 				E49A1D97208792AF00257A1A /* UIVisualEffectView+FunctionConfigurationSet.swift */,
 				E49A1DF0208792C100257A1A /* UIVisualEffectView+PropertyConfigurationSet.swift */,
 				E49A1DAD208792B100257A1A /* UIVisualEffectView+SubAndSuperclassInterop.swift */,
-				E49A1DB3208792B200257A1A /* UIWebView+FunctionConfigurationSet.swift */,
-				E49A1DF1208792C100257A1A /* UIWebView+PropertyConfigurationSet.swift */,
-				E49A1DF9208792C200257A1A /* UIWebView+SubAndSuperclassInterop.swift */,
 				E49A1DD4208792BB00257A1A /* UIWindow+FunctionConfigurationSet.swift */,
 				E49A1D9C208792AF00257A1A /* UIWindow+PropertyConfigurationSet.swift */,
 				E49A1DA5208792B000257A1A /* UIWindow+SubAndSuperclassInterop.swift */,
@@ -920,6 +911,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3549BAFB1DA387DB00C63030;
@@ -1167,7 +1159,6 @@
 				E49A1E65208792C400257A1A /* UIStepper+SubAndSuperclassInterop.swift in Sources */,
 				E49A1E52208792C400257A1A /* UICollectionView+FunctionConfigurationSet.swift in Sources */,
 				E49A1E5D208792C400257A1A /* UIVisualEffectView+PropertyConfigurationSet.swift in Sources */,
-				E49A1E5E208792C400257A1A /* UIWebView+PropertyConfigurationSet.swift in Sources */,
 				E49A1E46208792C400257A1A /* UIStackView+PropertyConfigurationSet.swift in Sources */,
 				E49A1E68208792C400257A1A /* UICollectionView+PropertyConfigurationSet.swift in Sources */,
 				E49A1E6B208792C400257A1A /* UITableViewCell+PropertyConfigurationSet.swift in Sources */,
@@ -1185,7 +1176,6 @@
 				E49A1E30208792C400257A1A /* UIToolbar+FunctionConfigurationSet.swift in Sources */,
 				E49A1E1A208792C400257A1A /* UITextView+PropertyConfigurationSet.swift in Sources */,
 				E49A1E4D208792C400257A1A /* UISearchBar+FunctionConfigurationSet.swift in Sources */,
-				E49A1E20208792C400257A1A /* UIWebView+FunctionConfigurationSet.swift in Sources */,
 				E49A1E2B208792C400257A1A /* UICollectionView+SubAndSuperclassInterop.swift in Sources */,
 				E49A1E14208792C400257A1A /* UIWindow+SubAndSuperclassInterop.swift in Sources */,
 				E49A1E5C208792C400257A1A /* UIRefreshControl+FunctionConfigurationSet.swift in Sources */,
@@ -1199,7 +1189,6 @@
 				E49A1E12208792C400257A1A /* UICollectionViewCell+FunctionConfigurationSet.swift in Sources */,
 				E49A1E03208792C400257A1A /* UIPageControl+PropertyConfigurationSet.swift in Sources */,
 				E49A1E0C208792C400257A1A /* UITextView+FunctionConfigurationSet.swift in Sources */,
-				E49A1E66208792C400257A1A /* UIWebView+SubAndSuperclassInterop.swift in Sources */,
 				E49A1E21208792C400257A1A /* UICollectionViewCell+PropertyConfigurationSet.swift in Sources */,
 				E49A1E22208792C400257A1A /* UIControl+FunctionConfigurationSet.swift in Sources */,
 				E49A1E6A208792C400257A1A /* UITableViewCell+SubAndSuperclassInterop.swift in Sources */,
@@ -1333,7 +1322,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1387,7 +1376,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1463,7 +1452,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1481,7 +1470,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.imagineon.ViewConfigurator.ConfiguratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

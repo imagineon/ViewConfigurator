@@ -126,7 +126,6 @@ extension UIKit._UIAlertControllerGradientView: SourceryGeneration {}
 extension UIKit._UIStaticScrollBar: SourceryGeneration {}
 extension UIKit._UIBackdropContentView: SourceryGeneration {}
 extension UIKit._UIBackdropEffectView: SourceryGeneration {}
-extension UIKit._UIWebFindOnPageHighlightBubbleView: SourceryGeneration {}
 extension UIKit._UIDimmingKnockoutBackdropView: SourceryGeneration {}
 extension UIKit._UIDetachedFieldEditorBackgroundView: SourceryGeneration {}
 extension UIKit._UIAlertControllerView: SourceryGeneration {}
@@ -297,7 +296,6 @@ extension UIKit.UITextFieldBorderView: SourceryGeneration {}
 extension UIKit.UIInputSwitcherTableCellSegmentView: SourceryGeneration {}
 extension UIKit.UIInputSwitcherTableCellBackgroundView: SourceryGeneration {}
 extension UIKit.UIMorphingLabel: SourceryGeneration {}
-extension UIKit.UIWebPlaybackTargetPicker: SourceryGeneration {}
 extension UIKit.UITableViewBackgroundView: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateInlineFloatingView: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidatePageControl: SourceryGeneration {}
@@ -329,8 +327,6 @@ extension UIKit.UIKeyboardDictationMenu: SourceryGeneration {}
 extension UIKit.UIKeyboardSplitControlMenu: SourceryGeneration {}
 extension UIKit.UIInputSwitcherView: SourceryGeneration {}
 extension UIKit.UIDocumentPasswordView: SourceryGeneration {}
-extension UIKit.UIWebOverflowContentView: SourceryGeneration {}
-extension UIKit.UIWebPDFLabelView: SourceryGeneration {}
 extension UIKit.UIDictationLandingView: SourceryGeneration {}
 extension UIKit.UIDebuggingZoomLoupeView: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateSortControl: SourceryGeneration {}
@@ -342,7 +338,6 @@ extension UIKit.UIDictationATVLinearView: SourceryGeneration {}
 extension UIKit.UIDictationFloatingStarkView: SourceryGeneration {}
 extension UIKit.UIKeyboardDicationBackground: SourceryGeneration {}
 extension UIKit.UIKeyboardDicationBackgroundGradientView: SourceryGeneration {}
-extension UIKit.UIWebPDFView: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateGrid: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateGridHeader: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateBarShadow: SourceryGeneration {}
@@ -364,7 +359,6 @@ extension UIKit.UIKeyboardCandidateView_iPhone_Floating: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateView_iPhone_Bar_ExtendDown: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateView_iPhone_Bar: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateView_iPhone_Bar_ExtendHalfwayUp: SourceryGeneration {}
-extension UIKit.UIWebFormAccessory: SourceryGeneration {}
 extension UIKit.UIKeyboardCandidateBar: SourceryGeneration {}
 extension UIKit.UIPeripheralHostView: SourceryGeneration {}
 extension UIKit.UIKeyboardCornerView: SourceryGeneration {}
@@ -382,11 +376,6 @@ extension UIKit._UIButtonBarStackView: SourceryGeneration {}
 extension UIKit.UISwipeActionDeleteScanlineView: SourceryGeneration {}
 extension UIKit.UITableViewIndexOverlaySelectionView: SourceryGeneration {}
 extension UIKit.UIKeyCommandDiscoverabilityHUDColumnView: SourceryGeneration {}
-extension UIKit.UIWebDragDotView: SourceryGeneration {}
-extension UIKit.UIWebTextRangeView: SourceryGeneration {}
-extension UIKit.UIWebSelectionOutline: SourceryGeneration {}
-extension UIKit.UIWebSelectionHandle: SourceryGeneration {}
-extension UIKit.UIWebSelectionView: SourceryGeneration {}
 extension UIKit.UIWKSelectionView: SourceryGeneration {}
 extension UIKit.UITextContentView: SourceryGeneration {}
 extension UIKit.UITextMagnifier: SourceryGeneration {}
@@ -445,7 +434,6 @@ extension UIKit.UITabBarCustomizeView: SourceryGeneration {}
 extension UIKit.UISplitAndMaskView: SourceryGeneration {}
 extension UIKit.UILayoutContainerView: SourceryGeneration {}
 extension UIKit.UITableViewCellSelectedBackground: SourceryGeneration {}
-extension UIKit.UIWebView: SourceryGeneration {}
 extension UIKit.UIAlertView: SourceryGeneration {}
 extension UIKit._UIUserNotificationAlertView: SourceryGeneration {}
 extension UIKit.UITableViewCell: SourceryGeneration {}
@@ -522,9 +510,7 @@ extension UIKit.UIMainPrinterUtilityCell: SourceryGeneration {}
 extension UIKit.UIDebuggingColorAuditTableViewCell: SourceryGeneration {}
 extension UIKit.UIKeyboardEmojiSplitCategoryCell: SourceryGeneration {}
 extension UIKit.UITableViewCollectionCell: SourceryGeneration {}
-extension UIKit.UIWebTiledView: SourceryGeneration {}
-extension UIKit.UIWebDocumentView: SourceryGeneration {}
-extension UIKit.UIWebBrowserView: SourceryGeneration {}
+
 extension UIKit.UITextFieldBackgroundView: SourceryGeneration {}
 extension UIKit._UITextFieldPasscodeCutoutBackground: SourceryGeneration {}
 extension UIKit.UITextFieldRoundedRectBackgroundView: SourceryGeneration {}
@@ -792,10 +778,7 @@ extension UIKit._UICompatibilityTextView: SourceryGeneration {}
 extension UIKit.UIPrinterSetupPINScrollView: SourceryGeneration {}
 extension UIKit.UITextView: SourceryGeneration {}
 extension UIKit._UISiriTranscriptTextView: SourceryGeneration {}
-extension UIKit.UIWebOverflowScrollView: SourceryGeneration {}
 extension UIKit.UIPageControllerScrollView: SourceryGeneration {}
-extension UIKit.UIWebScrollView: SourceryGeneration {}
-extension UIKit._UIWebViewScrollView: SourceryGeneration {}
 extension UIKit.UIFieldEditor: SourceryGeneration {}
 extension UIKit.UITableView: SourceryGeneration {}
 extension UIKit.CNAvatarCardActionsTableView: SourceryGeneration {}
@@ -836,5 +819,3 @@ extension UIKit.UIKeyboardEmojiSplitCharacterPicker: SourceryGeneration {}
 extension UIKit.UIPickerView: SourceryGeneration {}
 extension UIKit._UIDatePickerView: SourceryGeneration {}
 extension UIKit.UIPrintRangePickerView: SourceryGeneration {}
-extension UIKit.UIWebSelectMultiplePicker: SourceryGeneration {}
-extension UIKit.UIWebSelectSinglePicker: SourceryGeneration {}
